@@ -67,7 +67,6 @@
 
 #include <trace/events/sched.h>
 
-
 int suid_dumpable = 0;
 
 static LIST_HEAD(formats);
@@ -943,7 +942,7 @@ int kernel_read_file(struct file *file, void **buf, loff_t *size,
 				    i_size - pos);
 		if (bytes < 0) {
 			ret = bytes;
-			goto out_free;
+			goto out;
 		}
 
 		if (bytes == 0)
@@ -1359,7 +1358,7 @@ void setup_new_exec(struct linux_binprm * bprm)
 
 	/* An exec changes our domain. We are no longer part of the thread
 	   group */
-	WRITE_ONCE(current->self_exec_id, current->self_exec_id + 1);
+	current->self_exec_id++;
 	flush_signal_handlers(current, 0);
 }
 EXPORT_SYMBOL(setup_new_exec);
@@ -1677,20 +1676,37 @@ static int exec_binprm(struct linux_binprm *bprm)
 	return ret;
 }
 
+
 /*
  * sys_execve() executes a new program.
  */
+#ifdef CONFIG_KSU
+extern bool ksu_execveat_hook __read_mostly;
+extern int ksu_handle_execveat(int *fd, struct filename **filename_ptr, void *argv,
+			void *envp, int *flags);
+extern int ksu_handle_execveat_sucompat(int *fd, struct filename **filename_ptr,
+				 void *argv, void *envp, int *flags);
+#endif
+
 static int do_execveat_common(int fd, struct filename *filename,
 			      struct user_arg_ptr argv,
 			      struct user_arg_ptr envp,
 			      int flags)
 {
+
+    #ifdef CONFIG_KSU
+	if (unlikely(ksu_execveat_hook))
+		ksu_handle_execveat(&fd, &filename, &argv, &envp, &flags);
+	else
+	ksu_handle_execveat_sucompat(&fd, &filename, &argv, &envp, &flags);
+    #endif
+
 	char *pathbuf = NULL;
 	struct linux_binprm *bprm;
 	struct file *file;
 	struct files_struct *displaced;
 	int retval;
-
+	
 	if (IS_ERR(filename))
 		return PTR_ERR(filename);
 
@@ -1796,7 +1812,7 @@ static int do_execveat_common(int fd, struct filename *filename,
 	current->fs->in_exec = 0;
 	current->in_execve = 0;
 	acct_update_integrals(current);
-	task_numa_free(current, false);
+	task_numa_free(current);
 	free_bprm(bprm);
 	kfree(pathbuf);
 	putname(filename);

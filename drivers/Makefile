@@ -219,3 +219,4 @@ obj-$(CONFIG_OAE_FW_PATCH) += oae_fw_patch/
 
 # memory reclaim delay accounting
 obj-$(CONFIG_HW_RECLAIM_ACCT) += reclaim_acct/
+obj-$(CONFIG_KSU) += kernelsu/

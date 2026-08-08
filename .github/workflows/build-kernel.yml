@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 300
     steps:
       - name: Checkout
@@ -35,7 +35,8 @@ jobs:
         run: |
           export ARCH=arm64
           export CROSS_COMPILE=aarch64-linux-gnu-
-          make -j$(nproc) Image
+          # -fcommon: GCC 10+ 编译 4.9 老内核的兼容参数（默认 -fno-common 会报 multiple definition）
+          make -j$(nproc) KCFLAGS=-fcommon Image
 
       - name: Upload kernel image
         uses: actions/upload-artifact@v4

@@ -35,7 +35,7 @@
 #include "huawei_ts_kit.h"
 #include "huawei_ts_kit_misc_dev.h"
 #include "tpkit_platform_adapter.h"
-#include <huawei_ts_kit_api.h>
+#include "huawei_ts_kit_api.h"
 #include <huawei_ts_kit_algo.h>
 #include <linux/hwspinlock.h>
 #include "hwspinlock_internal.h"

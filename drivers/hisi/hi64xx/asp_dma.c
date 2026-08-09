@@ -55,7 +55,7 @@ unsigned int _dmac_reg_read(unsigned int reg)
 	unsigned long flag = 0;
 	unsigned int ret = 0;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 
 	if (hwspin_lock_timeout_irqsave(priv->hwlock, HWLOCK_WAIT_TIME, &flag)) {
 		dev_err(priv->dev, "hwspinlock timeout\n");
@@ -74,7 +74,7 @@ static void _dmac_reg_write(unsigned int reg, unsigned int value)
 	struct asp_dma_priv *priv = asp_dma_priv;
 	unsigned long flag = 0;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 
 	if (hwspin_lock_timeout_irqsave(priv->hwlock, HWLOCK_WAIT_TIME, &flag)) {
 		dev_err(priv->dev, "hwspinlock timeout\n");
@@ -93,7 +93,7 @@ static void _dmac_reg_set_bit(unsigned int reg, unsigned int offset)
 	unsigned long flag_hw = 0;
 	unsigned long flag_sft = 0;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 
 	if (hwspin_lock_timeout_irqsave(priv->hwlock, HWLOCK_WAIT_TIME, &flag_hw)) {
 		dev_err(priv->dev, "hwspinlock timeout\n");
@@ -118,7 +118,7 @@ static void _dmac_reg_clr_bit(unsigned int reg, unsigned int offset)
 	unsigned long flag_hw = 0;
 	unsigned long flag_sft = 0;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 
 	if (hwspin_lock_timeout_irqsave(priv->hwlock, HWLOCK_WAIT_TIME, &flag_hw)) {
 		dev_err(priv->dev, "hwspinlock timeout!\n");
@@ -140,7 +140,7 @@ static void _dmac_dump(unsigned int dma_channel)
 {
 	struct asp_dma_priv *priv = asp_dma_priv;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 
 	if (dma_channel >= ASP_DMA_MAX_CHANNEL_NUM) {
 		dev_err(priv->dev, "dma channel err:%d\n", dma_channel);
@@ -171,7 +171,7 @@ static irqreturn_t _asp_dmac_irq_handler(int irq, void *data)
 	unsigned int int_type = 0;
 	unsigned int i = 0;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 
 	/* if have interupts */
 	int_state = (unsigned short)_dmac_reg_read(ASP_DMA_INT_STAT_AP);

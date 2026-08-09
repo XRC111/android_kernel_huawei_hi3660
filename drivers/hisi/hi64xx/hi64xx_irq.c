@@ -377,7 +377,7 @@ int hi64xx_irq_disable_irq(struct hi64xx_irq *irq_data, int phy_irq)
 }
 EXPORT_SYMBOL(hi64xx_irq_disable_irq);
 
-int hi64xx_irq_enable_irqs(struct hi64xx_irq *irq_data, int irq_num, const int* phy_irqs)
+int hi64xx_irq_enable_irqs(struct hi64xx_irq *irq_data, int irq_num, int* phy_irqs)
 {
 	struct hi64xx_irq_platform_data *data =
 		(struct hi64xx_irq_platform_data *)irq_data;
@@ -395,7 +395,7 @@ int hi64xx_irq_enable_irqs(struct hi64xx_irq *irq_data, int irq_num, const int* 
 }
 EXPORT_SYMBOL(hi64xx_irq_enable_irqs);
 
-int hi64xx_irq_disable_irqs(struct hi64xx_irq *irq_data, int irq_num, const int* phy_irqs)
+int hi64xx_irq_disable_irqs(struct hi64xx_irq *irq_data, int irq_num, int* phy_irqs)
 {
 	struct hi64xx_irq_platform_data *data =
 		(struct hi64xx_irq_platform_data *)irq_data;

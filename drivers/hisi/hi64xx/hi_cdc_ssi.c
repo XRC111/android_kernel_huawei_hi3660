@@ -24,7 +24,6 @@
 #include <linux/delay.h>
 #include <linux/io.h>
 #include <linux/pm_runtime.h>
-#include <rdr_hisi_audio_adapter.h>
 
 /*lint -e750 -e730 -e838 -e529 -e438 -e778 -e826 -e774 -e747 -e527 -e456 -e454 -e455*/
 
@@ -92,7 +91,7 @@ unsigned int ssi_reg_read8(unsigned int reg)
 		if (pm_ret < 0) {
 			pr_err("[%s:%d] pm resume error, pm_ret:%d\n", __FUNCTION__, __LINE__, pm_ret);
 			mutex_unlock(&pdata->sr_rw_lock);
-			rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+			BUG_ON(true);
 			return 0;
 		}
 	}
@@ -123,7 +122,7 @@ unsigned int ssi_reg_read32(unsigned int reg)
 		if (pm_ret < 0) {
 			pr_err("[%s:%d] pm resume error, pm_ret:%d\n", __FUNCTION__, __LINE__, pm_ret);
 			mutex_unlock(&pdata->sr_rw_lock);
-			rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+			BUG_ON(true);
 			return 0;
 		}
 	}
@@ -163,7 +162,7 @@ void ssi_reg_write8(unsigned int reg, unsigned int val)
 		if (pm_ret < 0) {
 			pr_err("[%s:%d] pm resume error, pm_ret:%d\n", __FUNCTION__, __LINE__, pm_ret);
 			mutex_unlock(&pdata->sr_rw_lock);
-			rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+			BUG_ON(true);
 			return ;
 		}
 	}
@@ -198,7 +197,7 @@ void ssi_reg_write32(unsigned int reg, unsigned int val)
 		if (pm_ret < 0) {
 			pr_err("[%s:%d] pm resume error, pm_ret:%d\n", __FUNCTION__, __LINE__, pm_ret);
 			mutex_unlock(&pdata->sr_rw_lock);
-			rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+			BUG_ON(true);
 			return ;
 		}
 	}
@@ -321,7 +320,7 @@ static int hi_cdcssi_remove(struct platform_device *pdev)
 	struct hi_cdcssi_priv *priv = platform_get_drvdata(pdev);
 	struct device *dev;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 	dev = &pdev->dev;
 
 	if (priv->pm_runtime_support) {
@@ -350,7 +349,7 @@ static int hi_cdcssi_suspend(struct device *device)
 	struct device *dev;
 	int pm_ret = 0;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 	dev = &pdev->dev;
 
 	mutex_lock(&priv->sr_rw_lock);
@@ -360,7 +359,7 @@ static int hi_cdcssi_suspend(struct device *device)
 		if (pm_ret < 0) {
 			pr_err("[%s:%d] pm resume error, pm_ret:%d\n", __FUNCTION__, __LINE__, pm_ret);
 			mutex_unlock(&priv->sr_rw_lock);
-			rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+			BUG_ON(true);
 			return pm_ret;
 		}
 	}
@@ -385,7 +384,7 @@ static int hi_cdcssi_resume(struct device *device)
 	struct hi_cdcssi_priv *priv = platform_get_drvdata(pdev);
 	struct device	*dev;
 
-	WARN_ON(NULL == priv);
+	BUG_ON(NULL == priv);
 	dev = &pdev->dev;
 
 	ret = clk_prepare_enable(priv->codec_ssi_clk);

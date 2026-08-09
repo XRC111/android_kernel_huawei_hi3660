@@ -330,13 +330,6 @@ static inline bool ipv6_accept_ra(struct inet6_dev *idev)
 	    idev->cnf.accept_ra;
 }
 
-#if IS_ENABLED(CONFIG_IPV6)
-static inline int ip6_frag_mem(struct net *net)
-{
-	return sum_frag_mem_limit(&net->ipv6.frags);
-}
-#endif
-
 #define IPV6_FRAG_HIGH_THRESH	(4 * 1024*1024)	/* 4194304 */
 #define IPV6_FRAG_LOW_THRESH	(3 * 1024*1024)	/* 3145728 */
 #define IPV6_FRAG_TIMEOUT	(60 * HZ)	/* 60 seconds */
@@ -517,18 +510,6 @@ static inline bool ipv6_prefix_equal(const struct in6_addr *addr1,
 	return true;
 }
 #endif
-
-
-struct ip6_create_arg {
-	__be32 id;
-	u32 user;
-	const struct in6_addr *src;
-	const struct in6_addr *dst;
-	int iif;
-	u8 ecn;
-};
-
-bool ip6_frag_match(const struct inet_frag_queue *q, const void *a);
 
 static inline bool ipv6_addr_any(const struct in6_addr *a)
 {
@@ -875,7 +856,7 @@ static inline struct sk_buff *ip6_finish_skb(struct sock *sk)
 
 int ip6_dst_lookup(struct net *net, struct sock *sk, struct dst_entry **dst,
 		   struct flowi6 *fl6);
-struct dst_entry *ip6_dst_lookup_flow(const struct sock *sk, struct flowi6 *fl6,
+struct dst_entry *ip6_dst_lookup_flow(struct net *net, const struct sock *sk, struct flowi6 *fl6,
 				      const struct in6_addr *final_dst);
 struct dst_entry *ip6_sk_dst_lookup_flow(struct sock *sk, struct flowi6 *fl6,
 					 const struct in6_addr *final_dst);

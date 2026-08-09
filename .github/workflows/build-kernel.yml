@@ -24,6 +24,14 @@ jobs:
             libncurses-dev flex bison libssl-dev libelf-dev \
             bc u-boot-tools device-tree-compiler
 
+      - name: Normalize line endings (Huawei source is CRLF, Linux toolchain needs LF)
+        run: |
+          # 转换 kconfig/shell/perl/python/Makefile 为 LF（Kconfig 解析器对 CRLF 报错）
+          find . -path './.git' -prune -o -type f \( \
+            -name 'Kconfig' -o -name '*.config' -o -name '*.sh' -o \
+            -name '*.pl' -o -name '*.py' -o -name 'Makefile' \) \
+            -exec sed -i 's/\r$//' {} +
+
       - name: Generate defconfig
         run: |
           export ARCH=arm64

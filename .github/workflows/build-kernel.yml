@@ -43,8 +43,9 @@ jobs:
         run: |
           export ARCH=arm64
           export CROSS_COMPILE=aarch64-linux-gnu-
-          # -fcommon: GCC 10+ 编译 4.9 老内核的兼容参数（默认 -fno-common 会报 multiple definition）
-          make -j$(nproc) KCFLAGS=-fcommon Image
+          # -fcommon: GCC 10+ 编译 4.9 老内核的兼容参数（默认 -fno-common 报 multiple definition）
+          # HOSTCFLAGS 用于 host 工具（scripts/dtc 等），KCFLAGS 用于内核目标
+          make -j$(nproc) KCFLAGS=-fcommon HOSTCFLAGS=-fcommon Image
 
       - name: Upload kernel image
         uses: actions/upload-artifact@v4

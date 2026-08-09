@@ -57,7 +57,7 @@
 #include <net/rawv6.h>
 #include <net/ndisc.h>
 #include <net/addrconf.h>
-#include <net/ipv6_frag.h>
+#include <net/inet_frag.h>
 #include <net/inet_ecn.h>
 
 static const char ip6_frag_cache_name[] = "ip6-frags";
@@ -115,6 +115,61 @@ bool ip6_frag_match(const struct inet_frag_queue *q, const void *a)
 }
 EXPORT_SYMBOL(ip6_frag_match);
 
+void ip6_frag_init(struct inet_frag_queue *q, const void *a)
+{
+	struct frag_queue *fq = container_of(q, struct frag_queue, q);
+	const struct ip6_create_arg *arg = a;
+
+	fq->id = arg->id;
+	fq->user = arg->user;
+	fq->saddr = *arg->src;
+	fq->daddr = *arg->dst;
+	fq->ecn = arg->ecn;
+}
+EXPORT_SYMBOL(ip6_frag_init);
+
+void ip6_expire_frag_queue(struct net *net, struct frag_queue *fq,
+			   struct inet_frags *frags)
+{
+	struct net_device *dev = NULL;
+
+	spin_lock(&fq->q.lock);
+
+	if (fq->q.flags & INET_FRAG_COMPLETE)
+		goto out;
+
+	inet_frag_kill(&fq->q, frags);
+
+	rcu_read_lock();
+	dev = dev_get_by_index_rcu(net, fq->iif);
+	if (!dev)
+		goto out_rcu_unlock;
+
+	__IP6_INC_STATS(net, __in6_dev_get(dev), IPSTATS_MIB_REASMFAILS);
+
+	if (inet_frag_evicting(&fq->q))
+		goto out_rcu_unlock;
+
+	__IP6_INC_STATS(net, __in6_dev_get(dev), IPSTATS_MIB_REASMTIMEOUT);
+
+	/* Don't send error if the first segment did not arrive. */
+	if (!(fq->q.flags & INET_FRAG_FIRST_IN) || !fq->q.fragments)
+		goto out_rcu_unlock;
+
+	/* But use as source device on which LAST ARRIVED
+	 * segment was received. And do not use fq->dev
+	 * pointer directly, device might already disappeared.
+	 */
+	fq->q.fragments->dev = dev;
+	icmpv6_send(fq->q.fragments, ICMPV6_TIME_EXCEED, ICMPV6_EXC_FRAGTIME, 0);
+out_rcu_unlock:
+	rcu_read_unlock();
+out:
+	spin_unlock(&fq->q.lock);
+	inet_frag_put(&fq->q, frags);
+}
+EXPORT_SYMBOL(ip6_expire_frag_queue);
+
 static void ip6_frag_expire(unsigned long data)
 {
 	struct frag_queue *fq;
@@ -123,7 +178,7 @@ static void ip6_frag_expire(unsigned long data)
 	fq = container_of((struct inet_frag_queue *)data, struct frag_queue, q);
 	net = container_of(fq->q.net, struct net, ipv6.frags);
 
-	ip6frag_expire_frag_queue(net, fq &ip6_frags);
+	ip6_expire_frag_queue(net, fq, &ip6_frags);
 }
 
 static struct frag_queue *
@@ -152,8 +207,7 @@ fq_find(struct net *net, __be32 id, const struct in6_addr *src,
 }
 
 static int ip6_frag_queue(struct frag_queue *fq, struct sk_buff *skb,
-			  struct frag_hdr *fhdr, int nhoff,
-			  u32 *prob_offset)
+			   struct frag_hdr *fhdr, int nhoff)
 {
 	struct sk_buff *prev, *next;
 	struct net_device *dev;
@@ -169,7 +223,11 @@ static int ip6_frag_queue(struct frag_queue *fq, struct sk_buff *skb,
 			((u8 *)(fhdr + 1) - (u8 *)(ipv6_hdr(skb) + 1)));
 
 	if ((unsigned int)end > IPV6_MAXPLEN) {
-		*prob_offset = (u8 *)&fhdr->frag_off - skb_network_header(skb);
+		__IP6_INC_STATS(net, ip6_dst_idev(skb_dst(skb)),
+				IPSTATS_MIB_INHDRERRORS);
+		icmpv6_param_prob(skb, ICMPV6_HDR_FIELD,
+				  ((u8 *)&fhdr->frag_off -
+				   skb_network_header(skb)));
 		return -1;
 	}
 
@@ -200,7 +258,10 @@ static int ip6_frag_queue(struct frag_queue *fq, struct sk_buff *skb,
 			/* RFC2460 says always send parameter problem in
 			 * this case. -DaveM
 			 */
-			*prob_offset = offsetof(struct ipv6hdr, payload_len);
+			__IP6_INC_STATS(net, ip6_dst_idev(skb_dst(skb)),
+					IPSTATS_MIB_INHDRERRORS);
+			icmpv6_param_prob(skb, ICMPV6_HDR_FIELD,
+					  offsetof(struct ipv6hdr, payload_len));
 			return -1;
 		}
 		if (end > fq->q.len) {
@@ -285,48 +346,44 @@ found:
 
 	if (fq->q.flags == (INET_FRAG_FIRST_IN | INET_FRAG_LAST_IN) &&
 	    fq->q.meat == fq->q.len) {
+		int res;
 		unsigned long orefdst = skb->_skb_refdst;
 
 		skb->_skb_refdst = 0UL;
-		err = ip6_frag_reasm(fq, skb, prev_tail, dev);
+		res = ip6_frag_reasm(fq, prev, dev);
 		skb->_skb_refdst = orefdst;
-		return err;
+		return res;
 	}
 
 	skb_dst_drop(skb);
-	return -EINPROGRESS;
- 
-insert_error:
-	if (err == IPFRAG_DUP) {
-		kfree_skb(skb);
-		return -EINVAL;
-	}
-	err = -EINVAL;
-	__IP6_INC_STATS(net, ip6_dst_idev(skb_dst(skb)),
-			IPSTATS_MIB_REASM_OVERLAPS);
+	return -1;
+
 discard_fq:
 	inet_frag_kill(&fq->q, &ip6_frags);
+err:
 	__IP6_INC_STATS(net, ip6_dst_idev(skb_dst(skb)),
 			IPSTATS_MIB_REASMFAILS);
-err:
 	kfree_skb(skb);
-	return err;
+	return -1;
 }
 
 /*
  *	Check if this packet is complete.
+ *	Returns NULL on failure by any reason, and pointer
+ *	to current nexthdr field in reassembled frame.
  *
  *	It is called with locked fq, and caller must check that
  *	queue is eligible for reassembly i.e. it is not COMPLETE,
  *	the last and the first frames arrived and all the bits are here.
  */
-static int ip6_frag_reasm(struct frag_queue *fq, struct sk_buff *skb,
-			  struct sk_buff *prev_tail, struct net_device *dev)
+static int ip6_frag_reasm(struct frag_queue *fq, struct sk_buff *prev,
+			  struct net_device *dev)
 {
 	struct net *net = container_of(fq->q.net, struct net, ipv6.frags);
+	struct sk_buff *fp, *head = fq->q.fragments;
+	int    payload_len;
 	unsigned int nhoff;
-	void *reasm_data;
-	int payload_len;
+	int sum_truesize;
 	u8 ecn;
 
 	inet_frag_kill(&fq->q, &ip6_frags);
@@ -468,7 +525,6 @@ static int ipv6_frag_rcv(struct sk_buff *skb)
 	struct frag_queue *fq;
 	const struct ipv6hdr *hdr = ipv6_hdr(skb);
 	struct net *net = dev_net(skb_dst(skb)->dev);
-	int iif;
 
 	if (IP6CB(skb)->flags & IP6SKB_FRAGMENTED)
 		goto fail_hdr;
@@ -497,29 +553,17 @@ static int ipv6_frag_rcv(struct sk_buff *skb)
 		return 1;
 	}
 
-	if (skb->len - skb_network_offset(skb) < IPV6_MIN_MTU &&
-	    fhdr->frag_off & htons(IP6_MF))
-		goto fail_hdr;
-
-	iif = skb->dev ? skb->dev->ifindex : 0;
-	fq = fq_find(net, fhdr->identification, hdr, iif);
+	fq = fq_find(net, fhdr->identification, &hdr->saddr, &hdr->daddr,
+		     skb->dev ? skb->dev->ifindex : 0, ip6_frag_ecn(hdr));
 	if (fq) {
-		u32 prob_offset = 0;
 		int ret;
 
 		spin_lock(&fq->q.lock);
 
-		fq->iif = iif;
-		ret = ip6_frag_queue(fq, skb, fhdr, IP6CB(skb)->nhoff,
-				     &prob_offset);
+		ret = ip6_frag_queue(fq, skb, fhdr, IP6CB(skb)->nhoff);
 
 		spin_unlock(&fq->q.lock);
-		inet_frag_put(&fq->q);
-		if (prob_offset) {
-			__IP6_INC_STATS(net, ip6_dst_idev(skb_dst(skb)),
-					IPSTATS_MIB_INHDRERRORS);
-			icmpv6_param_prob(skb, ICMPV6_HDR_FIELD, prob_offset);
-		}
+		inet_frag_put(&fq->q, &ip6_frags);
 		return ret;
 	}
 
@@ -540,6 +584,7 @@ static const struct inet6_protocol frag_protocol = {
 };
 
 #ifdef CONFIG_SYSCTL
+static int zero;
 
 static struct ctl_table ip6_frags_ns_ctl_table[] = {
 	{
@@ -684,20 +729,12 @@ static struct pernet_operations ip6_frags_ops = {
 	.exit = ipv6_frags_exit_net,
 };
 
-static const struct rhashtable_params ip6_rhash_params = {
-	.head_offset		= offsetof(struct inet_frag_queue, node),
-	.hashfn			= ip6frag_key_hashfn,
-	.obj_hashfn		= ip6frag_obj_hashfn,
-	.obj_cmpfn		= ip6frag_obj_cmpfn,
-	.automatic_shrinking	= true,
-};
-
 int __init ipv6_frag_init(void)
 {
 	int ret;
 
 	ip6_frags.hashfn = ip6_hashfn;
-	ip6_frags.constructor = ip6frag_init;
+	ip6_frags.constructor = ip6_frag_init;
 	ip6_frags.destructor = NULL;
 	ip6_frags.qsize = sizeof(struct frag_queue);
 	ip6_frags.match = ip6_frag_match;

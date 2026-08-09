@@ -25,7 +25,7 @@
 #include <linux/fb.h>
 #include <linux/workqueue.h>
 #include <linux/vmalloc.h>
-#include <lcdkit_tp.h>
+#include "../lcdkit/lcdkit1.0/core/common/lcdkit_tp.h"
 #include <linux/notifier.h>
 #if defined(CONFIG_FB)
 #include <linux/fb.h>
@@ -36,7 +36,7 @@
 #include "huawei_ts_kit_misc_dev.h"
 #include "tpkit_platform_adapter.h"
 #include "huawei_ts_kit_api.h"
-#include <huawei_ts_kit_algo.h>
+#include "huawei_ts_kit_algo.h"
 #include <linux/hwspinlock.h>
 #include "hwspinlock_internal.h"
 #include "hostprocessing/huawei_thp_attr.h"

@@ -33,7 +33,7 @@
 #include <linux/earlysuspend.h>
 #endif
 #include "huawei_ts_kit.h"
-#include <huawei_ts_kit_misc_dev.h>
+#include "huawei_ts_kit_misc_dev.h"
 #include <tpkit_platform_adapter.h>
 #include <huawei_ts_kit_api.h>
 #include <huawei_ts_kit_algo.h>

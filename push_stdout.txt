@@ -1,0 +1,6 @@
+remote: 
+remote: Create a pull request for 'ack-test' on GitHub by visiting:        
+remote:      https://github.com/XRC111/android_kernel_huawei_hi3660/pull/new/ack-test        
+remote: 
+To https://github.com/XRC111/android_kernel_huawei_hi3660.git
+ * [new branch]          ack-test -> ack-test

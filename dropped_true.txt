@@ -1,0 +1,675 @@
+4.9.153	d012f3d66ef80c5b956599ed4005c3162b17ce87	[PATCH] nbd: Use set_blocksize() to set device blocksize	drivers/block/nbd.c
+4.9.153	3c94318420b760d192b962ff4c9d57368f60c653	[PATCH] r8169: Add support for new Realtek Ethernet	drivers/net/ethernet/realtek/r8169.c
+4.9.153	6a389fc512d6eece9ad6a9a1978cda7b162c652f	[PATCH] ipv6: Consider sk_bound_dev_if when binding a socket to a v4	net/ipv6/af_inet6.c
+4.9.153	0143c727efed20812da8b58cec0cd94834721055	[PATCH] ipv6: Take rcu_read_lock in __inet6_bind for mapped addresses	net/ipv6/af_inet6.c
+4.9.153	032a0c21ca273d440f39e1b3448287116dbc6a43	[PATCH] platform/x86: asus-wmi: Tell the EC the OS will handle the	drivers/platform/x86/asus-wmi.c
+4.9.153	5394eaaae95254865f1d2fca286748205612414a	[PATCH] e1000e: allow non-monotonic SYSTIM readings	drivers/net/ethernet/intel/e1000e/ptp.c
+4.9.153	6eddee9e9bf629e5a7399a0b6ccf37eda44db65e	[PATCH] writeback: don't decrement wb->refcnt if !wb->bdi	include/linux/backing-dev-defs.h
+4.9.153	74b00356c36668bc6e2649a9b9cabb1ce8ccfdf9	[PATCH] serial: set suppress_bind_attrs flag only if builtin	drivers/tty/serial/amba-pl011.c,drivers/tty/serial/pic32_uart.c,drivers/tty/serial/xilinx_uartps.c
+4.9.153	33bb8880718894c5db863674e5a57b5f92420571	[PATCH] MIPS: SiByte: Enable swiotlb for SWARM, LittleSur and BigSur	arch/mips/Kconfig,arch/mips/sibyte/common/Makefile,arch/mips/sibyte/common/dma.c
+4.9.153	0bdc472e77f0d105428918a810eceba4582c9d15	[PATCH] selinux: always allow mounting submounts	security/selinux/hooks.c
+4.9.153	eb3c527884005c24e7e154afd03655e1f8ced7a0	[PATCH] net: call sk_dst_reset when set SO_DONTROUTE	net/core/sock.c
+4.9.153	66794e362052faaaaa6559d2c69612da840c469b	[PATCH] tty/serial: do not free trasnmit buffer page under port lock	drivers/tty/serial/serial_core.c
+4.9.153	231dd1335068cf3ab064994dae0f70b7223c0b87	[PATCH] perf parse-events: Fix unchecked usage of strncpy()	tools/perf/util/parse-events.c
+4.9.153	8f3a6a68e163ce9bca7525496c87f350724fc6c6	[PATCH] ALSA: bebob: fix model-id of unit for Apogee Ensemble	sound/firewire/bebob/bebob.c
+4.9.153	a1d8ac113feff8e63facf922a1d1163343051d07	[PATCH] ipmi:ssif: Fix handling of multi-part return messages	drivers/char/ipmi/ipmi_ssif.c
+4.9.154	a7c936dbbd65ef49ec30d786023a4d20f2283cf7	[PATCH] ipfrag: really prevent allocation on netns exit	net/ipv4/inet_fragment.c
+4.9.154	700efccd52f1824cc41c7075d249ab1249886f5a	[PATCH] net: bridge: Fix ethernet header pointer before check skb	net/bridge/br_forward.c
+4.9.154	52889b88b8cd09fbd6cfbbfb6b60b60b1b91e7f4	[PATCH] net: Fix usage of pskb_trim_rcsum	drivers/net/ppp/pppoe.c,include/linux/skbuff.h,net/bridge/br_netfilter_ipv6.c,net/bridge/netfilter/nft_reject_bridge.c,net/ipv4/ip_input.c
+4.9.154	8a1c0e0735164e8c57980a60d765963e75d8038b	[PATCH] openvswitch: Avoid OOB read when parsing flow nlattrs	net/openvswitch/flow_netlink.c
+4.9.154	371da8cbf4e66b0b772821cb956a94581267ebba	[PATCH] vhost: log dirty page correctly	drivers/vhost/net.c,drivers/vhost/vhost.c,drivers/vhost/vhost.h
+4.9.154	af3ec6552903bc07db9c11e07febb37907b96e41	[PATCH] net: ipv4: Fix memory leak in network namespace dismantle	include/net/ip_fib.h,net/ipv4/fib_frontend.c,net/ipv4/fib_trie.c
+4.9.154	23b202b5740d0a298b9841e129b16c61bce0263d	[PATCH] net_sched: refetch skb protocol for each filter	net/sched/sch_api.c
+4.9.154	9f1f52703b92c3b88a61594963fba85117bee096	[PATCH] USB: serial: simple: add Motorola Tetra TPG2200 device id	drivers/usb/serial/usb-serial-simple.c
+4.9.154	c574260899634440c47f742566e7062b35d7b118	[PATCH] USB: serial: pl2303: add new PID to support PL2303TB	drivers/usb/serial/pl2303.c,drivers/usb/serial/pl2303.h
+4.9.154	c001e2e8713352330ba0e32f07fabcdf2c833545	[PATCH] ASoC: atom: fix a missing check of snd_pcm_lib_malloc_pages	sound/soc/intel/atom/sst-mfld-platform-pcm.c
+4.9.154	e59739a2296e0006c0b5b6ad1cc5d96a0a4c0054	[PATCH] ASoC: rt5514-spi: Fix potential NULL pointer dereference	sound/soc/codecs/rt5514-spi.c
+4.9.154	728582fc474896fc379bcdf5cdaca67ceb38442c	[PATCH] ARCv2: lib: memeset: fix doing prefetchw outside of buffer	arch/arc/lib/memset-archs.S
+4.9.154	d9135736fc69bc9bd4a603b15f3ca457a51b81ef	[PATCH] ARC: perf: map generic branches to correct hardware condition	arch/arc/include/asm/perf_event.h
+4.9.154	a1fcb1bd682c51358ecf214b0b07718899d51587	[PATCH] s390/early: improve machine detection	arch/s390/kernel/early.c,arch/s390/kernel/setup.c
+4.9.154	8d7e12b45492f583df31571e50083c75df988a8c	[PATCH] Input: xpad - add support for SteelSeries Stratus Duo	drivers/input/joystick/xpad.c
+4.9.154	c54da25b85c54fc4f91a11568021e9006359cb77	[PATCH] compiler.h: enable builtin overflow checkers and add	include/linux/compiler-clang.h
+4.9.154	5b905b97277d53c5410c2f502adbd09f869e84d1	[PATCH] s390/smp: fix CPU hotplug deadlock with CPU rescan	arch/s390/kernel/smp.c,drivers/s390/char/sclp_config.c
+4.9.154	547e387b9dd7ff2192db4ca23767b1a9943a3412	[PATCH] char/mwave: fix potential Spectre v1 vulnerability	drivers/char/mwave/mwavedd.c
+4.9.154	5cda29ae6f353891f7e4c149cdca8180bc546cdc	[PATCH] staging: rtl8188eu: Add device code for D-Link DWA-121 rev B1	drivers/staging/rtl8188eu/os_dep/usb_intf.c
+4.9.154	6bdea422180d53ec59b610ef9c37ac343c274251	[PATCH] tty: Handle problem if line discipline does not have	drivers/tty/tty_io.c
+4.9.154	3314a450d7f4da1500f632e1f293604825481506	[PATCH] uart: Fix crash in uart_write and uart_put_char	drivers/tty/serial/serial_core.c
+4.9.154	bbf68b9285562c6dc15df51c40bd893411ce47e4	[PATCH] tty/n_hdlc: fix __might_sleep warning	drivers/tty/n_hdlc.c
+4.9.154	1fed87e14bf1fcd4b443615d805a1df5833e4a32	[PATCH] CIFS: Fix possible hang during async MTU reads and writes	fs/cifs/smb2ops.c
+4.9.154	594592cff17cc4ffaa9c271239a1ab559cfc46f9	[PATCH] Input: uinput - fix undefined behavior in	drivers/input/misc/uinput.c
+4.9.154	2e3ab85592760e48883cb25d50a797cbf364ed73	[PATCH] acpi/nfit: Block function zero DSMs	drivers/acpi/nfit/core.c
+4.9.154	e06114b1babf018aeec4569ee069e029820e8ce7	[PATCH] dm thin: fix passdown_double_checking_shared_status()	drivers/md/dm-thin-metadata.c,drivers/md/dm-thin-metadata.h,drivers/md/dm-thin.c
+4.9.154	3300e5748e0136e6014d3863802cf9a724f519d9	[PATCH] KVM: x86: Fix single-step debugging	arch/x86/kvm/x86.c
+4.9.154	dd35627e88e9df1bef4df3a6d095c34a398d6505	[PATCH] Delete overlow.h to patch	include/linux/overflow.h
+4.9.154	0cc1b7901925a0cfb15fa72062774bbb3de7b2c3	[PATCH] compiler.h: enable builtin overflow checkers and add fallback	include/linux/compiler-gcc.h,include/linux/compiler-intel.h,include/linux/overflow.h
+4.9.154	5f413cccf3e16b45457b63c9de4a4d898d7e15ee	[PATCH] acpi/nfit: Fix command-supported detection	drivers/acpi/nfit/core.c
+4.9.154	b1a16a3ca6ccd9d683b52ad118df239cc763220b	[PATCH] can: dev: __can_get_echo_skb(): fix bogous check for	drivers/net/can/dev.c
+4.9.154	a819c0ff6c9049fe94738f68b9918f7216768d9f	[PATCH] perf unwind: Unwind with libdw doesn't take symfs into	tools/perf/util/unwind-libdw.c
+4.9.154	d12662b3c9e6c729ace44b7c966ca7d5f4be4a2b	[PATCH] s390/smp: Fix calling smp_call_ipl_cpu() from ipl CPU	arch/s390/kernel/smp.c
+4.9.154	e2f8164ed065d9e7426f91b76a59786e72f59ea4	[PATCH] perf unwind: Take pgoff into account when reporting elf	tools/perf/util/unwind-libdw.c
+4.9.155	2c7f0b59efff4cddad7bb576c9b86e625d87dfd3	[PATCH] net: ipv4: do not handle duplicate fragments as overlapping	net/ipv4/ip_fragment.c
+4.9.155	7c524ba8d42ccef70b47eea9d9bd801bb13ad3d1	[PATCH] fs: add the fsnotify call to vfs_iter_write	fs/read_write.c
+4.9.155	fca7d32cef6a18ac2ffa38b51213f8662a3ba81e	[PATCH] ipv6: Consider sk_bound_dev_if when binding a socket to an	net/ipv6/af_inet6.c
+4.9.155	3c3f0d09bea34f0e8462c7912ee334befdfe77fb	[PATCH] l2tp: copy 4 more bytes to linear part if necessary	net/l2tp/l2tp_core.c
+4.9.155	fca3ce041de99b004b47bf6d71e3ba6ef7c670db	[PATCH] net/mlx4_core: Add masking for a few queries on HCA caps	drivers/net/ethernet/mellanox/mlx4/fw.c
+4.9.155	2e4c84c0e23bebaef4cc15719555ec5796dc821f	[PATCH] netrom: switch to sock timer API	net/netrom/nr_timer.c
+4.9.155	289beabcf6e35e255ae07f0c727dac8fead49987	[PATCH] net/rose: fix NULL ax25_cb kernel panic	net/rose/rose_route.c
+4.9.155	19a3187b559ca54620ae6ea85b41bbe9dbacdd7c	[PATCH] ucc_geth: Reset BQL queue when stopping device	drivers/net/ethernet/freescale/ucc_geth.c
+4.9.155	5d8e05ae7b48f87f92148fb0e0146f3c67f0d211	[PATCH] net/mlx5e: Allow MAC invalidation while spoofchk is ON	drivers/net/ethernet/mellanox/mlx5/core/eswitch.c
+4.9.155	ba4a858318c980206ceb1feae909a0252294d9e7	[PATCH] l2tp: remove l2specific_len dependency in l2tp_core	net/l2tp/l2tp_core.c
+4.9.155	230df801487e0900cf955491c6f91be8a3845422	[PATCH] l2tp: remove l2specific_len dependency in l2tp_core	net/l2tp/l2tp_core.c
+4.9.155	c1e2cabef7644c6d50bc88a8d7826ce8d5da30b0	[PATCH] l2tp: remove l2specific_len dependency in l2tp_core	net/l2tp/l2tp_core.c,net/l2tp/l2tp_core.h
+4.9.155	3d0a1a6a38b8aa50fafebe7d89bb735b522f3091	[PATCH] ipvlan, l3mdev: fix broken l3s mode wrt local routes	drivers/net/ipvlan/ipvlan_main.c
+4.9.155	47c969a6ff603762514b7d645be16e0dc12c31b9	[PATCH] l2tp: fix reading optional fields of L2TPv3	net/l2tp/l2tp_core.c,net/l2tp/l2tp_core.h,net/l2tp/l2tp_ip.c,net/l2tp/l2tp_ip6.c
+4.9.155	04f77afaf4c54b5dd30af76303f7662f43ebf568	[PATCH] ipvlan, l3mdev: fix broken l3s mode wrt local routes	drivers/net/ipvlan/ipvlan_main.c,include/linux/netdevice.h,include/net/l3mdev.h
+4.9.155	c2b473a8336896e14ad6cd0dd70ffcbc391a1540	[PATCH] CIFS: Do not count -ENODATA as failure for query directory	fs/cifs/smb2pdu.c
+4.9.155	74de4be397a4a72a5f549ca6e53b34d2eabce2e4	[PATCH] fs/dcache: Fix incorrect nr_dentry_unused accounting in	fs/dcache.c
+4.9.155	f403b62806cd32a1c1062f03fffae08772938d3a	[PATCH] ARM: cns3xxx: Fix writing to wrong PCI config registers after	arch/arm/mach-cns3xxx/pcie.c
+4.9.155	e141e91bd9877c333f0288aeff22f28f689029bd	[PATCH] arm64: kaslr: ensure randomized quantities are clean also	arch/arm64/kernel/kaslr.c
+4.9.155	f4e9936e13b90243512c2312b6261e7fc25e1565	[PATCH] arm64: hyp-stub: Forbid kprobing of the hyp-stub	arch/arm64/kernel/hyp-stub.S
+4.9.155	2585950557110fc3d27e7f54f148766b9ee12984	[PATCH] arm64: hibernate: Clean the __hyp_text to PoC after resume	arch/arm64/kernel/hibernate.c
+4.9.155	70d0227c8c3d36fb6d6a2683468e85fb05c50b75	[PATCH] gfs2: Revert "Fix loop in gfs2_rbm_find"	fs/gfs2/rgrp.c
+4.9.155	338cb628ea461f23a06b8235e534f84bd236b38a	[PATCH] platform/x86: asus-nb-wmi: Map 0x35 to KEY_SCREENLOCK	drivers/platform/x86/asus-nb-wmi.c
+4.9.155	66ad4c14816f6bd508dddc834d0fb5002ffcb063	[PATCH] mmc: sdhci-iproc: handle mmc_of_parse() errors during probe	drivers/mmc/host/sdhci-iproc.c
+4.9.155	d91b55eda07a5e0ee2bd395fcf516f48822c811a	[PATCH] kernel/exit.c: release ptraced tasks before	kernel/exit.c
+4.9.155	464b63f48170f91c902c9e5ebf6d9fb318a9c37e	[PATCH] mm, oom: fix use-after-free in oom_kill_process	mm/oom_kill.c
+4.9.155	1b43fb1b8550b188927f48e305d9bb918ecddf7a	[PATCH] mm: hwpoison: use do_send_sig_info() instead of force_sig()	mm/memory-failure.c
+4.9.155	4a993e3300b2b5843d0bebbd4d37be5fb076387c	[PATCH] platform/x86: asus-nb-wmi: Drop mapping of 0x33 and 0x34 scan	drivers/platform/x86/asus-nb-wmi.c
+4.9.155	2e77ad9b7deaee7907b8d11edfb6aed0af0ca7be	[PATCH] mm: migrate: don't rely on __PageMovable() of newpage after	mm/migrate.c
+4.9.155	34ef2d7dd398ed5309f317384726687b5235410a	[PATCH] cifs: Always resolve hostname before reconnecting	fs/cifs/connect.c
+4.9.155	14ca6324d2aaba8d5c571e8650ca79fdd358bf86	[PATCH] drivers: core: Remove glue dirs from sysfs earlier	drivers/base/core.c,include/linux/kobject.h
+4.9.155	6fa6eb18e7d8c8a57dc83be775ff9a2f1e787405	[PATCH] fs: don't scan the inode cache before SB_BORN is set	fs/super.c
+4.9.155	432edfde444adacf53195f6f3d21bb6744fa2553	[PATCH] fanotify: fix handling of events on child sub-directory	fs/notify/fsnotify.c
+4.9.156	dfac215ea6ca8dc6360a496dccba36b4ae480563	[PATCH] Fix error	include/linux/overflow.h,net/ipv4/ip_fragment.c
+4.9.156	2c1c05ec9c9b51c1d9050143928610cd06a18d68	[PATCH] Correct a mistake	drivers/block/loop.c
+4.9.156	0503a945b976f484fad0926e1ec268e594e2ea51	[PATCH] Enable ZRAM	arch/arm64/configs/Pangu_M5_defconfig,arch/arm64/configs/Pangu_P10_defconfig,arch/arm64/configs/Pangu_defconfig
+4.9.156	222c1977acc783367637e7ba993f34b37bd96dc8	[PATCH] Fix Schedutil	arch/arm64/configs/Pangu_M5_defconfig,arch/arm64/configs/Pangu_P10_defconfig,arch/arm64/configs/Pangu_defconfig,kernel/sched/cpufreq_schedutil.c
+4.9.156	aa50da90485f693fc1484f1543833c2cf49e7e2a	[PATCH] Edit pack scripts	pack.sh,pack_M5.sh,pack_P10.sh
+4.9.156	213365b691506b7cd5f1fe3c16e9ed9da33b7ec4	[PATCH] No need to build M5 version, because it shares  the normal	arch/arm64/configs/Pangu_M5_defconfig,arch/arm64/configs/Pangu_P10_defconfig,arch/arm64/configs/Pangu_defconfig,build_M5.sh,build_M5_exp.sh,pack_M5.sh
+4.9.156	52c36b791011b6a8cf49126ab27f86cc08a47856	[PATCH] Enable GPU SCENE AWARE	arch/arm64/configs/Pangu_P10_defconfig,arch/arm64/configs/Pangu_defconfig
+4.9.156	125166101bfc323e35483ff86cdbc65774ff6ee2	[PATCH] Add README.md	README.md
+4.9.156	91b0ecc5f3459458ce649fdb0d14da1cb48dfe57	[PATCH] cifs: check if SMB2 PDU size has been padded and suppress the	fs/cifs/smb2misc.c
+4.9.156	3eac03f15fbf4faec8b1b05fb35751be69604a73	[PATCH] ipvs: fix race between ip_vs_conn_new() and ip_vs_del_dest()	net/netfilter/ipvs/ip_vs_core.c
+4.9.156	f981b4ae207dc9708ce87f96bd8ed225373a98d3	[PATCH] platform/x86: asus-nb-wmi: Add keymap entry for lid flip	drivers/platform/x86/asus-nb-wmi.c
+4.9.156	4d246253c61468d9e751c82d831f893c1a19a5aa	[PATCH] s390/dasd: fix hanging offline processing due to canceled	drivers/s390/block/dasd_eckd.c
+4.9.156	902eca67eb621f5968894336d8572eb74c153cfc	[PATCH] btrfs: Don't remove block group that still has pinned down	fs/btrfs/extent-tree.c
+4.9.156	17d6b8d8a1a2361736a380ba3f3492a2d9042de3	[PATCH] enic: do not call enic_change_mtu in enic_probe	drivers/net/ethernet/cisco/enic/enic_main.c
+4.9.156	883ab83a2b85cf8865fc0cf4477b9876a007ada0	[PATCH] sch_hhf: fix null pointer dereference on init failure	net/sched/sch_hhf.c
+4.9.156	e4c2172b72cdeadfaf1b4fee6292c4411759568d	[PATCH] sch_netem: avoid null pointer deref on init failure	net/sched/sch_netem.c
+4.9.156	bc8a4ef1a3b4424b65bed880230585ae293f0911	[PATCH] sch_tbf: fix two null pointer dereferences on init failure	net/sched/sch_tbf.c
+4.9.156	dcbfb71cd26a5421c6a36d3cae0b7947e513a0e0	[PATCH] btrfs: use correct compare function of dirty_metadata_bytes	fs/btrfs/disk-io.c
+4.9.162	ac6e7ed3ef8bc86e8eed23fb660f0128933c81e9	[PATCH] Revert "loop: Fix double mutex_unlock(&loop_ctl_mutex) in	drivers/block/loop.c
+4.9.162	002da6dcbcafb6226ecae844ca63ed403e7db0b6	[PATCH] Revert "loop: Get rid of loop_index_mutex"	drivers/block/loop.c
+4.9.162	cd47907addae7712353c8b64fb4409edcddacd75	[PATCH] Revert "loop: Fold __loop_release into loop_release"	drivers/block/loop.c
+4.9.162	bc3cd46b5eadbf85afa4833b1b6f8b91a16ec55d	[PATCH] scsi: libsas: Fix rphy phy_identifier for PHYs with end	drivers/scsi/libsas/sas_expander.c
+4.9.162	e77278823bcba5bbee183689ad24c41ed617842a	[PATCH] ASoC: dapm: change snprintf to scnprintf for possible	sound/soc/soc-dapm.c
+4.9.162	d6b098a23665c1681219a020bf37e20a6e309e95	[PATCH] locking/rwsem: Fix (possible) missed wakeup	kernel/locking/rwsem-xadd.c
+4.9.162	9ac738381a4bf8f998f7e4f52c71f64beabab034	[PATCH] ibmveth: Do not process frames after calling napi_reschedule	drivers/net/ethernet/ibm/ibmveth.c
+4.9.162	525621b038e90007f72b541922e39374741d5593	[PATCH] mac80211: don't initiate TDLS connection if station is not	net/mac80211/cfg.c
+4.9.162	05294a418ab193f55b76faf2d7169d6f6327f3b2	[PATCH] cfg80211: extend range deviation for DMG	net/wireless/reg.c
+4.9.162	b427092f53bcda3fbbbf9dc2eda96224e3c10294	[PATCH] svm: Fix AVIC incomplete IPI emulation	arch/x86/kvm/svm.c
+4.9.162	281a39ef2d2735be33132d7e300ebcec94eddaaf	[PATCH] KVM: nSVM: clear events pending from	arch/x86/kvm/svm.c
+4.9.162	8dc13d35107fa74c65d2f35277cc918aa00e8dae	[PATCH] mmc: spi: Fix card detection during probe	drivers/mmc/host/mmc_spi.c
+4.9.165	bbd0266dd86196b299a480016bfdf8af85d91fec	[PATCH] Input: matrix_keypad - use flush_delayed_work()	drivers/input/keyboard/matrix_keypad.c
+4.9.165	ef3697fa9a7a0c5cc091ce84ec31870a3d2677a8	[PATCH] 9p: use inode->i_lock to protect i_size_write() under 32-bit	fs/9p/v9fs_vfs.h,fs/9p/vfs_file.c,fs/9p/vfs_inode.c,fs/9p/vfs_inode_dotl.c,fs/9p/vfs_super.c
+4.9.165	45811c28a802066c09b22adcccf3230a85e64dd9	[PATCH] 9p/net: fix memory leak in p9_client_create	net/9p/client.c
+4.9.165	0f3ff58ba3ef8c0ab15945ae771f73fc0f0f90a2	[PATCH] ASoC: fsl_esai: fix register setting issue in RIGHT_J mode	sound/soc/fsl/fsl_esai.c
+4.9.165	71ba3cecab8161d30f7ebfad54517e35d84a5f01	[PATCH] stm class: Fix an endless loop in channel allocation	drivers/hwtracing/stm/core.c
+4.9.165	eb36644d30c2a07041711e0836b362c7bec899f6	[PATCH] s390/dasd: fix using offset into zero size array error	drivers/s390/block/dasd_eckd.c
+4.9.165	f671bcbda0485bf982a50ce08d6fc0b0ffff7934	[PATCH] mm: page_alloc: fix ref bias in page_frag_alloc() for 1-byte	mm/page_alloc.c
+4.9.165	510b63be36ff54739a7363e833a7e8f8b35c839b	[PATCH] net: hns: Fix object reference leaks in hns_dsaf_roce_reset()	drivers/net/ethernet/hisilicon/hns/hns_dsaf_main.c
+4.9.165	7f8b1acc78259a32ad4b934d7efb0c88393d1902	[PATCH] ARM: 8824/1: fix a migrating irq bug when hotplug cpu	arch/arm/Kconfig,arch/arm/include/asm/irq.h,arch/arm/kernel/irq.c,arch/arm/kernel/smp.c
+4.9.165	ed1eadaf050e357cdd6521b26df4f8def8ce066b	[PATCH] qmi_wwan: apply SET_DTR quirk to Sierra WP7607	drivers/net/usb/qmi_wwan.c
+4.9.165	119caa160c079f850fd3f4c0f53f1d3cd7284afc	[PATCH] arm64: Relax GIC version check during early boot	arch/arm64/kernel/head.S
+4.9.165	f8c3bee654dfd90873d83d4ba681c63be6bbf150	[PATCH] net: marvell: mvneta: fix DMA debug warning	drivers/net/ethernet/marvell/mvneta.c
+4.9.165	4efec6eeed9e2eff228c34565627aa61100f75f9	[PATCH] stm class: Prevent division by zero	drivers/hwtracing/stm/core.c
+4.9.165	0c39a1c9c6400b8af4d7c97a492f191e20b38f54	[PATCH] libnvdimm/label: Clear 'updating' flag after label-set update	drivers/nvdimm/label.c
+4.9.165	f5583a7cb626eea178e99cd6eac1f5d717a91c07	[PATCH] libnvdimm/pmem: Honor force_raw for legacy pmem regions	drivers/nvdimm/namespace_devs.c
+4.9.165	f4ecea815aeb1d7931724bd3e03413e77a3564a5	[PATCH] CIFS: Do not reset lease state to NONE on lease break	fs/cifs/smb2misc.c,fs/cifs/smb2ops.c
+4.9.165	074ce47cdac82277f5981df664b51c7b10e74df8	[PATCH] CIFS: Fix read after write for files with read caching	fs/cifs/file.c
+4.9.165	a8e23147353429723e4bdf6bd697b044f1bd33c6	[PATCH] tracing: Do not free iter->trace in fail path of	kernel/trace/trace.c
+4.9.165	9a91ae2960fc2cfda08a166f7cc0615933b79c20	[PATCH] spi: pxa2xx: Setup maximum supported DMA transfer length	drivers/spi/spi-pxa2xx.c
+4.9.165	a43a2fb12f5597dfcfb65a5fc52cfdee6901a0a5	[PATCH] scsi: sd: Optimal I/O size should be a multiple of physical	drivers/scsi/sd.c
+4.9.165	6425e4168e1664c176fc678cb5d4e6e588d3b60a	[PATCH] fs/devpts: always delete dcache dentry-s in dput()	fs/devpts/inode.c
+4.9.165	187803cff3fc1e934c7b1602a370dc0f9e45cfd0	[PATCH] btrfs: ensure that a DUP or RAID1 block group has exactly two	fs/btrfs/volumes.c
+4.9.165	d9f81b2ccaf52c4977921a205aa943ec87fa785d	[PATCH] Btrfs: fix corruption reading shared and compressed extents	fs/btrfs/extent_io.c
+4.9.165	ea9507f5767505cf2cf8a9bed5045586c11e42a8	[PATCH] ext4: fix crash during online resizing	fs/ext4/resize.c
+4.9.165	3c8786cb4f56cc4246d962341ad82fa760ffee2e	[PATCH] nfit: acpi_nfit_ctl(): Check out_obj->type in the right place	drivers/acpi/nfit/core.c
+4.9.165	87e428536e0c55425cb32e0c52441a3644b9f556	[PATCH] mm: hwpoison: fix thp split handing in	mm/memory-failure.c
+4.9.165	0623451da7d7e1745f3666fd5a48c72d6f9cb844	[PATCH] mm/vmalloc: fix size check for remap_vmalloc_range_partial()	mm/vmalloc.c
+4.9.165	63b1a09eff62229d1983111fc155cd2ce136eb55	[PATCH] kernel/sysctl.c: add missing range check in	kernel/sysctl.c
+4.9.165	35c7562bf4d6b263c7246fd131d25939960fca87	[PATCH] intel_th: Don't reference unassigned outputs	drivers/hwtracing/intel_th/gth.c
+4.9.165	7cadc0d195bf96344954782abda25f4e5d7a46a0	[PATCH] drm/i915: Relax mmap VMA check	drivers/gpu/drm/i915/i915_gem.c
+4.9.165	c45532de7e0583b2a2065ea3f420f63dc082234d	[PATCH] serial: uartps: Fix stuck ISR if RX disabled with non-empty	drivers/tty/serial/xilinx_uartps.c
+4.9.165	5768d6a3fc2a73d768cacbd62222c5917e010c6f	[PATCH] powerpc/32: Clear on-stack exception marker upon exception	arch/powerpc/kernel/entry_32.S
+4.9.165	b3be7b70129442ed2853615a6e09ee11f24f6d03	[PATCH] md: Fix failed allocation of md_register_thread	drivers/md/raid10.c,drivers/md/raid5.c
+4.9.165	4c691eb3369ebbbf4a0f28b8f677ea3d7a76c67f	[PATCH] KVM: nVMX: Sign extend displacements of VMX instr's mem	arch/x86/kvm/vmx.c
+4.9.165	cdabf945c4e6890c62d9743dc1230d1fd45dfbb4	[PATCH] KVM: nVMX: Ignore limit checks on VMX instructions using flat	arch/x86/kvm/vmx.c
+4.9.165	fc6c775f32c4725f32bb036dc9630e1af1bbce41	[PATCH] KVM: X86: Fix residual mmio emulation request to userspace	arch/x86/kvm/vmx.c,arch/x86/kvm/x86.c
+4.9.165	37c218aec031993fa32e342179bdd1813e304123	[PATCH] perf intel-pt: Fix overlap calculation for padding	tools/perf/util/intel-pt-decoder/intel-pt-decoder.c
+4.9.167	dad1bc0659bacfa0e165b1834eee21e9aa162b53	[PATCH] cfg80211: size various nl80211 messages correctly	net/wireless/nl80211.c
+4.9.167	8bd08ff5f796311fe75eebb9a49abf01ce4adbe6	[PATCH] stmmac: copy unicast mac address to MAC registers	drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+4.9.167	afc95096d4320ce02f63576af5f1440103d56958	[PATCH] dccp: do not use ipv6 header for ipv4 flow	net/dccp/ipv6.c
+4.9.167	5b2d0cd3b71d1fbc1790f65e38100e8df76b508a	[PATCH] mISDN: hfcpci: Test both vendor & device ID for Digium HFC4S	drivers/isdn/hardware/mISDN/hfcmulti.c
+4.9.167	c9aa4fe3e3d51383babb47862cef5900aa4690e0	[PATCH] net/packet: Set __GFP_NOWARN upon allocation in alloc_pg_vec	net/packet/af_packet.c
+4.9.167	3e694d7f06f0cc8f779ced0aa8dd7cdc56ebce68	[PATCH] net: rose: fix a possible stack overflow	net/rose/rose_subr.c
+4.9.167	3700c4861cdb482298f31e27d85507069b043495	[PATCH] packets: Always register packet sk in the same order	include/net/sock.h,net/packet/af_packet.c
+4.9.167	a220b2097f68c9f54514a9d8831ba6563be0becf	[PATCH] tcp: do not use ipv6 header for ipv4 flow	net/ipv6/tcp_ipv6.c
+4.9.167	04e6fa644403d1ac9494f0bb966069e3bc44959b	[PATCH] vxlan: Don't call gro_cells_destroy() before device is	drivers/net/vxlan.c
+4.9.167	2642425645c98047623c8dfcb33dcd114474f9e7	[PATCH] sctp: get sctphdr by offset in sctp_compute_cksum	include/net/sctp/checksum.h
+4.9.167	3f81538e728f74ce82a4122337b17e6bab7f1698	[PATCH] mac8390: Fix mmio access size probe	drivers/net/ethernet/8390/mac8390.c
+4.9.167	d83787db7410fc408458a0d09a3b8b17c0933a34	[PATCH] scsi: sd: Fix a race between closing an sd device and sd I/O	drivers/scsi/sd.c
+4.9.167	3310d95cde63c865424337dacc38dbcef7ffca40	[PATCH] tun: properly test for IFF_UP	drivers/net/tun.c
+4.9.167	d8fe10f3012058b9c6f78b0717d83e907ea5faa5	[PATCH] btrfs: remove WARN_ON in log_dir_items	fs/btrfs/tree-log.c
+4.9.167	8da138905bba8064d7a2500d6f561f2392f6912c	[PATCH] btrfs: raid56: properly unmap parity page in	fs/btrfs/raid56.c
+4.9.167	66af24aa548feabba5e74671e232f31c37c6ff7f	[PATCH] ARM: imx6q: cpuidle: fix bug that CPU might not wake up at	arch/arm/mach-imx/cpuidle-imx6q.c
+4.9.167	d9f52f05df6d2560f2821c09d9328d4cf8ce1d5a	[PATCH] powerpc: bpf: Fix generation of load/store DW instructions	arch/powerpc/include/asm/ppc-opcode.h,arch/powerpc/net/bpf_jit.h,arch/powerpc/net/bpf_jit32.h,arch/powerpc/net/bpf_jit64.h,arch/powerpc/net/bpf_jit_comp64.c
+4.9.167	4825ccebcb000bcdfeac9485c09554b8c22c5b76	[PATCH] NFSv4.1 don't free interrupted slot on open	fs/nfs/nfs4proc.c
+4.9.167	4ab3cbc6b5828c1634faa617adb6d6d9f883baaf	[PATCH] net: dsa: qca8k: remove leftover phy accessors	drivers/net/dsa/qca8k.c
+4.9.167	0a940e6dd294422191067788476474f2b988a83e	[PATCH] ALSA: rawmidi: Fix potential Spectre v1 vulnerability	sound/core/rawmidi.c
+4.9.167	a89206c39c7095d074ff4fb3a50fc5d884b0b14e	[PATCH] ALSA: seq: oss: Fix Spectre v1 vulnerability	sound/core/seq/oss/seq_oss_synth.c
+4.9.167	c66a1ca0456c7d17996e815337c35b0bdf96f413	[PATCH] ALSA: pcm: Fix possible OOB access in PCM oss plugins	sound/core/oss/pcm_oss.c
+4.9.167	f8a16cb1aa0f209fc0f73a6cc7643b3fdcb42350	[PATCH] ALSA: pcm: Don't suspend stream in unrecoverable PCM state	sound/core/pcm_native.c
+4.9.167	cbe3f63ce3d6be888338aa3e1472fab41f66d059	[PATCH] fs/open.c: allow opening only regular files during execve()	fs/open.c
+4.9.167	98ea0d123ed70e05a9c322980a86f1a12fee8037	[PATCH] scsi: sd: Fix a race between closing an sd device and sd I/O	drivers/scsi/sd.c
+4.9.167	d768561fcce30c7345b1b60bd6645a1a7275fb69	[PATCH] scsi: sd: Quiesce warning if device does not report optimal	drivers/scsi/sd.c
+4.9.167	60aa0ddf6aba41ca5a0dc5815c28c165e1c682f3	[PATCH] scsi: zfcp: fix rport unblock if deleted SCSI devices on	drivers/s390/scsi/zfcp_erp.c
+4.9.167	68bd9e2deb89186fdc4a59208187cc12c8840e4a	[PATCH] tty: atmel_serial: fix a potential NULL pointer dereference	drivers/tty/serial/atmel_serial.c
+4.9.167	026986943791972c6dd7f1984e9facd5eb91664f	[PATCH] tun: add a missing rcu_read_unlock() in error path	drivers/net/tun.c
+4.9.167	bc6ba95373d49f90e7ff961428887f51eca17de0	[PATCH] scsi: zfcp: fix scsi_eh host reset with port_forced ERP for	drivers/s390/scsi/zfcp_erp.c,drivers/s390/scsi/zfcp_ext.h
+4.9.167	fd85a3802204ff0d15ba891f00da348653453e0d	[PATCH] USB: serial: cp210x: add new device id	drivers/usb/serial/cp210x.c
+4.9.167	3e02d5e19ba1888cf314db080d997e321d7f78a0	[PATCH] USB: serial: ftdi_sio: add additional NovaTech products	drivers/usb/serial/ftdi_sio.c,drivers/usb/serial/ftdi_sio_ids.h
+4.9.167	6f081af2a363881c1bd3d44676310a5d47d5e9ff	[PATCH] fs/proc/proc_sysctl.c: fix NULL pointer dereference in	fs/proc/proc_sysctl.c
+4.9.167	f96cd919f751cde87241f3b445de68a34ce50c9e	[PATCH] usb: host: xhci-rcar: Add XHCI_TRUST_TX_LENGTH quirk	drivers/usb/host/xhci-rcar.c
+4.9.167	5a15e5b526aa5c0ec8ca211c35a11f35a9c10bba	[PATCH] perf intel-pt: Fix TSC slip	tools/perf/util/intel-pt-decoder/intel-pt-decoder.c
+4.9.167	4eaa9bdcf8099afbac6955992259d6977f8c79fc	[PATCH] cpu/hotplug: Prevent crash when CPU bringup fails on	kernel/cpu.c
+4.9.167	ebccd51bfee6732cfff7fc63c90f1cfe5e41b776	[PATCH] x86/smp: Enforce CONFIG_HOTPLUG_CPU when SMP=y	arch/x86/Kconfig
+4.9.167	1b5c9d8d2f616646a3f782ac53194d852019f638	[PATCH] xhci: Fix port resume done detection for SS ports with LPM	drivers/usb/host/xhci-ring.c,drivers/usb/host/xhci.h
+4.9.167	5e98c9b8c2fec42d2a82e79d6f1aa88793dd6e74	[PATCH] Revert "USB: core: only clean up what we allocated"	drivers/usb/core/config.c
+4.9.167	0800a53428eb9f8826ff9711181b4c9db97fa524	[PATCH] USB: serial: option: set driver_info for SIM5218 and	drivers/usb/serial/option.c
+4.9.167	8b9b9bb97acecdb11dcbfaaadcdc4d4e2a7607c3	[PATCH] USB: serial: option: add Olicard 600	drivers/usb/serial/option.c
+4.9.171	9b4a542c96e938d2d575bb11406f6608529cf200	[PATCH] Fix building error	net/wireless/nl80211.c
+4.9.171	a58145680b6788a6326aca6f06851e9dc0b6fa53	[PATCH] Fix building error	fs/file.c
+4.9.171	5263c9c9ea9b3ab2c85b3cdf99b362306d7f5938	[PATCH] tcp: tcp_grow_window() needs to respect tcp_space()	net/ipv4/tcp_input.c
+4.9.171	f92e74f0a86be02ff53f9d22afc6ff17040b3428	[PATCH] team: set slave to promisc if team is already in promisc mode	drivers/net/team/team.c
+4.9.171	4fcef51de5957fbf2773f583f5c91ffbb163ff92	[PATCH] mmc: sdhci: Fix data command CRC error handling	drivers/mmc/host/sdhci.c
+4.9.171	cfdc5995dc307d3dd3fe213fc37ed632c69b5752	[PATCH] mmc: sdhci: Fix data command CRC error handling	drivers/mmc/host/sdhci.c
+4.9.171	4766a0db0e29ae93effe87a0cf42d98b64bc2a4d	[PATCH] bonding: fix event handling for stacked bonds	drivers/net/bonding/bond_main.c
+4.9.171	8a44b0760d0a6204d4e4e63b67471dab676642a0	[PATCH] net: atm: Fix potential Spectre v1 vulnerabilities	net/atm/lec.c
+4.9.171	34be42964b4a12eb8b6b1fa9048bb33f14a3d8e8	[PATCH] net: bridge: fix per-port af_packet sockets	net/bridge/br_input.c
+4.9.171	d28a4575801d03e1604033e9ae77d14415ccf9aa	[PATCH] net: bridge: multicast: use rcu to access port list from	net/bridge/br_multicast.c
+4.9.171	ab8d1dd7cd43d1078941820e3df264913a8e3e39	[PATCH] net: fou: do not use guehdr after iptunnel_pull_offloads in	net/ipv4/fou.c
+4.9.171	42a63078a1d1c4de7d1d41a80b81c81b814bce32	[PATCH] tcp: tcp_grow_window() needs to respect tcp_space()	net/ipv4/tcp_input.c
+4.9.171	50f82111e9c288e06938a6769d4685d0bb98c7c3	[PATCH] team: set slave to promisc if team is already in promisc mode	drivers/net/team/team.c
+4.9.171	410628f851f1b21a1987fd7838cc215bf0f75212	[PATCH] vhost: reject zero size iova range	drivers/vhost/vhost.c
+4.9.171	7a5846757df696ef2fc035ed29f862291440eb94	[PATCH] ipv4: recompile ip options in ipv4_link_failure	net/ipv4/route.c
+4.9.171	2c6667312651476350e1c61f70c82548efcc2c98	[PATCH] ipv4: ensure rcu_read_lock() in ipv4_link_failure()	net/ipv4/route.c
+4.9.171	d25f21b0c73e97040e5df29d2914e53fb16a6846	[PATCH] crypto: crypto4xx - properly set IV after de- and encrypt	drivers/crypto/amcc/crypto4xx_alg.c,drivers/crypto/amcc/crypto4xx_core.c
+4.9.171	17fd79e8ec210ca3bf87e43ce16a6bd37955fc0b	[PATCH] mmc: sdhci: Fix data command CRC error handling	drivers/mmc/host/sdhci.c
+4.9.171	0fd8b6d5dd4ab0db9d8cbccd3ed1f91b9ca8e875	[PATCH] modpost: file2alias: go back to simple devtable lookup	scripts/mod/file2alias.c
+4.9.171	2ad7e8791734588c46740b06be57c10cdb848601	[PATCH] modpost: file2alias: check prototype of handler	scripts/mod/file2alias.c
+4.9.171	57a2ef6250157ae29defef02f52d1522ac223985	[PATCH] tpm/tpm_i2c_atmel: Return -E2BIG when the transfer is	drivers/char/tpm/tpm_i2c_atmel.c
+4.9.171	aace4afa0147aed9b7211c04381d766519cf2fa1	[PATCH] CIFS: keep FileInfo handle live during oplock break	fs/cifs/cifsglob.h,fs/cifs/file.c,fs/cifs/misc.c,fs/cifs/smb2misc.c
+4.9.171	905dd24529342e8c5e5611dae8a2b408574b2280	[PATCH] iio: ad_sigma_delta: select channel when reading register	drivers/iio/adc/ad_sigma_delta.c
+4.9.171	61e993501f0030fcb37905dae1cc1a2c54305a47	[PATCH] kprobes: Mark ftrace mcount handler functions nokprobe	kernel/trace/ftrace.c
+4.9.171	254a96273303104dade6463451e9ee58351fac3f	[PATCH] Revert "svm: Fix AVIC incomplete IPI emulation"	arch/x86/kvm/svm.c
+4.9.171	2b9152d93b0bd795f5e359c732372067e7f84e8c	[PATCH] arm64: futex: Restore oldval initialization to work around	arch/arm64/include/asm/futex.h
+4.9.171	24a699d03cd505befc041f92988aa9a4fc14447a	[PATCH] kprobes: Mark ftrace mcount handler functions nokprobe	kernel/trace/ftrace.c
+4.9.171	52b2a8d48709eaf684ff4a761fac62c0e77cad8b	[PATCH] sched/fair: Limit sched_cfs_period_timer() loop to avoid hard	kernel/sched/fair.c
+4.9.171	ec5cb08c3032ad3c2ddff3d9d33f6f3bbbecdef0	[PATCH] i2c-hid: properly terminate i2c_hid_dmi_desc_override_table[]	drivers/hid/i2c-hid/i2c-hid-dmi-quirks.c
+4.9.171	4981152ca86a8ee6fcc2a515c692d284f9ca3ba6	[PATCH] Revert "locking/lockdep: Add debug_locks check in	kernel/locking/lockdep.c
+4.9.171	633b5d845ac37bfdaa640c78a7540f070375f09b	[PATCH] kernel/sysctl.c: fix out-of-bounds access when setting	kernel/sysctl.c
+4.9.171	7eec33c6221ba0fa6bf2b866d82a5dbe85087538	[PATCH] Revert 'kbuild: use -Oz instead of -Os when using clang'	Makefile
+4.9.172	1326baf1d48c0a90f8daa5505d64a62307c4c26a	[PATCH] kbuild: simplify ld-option implementation	scripts/Kbuild.include
+4.9.172	828c83c598369f6077335db660e138da816253e4	[PATCH] cifs: do not attempt cifs operation on smb2+ rename error	fs/cifs/inode.c
+4.9.172	f5fc409ed40bda3b06b49473508cc4a3e638676e	[PATCH] tracing: Fix a memory leak by early error exit in	kernel/trace/trace.c
+4.9.172	7df570c7ceca36befcc80a87c1e1d798deceef9f	[PATCH] MIPS: scall64-o32: Fix indirect syscall number load	arch/mips/kernel/scall64-o32.S
+4.9.172	0d926f4c32af35727bc770c965de8295aaa9746d	[PATCH] trace: Fix preempt_enable_no_resched() abuse	kernel/trace/ring_buffer.c
+4.9.172	5a481863652c5f3adc77f5db728c74450da68990	[PATCH] IB/rdmavt: Fix frwr memory registration	drivers/infiniband/sw/rdmavt/mr.c
+4.9.172	f4e019ca806081aee735232551225243ec28f657	[PATCH] sched/numa: Fix a possible divide-by-zero	kernel/sched/fair.c
+4.9.172	83ef62f3a57e61ca1a6ae8105f16ed868d7df569	[PATCH] ceph: ensure d_name stability in ceph_dentry_hash()	fs/ceph/dir.c
+4.9.172	1df6f682e41203c7b6260847f651fd25a1382074	[PATCH] ceph: fix ci->i_head_snapc leak	fs/ceph/mds_client.c,fs/ceph/snap.c
+4.9.172	70a346be25bc8204fee25a385f207af26bc9b7e1	[PATCH] nfsd: Don't release the callback slot unless it was actually	fs/nfsd/nfs4callback.c,fs/nfsd/state.h
+4.9.172	f5afb9c31de3d3ea2440a3111c969a9f8e95d4ce	[PATCH] sunrpc: don't mark uninitialised items as VALID.	net/sunrpc/cache.c
+4.9.172	71dd7b2afe19314f3ca7869f6c0cfd13794e9c0f	[PATCH] dmaengine: sh: rcar-dmac: With cyclic DMA residue 0 is valid	drivers/dma/sh/rcar-dmac.c
+4.9.172	890958f159ccef8984b30af700d02861844ae706	[PATCH] USB: Add new USB LPM helpers	drivers/usb/core/driver.c,drivers/usb/core/hub.c,drivers/usb/core/message.c,drivers/usb/core/sysfs.c,drivers/usb/core/usb.h
+4.9.172	7779ef0bddcb3d359c13bf502ab545e7bee01509	[PATCH] USB: Consolidate LPM checks to avoid enabling LPM twice	drivers/usb/core/driver.c,drivers/usb/core/hub.c,drivers/usb/core/message.c
+4.9.172	0e37501b99a18f4b81e4b991b98819dd689df7ec	[PATCH] vsock/virtio: fix kernel panic from	net/vmw_vsock/virtio_transport_common.c
+4.9.172	3a072701d88a8e796017ca44ca8532ec7483b8cd	[PATCH] tipc: handle the err returned from cmd header function	net/tipc/netlink_compat.c
+4.9.172	00163e4068658a46aeeb5a78a7bc223cdbbda6b8	[PATCH] net: IP defrag: encapsulate rbtree defrag code into callable	net/ipv4/inet_fragment.c
+4.9.172	e5ae222a22f4d8a2f3cdf56d6e04266507bf4f60	[PATCH] NFS: Forbid setting AF_INET6 to "struct	fs/nfs/super.c
+4.9.172	a711817d38510c8a186511d322e1c28e90508231	[PATCH] netfilter: ebtables: CONFIG_COMPAT: drop a bogus WARN_ON	net/bridge/netfilter/ebtables.c
+4.9.172	5d8cc1a308c55716793ab00bad29416b1b299b39	[PATCH] tipc: check bearer name with right length in	net/tipc/netlink_compat.c
+4.9.172	3bc222f804101bafb93ff5ab55fb8c79d2a91f0b	[PATCH] tipc: check link name with right length in	net/tipc/netlink_compat.c
+4.9.172	27b2e937acd2224bed8a321d5e3192de8d74b114	[PATCH] Revert "block/loop: Use global lock for ioctl() operation."	drivers/block/loop.c,drivers/block/loop.h
+4.9.172	09cfba9501ce65204b311c481b5b1fa3b49464cb	[PATCH] ipv4: add sanity checks in ipv4_link_failure()	net/ipv4/route.c
+4.9.172	ea8f4af6b045744c9584defc01f197cb20b51d77	[PATCH] mlxsw: spectrum: Fix autoneg status in ethtool	drivers/net/ethernet/mellanox/mlxsw/spectrum.c
+4.9.172	2e1d77f58288125d7d71cd17191eed04554a32db	[PATCH] net/mlx5e: ethtool, Remove unsupported SFP EEPROM high pages	drivers/net/ethernet/mellanox/mlx5/core/en_ethtool.c,drivers/net/ethernet/mellanox/mlx5/core/port.c
+4.9.172	0b1003d33f90533d1881bbbbb195b9c3d0bc3921	[PATCH] team: fix possible recursive locking when add slaves	drivers/net/team/team.c
+4.9.172	53086cdf64d357029511ee00f520e5632ae63fc1	[PATCH] net: stmmac: move stmmac_check_ether_addr() to driver probe	drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+4.9.172	def1d4ba34c3c46bca001a99a6fff4b041c2b1d6	[PATCH] ipv4: set the tcp_min_rtt_wlen range from 0 to one day	Documentation/networking/ip-sysctl.txt,net/ipv4/sysctl_net_ipv4.c
+4.9.172	0c305bdd9931b7db354ceee331496fb5d051c8fe	[PATCH] net: IP defrag: encapsulate rbtree defrag code into callable	include/net/inet_frag.h,net/ipv4/inet_fragment.c,net/ipv4/ip_fragment.c
+4.9.172	a55f198a04c4ab2e60e7d1659bd4788053f32217	[PATCH] ipv6: remove dependency of nf_defrag_ipv6 on ipv6 module	include/net/ipv6_frag.h,net/ieee802154/6lowpan/reassembly.c,net/ipv6/netfilter/nf_conntrack_reasm.c,net/ipv6/netfilter/nf_defrag_ipv6_hooks.c,net/ipv6/reassembly.c,net/openvswitch/conntrack.c
+4.9.172	d8a3ef6d18c29f2d20d156060224990aa817ef18	[PATCH] Documentation: Add nospectre_v1 parameter	Documentation/kernel-parameters.txt
+4.9.174	caf3199e2c0f607f7f6e41354748615b01d3ee96	[PATCH] ALSA: line6: use dynamic buffers	sound/usb/line6/driver.c,sound/usb/line6/podhd.c,sound/usb/line6/toneport.c
+4.9.174	0020115d02740a21f679ab24e81d2168373aaa96	[PATCH] ipv4: ip_do_fragment: Preserve skb_iif during fragmentation	net/ipv4/ip_output.c
+4.9.174	e0a9fcf6bfa5f698db63544b27c71170f6dab528	[PATCH] ipv6/flowlabel: wait rcu grace period before put_pid()	net/ipv6/ip6_flowlabel.c
+4.9.174	04ee16ca6d7c2dd2a09693eab8ce88c97c7fff1f	[PATCH] ipv6: invert flowlabel sharing check in process and user mode	net/ipv6/ip6_flowlabel.c
+4.9.174	9b08a9ea954ef4d43ea5a873343fd2b5210311a8	[PATCH] packet: validate msg_namelen in send directly	net/packet/af_packet.c
+4.9.174	1961349869a66d963a9db1a4175a2621011cd996	[PATCH] bnxt_en: Improve multicast address setup logic.	drivers/net/ethernet/broadcom/bnxt/bnxt.c
+4.9.174	1f622150d52318467834196286aa382c45f62e25	[PATCH] arm64: proc: Set PTE_NG for table entries to avoid traversing	arch/arm64/mm/proc.S
+4.9.174	25b3ec9814e8c09706c668a9f4f113457291d9ae	[PATCH] kasan: prevent compiler from optimizing away memset in tests	lib/Makefile
+4.9.174	0d9ac1ca013ebffe72c9bf80a3fa1ad60ed3a00f	[PATCH] arm64: mm: print out correct page table entries	arch/arm64/include/asm/system_misc.h,arch/arm64/mm/fault.c
+4.9.174	1988dfb6522099aab486dc9b90bfbd4edb7b4c27	[PATCH] arm64: mm: don't print out page table entries on EL0 faults	arch/arm64/mm/fault.c
+4.9.174	dfe42150ceeba53d2f8b3b9957e2fdfa21878ef2	[PATCH] USB: core: Fix bug caused by duplicate interface PM usage	Documentation/usb/power-management.txt,drivers/usb/core/driver.c,drivers/usb/storage/realtek_cr.c,include/linux/usb.h
+4.9.174	06439b017bd7acf5c758f0ff1cf65f0054937ce3	[PATCH] HID: logitech: check the return value of	drivers/hid/hid-logitech-hidpp.c
+4.9.174	420b53898facfda3ac62c8442afbd1be78e5206d	[PATCH] batman-adv: Reduce tt_local hash refcnt only for removed	net/batman-adv/translation-table.c
+4.9.174	09149798e71c5394255106add49225c5e792dc16	[PATCH] batman-adv: Reduce tt_global hash refcnt only for removed	net/batman-adv/translation-table.c
+4.9.174	869c66d92295daa301b26c1f3d7a34fc339cb759	[PATCH] net/mlx5: E-Switch, Fix esw manager vport indication for more	drivers/net/ethernet/mellanox/mlx5/core/eswitch.c
+4.9.174	3fa9413b2372562638d7555c1a9d614a5d2a5887	[PATCH] net: stmmac: don't overwrite discard_frame status	drivers/net/ethernet/stmicro/stmmac/enh_desc.c
+4.9.174	d89616bd2d7d580d62a4162a17be90ec1943d01c	[PATCH] net: stmmac: fix dropping of multi-descriptor RX frames	drivers/net/ethernet/stmicro/stmmac/enh_desc.c
+4.9.174	059351dc4661101df1cc4372cb1e837dae3be6be	[PATCH] net: stmmac: don't log oversized frames	drivers/net/ethernet/stmicro/stmmac/norm_desc.c
+4.9.174	ef6e7fa6a1bb4899453ff33e1478bf24a4f2086e	[PATCH] net: hns: fix KASAN: use-after-free in hns_nic_net_xmit_hw()	drivers/net/ethernet/hisilicon/hns/hns_enet.c
+4.9.174	6d710b9337b219c0b50ed97587d55cbc9543f065	[PATCH] net: hns: Use NAPI_POLL_WEIGHT for hns driver	drivers/net/ethernet/hisilicon/hns/hns_enet.c
+4.9.174	3c8959ed51c2a2d249431a5a230a81bde36222fe	[PATCH] hugetlbfs: fix memory leak for resv_map	fs/hugetlbfs/inode.c
+4.9.174	bd47999f58eae600694fd7584078f02caa67e643	[PATCH] selinux: never allow relabeling on context mounts	security/selinux/hooks.c
+4.9.175	79385996fee29b96b4aa3e2055526b6b03ab0ea7	[PATCH] Fix building error	include/net/ipv6.h,net/ipv4/inet_fragment.c,net/ipv4/ip_fragment.c,net/ipv4/ip_output.c,net/ipv4/route.c,net/ipv4/sysctl_net_ipv4.c
+4.9.175	74971b81a0df393b2f14eb8f2fbe1006efae1724	[PATCH] scsi: libsas: fix a race condition when smp task timeout	drivers/scsi/libsas/sas_expander.c
+4.9.175	3e8d3676e8acf9bba272f89f2a91a33d3370a32e	[PATCH] perf/x86/intel: Fix handling of wakeup_events for multi-entry	arch/x86/events/intel/core.c
+4.9.175	a9ada98db5a50043d073964f0c992452ac1e693d	[PATCH] usb-storage: Set virt_boundary_mask to avoid SG overflows	drivers/usb/storage/scsiglue.c
+4.9.178	9dd9d63b5c65565cbe6926ab9f6b275aa9c7f120	[PATCH] net: core: another layer of lists, around PF_MEMALLOC skb	include/linux/list.h
+4.9.178	8ee18a0de3f1dd3b39ab6356b9bec133a2385836	[PATCH] locking/rwsem: Prevent decrement of reader count before	kernel/locking/rwsem-xadd.c
+4.9.178	6dcacf49eba23048005da9c67886a48c80f48279	[PATCH] crypto: vmx - fix copy-paste error in CTR mode	drivers/crypto/vmx/aesp8-ppc.pl
+4.9.178	68b6dbd95ba24353f9aeae14083ece8985c90409	[PATCH] ALSA: usb-audio: Fix a memory leak bug	sound/usb/mixer.c
+4.9.178	5d7bdac60e1e185b5c341e82412c9e504c59a53a	[PATCH] ALSA: hda/realtek - EAPD turn on later	sound/pci/hda/patch_realtek.c
+4.9.178	9e3751bd915eb016852e2179825360c2006ac0b5	[PATCH] ext4: actually request zeroing of inode table after grow	fs/ext4/ioctl.c
+4.9.178	a6a8d3029453f10b33c811eb22b91c75f358905c	[PATCH] ext4: fix ext4_show_options for file systems w/o journal	fs/ext4/super.c
+4.9.178	d4ec729fd6de436350cea29ad29fe4cbe6ee13c6	[PATCH] bcache: fix a race between cache register and cacheset	drivers/md/bcache/super.c
+4.9.178	013832f869f70ac779996699a442c8a39274f6f0	[PATCH] bcache: never set KEY_PTRS of journal key to 0 in	drivers/md/bcache/journal.c
+4.9.178	25bc72a677b3508d63c52b753fbd08d7cf7c3379	[PATCH] fib_rules: fix error in backport of e9919a24d302 ("fib_rules:	net/core/fib_rules.c
+4.9.178	578c4e225595feac00afa12ce76be3033fdd9a56	[PATCH] writeback: synchronize sync(2) against cgroup writeback	fs/fs-writeback.c,include/linux/backing-dev-defs.h,mm/backing-dev.c
+4.9.178	f6822f7ea8e5f2b22393879759963a179e66e613	[PATCH] ext4: fix data corruption caused by overlapping unaligned and	fs/ext4/file.c
+4.9.178	a2b3dd7c15dbd6f6d72b00c4689e56a666db1e3d	[PATCH] ALSA: hda/realtek - Fix for Lenovo B50-70 inverted internal	sound/pci/hda/patch_realtek.c
+4.9.178	9fe26949871edc9f84d4ad2017f4ef9ec55d3c23	[PATCH] fs/writeback.c: use rcu_barrier() to wait for inflight wb	fs/fs-writeback.c
+4.9.181	f2bf7348635ddf9ec6c1c5f19a9d2236ae7ed411	[PATCH] ipv6: Consider sk_bound_dev_if when binding a raw socket to	net/ipv6/raw.c
+4.9.181	8f5a5126316e51ebeeaf57bc17208ca2d0f2621b	[PATCH] llc: fix skb leak in llc_build_and_send_ui_pkt()	net/llc/llc_output.c
+4.9.181	d9b940e2b7d1d6b9cb6d520e52f3e4112d3528a6	[PATCH] net-gro: fix use-after-free read in napi_gro_frags()	net/core/dev.c
+4.9.181	59ad92412db734642220e62c4c5fb3215b97cf7f	[PATCH] net: stmmac: fix reset gpio free missing	drivers/net/ethernet/stmicro/stmmac/stmmac_mdio.c
+4.9.181	124edd6ea56bdd654944250a9586ea496c6322d5	[PATCH] usbnet: fix kernel crash after disconnect	drivers/net/usb/usbnet.c
+4.9.181	28a2df602a322c5dc35e1b8bdcae17569c2b54a3	[PATCH] tipc: Avoid copying bytes beyond the supplied data	include/uapi/linux/tipc_config.h
+4.9.181	c4cbc0b39e888c4019c64340c8f7fe5171caa011	[PATCH] bnxt_en: Fix aggregation buffer leak under OOM condition.	drivers/net/ethernet/broadcom/bnxt/bnxt.c
+4.9.181	7d89f63198d6330e102ae7a1a632340c62502f0b	[PATCH] ipv4/igmp: fix another memory leak in igmpv3_del_delrec()	net/ipv4/igmp.c
+4.9.181	0ab56dcbcaa284bfb940121c1fbf47da8e251a9a	[PATCH] net: dsa: mv88e6xxx: fix handling of upper half of	drivers/net/dsa/mv88e6xxx/chip.c
+4.9.181	19e6fd42c506e88f75df0253476749b42680b8f0	[PATCH] net: mvneta: Fix err code path of probe	drivers/net/ethernet/marvell/mvneta.c
+4.9.181	72e7b2677f47d0c5f577bbeeaf479703b84ddb37	[PATCH] net: mvpp2: fix bad MVPP2_TXQ_SCHED_TOKEN_CNTR_REG queue	drivers/net/ethernet/marvell/mvpp2.c
+4.9.181	0527651b082b3a29798ab4e5be4fbdda40ff979c	[PATCH] crypto: vmx - ghash: do nosimd fallback manually	drivers/crypto/vmx/ghash.c
+4.9.181	88d072d9362b4cc2178dfc0b158e57970ca1f853	[PATCH] xen/pciback: Don't disable PCI_COMMAND on PCI device reset.	drivers/xen/xen-pciback/pciback_ops.c
+4.9.181	734c672575a40a3795388b4770c05dc344bc5ab2	[PATCH] Revert "tipc: fix modprobe tipc failed after switch order of	net/tipc/core.c
+4.9.181	ee6034c264ff1932f8b583a75dcfec3fe722a637	[PATCH] sparc64: Fix regression in non-hypervisor TLB flush xcall	arch/sparc/mm/ultra.S
+4.9.181	b494c47c8b9cd0cc61a1f17876b46502cecc6b95	[PATCH] include/linux/bitops.h: sanitize rotate primitives	include/linux/bitops.h
+4.9.181	2ddc0cdcd44b24da8a76b563f033aa3fb78cfebf	[PATCH] xhci: update bounce buffer with correct sg num	drivers/usb/host/xhci-ring.c
+4.9.181	fdec0d0a19ba7b57718460979c640f99af202d9f	[PATCH] ipv4/igmp: fix build error if !CONFIG_IP_MULTICAST	net/ipv4/igmp.c
+4.9.181	eee6e18fd23202401cbd5b207640b9ba0f70a84a	[PATCH] tipc: fix modprobe tipc failed after switch order of device	net/tipc/core.c,net/tipc/subscr.c,net/tipc/subscr.h
+4.9.181	f78718d9fa0d4190d5d087746e329185c02e60e3	[PATCH] xhci: Use %zu for printing size_t type	drivers/usb/host/xhci-ring.c
+4.9.181	b053851c30e76d6406bd07fa989e10f5fe26f0c4	[PATCH] xhci: Convert xhci_handshake() to use	drivers/usb/host/xhci.c
+4.9.181	4b9850d9b61d3ffc1a811b8af53ab3fb2bc2a9f9	[PATCH] usb: xhci: avoid null pointer deref when bos field is NULL	drivers/usb/host/xhci.c
+4.9.181	b892d7cb880d113591f63e21a253ea649715bdc5	[PATCH] USB: Fix slab-out-of-bounds write in usb_get_bos_descriptor	drivers/usb/core/config.c
+4.9.181	30510b0aa14926bc410b83c058b044d78a13a3f9	[PATCH] USB: sisusbvga: fix oops in error path of sisusb_probe	drivers/usb/misc/sisusbvga/sisusb.c
+4.9.181	1013dac356410c37f5a9b91d29726dd11fa52034	[PATCH] USB: Add LPM quirk for Surface Dock GigE adapter	drivers/usb/core/quirks.c
+4.9.181	e925b0cd51fd21af0d39983d0190370b6532243a	[PATCH] USB: rio500: refuse more than one device at a time	drivers/usb/misc/rio500.c
+4.9.181	d43903fca9411499cffd8da9fe002fcfb7177243	[PATCH] USB: rio500: fix memory leak in close after disconnect	drivers/usb/misc/rio500.c
+4.9.181	6852e3a397bfeecd4adf09e6ac9e0ee8a576991e	[PATCH] scsi: zfcp: fix missing zfcp_port reference put on -EBUSY	drivers/s390/scsi/zfcp_sysfs.c
+4.9.181	78d460156dd0291683906f8a6dfe0cf2cfbb5569	[PATCH] Btrfs: fix race updating log root item during fsync	fs/btrfs/tree-log.c
+4.9.181	a241dec9c1c0946fe6ea1e39a07cf6c221b47483	[PATCH] powerpc/perf: Fix MMCRA corruption by bhrb_filter	arch/powerpc/perf/core-book3s.c,arch/powerpc/perf/power8-pmu.c,arch/powerpc/perf/power9-pmu.c
+4.9.181	2152c44d1a61747b27107d8d7ea1877e9f3558d1	[PATCH] ALSA: hda/realtek - Set default power save node to 0	sound/pci/hda/patch_realtek.c
+4.9.181	654f649b24f4a3d479e34e43e8ef334126c21df5	[PATCH] drm/nouveau/i2c: Disable i2c bus access after ->fini()	drivers/gpu/drm/nouveau/include/nvkm/subdev/i2c.h,drivers/gpu/drm/nouveau/nvkm/subdev/i2c/aux.c,drivers/gpu/drm/nouveau/nvkm/subdev/i2c/aux.h,drivers/gpu/drm/nouveau/nvkm/subdev/i2c/base.c,drivers/gpu/drm/nouveau/nvkm/subdev/i2c/bus.c,drivers/gpu/drm/nouveau/nvkm/subdev/i2c/bus.h
+4.9.181	f1fcf485f6b2cc874424d79570aaea3097c1ca65	[PATCH] media: smsusb: better handle optional alignment	drivers/media/usb/siano/smsusb.c
+4.9.181	9924adf7d820dd84583f9605ae5cb42d884da237	[PATCH] scsi: zfcp: fix to prevent port_remove with pure auto scan	drivers/s390/scsi/zfcp_ext.h,drivers/s390/scsi/zfcp_scsi.c,drivers/s390/scsi/zfcp_sysfs.c,drivers/s390/scsi/zfcp_unit.c
+4.9.181	fe6893573001aaba11f4efef1dee6c90fc7b379a	[PATCH] CIFS: cifs_read_allocate_pages: don't iterate through whole	fs/cifs/file.c
+4.9.181	bbc9d1ee18f37e8e2d81a8aa295906eb6d67b66f	[PATCH] brcmfmac: add length checks in scheduled scan result handler	drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
+4.9.181	7230eae9701ca3cd16249eb90d92c8004be24272	[PATCH] brcmfmac: assure SSID length from firmware is limited	drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
+4.9.181	aa48450f667afaf82a81845c621e7a63ead5ec6d	[PATCH] brcmfmac: add subtype check for event handling in data path	drivers/net/wireless/broadcom/brcm80211/brcmfmac/core.c,drivers/net/wireless/broadcom/brcm80211/brcmfmac/fweh.h,drivers/net/wireless/broadcom/brcm80211/brcmfmac/msgbuf.c
+4.9.181	8f3e2add30596eadec2c2f5e69afd46d34eb7a25	[PATCH] fs: prevent page refcount overflow in pipe_buf_get	fs/fuse/dev.c,fs/pipe.c,fs/splice.c,include/linux/pipe_fs_i.h,kernel/trace/trace.c
+4.9.181	70f461e335d668cbfa70e5039c0b9d91cba2af4c	[PATCH] media: uvcvideo: Fix uvc_alloc_entity() allocation alignment	drivers/media/usb/uvc/uvc_driver.c
+4.9.181	b8745df3bf351d6d8e1ffb0bc28d79bb432254e2	[PATCH] ethtool: fix potential userspace buffer overflow	net/core/ethtool.c
+4.9.181	0b65992b406c6bf5dabac635fd151df312ba2b8a	[PATCH] ipv6: fix EFAULT on sendto with icmpv6 and hdrincl	net/ipv6/raw.c
+4.9.181	d4be1f4d89204381d8b600713b5aa4d72876b1ea	[PATCH] ipv6: use READ_ONCE() for inet->hdrincl as in ipv4	net/ipv6/raw.c
+4.9.181	086165ae41e249f40c13e29b1900de74dd03cb1b	[PATCH] Revert "fib_rules: fix error in backport of e9919a24d302	net/core/fib_rules.c
+4.9.181	9a85df36a82d8c97f5fe4f8439c49db4167a3076	[PATCH] rcu: locking and unlocking need to always be at least	include/linux/rcupdate.h
+4.9.181	de74bf4d3ca534668201a25cba3ab2c1d5df308a	[PATCH] mm: prevent get_user_pages() from overflowing page refcount	mm/gup.c,mm/hugetlb.c
+4.9.181	4c594c17b7396041f86de020ddb111b5ed23ef93	[PATCH] Revert "fib_rules: return 0 directly if an exactly same rule	net/core/fib_rules.c
+4.9.181	9ad974b4afa130d90bae5027a0a961873ff0c4d3	[PATCH] fuse: fallocate: fix return with locked inode	fs/fuse/file.c
+4.9.181	543671d5986c2741e4d687b5924b9da1b95186a9	[PATCH] x86/power: Fix 'nosmt' vs hibernation triple fault during	arch/x86/power/cpu.c,arch/x86/power/hibernate_64.c,include/linux/cpu.h,kernel/cpu.c,kernel/power/hibernate.c
+4.9.181	10542e40d53bf54542ae781612a765de60048c09	[PATCH] Revert "MIPS: perf: ath79: Fix perfcount IRQ assignment"	arch/mips/ath79/setup.c,drivers/irqchip/irq-ath79-misc.c
+4.9.181	13a21f517100dce301f3215271409c2b0cd317f3	[PATCH] genwqe: Prevent an integer overflow in the ioctl	drivers/misc/genwqe/card_dev.c,drivers/misc/genwqe/card_utils.c
+4.9.181	d010f3edba0bdb1cd5e436de27c25187b721b0ef	[PATCH] TTY: serial_core, add ->install	drivers/tty/serial/serial_core.c
+4.9.181	8f71648793eed24586bd074f5efcae1bcb447286	[PATCH] fs: stream_open - opener for stream-like files so that read	drivers/xen/xenbus/xenbus_dev_frontend.c,fs/open.c,fs/read_write.c,include/linux/fs.h,scripts/coccinelle/api/stream_open.cocci
+4.9.181	8b832bb863ce6aba408a22310f552c896d3ed259	[PATCH] fuse: Add FOPEN_STREAM to use stream_open()	fs/fuse/file.c,include/uapi/linux/fuse.h
+4.9.181	1eab065819f7d13d4146543da60c3728a119e40a	[PATCH] ethtool: check the return value of get_regs_len	net/core/ethtool.c
+4.9.182	2d65f45fb183660b968067167edc8fcecf027c95	[PATCH] tcp: reduce tcp_fastretrans_alert() verbosity	net/ipv4/tcp_input.c
+4.9.182	034e158868c13085374a6b07ff314e642b322ad2	[PATCH] tcp: tcp_fragment() should apply sane memory limits	include/uapi/linux/snmp.h,net/ipv4/proc.c,net/ipv4/tcp_output.c
+4.9.183	f5452c4e9dffa14a68d6fd63af01c9e85d70d46a	[PATCH] rapidio: fix a NULL pointer dereference when	drivers/rapidio/rio_cm.c
+4.9.183	73b7fc781645ff7b393f0b2680885779faf88cd5	[PATCH] fs/fat/file.c: issue flush after the writeback of FAT	fs/fat/file.c
+4.9.183	84c6bc5d72a556bd61d890c6021bc5df2ee0ac12	[PATCH] sysctl: return -EINVAL if val violates minmax	kernel/sysctl.c
+4.9.183	3e08d1eed84de4fd2af1d5167189cceb099d9a57	[PATCH] ipc: prevent lockup on alloc_msg and free_msg	ipc/mqueue.c,ipc/msgutil.c
+4.9.183	6f732d156521184b244f87756f4f73720f5aa69c	[PATCH] ARM: prevent tracing IPI_CPU_BACKTRACE	arch/arm/include/asm/hardirq.h,arch/arm/kernel/smp.c
+4.9.183	38f6fee384c3e0e96fa6e505518daed371923e47	[PATCH] hugetlbfs: on restore reserve error path retain subpool	mm/hugetlb.c
+4.9.183	1fae13cd7e57f960017a7da89cd21d6dd7eb8b52	[PATCH] mem-hotplug: fix node spanned pages when we have a node with	mm/page_alloc.c
+4.9.183	45348e176f19edbb64e974beba29359c0cb017fa	[PATCH] mm/cma.c: fix crash on CMA allocation if bitmap allocation	mm/cma.c
+4.9.183	126b6820556b06d9a0674e78fc4b3df587f7aec3	[PATCH] mm/cma_debug.c: fix the break condition in cma_maxchunk_get()	mm/cma_debug.c
+4.9.183	312de66dac90265a6577f4bbfd3a53cc7af7be0c	[PATCH] mm/slab.c: fix an infinite loop in leaks_show()	mm/slab.c
+4.9.183	d84ad391ef5ba889be8cdbeb4829fd69bb75fc2c	[PATCH] kernel/sys.c: prctl: fix false positive in	kernel/sys.c
+4.9.183	798918ccf28d8b8f4d13b1a814d8a0babf6ba818	[PATCH] drivers: thermal: tsens: Don't print error message on	drivers/thermal/qcom/tsens.c
+4.9.183	b94f7626a449b2019cda7392d2d1e0643bca5d44	[PATCH] mfd: tps65912-spi: Add missing of table registration	drivers/mfd/tps65912-spi.c
+4.9.183	baa4bb903e8a1219a6433151fa80807ea8aa7b0b	[PATCH] mfd: intel-lpss: Set the device in reset state when init	drivers/mfd/intel-lpss.c
+4.9.183	7f0575db71182d3b3c9bbc19f0ab4f919d58586d	[PATCH] mfd: twl6040: Fix device init errors for ACCCTL register	drivers/mfd/twl6040.c
+4.9.183	3accb18dee1576ca4edf3527afdb005063b2ea5d	[PATCH] perf/x86/intel: Allow PEBS multi-entry in watermark mode	arch/x86/events/intel/core.c
+4.9.183	abf9e44beb016a96f5db6d4bf41c0c96a620e939	[PATCH] objtool: Don't use ignore flag for fake jumps	tools/objtool/check.c
+4.9.183	cece3ca7f29cc40933c5810927279e1e2044976b	[PATCH] ntp: Allow TAI-UTC offset to be set to zero	kernel/time/ntp.c
+4.9.183	aec30b16aca5b538bf3d7aec1543a2a2826b921d	[PATCH] f2fs: fix to do sanity check on valid block count of segment	fs/f2fs/segment.h
+4.9.183	ed48280dfcd9dc8ea7bef505f9c82d51bcdd0b12	[PATCH] iommu/vt-d: Set intel_iommu_gfx_mapped correctly	drivers/iommu/intel-iommu.c
+4.9.183	fa8cad8443781f6a3b42a9dbdd2194edb98cb6ec	[PATCH] ARM: dts: imx6ul: Specify IMX6UL_CLK_IPG as "ipg" clock to	arch/arm/boot/dts/imx6ul.dtsi
+4.9.183	4c0108cd2e53171469ffd87a9bec6c084b551825	[PATCH] gpio: gpio-omap: add check for off wake capable gpios	drivers/gpio/gpio-omap.c
+4.9.183	449ff27547ef0284e266661667718d70159d33c0	[PATCH] dmaengine: idma64: Use actual device for DMA transfers	drivers/dma/idma64.c,drivers/dma/idma64.h,drivers/spi/spi-pxa2xx.c,drivers/tty/serial/8250/8250_dw.c
+4.9.183	c1b53e62a2dacc1f8b84d827f54dd3e9c898a286	[PATCH] ALSA: seq: Protect in-kernel ioctl calls with mutex	sound/core/seq/seq_clientmgr.c
+4.9.183	ea0ebe04e5a5da9a26c80cbaee5eadd7ba2dfdb7	[PATCH] ALSA: seq: Fix race of get-subscription call vs port-delete	sound/core/seq/seq_clientmgr.c,sound/core/seq/seq_ports.c,sound/core/seq/seq_ports.h
+4.9.183	b53197e6b6a81b0df4061e5610da8c29bd49b990	[PATCH] usbnet: ipheth: fix racing condition	drivers/net/usb/ipheth.c
+4.9.183	f276c02fbf02aba7131f7b21f8b56cec25a6d00d	[PATCH] usb: dwc2: Fix DMA cache alignment issues	drivers/usb/dwc2/hcd.c
+4.9.183	b88c0dbc78452ca5952a78c74a266bfa24f885c5	[PATCH] USB: Fix chipmunk-like voice when using Logitech C270 for	drivers/usb/core/quirks.c
+4.9.183	6d8f6bacf22ed37e1920590a329b063ab12a52bb	[PATCH] USB: serial: pl2303: add Allied Telesis VT-Kit3	drivers/usb/serial/pl2303.c,drivers/usb/serial/pl2303.h
+4.9.183	8d1005b2a2f6f6ebe8d2e07e0cd57bb46dc93a4a	[PATCH] ax25: fix inconsistent lock state in ax25_destroy_timer	net/ax25/ax25_route.c
+4.9.183	021b07fea10ba57f6d30314d7e362f725016381f	[PATCH] be2net: Fix number of Rx queues used for flow hashing	drivers/net/ethernet/emulex/benet/be_ethtool.c
+4.9.183	4cd7a24c68688443943098aa30bc0aa38f536337	[PATCH] ipv6: flowlabel: fl6_sock_lookup() must use	net/ipv6/ip6_flowlabel.c
+4.9.183	1526c14f789fb8824ef6020c9fc7a1a52dad8907	[PATCH] selftests: netfilter: missing error check when setting up	tools/testing/selftests/netfilter/nft_nat.sh
+4.9.183	03348386b4c96e0d45666fe60f4dbd25897612be	[PATCH] USB: serial: option: add support for Simcom SIM7500/SIM7600	drivers/usb/serial/option.c
+4.9.183	6f3d75fe00485d1ec36255612ac3357bb12a8c87	[PATCH] USB: serial: option: add Telit 0x1260 and 0x1261 compositions	drivers/usb/serial/option.c
+4.9.183	00282a5e9284f55f20b126834dc7d6401ef197b8	[PATCH] mISDN: make sure device name is NUL terminated	drivers/isdn/mISDN/socket.c
+4.9.183	25fdf53687c033717ac99e025f3823e223ea7f2c	[PATCH] perf/ring_buffer: Fix exposing a temporarily decreased	kernel/events/ring_buffer.c
+4.9.183	f0bba3062dbaa555bf9ae81ff9a9c43c688b531f	[PATCH] perf/ring_buffer: Add ordering to rb->nest increment	kernel/events/ring_buffer.c
+4.9.183	27113dfc939c26e937d4cef7574d5c0841bfb942	[PATCH] i2c: dev: fix potential memory leak in i2cdev_ioctl_rdwr	drivers/i2c/i2c-dev.c
+4.9.183	f9b5afc9983a7b71346cca95ac18c30fa0447e35	[PATCH] perf record: Fix s390 missing module symbol and warning for	tools/perf/arch/s390/util/machine.c
+4.9.183	7e7533da985cba255d74d1febf643518641b49ea	[PATCH] scsi: libsas: delete sas port if expander discover failed	drivers/scsi/libsas/sas_expander.c
+4.9.183	3a7060b957824862a51fb0beac344e44ecb07a6d	[PATCH] mlxsw: spectrum: Prevent force of 56G	drivers/net/ethernet/mellanox/mlxsw/spectrum.c
+4.9.184	16702ed3cfd7bf4f57b2f4650646a1db0aac4710	[PATCH] tcp: refine memory limit test in tcp_fragment()	net/ipv4/tcp_output.c
+4.9.185	093332b5ae14e743a7ffa89b1eb0384cf7286111	[PATCH] tracing: Silence GCC 9 array bounds warning	kernel/trace/trace.c,kernel/trace/trace.h,kernel/trace/trace_kdb.c
+4.9.185	f10d04e14fe96b223cae9b6cd0ee918dfcf411ee	[PATCH] gcc-9: silence 'address-of-packed-member' warning	Makefile
+4.9.185	c9924d00991077b2db0b99f13c10362a5115f410	[PATCH] usb: chipidea: udc: workaround for endpoint conflict issue	drivers/usb/chipidea/udc.c
+4.9.185	84ededc2aeaf341203aaf24ea5e8180e01aef94b	[PATCH] IB/hfi1: Silence txreq allocation warnings	drivers/infiniband/hw/hfi1/verbs_txreq.c,drivers/infiniband/hw/hfi1/verbs_txreq.h
+4.9.185	bc4e7bfe8fbe867588027baa12a85a9b991d0934	[PATCH] Input: uinput - add compat ioctl number translation for	drivers/input/misc/uinput.c
+4.9.185	51ced3f5225d3b727c769f5095f6f113c87edef3	[PATCH] apparmor: enforce nullbyte at end of tag string	security/apparmor/policy_unpack.c
+4.9.185	502945826843ab7cb5f9f53121dac1b8f86fed9f	[PATCH] ARC: fix build warnings with !CONFIG_KPROBES	arch/arc/include/asm/cmpxchg.h,arch/arc/mm/tlb.c
+4.9.185	2ef3c4b73c8eea3e0c2fa869bbabb994f354d08b	[PATCH] parport: Fix mem leak in parport_register_dev_model	drivers/parport/share.c
+4.9.185	4715b9797138ec95636c314c7ffc02a33585a7ed	[PATCH] parisc: Fix compiler warnings in float emulation code	arch/parisc/math-emu/cnv_float.h
+4.9.185	f5bd6a67cb5d7012c0cc736e06811fb66e05cbeb	[PATCH] IB/rdmavt: Fix alloc_qpn() WARN_ON()	drivers/infiniband/sw/rdmavt/qp.c
+4.9.185	aae89ac1605fdd3a2204b5aec1ae9391114cc859	[PATCH] IB/hfi1: Insure freeze_work work_struct is canceled on	drivers/infiniband/hw/hfi1/chip.c
+4.9.185	5e083df8505731e17ff89a3dfd5bbbc701eba166	[PATCH] IB/{qib, hfi1, rdmavt}: Correct ibv_devinfo max_mr value	drivers/infiniband/hw/hfi1/verbs.c,drivers/infiniband/hw/qib/qib_verbs.c,drivers/infiniband/sw/rdmavt/mr.c
+4.9.185	85e17fe856008c144acd3a802c4b1a00a8a2f369	[PATCH] MIPS: uprobes: remove set but not used variable 'epc'	arch/mips/kernel/uprobes.c
+4.9.185	fe88fc68fe364d9cfd8f56ae926efca5860af721	[PATCH] net: dsa: mv88e6xxx: avoid error message on remove from VLAN	drivers/net/dsa/mv88e6xxx/chip.c
+4.9.185	afee4a5ba4459586901ff62c5b12b058321c5089	[PATCH] net: hns: Fix loopback test failed at copper ports	drivers/net/ethernet/hisilicon/hns/hns_ethtool.c
+4.9.185	6b08156bb3ba6f52a803263ebf20cc9d94feac58	[PATCH] sparc: perf: fix updated event period in response to	arch/sparc/kernel/perf_event.c
+4.9.185	d0702821bafc8e5cf24289b870eb1a5886289eea	[PATCH] net: ethernet: mediatek: Use hw_feature to judge if HWLRO is	drivers/net/ethernet/mediatek/mtk_eth_soc.c
+4.9.185	cd0e0e6f0224f6b5063553ea36a986b06228d5c6	[PATCH] net: ethernet: mediatek: Use NET_IP_ALIGN to judge if HW	drivers/net/ethernet/mediatek/mtk_eth_soc.c
+4.9.185	17b2b4d81e40f7b906661b4cb80a0ed22be391ed	[PATCH] drm/arm/hdlcd: Allow a bit of clock tolerance	drivers/gpu/drm/arm/hdlcd_crtc.c
+4.9.185	34d83199be03071c38543fd0f9642c9c5d3a3c20	[PATCH] scripts/checkstack.pl: Fix arm64 wrong or unknown	scripts/checkstack.pl
+4.9.185	8e3216d6ee3921bcb07221eceb29020557916765	[PATCH] scsi: ufs: Check that space was properly alloced in	drivers/scsi/ufs/ufshcd.c
+4.9.185	f2a231220d75a88c39a860078d6e12eefa316935	[PATCH] powerpc/bpf: use unsigned division instruction for 64-bit	arch/powerpc/include/asm/ppc-opcode.h,arch/powerpc/net/bpf_jit.h,arch/powerpc/net/bpf_jit_comp64.c
+4.9.185	0ff92a3ed514f655610bc25db43f0643d55cdb3d	[PATCH] ARM: imx: cpuidle-imx6sx: Restrict the SW2ISO increase to	arch/arm/mach-imx/cpuidle-imx6sx.c
+4.9.185	63beb1951b2a99c8dce4c330255e9eb3d3fb01ae	[PATCH] 9p: p9dirent_read: check network-provided name length	net/9p/protocol.c
+4.9.185	d667a58ceb948b64e3c3988e821dc505238b80b1	[PATCH] fs/proc/array.c: allow reporting eip/esp for all coredumping	fs/proc/array.c
+4.9.185	d8c6f6f9dd449fb3d6aff4a083932ea4c8f79bdf	[PATCH] cpu/speculation: Warn on unsupported mitigations= parameter	kernel/cpu.c
+4.9.185	27c7e5890fcf43c4a9cc5d6d6fa1ce35ef7700b4	[PATCH] af_packet: Block execution of tasks waiting for transmit to	net/packet/af_packet.c,net/packet/internal.h
+4.9.185	f7d39c78abf7d579cdc16ae9058e71779b7572ad	[PATCH] tipc: change to use register_pernet_device	net/tipc/core.c
+4.9.185	7c183561c33bfc762c14632179af0123f5e5ec37	[PATCH] tipc: check msg->req data len in	net/tipc/netlink_compat.c
+4.9.185	b9e09bcc0ffe6219ebd2f6382048db15a11a7e49	[PATCH] tun: wake up waitqueues after IFF_UP is set	drivers/net/tun.c
+4.9.185	adf4f1bdcc38f16fc91ab99160f2696e88536290	[PATCH] team: Always enable vlan tx offload	drivers/net/team/team.c
+4.9.185	960d3dca235374c82de2f8a013c3d498879b3d2f	[PATCH] bonding: Always enable vlan tx offload	drivers/net/bonding/bond_main.c
+4.9.185	a4756f6d1fc2040ecb76c05c7a7708fd0cc84c35	[PATCH] ipv4: Use return value of inet_iif() for __raw_v4_lookup in	net/ipv4/raw.c
+4.9.185	a675b3ccf61f39ad372f7deb989304655735e489	[PATCH] x86/speculation: Allow guests to use SSBD even if host does	arch/x86/kernel/cpu/bugs.c
+4.9.185	45f62c63b34c8e96cdbe2da0c07af97556fc16fe	[PATCH] net: check before dereferencing netdev_ops during busy poll	net/core/dev.c
+4.9.185	37cb00c06acde4c8d596d9e1f747be3284da0f24	[PATCH] tipc: pass tunnel dev as NULL to udp_tunnel(6)_xmit_skb	net/tipc/udp_media.c
+4.9.185	dc889ef7764768661f3ff68dbb70190605805ee1	[PATCH] Bluetooth: Fix faulty expression for minimum encryption key	net/bluetooth/l2cap_core.c
+4.9.185	994b5983008b0033d5f30d2a9511a0ecdbd07004	[PATCH] bug.h: work around GCC PR82365 in BUG()	arch/arc/include/asm/bug.h,arch/ia64/include/asm/bug.h,arch/m68k/include/asm/bug.h,arch/sparc/include/asm/bug.h,include/asm-generic/bug.h,include/linux/compiler-gcc.h
+4.9.185	ca5a7b617ba49018cf69feb0b81d3de985b86f84	[PATCH] ARC: handle gcc generated __builtin_trap for older compiler	arch/arc/kernel/traps.c
+4.9.185	cc2ee56f3149acab9646f6e8d6585fb8c68dbcb5	[PATCH] KVM: x86: degrade WARN to pr_warn_ratelimited	arch/x86/kvm/x86.c
+4.9.185	4ed709fb2916d294ef9a4ffaf60e4d13432df74f	[PATCH] MIPS: Workaround GCC __builtin_unreachable reordering bug	arch/mips/Kconfig,arch/mips/include/asm/compiler.h
+4.9.185	27b7303932862fcdb5da1d25e51609362b2350f6	[PATCH] ALSA: line6: Fix write on zero-sized buffer	sound/usb/line6/pcm.c
+4.9.185	b69845f38c84e3d02c9e07a64a1b042511ba4073	[PATCH] btrfs: Ensure replaced device doesn't have pending chunk	fs/btrfs/dev-replace.c,fs/btrfs/volumes.c,fs/btrfs/volumes.h
+4.9.185	e1966d0ee81bcff074b5b552a8a9090bed24d6c4	[PATCH] tty: rocket: fix incorrect forward declaration of 'rp_init()'	drivers/tty/rocket.c
+4.9.185	c9e9a02e307003174985f7614d93af516d50a970	[PATCH] arm64, vdso: Define vdso_{start,end} as array	arch/arm64/kernel/vdso.c
+4.9.185	dae4f0990eff75a688b3585dd3dd78e449e21de1	[PATCH] dmaengine: imx-sdma: remove BD_INTR for channel0	drivers/dma/imx-sdma.c
+4.9.187	fc63ce764fd9f3327a8e4eaf41abe534e383c8c0	[PATCH] MIPS: ath79: fix ar933x uart parity mode	arch/mips/include/asm/mach-ath79/ar933x_uart.h
+4.9.187	bd7a914b877801aceafe32d40d5cc86115300156	[PATCH] MIPS: fix build on non-linux hosts	arch/mips/boot/compressed/Makefile,arch/mips/boot/compressed/calc_vmlinuz_load_addr.c
+4.9.187	3ac9435607ce85978197e2cc41639923f6bc63c7	[PATCH] arm64/efi: Mark __efistub_stext_offset as an absolute symbol	arch/arm64/kernel/image.h
+4.9.187	3485e5374a518d3b26ea7f220067f96630f5ca7f	[PATCH] dmaengine: imx-sdma: fix use-after-free on probe error path	drivers/dma/imx-sdma.c
+4.9.187	58dda75a13adf88b05494ac98c707340feb51a5d	[PATCH] ath10k: Do not send probe response template for mesh	drivers/net/wireless/ath/ath10k/mac.c
+4.9.187	0ecd34bef01c79f4d7127cb83aa0cd62237fc85a	[PATCH] ath9k: Check for errors when reading SREV register	drivers/net/wireless/ath/ath9k/hw.c
+4.9.187	5eb884f481ce71f990278463116e83a24d25b4e7	[PATCH] ath6kl: add some bounds checking	drivers/net/wireless/ath/ath6kl/wmi.c
+4.9.187	ee07719b18ab1518dff7f312d88daf859ee8d55b	[PATCH] ath: DFS JP domain W56 fixed pulse type 3 RADAR detection	drivers/net/wireless/ath/dfs_pattern_detector.c
+4.9.187	c0a44a7dbdc8a799a5a32bfcaf1f8da1533c9fa0	[PATCH] batman-adv: fix for leaked TVLV handler.	net/batman-adv/translation-table.c
+4.9.187	3e735ebdbf47e716007cb4e35bcb58112470641a	[PATCH] media: dvb: usb: fix use after free in dvb_usb_device_exit	drivers/media/usb/dvb-usb/dvb-usb-init.c
+4.9.187	7fdb974b9f68b2bb060c71f25a10fd3f4097e9ef	[PATCH] crypto: talitos - fix skcipher failure due to wrong output IV	drivers/crypto/talitos.c
+4.9.187	5277ebb9e0765738afc3a1c3b0bac9fa614b0afe	[PATCH] media: marvell-ccic: fix DMA s/g desc number calculation	drivers/media/platform/marvell-ccic/mcam-core.c
+4.9.187	83863dea22b22e28d5920ff7e69c3cdfe989a570	[PATCH] media: vpss: fix a potential NULL pointer dereference	drivers/media/platform/davinci/vpss.c
+4.9.187	05c7d6fea692216968d46c4c738ad30054f3797e	[PATCH] media: media_device_enum_links32: clean a reserved field	drivers/media/media-device.c
+4.9.187	8378738b1fe4d2aee6f2137003168cb82ac514d6	[PATCH] net: stmmac: dwmac1000: Clear unused address entries	drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c
+4.9.187	1587ca35b6c60710724c78d3b4e2599e2ad1772d	[PATCH] net: stmmac: dwmac4/5: Clear unused address entries	drivers/net/ethernet/stmicro/stmmac/dwmac4_core.c
+4.9.187	f7d35f28f9f0454527a9aee2228100f552685976	[PATCH] signal/pid_namespace: Fix reboot_pid_ns to use send_sig not	kernel/pid_namespace.c
+4.9.187	6ea7310bcc4b6f499b4070e93a8b215b6b0fd781	[PATCH] af_key: fix leaks in key_pol_get_resp and dump_sp.	net/key/af_key.c
+4.9.187	ae77784b2fa6b199dcbc3e88705d58eff94294f6	[PATCH] 'xfrm: Fix xfrm sel prefix length validation' and 'xfrm: fix	net/xfrm/xfrm_user.c
+4.9.187	b808c36762ef990d65e1600cc60b93baa866c1bc	[PATCH] media: mc-device.c: don't memset __user pointer contents	drivers/media/media-device.c
+4.9.187	5a8361de37eb003eb888b696c5ba298ecd0163b1	[PATCH] media: staging: media: davinci_vpfe: - Fix for memory leak if	drivers/staging/media/davinci_vpfe/vpfe_video.c
+4.9.187	8293133dbbb01cc0a7031ba6b06987ad201f9614	[PATCH] net: phy: Check against net_device being NULL	drivers/net/phy/phy_device.c
+4.9.187	dd3cea6acc3781c20484cf5f09b737a5ea8db3c3	[PATCH] crypto: talitos - properly handle split ICV.	drivers/crypto/talitos.c
+4.9.187	0694c55785e1e3f085114a13257839ff9c118b88	[PATCH] crypto: talitos - Align SEC1 accesses to 32 bits boundaries.	drivers/crypto/talitos.c
+4.9.187	3c588670b3b3861889e518ee2ac0c56eefdf758a	[PATCH] tua6100: Avoid build warnings.	drivers/media/dvb-frontends/tua6100.c
+4.9.187	dd1cb2ea09884fbe9b849fe37b8fe855d53bbba3	[PATCH] locking/lockdep: Fix merging of hlocks with non-zero	kernel/locking/lockdep.c
+4.9.187	7c352f4514c79d3a3b94846a453f9908e0e45872	[PATCH] media: wl128x: Fix some error handling in	drivers/media/radio/wl128x/fmdrv_v4l2.c
+4.9.187	80379e6864befda0dda3787c656218bb23ec3911	[PATCH] cpupower : frequency-set -r option misses the last cpu in	tools/power/cpupower/utils/cpufreq-set.c
+4.9.187	dc4fcc8580ed196080ef6fc36560ad934de29038	[PATCH] net: fec: Do not use netdev messages too early	drivers/net/ethernet/freescale/fec_main.c
+4.9.187	e9103fe9048c193138977fa6e912bc4893402bc1	[PATCH] net: axienet: Fix race condition causing TX hang	drivers/net/ethernet/xilinx/xilinx_axienet_main.c
+4.9.187	850653b38a4651db9bac560b78ca87ea4d40ee4a	[PATCH] s390/qdio: handle PENDING state for QEBSM devices	drivers/s390/cio/qdio_main.c
+4.9.187	671008b5d186242cb4361a286c880743e1358be2	[PATCH] perf cs-etm: Properly set the value of 'old' and 'head' in	tools/perf/arch/arm/util/cs-etm.c
+4.9.187	a69aeaf164b344dde4b8f6cf554e6e7ce402e4d9	[PATCH] perf test 6: Fix missing kvm module load for s390	tools/perf/tests/parse-events.c
+4.9.187	739ff0708b36b0e14c2ff5ec7b50de00c425300b	[PATCH] gpio: omap: fix lack of irqstatus_raw0 for OMAP4	drivers/gpio/gpio-omap.c
+4.9.187	3701448598ae8bbe4661c1c0ee460801865d175e	[PATCH] gpio: omap: ensure irq is enabled before wakeup	drivers/gpio/gpio-omap.c
+4.9.187	3eac73c9857e1617fcce9b148b2da48ef1082286	[PATCH] regmap: fix bulk writes on paged registers	drivers/base/regmap/regmap.c
+4.9.187	70b8cb497edfe76cbec274e9f9529bec9879aea7	[PATCH] bpf: silence warning messages in core	kernel/bpf/Makefile
+4.9.187	ccaf967606d15ac548e7b42d4d367b735baab2e7	[PATCH] rcu: Force inlining of rcu_read_lock()	include/linux/rcupdate.h
+4.9.187	032007618f36aca5e559e208cfa72686e593b74f	[PATCH] blkcg, writeback: dead memcgs shouldn't contribute to	fs/fs-writeback.c
+4.9.187	8c55b83eba30d5ada9b3c6cc797187dcc507d61d	[PATCH] perf evsel: Make perf_evsel__name() accept a NULL argument	tools/perf/util/evsel.c
+4.9.187	2d154a92d1c6c99b5c6aee660262c848a11cd000	[PATCH] vhost_net: disable zerocopy by default	drivers/vhost/net.c
+4.9.187	51a67c50bbbf0f003b2298dd48be2ce36c40dca7	[PATCH] ipoib: correcly show a VF hardware address	drivers/infiniband/ulp/ipoib/ipoib_main.c
+4.9.187	acd4a6e47fd4e7c16e0817bfc65d1c4b7f9915d0	[PATCH] EDAC/sysfs: Fix memory leak when creating a csrow object	drivers/edac/edac_mc_sysfs.c
+4.9.187	dc50586a2abc4043e56893e4c732f1919a628796	[PATCH] ipsec: select crypto ciphers for xfrm_algo	net/xfrm/Kconfig
+4.9.187	78e0de13e998ae562481ace42bb7ba58725e1fce	[PATCH] media: i2c: fix warning same module names	drivers/media/i2c/Makefile,drivers/media/i2c/adv7511-v4l2.c,drivers/media/i2c/adv7511.c
+4.9.187	afbc885833ba494975e6aa2d1307c541a2d8b2d9	[PATCH] ntp: Limit TAI-UTC offset	kernel/time/ntp.c
+4.9.187	28c8f069f2f94ad6d4a33eb912b8c8d4a5468807	[PATCH] media: coda: fix mpeg2 sequence number handling	drivers/media/platform/coda/coda-bit.c
+4.9.187	efc6dd5a0f05c95302764d3563beaf76109a4119	[PATCH] media: coda: increment sequence offset for the last returned	drivers/media/platform/coda/coda-bit.c
+4.9.187	a9d45f08b014843b11113121e4a006051a3762e2	[PATCH] EDAC: Fix global-out-of-bounds write when setting	drivers/edac/edac_mc_sysfs.c,drivers/edac/edac_module.h
+4.9.187	ebc236a9184bccdffc4ab50d916fe6e7202d592d	[PATCH] bcache: check c->gc_thread by IS_ERR_OR_NULL in	drivers/md/bcache/super.c
+4.9.187	6308e42ff5cbfb116c13bdc086a4e9749714ab81	[PATCH] gpiolib: Fix references to gpiod_[gs]et_*value_cansleep()	drivers/gpio/gpiolib.c
+4.9.187	45ad5d4549236ad5fc719afa5224c1bcf23067af	[PATCH] crypto: crypto4xx - fix a potential double free in	drivers/crypto/amcc/crypto4xx_trng.c
+4.9.187	3d41accc9b5d527ca0db586c3795aedcc43d7a43	[PATCH] iwlwifi: pcie: don't service an interrupt that was masked	drivers/net/wireless/intel/iwlwifi/pcie/rx.c
+4.9.187	82fbc9fdb49ebfbd4bdc79cf1d78ebe2be7b7216	[PATCH] tracing/snapshot: Resize spare buffer if size changed	kernel/trace/trace.c
+4.9.187	fb9e0dbb25d511d3108b7329273fde7f8e8c6aad	[PATCH] ALSA: seq: Break too long mutex context in the write loop	sound/core/seq/seq_clientmgr.c
+4.9.187	0bbd786369f7e286db5ca7c54c6324c60c35ec3c	[PATCH] ALSA: hda/realtek: apply ALC891 headset fixup to one Dell	sound/pci/hda/patch_realtek.c
+4.9.187	8a523bdcfe988fcddaf8437a8e0dc05e36e4ee97	[PATCH] media: v4l2: Test type instead of cfg->type in	drivers/media/v4l2-core/v4l2-ctrls.c
+4.9.187	9fcf0d1601de5a11fe86117b48c967fa22076008	[PATCH] media: coda: Remove unbalanced and unneeded mutex unlock	drivers/media/platform/coda/coda-bit.c
+4.9.187	9fe50a79cd6836e3f837da2399e461da97b56d62	[PATCH] drm/nouveau/i2c: Enable i2c pads & busses during preinit	drivers/gpu/drm/nouveau/nvkm/subdev/i2c/base.c
+4.9.187	50bfeb31b9b319d62c04ea34c05e21fb158ddd63	[PATCH] Btrfs: add missing inode version, ctime and mtime updates	fs/btrfs/file.c
+4.9.187	3b764be6b3bf9be14d7180874f6fa6d90281d289	[PATCH] take floppy compat ioctls to sodding floppy.c	block/compat_ioctl.c,drivers/block/floppy.c
+4.9.187	6c453bac080a507bf4e0a11c478602822f2222dd	[PATCH] parisc: Ensure userspace privilege for ptraced processes in	arch/parisc/kernel/ptrace.c
+4.9.187	3778a5da617ad2c62aa06fc810ada3a97fd778a4	[PATCH] parisc: Fix kernel panic due invalid values in IAOQ0 or IAOQ1	arch/parisc/kernel/ptrace.c
+4.9.187	1e118895c55fac0a74caa7e33fdb18cf47bcde3f	[PATCH] intel_th: msu: Fix single mode with disabled IOMMU	drivers/hwtracing/intel_th/msu.c
+4.9.187	45ff192176b4f5e2b91fbf04d627f4c9152d8c8c	[PATCH] usb: Handle USB3 remote wakeup for LPM enabled devices	drivers/usb/core/hub.c
+4.9.187	0aa15ceff7534c83070a2c12dc26ecc72bdcc588	[PATCH] lib/strscpy: Shut up KASAN false-positives in strscpy()	lib/string.c
+4.9.187	a7dec7ce1d839d71e6ca06196c9a440a9f73973b	[PATCH] bnx2x: Prevent ptp_task to be rescheduled indefinitely	drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c,drivers/net/ethernet/broadcom/bnx2x/bnx2x_ethtool.c,drivers/net/ethernet/broadcom/bnx2x/bnx2x_main.c,drivers/net/ethernet/broadcom/bnx2x/bnx2x_stats.h
+4.9.187	c0caa8088e64c84250e89207147e2ea04bc9f42c	[PATCH] igmp: fix memory leak in igmpv3_del_delrec()	net/ipv4/igmp.c
+4.9.187	999e6c0b62dc428b69d18947c36d32b89b669b08	[PATCH] net: dsa: mv88e6xxx: wait after reset deactivation	drivers/net/dsa/mv88e6xxx/chip.c
+4.9.187	3294e52c62578bba144670d2f4dbf17bf1294a2d	[PATCH] sky2: Disable MSI on ASUS P6T	drivers/net/ethernet/marvell/sky2.c
+4.9.187	d4c6a4694e7596d4d0d98f4004ebf01ea42ef466	[PATCH] floppy: fix invalid pointer dereference in drive_name	drivers/block/floppy.c
+4.9.187	476c1f1920e92fd59a2a9706cb3e5602744f6671	[PATCH] netrom: fix a memory leak in nr_rx_frame()	net/netrom/af_netrom.c
+4.9.187	f1bae6063d4bf315988a8585b12503ef7320380d	[PATCH] bonding: validate ip header before check IPPROTO_IGMP	drivers/net/bonding/bond_main.c
+4.9.187	721ee4b594421fe3848c4de4c4ec0d0c18fb20e5	[PATCH] tcp: Reset bytes_acked and bytes_received when disconnecting	net/ipv4/tcp.c
+4.9.187	f61de6b6db955a3fc3544f4321010efb3a839704	[PATCH] net: bridge: mcast: fix stale nsrcs pointer in igmp3/mld2	net/bridge/br_multicast.c
+4.9.187	1e10c506bd498d4b4c351570880c4c02e432b649	[PATCH] net: bridge: mcast: fix stale ipv6 hdr pointer when handling	net/bridge/br_multicast.c
+4.9.187	d67decd8a84360fbbf0f5534f07e49f523be04e4	[PATCH] NFSv4: Fix open create exclusive when the server reboots	fs/nfs/nfs4proc.c
+4.9.187	9f445cd426b7b8ae070c69e1303e89b375592d48	[PATCH] usb: core: hub: Disable hub-initiated U1/U2	drivers/usb/core/hub.c
+4.9.187	8f3532483d405ff3294b152bf0cceca7bbacdce4	[PATCH] netrom: hold sock when setting skb->destructor	net/netrom/af_netrom.c
+4.9.187	b638167cdc059499eea23baf09d28fc1e5b9b555	[PATCH] drm/bridge: tc358767: read display_props in get_modes()	drivers/gpu/drm/bridge/tc358767.c
+4.9.187	89d8b257c1f6617a4ca002405297bcad9ad28c31	[PATCH] tty: serial_core: Set port active bit in uart_port_activate	drivers/tty/serial/serial_core.c
+4.9.187	ef7c2a8141d3c4f72a12e936a91c9d1b60b51e53	[PATCH] usb: gadget: Zero ffs_io_data	drivers/usb/gadget/function/f_fs.c
+4.9.187	24b3f004898a39bdfa8854f019e8c0be0d1cb0bd	[PATCH] kbuild: Add -Werror=unknown-warning-option to CLANG_FLAGS	Makefile
+4.9.187	ffa3998cf2a1142a552ec3618bfaa452f7dda84b	[PATCH] perf/events/amd/uncore: Fix amd_uncore_llc ID to use	arch/x86/events/amd/uncore.c
+4.9.187	7daeb81d5d3ff3b29e9f503bd7dbf99b7871d417	[PATCH] nfsd: Fix overflow causing non-working mounts on 1 TB	fs/nfsd/nfs4state.c
+4.9.187	4f4d8bd0c19d5b62ae392daab2d279d5bad49433	[PATCH] RDMA/rxe: Fill in wc byte_len with IB_WC_RECV_RDMA_WITH_IMM	drivers/infiniband/sw/rxe/rxe_resp.c,drivers/infiniband/sw/rxe/rxe_verbs.h
+4.9.187	c02baac86ab77d23a017e4b2a12550c573efa20c	[PATCH] hpet: Fix division by zero in hpet_time_div()	drivers/char/hpet.c
+4.9.187	c719479c63866825391c0de6d13a816ce0926453	[PATCH] ALSA: line6: Fix wrong altsetting for LINE6_PODHD500_1	sound/usb/line6/podhd.c
+4.9.187	73d626bafeea3affe5f1dd5243787a8dcb68dddb	[PATCH] ALSA: hda - Add a conexant codec entry to let mute led work	sound/pci/hda/patch_conexant.c
+4.9.187	889bc779e73c2e75a7ca1db2ac831a059fece61c	[PATCH] powerpc/tm: Fix oops on sigreturn on systems without TM	arch/powerpc/kernel/signal_32.c,arch/powerpc/kernel/signal_64.c
+4.9.187	a5f2c61fbdcd6f9872be9e1c9f0c9fd52cf789ef	[PATCH] access: avoid the RCU grace period for the temporary	fs/open.c,include/linux/cred.h,kernel/cred.c
+4.9.187	e045a745a3bfc46c0c8d250aabd000d019721530	[PATCH] ipv6: check sk sk_type and protocol early in	net/ipv6/ip6mr.c
+4.9.187	10044d7e551dba296fdc16a3db1df3472e81b46a	[PATCH] tcp: reset sk_send_head in tcp_write_queue_purge	include/net/tcp.h
+4.9.187	5c4cf6be742a3e531169510fbdb673dfc3513485	[PATCH] ISDN: hfcsusb: checking idx of ep configuration	drivers/isdn/hardware/mISDN/hfcsusb.c
+4.9.187	307c7621c644b0590f6a342adb5c09a256484564	[PATCH] sched/fair: Don't free p->numa_faults with concurrent readers	fs/exec.c,include/linux/sched.h,kernel/fork.c,kernel/sched/fair.c
+4.9.187	84e61798ae983d42cb4c0bdbdd595dca0dbd933d	[PATCH] ceph: hold i_ceph_lock when removing caps for freeing inode	fs/ceph/caps.c
+4.9.188	54643f91cf78800bc46c7a5b39dcfcba42b5a94f	[PATCH] ARM: riscpc: fix DMA	arch/arm/mach-rpc/dma.c
+4.9.188	c02bbd3a5c9fc0906c1a5b465816544692c966a0	[PATCH] ARM: dts: rockchip: Make rk3288-veyron-minnie run at hs200	arch/arm/boot/dts/rk3288-veyron-minnie.dts
+4.9.188	073777f63bea88ae3f1a792cff11e02a6be21524	[PATCH] ARM: dts: rockchip: Make rk3288-veyron-mickey's emmc work	arch/arm/boot/dts/rk3288-veyron-mickey.dts
+4.9.188	1617e50ed195b0ce7d0254c5b727ec80a30c4352	[PATCH] ARM: dts: rockchip: Mark that the rk3288 timer might stop in	arch/arm/boot/dts/rk3288.dtsi
+4.9.188	c99d21ad3cad2ebc7315a5e7235fd285ed56ee4e	[PATCH] ftrace: Enable trampoline when rec count returns back to one	kernel/trace/ftrace.c
+4.9.188	b0fb0933a4ede988f834a8af4f8bde861f8a35a1	[PATCH] kernel/module.c: Only return -EEXIST for modules that have	kernel/module.c
+4.9.188	de693a68afbc73534852e797ccb6bb0bceebb631	[PATCH] MIPS: lantiq: Fix bitfield masking	arch/mips/lantiq/irq.c
+4.9.188	db925a5f46908a5136871c684724cfdbb915be15	[PATCH] dmaengine: rcar-dmac: Reject zero-length slave DMA requests	drivers/dma/sh/rcar-dmac.c
+4.9.188	5b816dfed5655d81801d961ed00e02ba67fd2708	[PATCH] fs/adfs: super: fix use-after-free bug	fs/adfs/super.c
+4.9.188	028d504f5abbe224111a9ef22d15ee0ce69b74cb	[PATCH] btrfs: fix minimum number of chunk errors for DUP	fs/btrfs/volumes.c
+4.9.188	db2b6cf943ac23413d1bb530f186249204209273	[PATCH] ceph: fix improper use of smp_mb__before_atomic()	fs/ceph/super.h
+4.9.188	2c55d5ab9d43330ea7eedaa9d473b74e0cdfc6d3	[PATCH] ceph: return -ERANGE if virtual xattr value didn't fit in	fs/ceph/xattr.c
+4.9.188	4c7dd7af54d7133c282d784b358aebfeb6d25399	[PATCH] scsi: zfcp: fix GCC compiler warning emitted with	drivers/s390/scsi/zfcp_erp.c
+4.9.188	76d9fbc6b7daaf10108d06152206e318aea8f75e	[PATCH] ACPI: fix false-positive -Wuninitialized warning	include/linux/acpi.h
+4.9.188	0ad6cf8be66e22f47286906096920c44cdf21e62	[PATCH] be2net: Signal that the device cannot transmit during	drivers/net/ethernet/emulex/benet/be_main.c
+4.9.188	0284d1a889b026ff7803827c22b5b22364950c52	[PATCH] x86/apic: Silence -Wtype-limits compiler warnings	arch/x86/include/asm/apic.h,arch/x86/kernel/apic/apic.c
+4.9.188	69b2da2114b58b0777ce4e4b965425805623c59c	[PATCH] x86: math-emu: Hide clang warnings for 16-bit overflow	arch/x86/math-emu/fpu_emu.h,arch/x86/math-emu/reg_constant.c
+4.9.188	a57b352c4124f9bd198fe8c0afa708c850d9e9f8	[PATCH] mm/cma.c: fail if fixed declaration can't be honored	mm/cma.c
+4.9.188	4f592694b691450d1c4c457628e50826a5dea9ad	[PATCH] coda: add error handling for fget	fs/coda/psdev.c
+4.9.188	7b2364bf91550704f5ea75978a813855685700df	[PATCH] coda: fix build using bare-metal toolchain	include/linux/coda.h
+4.9.188	9299ddcb9dc2ca7d73ac0a8368bf17f3e4a9f190	[PATCH] uapi linux/coda_psdev.h: move upc_req definition from uapi to	include/linux/coda_psdev.h,include/uapi/linux/coda_psdev.h
+4.9.188	fb10e4566e8b468d043723101494be3683d5a8d1	[PATCH] mmc: dw_mmc: Fix occasional hang after tuning on eMMC	drivers/mmc/host/dw_mmc.c
+4.9.188	58caaeac68dcf4e2bd189344325fe1b3b8afb4f6	[PATCH] drivers/rapidio/devices/rio_mport_cdev.c: NUL terminate some	drivers/rapidio/devices/rio_mport_cdev.c
+4.9.188	86a8e2c5fdb3b522d5940cdea9db26da9e88f119	[PATCH] ipc/mqueue.c: only perform resource calculation if user valid	ipc/mqueue.c
+4.9.188	dbcff05ab626f9ed52604b17bfa376c9c5ef12b9	[PATCH] x86/kvm: Don't call kvm_spurious_fault() from .fixup	arch/x86/include/asm/kvm_host.h
+4.9.188	a3c85a9b6ff05a82c6f9e1112c8035889a083adf	[PATCH] kbuild: initialize CLANG_FLAGS correctly in the top Makefile	Makefile
+4.9.188	c29e4eb68418ee74650a4710696b86457b2ac0ca	[PATCH] gpiolib: fix incorrect IRQ requesting of an active-low	drivers/gpio/gpiolib.c
+4.9.188	b1f60d9c15e267d5f611c64fdad60871cf4f72a3	[PATCH] selinux: fix memory leak in policydb_init()	security/selinux/ss/policydb.c
+4.9.188	b2e74c919f60eebfd00feadb0bdd4b3dbce229d3	[PATCH] coredump: fix race condition between	drivers/android/binder_alloc.c,fs/proc/task_mmu.c,fs/userfaultfd.c,include/linux/mm.h,mm/mmap.c
+4.9.188	b882e30653dd7bcf7fcbef7fd857f1dda5f5ba65	[PATCH] eeprom: at24: make spd world-readable again	drivers/misc/eeprom/at24.c
+4.9.189	907d3464514a0838fbf5ec161fd6a5776135b45e	[PATCH] scsi: fcoe: Embed fc_rport_priv in fcoe_rport structure	drivers/scsi/fcoe/fcoe_ctlr.c,drivers/scsi/libfc/fc_rport.c,include/scsi/libfcoe.h
+4.9.189	024e70faaa9822bcdd5d5bc3a7a42c536f65c98e	[PATCH] ARM: dts: Add pinmuxing for i2c2 and i2c3 for LogicPD SOM-LV	arch/arm/boot/dts/logicpd-som-lv.dtsi
+4.9.189	f71f34f07f437d04af731f59094e1ad702ddc081	[PATCH] ARM: dts: Add pinmuxing for i2c2 and i2c3 for LogicPD torpedo	arch/arm/boot/dts/logicpd-torpedo-som.dtsi
+4.9.189	f0694589e694e672ea846149a9607e90a51781a7	[PATCH] ARM: dts: logicpd-som-lv: Fix Audio Mute	arch/arm/boot/dts/logicpd-som-lv.dtsi
+4.9.189	4cf5552f3f65cb46d25d3d1e39240e80aa6b4547	[PATCH] arm64: cpufeature: Fix feature comparison for	arch/arm64/include/asm/cpufeature.h,arch/arm64/kernel/cpufeature.c
+4.9.189	d1fa0b3dbeef038bdfa0acc01d9d06becb8f0698	[PATCH] tcp: be more careful in tcp_fragment()	include/net/tcp.h,net/ipv4/tcp_output.c
+4.9.189	4a2c2c92ad6d4a01c6af63cd09c1f5c227b11553	[PATCH] HID: wacom: fix bit shift for Cintiq Companion 2	drivers/hid/wacom_wac.c
+4.9.189	b7de2ea743fcf7477e24c6b697aef287bf969220	[PATCH] objtool: Add machine_real_restart() andrewind_stack_do_exit()	tools/objtool/check.c
+4.9.189	0239952abcc6437fc75224d39c6476ac1a3a914c	[PATCH] libceph: use kbasename() and kill ceph_file_part()	include/linux/ceph/ceph_debug.h,net/ceph/ceph_common.c
+4.9.189	9348db160bd1f4afe3e37276a6599e9957141eb0	[PATCH] net: bridge: mcast: don't delete permanent entries when fast	net/bridge/br_multicast.c
+4.9.189	cb4d237eb78131e60bde2ed16765540cf2e20061	[PATCH] net: fix ifindex collision during namespace removal	net/core/dev.c
+4.9.189	66c51528a13d4e2d710bf829935cf684127cb2b0	[PATCH] tipc: compat: allow tipc commands without arguments	net/tipc/netlink_compat.c
+4.9.189	558b995c469ec949107cea4cf7da8783b1bd340c	[PATCH] compat_ioctl: pppoe: fix PPPOEIOCSFWD handling	drivers/net/ppp/pppoe.c,drivers/net/ppp/pppox.c,drivers/net/ppp/pptp.c,fs/compat_ioctl.c,include/linux/if_pppox.h,net/l2tp/l2tp_ppp.c
+4.9.189	ecd34f3419af55ed50bccc2a7c6fa7593dffda06	[PATCH] ip6_tunnel: fix possible use-after-free on xmit	net/ipv6/ip6_tunnel.c
+4.9.189	930ba64e24c49c3bf6c7c5db40ace585421506a5	[PATCH] spi: bcm2835: Fix 3-wire mode if DMA is enabled	drivers/spi/spi-bcm2835.c
+4.9.190	bc3d14e79cfb20b4adba3e81c49b19ba7e1390de	[PATCH] usb: usbfs: fix double-free of usb memory upon submiturb	drivers/usb/core/devio.c
+4.9.190	14551a93b7aa36dbb294139b21eb85cbdc00b3c3	[PATCH] usb: iowarrior: fix deadlock on disconnect	drivers/usb/misc/iowarrior.c
+4.9.190	80dd81b923c36a0ffe57e647f13c83135487f778	[PATCH] sound: fix a memory leak bug	sound/sound_core.c
+4.9.190	85b84c08fd472cfcac63dc0e9be8022ccc03bc60	[PATCH] mm/vmalloc: Sync unmappings in __purge_vmap_area_lazy()	mm/vmalloc.c
+4.9.190	71a8df0b65dff884ac3e32a4d144d436deacf0f8	[PATCH] perf record: Fix wrong size in perf_record_mmap for last	tools/perf/util/machine.c,tools/perf/util/symbol-elf.c,tools/perf/util/symbol.c,tools/perf/util/symbol.h
+4.9.190	b9a4ce767ddf05ed930f4f00445bef516146a4e5	[PATCH] perf db-export: Fix thread__exec_comm()	tools/perf/util/thread.c
+4.9.190	71b02997679bd5130074e4f6a5795808555a5561	[PATCH] perf record: Fix module size on s390	tools/perf/arch/s390/util/machine.c,tools/perf/util/machine.c,tools/perf/util/machine.h
+4.9.190	4cb44628b8fbff572619482d7a57101398e14bd8	[PATCH] can: peak_usb: fix potential double kfree_skb()	drivers/net/can/usb/peak_usb/pcan_usb_core.c
+4.9.190	8231124dd078837fa75fc008f06643dfce467748	[PATCH] netfilter: nfnetlink: avoid deadlock due to synchronous	net/netfilter/nfnetlink.c
+4.9.190	5f77cec45a6dd78b57bb7c2fbeb2d7fa746c3037	[PATCH] iscsi_ibft: make ISCSI_IBFT dependson ACPI instead of	drivers/firmware/Kconfig,drivers/firmware/iscsi_ibft.c
+4.9.190	426fd26a39b7c44c39ee44abceb864462d76770e	[PATCH] cpufreq/pasemi: fix use-after-free in pas_cpufreq_cpu_init()	drivers/cpufreq/pasemi-cpufreq.c
+4.9.190	b507b650675577da477e3b4f00d5ade88e1c1cd0	[PATCH] s390/qdio: add sanity checks to the fast-requeue path	drivers/s390/cio/qdio_main.c
+4.9.190	5b28515d06b4daed89005e844eee3693f61f51df	[PATCH] scsi: megaraid_sas: fix panic on loading firmware crashdump	drivers/scsi/megaraid/megaraid_sas_base.c
+4.9.190	d9e8b4f4a602bdecf2c7d3e5b836062d4f3cb0a4	[PATCH] tty/ldsem, locking/rwsem: Add missing ACQUIRE to read_failed	drivers/tty/tty_ldsem.c
+4.9.190	b45e85452c12c4031072076763844a706a2d81b2	[PATCH] perf/core: Fix creating kernel counters for PMUs that	kernel/events/core.c
+4.9.190	83f6c0b0d877b58c709f00fefd734b7e2269db77	[PATCH] mac80211: don't WARN on short WMM parameters from AP	net/mac80211/mlme.c
+4.9.190	e5854d60647e4b40579d454dd902de3f6078ed73	[PATCH] SMB3: Fix deadlock in validate negotiate hits reconnect	fs/cifs/smb2pdu.c
+4.9.190	b01e8c118ef8cb9dac73901754385d428225e710	[PATCH] smb3: send CAP_DFS capability during session setup	fs/cifs/smb2pdu.c
+4.9.190	5230b01f51954e5cd37958dbf4dcebe4e9e8d613	[PATCH] mwifiex: fix 802.11n/WPA detection	drivers/net/wireless/marvell/mwifiex/main.h,drivers/net/wireless/marvell/mwifiex/scan.c
+4.9.190	46fb88fe59ab4b293506c0b26f38f6aef9aefa22	[PATCH] bpf: get rid of pure_initcall dependency to enable jits	arch/arm/net/bpf_jit_32.c,arch/arm64/net/bpf_jit_comp.c,arch/mips/net/bpf_jit.c,arch/powerpc/net/bpf_jit_comp.c,arch/powerpc/net/bpf_jit_comp64.c,arch/sparc/net/bpf_jit_comp.c
+4.9.190	ed847447b7e1e74d9b77f79ba3544e95839ce0f8	[PATCH] vhost-net: set packet weight of tx polling to 2 * vq size	drivers/vhost/net.c
+4.9.190	c194e36d5302408dba98b41b1518b3e969d64b82	[PATCH] siphash: add cryptographically secure PRF	Documentation/siphash.txt,MAINTAINERS,include/linux/siphash.h,lib/Kconfig.debug,lib/Makefile,lib/siphash.c
+4.9.190	c295a35abfdc90b7fd2d45cf827b52888d1b3e39	[PATCH] netfilter: ctnetlink: don't use conntrack/expect object	include/net/netfilter/nf_conntrack.h,net/netfilter/nf_conntrack_core.c,net/netfilter/nf_conntrack_netlink.c
+4.9.190	9e0d9519a797397e32c032c1f1cba53861bc3a53	[PATCH] ALSA: hda - Fix a memory leak bug	sound/pci/hda/hda_generic.c
+4.9.190	2cea0c2a23afce9dec30638c18fd1f3a1377b7ea	[PATCH] bpf: restrict access to core bpf sysctls	net/core/sysctl_net_core.c
+4.9.190	9f0ac40b421212a3a441dcc3fc4509c8903aebd7	[PATCH] vhost_net: use packet weight for rx handler, too	drivers/vhost/net.c
+4.9.190	8de22a279c7eeaced4704eebec193f59fe55127a	[PATCH] inet: switch IP ID generator to siphash	include/linux/siphash.h,include/net/netns/ipv4.h,net/ipv4/route.c,net/ipv6/output_core.c
+4.9.190	88d5a4cce6edaeb51c3fbc9f52015fc6d288ca37	[PATCH] ALSA: hda - Add a generic reboot_notify	sound/pci/hda/hda_generic.c,sound/pci/hda/hda_generic.h,sound/pci/hda/patch_conexant.c,sound/pci/hda/patch_realtek.c
+4.9.190	a32df21bd0a1995138933cbfd8ff7334c643fe2a	[PATCH] bpf: add bpf_jit_limit knob to restrict unpriv allocations	Documentation/sysctl/net.txt,include/linux/filter.h,kernel/bpf/core.c,net/core/sysctl_net_core.c
+4.9.190	9e65c093decfa253496e4144a12760fd76902e33	[PATCH] vhost_net: introduce vhost_exceeds_weight()	drivers/vhost/net.c
+4.9.190	ed4c381745a49b4f88ebd683cfbe17a316fa8d21	[PATCH] ALSA: hda - Let all conexant codec enter D3 when rebooting	sound/pci/hda/patch_conexant.c
+4.9.190	10d4aacd10092aeee4effb96b1f169c9682e25ae	[PATCH] libata: zpodd: Fix small read overflow in	drivers/ata/libata-zpodd.c
+4.9.190	57a151ca36330167b963a0e3f8d431a7eb710c50	[PATCH] arm64/mm: fix variable 'pud' set but not used	arch/arm64/include/asm/pgtable.h
+4.9.190	c32a230ecaa388e61aa6b16d6229026960f0fa4e	[PATCH] usb: cdc-acm: make sure a refcount is taken early enough	drivers/usb/class/cdc-acm.c
+4.9.190	b77eca890e144042e63df00be41fe80c0b562756	[PATCH] vhost: introduce vhost_exceeds_weight()	drivers/vhost/net.c,drivers/vhost/scsi.c,drivers/vhost/vhost.c,drivers/vhost/vhost.h,drivers/vhost/vsock.c
+4.9.190	bfc57d111ee707f589e12e170c9a3998fe19625c	[PATCH] bpf: fix bpf_jit_limit knob for PAGE_SIZE >= 64K	include/linux/filter.h,kernel/bpf/core.c,net/core/sysctl_net_core.c
+4.9.190	ed6c60200fd462e77813d73b418ae7c5507ae739	[PATCH] netfilter: conntrack: Use consistent ct id hash calculation	net/netfilter/nf_conntrack_core.c
+4.9.190	0557739b0bb1d77a9f4f51579e3b870dc2c8cf6c	[PATCH] bnx2x: Fix VF's VLAN reconfiguration in reload.	drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c,drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.h,drivers/net/ethernet/broadcom/bnx2x/bnx2x_main.c
+4.9.190	b53545d390edf3443a412465345313296ebbdd96	[PATCH] net/packet: fix race in tpacket_snd()	net/packet/af_packet.c
+4.9.190	3694cc9f16832d6a2947a114175a7817c890840a	[PATCH] sctp: fix the transport error_count check	net/sctp/sm_sideeffect.c
+4.9.190	7ec52204d5b0551309c89a6fee74d1fc7e27a1be	[PATCH] xen/netback: Reset nr_frags before freeing skb	drivers/net/xen-netback/netback.c
+4.9.190	feeeb4d7bb98c116872cd0c9512aa6575f209991	[PATCH] net/mlx5e: Only support tx/rx pause setting for port owner	drivers/net/ethernet/mellanox/mlx5/core/en_ethtool.c
+4.9.190	c4fdec3044f966eab47a6ad43de3098fc88b5985	[PATCH] team: Add vlan tx offload to hw_enc_features	drivers/net/team/team.c
+4.9.190	6f1706c3631f74099615d00f9c6699f65d8575c4	[PATCH] bonding: Add vlan tx offload to hw_enc_features	drivers/net/bonding/bond_main.c
+4.9.190	09a7f486f84b326c110b7215a6450f4448e4802d	[PATCH] vhost_net: fix possible infinite loop	drivers/vhost/net.c
+4.9.190	3b9cf351d1e8b1c82c18cecd85fe69e145e9b8b2	[PATCH] Fix USB serial option	drivers/usb/serial/option.c
+4.9.190	ea6c606e0880603dc2f21909913f22b4135b1e3d	[PATCH] USB: serial: option: add D-Link DWM-222 device ID	drivers/usb/serial/option.c
+4.9.190	6001471c0cdeb407b6803a869f0b74a20f45bc8f	[PATCH] USB: serial: option: Add support for ZTE MF871A	drivers/usb/serial/option.c
+4.9.190	8382df44a462217de5320815e06e3715c9d59694	[PATCH] USB: serial: option: add the BroadMobi BM818 card	drivers/usb/serial/option.c
+4.9.190	3c870ed5c7d0d1573edfb64ea7e39a2973be45be	[PATCH] USB: serial: option: Add Motorola modem UARTs	drivers/usb/serial/option.c
+4.9.190	78a97ce7244591e65d9b5e14a423be6b22ffb1ef	[PATCH] x86/mm: Check for pfn instead of page in vmalloc_sync_one()	arch/x86/mm/fault.c
+4.9.190	27c739cb4d1ed846f75bedbba8dceaec7da2d748	[PATCH] x86/mm: Sync also unmappings in vmalloc_sync_all()	arch/x86/mm/fault.c
+4.9.193	0d26cdb9a567f72926218ad4cdf291f5a72b0679	[PATCH] ALSA: hda - Fix potential endless loop at applying quirks	sound/pci/hda/hda_auto_parser.c
+4.9.193	50b187b550beaf85e9773a2c6d5613c40cd6ec43	[PATCH] ALSA: hda/realtek - Fix overridden device-specific	sound/pci/hda/hda_generic.c,sound/pci/hda/hda_generic.h,sound/pci/hda/patch_realtek.c
+4.9.193	57f99013967fd77aa171391267f1ca20441efdec	[PATCH] sched/fair: Don't assign runtime for throttled cfs_rq	kernel/sched/fair.c
+4.9.193	adfe9b68377d4b1111b78b94550398bc3a87cb35	[PATCH] drm/vmwgfx: Fix double free in vmw_recv_msg()	drivers/gpu/drm/vmwgfx/vmwgfx_msg.c
+4.9.193	f548419a2aaafa67cb409cfabde8e2d31eabe812	[PATCH] xfrm: clean up xfrm protocol checks	include/net/xfrm.h,net/key/af_key.c,net/xfrm/xfrm_state.c,net/xfrm/xfrm_user.c
+4.9.193	866674beb67dbb7d48b1868e7c90d172e0e6827a	[PATCH] vhost: make sure log_num < in_num	drivers/vhost/vhost.c
+4.9.194	d009cb63578a6744be5ec4d6ce920c872b5a5cd7	[PATCH] bridge/mdb: remove wrong use of NLM_F_MULTI	net/bridge/br_mdb.c
+4.9.194	fd5ffee99f77863565a45bb64a80825e2f181d52	[PATCH] cdc_ether: fix rndis support for Mediatek based smartphones	drivers/net/usb/cdc_ether.c
+4.9.194	bf43247aef3e9e5ee0bd505db42d4340652f18c1	[PATCH] ipv6: Fix the link time qualifier of	net/ipv6/ping.c
+4.9.194	cd480364d00d3d249922df93d887830f2f864ca8	[PATCH] isdn/capi: check message length in capi_write()	drivers/isdn/capi/capi.c,include/uapi/linux/isdn/capicmd.h
+4.9.194	d4e33f9d8e66e93c57e4125eeab0c04e642aea46	[PATCH] net: Fix null de-reference of device refcount	net/core/dev.c
+4.9.194	f58a39d96478d974e3eaca01dec5d97f22bcb0ba	[PATCH] net: gso: Fix skb_segment splat when splitting gso_size	net/core/skbuff.c
+4.9.194	d8288e1d10821c5ddb3a071d6c1634f207f51599	[PATCH] sch_hhf: ensure quantum and hhf_non_hh_weight are non-zero	net/sched/sch_hhf.c
+4.9.194	1ab290319fcb72f7c55fbcd3017bd233266b6378	[PATCH] sctp: Fix the link time qualifier of 'sctp_ctrlsock_exit()'	net/sctp/protocol.c
+4.9.194	a62f02027ffac6d5338f5a453c9ce0f1fb87f7a2	[PATCH] sctp: use transport pf_retrans in	net/sctp/sm_sideeffect.c
+4.9.194	f66fbdb8d0410dcb29ef39c1d160cd88f1f27b86	[PATCH] tcp: fix tcp_ecn_withdraw_cwr() to clear TCP_ECN_QUEUE_CWR	net/ipv4/tcp_input.c
+4.9.194	1bd2843fa5f3191587a89e1c36a611150a18d317	[PATCH] tun: fix use-after-free when register netdev failed	drivers/net/tun.c
+4.9.194	fa86a7f88b4931fb90c3edb120d5c88c68ca8088	[PATCH] Revert "MIPS: SiByte: Enable swiotlb for SWARM, LittleSur and	arch/mips/Kconfig,arch/mips/sibyte/common/Makefile,arch/mips/sibyte/common/dma.c
+4.9.194	4224beab8e939189c5eaff9df1ee24e430b75d59	[PATCH] gpio: fix line flag validation in linehandle_create	drivers/gpio/gpiolib.c
+4.9.194	74508bedb9bffe39ddf8fc449803209ba441ee86	[PATCH] gpio: fix line flag validation in lineevent_create	drivers/gpio/gpiolib.c
+4.9.194	2a17470a9c40386777df4b4e83aa4acaaf80a054	[PATCH] Btrfs: fix assertion failure during fsync and use of stale	fs/btrfs/tree-log.c
+4.9.194	9d642009bef3fca292d0a8a293343da45fc14899	[PATCH] driver core: Fix use-after-free and double free on glue	drivers/base/core.c
+4.9.194	31dbedf8689ed9a00fd72277228b41321781eb7e	[PATCH] x86/build: Add -Wnoaddress-of-packed-member to	arch/x86/Makefile
+4.9.194	30f881f670923dcf4d5fc11e801998e75e39601d	[PATCH] USB: usbcore: Fix slab-out-of-bounds bug during device reset	drivers/usb/core/config.c
+4.9.194	525bc6d53dd60a15970aec52dfebf48badc69bf2	[PATCH] x86/boot: Add missing bootparam that breaks boot on some	arch/x86/include/asm/bootparam_utils.h
+4.9.194	1d9fd2379412c53e4070db99ea7dc5f8415b13d7	[PATCH] xen-netfront: do not assume sk_buff_head list is empty in	drivers/net/xen-netfront.c
+4.9.194	f244df060b3f59de0e3c4c6d3e95fe3493ef612b	[PATCH] serial: sprd: correct the wrong sequence of arguments	drivers/tty/serial/sprd_serial.c
+4.9.194	5ee1590a344116ba093056d52e646b94f79fa47e	[PATCH] tty/serial: atmel: reschedule TX after RX was started	drivers/tty/serial/atmel_serial.c
+4.9.194	ebcfd69c0161c7dff36ab5d2a4be6caa98c2c726	[PATCH] mwifiex: Fix three heap overflow at parsing element in	drivers/net/wireless/marvell/mwifiex/ie.c,drivers/net/wireless/marvell/mwifiex/uap_cmd.c
+4.9.194	bc91347ea9597b94fc30ef1ca2973ee48efdb197	[PATCH] netfilter: nf_conntrack_ftp: Fix debug output	net/netfilter/nf_conntrack_ftp.c
+4.9.194	ff13980c4e167ef441fa32a475e15bc5c4627c20	[PATCH] cifs: set domainName when a domain-key is used in multiuser	fs/cifs/connect.c
+4.9.194	31674c557399a2da9365780aad553075c6e7376d	[PATCH] sky2: Disable MSI on yet another ASUS boards (P6Xxxx)	drivers/net/ethernet/marvell/sky2.c
+4.9.194	5fbf99a1ed578fcd93b577f79a1a61541138f18f	[PATCH] perf/x86/intel: Restrict period on Nehalem	arch/x86/events/intel/core.c
+4.9.194	94615b53b6461be9a179950b538c6d145f919e64	[PATCH] tools/power turbostat: fix buffer overrun	tools/power/x86/turbostat/turbostat.c
+4.9.194	f782151cc5693895521f5c0d89923cb777db005a	[PATCH] keys: Fix missing null pointer check in	security/keys/request_key_auth.c
+4.9.194	9769a1177b42472a6f4d5860aaf3d7612cfbb1f2	[PATCH] iommu/amd: Fix race in increase_address_space()	drivers/iommu/amd_iommu.c
+4.9.194	14cd2acaa481a7e248576d152040e4bacd9c11f9	[PATCH] crypto: talitos - check AES key size	drivers/crypto/talitos.c
+4.9.194	66cd751c9f806ced8eddc7d5aa03367a3cf74119	[PATCH] crypto: talitos - fix CTR alg blocksize	drivers/crypto/talitos.c
+4.9.194	645897ca3d556676923278a4c52b36e8eeba7028	[PATCH] crypto: talitos - check data blocksize in ablkcipher.	drivers/crypto/talitos.c
+4.9.194	c09f68ba49f6c70fcd673bd61b7b344c0a1b9523	[PATCH] crypto: talitos - fix ECB algs ivsize	drivers/crypto/talitos.c
+4.9.194	c7dae13ef46a5febdb90ac876e91bdab78249249	[PATCH] crypto: talitos - Do not modify req->cryptlen on decryption.	drivers/crypto/talitos.c
+4.9.194	c8ced2d18e7124182f5e83aaae37bb6a5ca1625f	[PATCH] crypto: talitos - HMAC SNOOP NO AFEU mode requires SW icv	drivers/crypto/talitos.c
+4.9.194	f40a730fd09545dfae01af006c2ea77b1f851fde	[PATCH] cifs: Use kzfree() to zero out the password	fs/cifs/connect.c

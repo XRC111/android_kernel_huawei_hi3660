@@ -23,8 +23,6 @@ void rdr_audio_codec_exit(void);
 void rdr_audio_codec_dump(u32 modid, char *pathname, pfn_cb_dump_done pfb);
 void rdr_audio_codec_reset(u32 modid, u32 etype, u64 coreid);
 void rdr_codec_hifi_watchdog_process(void);
-void rdr_audio_codec_err_process(void);
-void rdr_audio_clear_reboot_times(void);
 
 #ifdef __cplusplus
 #if __cplusplus

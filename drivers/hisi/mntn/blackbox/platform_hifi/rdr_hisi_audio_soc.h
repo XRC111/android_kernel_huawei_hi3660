@@ -51,7 +51,7 @@ struct drv_hifi_sec_ddr_head {
 
 /*** for icc begin***/
 #define ICC_CHN_ID_MAX 16
-#define ICC_STAT_MSG_NUM   50
+#define ICC_STAT_MSG_NUM   1000
 
 #define ICC_DEBUG_PROTECT_WORD1 0xCDCDDCDC
 #define ICC_DEBUG_PROTECT_WORD2 0xEFEFFEFE

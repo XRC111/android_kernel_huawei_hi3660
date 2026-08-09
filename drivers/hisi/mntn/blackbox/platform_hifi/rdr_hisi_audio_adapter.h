@@ -18,23 +18,24 @@ extern "C" {
 #endif
 
 #include <linux/hisi/rdr_pub.h>
-#include <mntn_subtype_exception.h>
 
 #define RDR_FNAME_LEN					128UL
 /* rdr modid for hifi from 0x84000000(HISI_BB_MOD_HIFI_START) to 0x84ffffff(HISI_BB_MOD_HIFI_END) */
+#define RDR_AUDIO_MODID_START          HISI_BB_MOD_HIFI_START
 
-enum RDR_AUDIO_MODID{
-	RDR_AUDIO_MODID_START = HISI_BB_MOD_HIFI_START,
-	RDR_AUDIO_SOC_WD_TIMEOUT_MODID,
-	RDR_AUDIO_CODEC_WD_TIMEOUT_MODID,
-	RDR_AUDIO_NOC_MODID = 0x84000021,
-	RDR_AUDIO_CODEC_CRASH_MODID_START,
-	RDR_AUDIO_CODEC_ERR_MODID,
-	RDR_AUDIO_SLIMBUS_LOSTSYNC_MODID,
-	RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID,
-	RDR_AUDIO_CODEC_CRASH_MODID_END,
-	RDR_AUDIO_MODID_END = HISI_BB_MOD_HIFI_END,
-};
+#define RDR_AUDIO_SOC_MODID_START      RDR_AUDIO_MODID_START
+#define RDR_AUDIO_SOC_WD_TIMEOUT_MODID 0x84000001U
+#define RDR_AUDIO_SOC_MODID_END        0x8400000fU
+
+#define RDR_AUDIO_CODEC_MODID_START      0x84000010U
+#define RDR_AUDIO_CODEC_WD_TIMEOUT_MODID 0x84000011U
+#define RDR_AUDIO_CODEC_MODID_END        0x8400001FU
+
+#define RDR_AUDIO_REBOOT_MODID_START 0x84000020U
+#define RDR_AUDIO_NOC_MODID          0x84000021U
+#define RDR_AUDIO_REBOOT_MODID_END   0x8400002FU
+
+#define RDR_AUDIO_MODID_END          HISI_BB_MOD_HIFI_END
 
 enum core_type {
 	CODECDSP,
@@ -76,7 +77,7 @@ struct parse_log {
 	LOG_PARSE_FUNC parse_func;
 };
 
-int rdr_audio_write_file(char *name, const char *data, u32 size);
+int rdr_audio_write_file(char *name, char *data, u32 size);
 int parse_hifi_cpuview(char *original_buf, unsigned int original_buf_size,
 	char *parsed_buf, unsigned int parsed_buf_size, unsigned int core_type);
 int parse_hifi_trace(char *original_data, unsigned int original_data_size,

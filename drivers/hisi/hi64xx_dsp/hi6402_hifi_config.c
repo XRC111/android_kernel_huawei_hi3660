@@ -370,14 +370,10 @@ static void hi6402_soundtrigger_fasttrans_ctrl_4smartpa(bool enable, bool fm)
 	if (enable) {
 		hi64xx_hifi_write_reg(HI6402_SLIM_CTRL_5, 0x66);/*S3_OL_PGA 16K*/
 		hi64xx_hifi_write_reg(HI6402_DSP_S3_CTRL_L, 0x0e);/*S3_CTRL*/
-		/* DSP IF 1 */
-		hi64xx_hifi_write_reg(HI6402_DSP_S1_CTRL_H, 0x14);/* 16K */
-		/* Slimbus u1,u2 sample rate */
-		hi64xx_hifi_write_reg(HI6402_SLIM_CTRL_1, 0x44);/* 48K */
 		hi64xx_hifi_write_reg(HI6402_SLIM_UP_EN, 0xFF);/*SLIMBUS INPUT ENABLE*/
 	} else {
 		hi64xx_hifi_write_reg(HI6402_SLIM_CTRL_5, 0x00);/*S3_OL_PGA 16K*/
-		hi64xx_hifi_write_reg(HI6402_DSP_S3_CTRL_L, 0x04);
+		hi64xx_hifi_write_reg(HI6402_DSP_S3_CTRL_L, 0x00);
 		hi64xx_hifi_write_reg(HI6402_SLIM_UP_EN, 0xAA);
 	}
 
@@ -404,11 +400,7 @@ static void hi6402_dsp_if_set_bypass(unsigned int dsp_if_id, bool enable)
 
 	IN_FUNCTION;
 
-	if (i2s_id >= ARRAY_SIZE(hi6402_sc_src_lr_ctrls_m)) {
-		HI64XX_DSP_ERROR("i2s id error, %d\n", i2s_id);
-		WARN_ON(1);
-		return;
-	}
+	BUG_ON(i2s_id >= ARRAY_SIZE(hi6402_sc_src_lr_ctrls_m));
 
 	bit = (direct == HI64XX_HIFI_PCM_IN) ? 6 : 7;
 	if(dsp_if_id == HI64XX_HIFI_DSP_IF_PORT_8)
@@ -451,12 +443,7 @@ static int hi6402_dsp_if_set_sample_rate(unsigned int dsp_if_id,
 
 	IN_FUNCTION;
 
-	if (i2s_id >= ARRAY_SIZE(hi6402_sc_fs_ctrls_h)) {
-		HI64XX_DSP_ERROR("i2s id error, %d\n", i2s_id);
-		WARN_ON(1);
-		return 0;
-	}
-
+	WARN_ON(i2s_id >= ARRAY_SIZE(hi6402_sc_fs_ctrls_h));
 	addr = hi6402_sc_fs_ctrls_h[i2s_id];
 
 	if (!hi64xx_get_sample_rate_index(sample_rate_in, &sample_rate_index)) {

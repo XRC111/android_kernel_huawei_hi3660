@@ -7,20 +7,18 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  */
-#include <hi64xx_hifi_interface.h>
+#include "hi64xx_hifi_interface.h"
 #include "hi64xx_hifi_debug.h"
 #include "hi64xx_hifi_om.h"
 #include "hi64xx_hifi_misc.h"
-#include "huawei_platform/log/imonitor.h"
-#include "huawei_platform/log/imonitor_keys.h"
+#include "../../huawei_platform/log/imonitor.h"
+#include "../../huawei_platform/log/imonitor_keys.h"
 
 
 /*lint -e655 -e838 -e730 -e754 -e747 -e731*/
 #define CODEC_DSP_ANC_ERR_BASE_ID        916000000
 #define CODEC_DSP_SMARTPA_ERR_BASE_ID    916000100
-#define VIRTUAL_BTN_INFO_EVENT_ID        931001002
 #define HOOK_PATH_BETA_CLUB "/data/log/codec_dsp/beta_club/"
-#define HOOK_PATH_VIRTUAL_BTN "/data/log/codec_dsp/"
 #define FULL_PERMISSION true
 #define SAFE_PERMISSION false
 #define EVENTLEVEL E916000001_EVENTLEVEL_INT
@@ -156,7 +154,7 @@ int anc_beta_stop_hook(void)
 	return ret;
 }
 
-void anc_beta_generate_path(hook_pos pos, const char *base_path, char *full_path, unsigned long full_path_len)
+void anc_beta_generate_path(hook_pos pos, char *base_path, char *full_path, unsigned long full_path_len)
 {
 	switch (pos) {
 	case HOOK_POS_ANC_PCM_REF:
@@ -253,59 +251,6 @@ int dsm_beta_log_upload(void* data)
 		imonitor_set_param(obj, E916000102_ERRPOSTAG_VARCHAR, (long)numStr);
 	}
 	ret = imonitor_send_event(obj);
-	imonitor_destroy_eventobj(obj);
-
-	return ret;
-}
-
-int virtual_btn_beta_dump_file(const void* data, unsigned int len, bool create_dir)
-{
-	char fullname[HOOK_PATH_MAX_LENGTH] = {0};
-
-	if (create_dir) {
-		hi64xx_hifi_create_hook_dir(HOOK_PATH_VIRTUAL_BTN);
-	}
-	snprintf(fullname, sizeof(fullname), "%s%s", HOOK_PATH_VIRTUAL_BTN, "virtual_btn_info");
-	hi64xx_hifi_dump_to_file(data, len, fullname);
-
-	return 0;
-}
-
-int virtual_btn_beta_log_upload(VITRUAL_BNT_DATA_LOG *info)
-{
-	struct imonitor_eventobj *obj;
-	unsigned int event_id;
-	int ret;
-	int i;
-
-	event_id = VIRTUAL_BTN_INFO_EVENT_ID;
-	obj = imonitor_create_eventobj(event_id);
-	if (!obj) {
-		HI64XX_DSP_ERROR("virtual btn imonitor create eventobj error\n");
-		return -1;
-	}
-	imonitor_set_param_integer_v2(obj, "btn_num", (long)info->btn_num);
-	imonitor_set_param_integer_v2(obj, "passive_num", (long)info->passive_num);
-	imonitor_set_param_integer_v2(obj, "active_num", (long)info->active_num);
-	for (i = 0; i < VIRTUAL_BTN_MSG_NUM; i++) {
-		if (VIRTUAL_BTN_PRESS_UP_FLAG == info->data_log[i][VIRTBTN_PRESS_UP]) {
-			break;
-		}
-	}
-	if (i < VIRTUAL_BTN_MSG_NUM) {
-		imonitor_set_param_integer_v2(obj, "fitting_linearity", (long)info->data_log[i][VIRTBTN_FITTING_LINEARITY]);
-		imonitor_set_param_integer_v2(obj, "data_ult_baseline", (long)info->data_log[i][VIRTBTN_DATA_ULT_BASELINE]);
-		imonitor_set_param_integer_v2(obj, "slope_intercept", (long)info->data_log[i][VIRTBTN_SLOPE_INTERCEPT]);
-		imonitor_set_param_integer_v2(obj, "freq_scan", (long)info->data_log[i][VIRTBTN_FREQ_SCAN]);
-	} else {
-		imonitor_set_param_integer_v2(obj, "fitting_linearity", 0);
-		imonitor_set_param_integer_v2(obj, "data_ult_baseline", 0);
-		imonitor_set_param_integer_v2(obj, "slope_intercept", 0);
-		imonitor_set_param_integer_v2(obj, "freq_scan", 0);
-	}
-	ret = imonitor_send_event(obj);
-	if (ret < 0)
-		HI64XX_DSP_ERROR("virtual btn imonitor send event fail %d\n", ret);
 	imonitor_destroy_eventobj(obj);
 
 	return ret;

@@ -240,7 +240,8 @@ static void hi6403_soundtrigger_fasttrans_ctrl(bool enable, bool fm)
 		hi64xx_hifi_reg_write_bits(HI6403_DSP_S3_CTRL_L, 0x06, 0x07);/* 192K */
 		/* DSP IF 5 */
 		hi64xx_hifi_write_reg(HI6403_DSP_S3_CTRL_H, 0x66);/* 192K */
-
+		/* use DSP IF5/DSP IF1 instead of PGA */
+		hi64xx_hifi_write_reg(HI6403_SLIM_UP_EN2, 0xC7);/* use DSP IF5, DSP IF1 */
 		/* Slimbus u5,u6,u1,u2 */
 		hi64xx_hifi_write_reg(HI6403_SLIM_UP_EN1, 0xFF);/* Open u5,u6 */
 		/* Slimbus u5,u6 sample rate */
@@ -257,6 +258,8 @@ static void hi6403_soundtrigger_fasttrans_ctrl(bool enable, bool fm)
 		hi64xx_hifi_reg_write_bits(HI6403_DSP_S3_CTRL_L, 0x04, 0x07);/* 48K */
 		/* DSP IF 5 */
 		hi64xx_hifi_write_reg(HI6403_DSP_S3_CTRL_H, 0x00);/* 8K */
+		/* use DSP IF5/DSP IF1 instead of PGA */
+		hi64xx_hifi_write_reg(HI6403_SLIM_UP_EN2, 0x00);/* disuse DSP IF5, DSP IF1 */
 		/* Slimbus u5,u6,u1,u2 */
 		hi64xx_hifi_write_reg(HI6403_SLIM_UP_EN1, 0x00);/* close u5,u6,u1,u2 */
 		/* Slimbus u5,u6 sample rate */
@@ -293,11 +296,7 @@ static void hi6403_dsp_if_set_bypass(unsigned int dsp_if_id, bool enable)
 
 	IN_FUNCTION;
 
-	if (i2s_id >= ARRAY_SIZE(hi6403_sc_src_lr_ctrls_m)) {
-		HI64XX_DSP_ERROR("i2s id error, %d\n", i2s_id);
-		WARN_ON(1);
-		return;
-	}
+	BUG_ON(i2s_id >= ARRAY_SIZE(hi6403_sc_src_lr_ctrls_m));
 	addr = hi6403_sc_src_lr_ctrls_m[i2s_id];
 
 	if(HI64XX_HIFI_DSP_IF_PORT_8 > dsp_if_id) {
@@ -443,11 +442,7 @@ static int hi6403_dsp_if_set_sample_rate(unsigned int dsp_if_id,
 
 	IN_FUNCTION;
 
-	if (i2s_id >= ARRAY_SIZE(hi6403_sc_fs_ctrls_h)) {
-		HI64XX_DSP_ERROR("i2s id error, %d\n", i2s_id);
-		WARN_ON(1);
-		return -1;
-	}
+	WARN_ON(i2s_id >= ARRAY_SIZE(hi6403_sc_fs_ctrls_h));
 	addr = hi6403_sc_fs_ctrls_h[i2s_id];
 
 	if (!hi64xx_get_sample_rate_index(sample_rate_in, &sample_rate_index)) {
@@ -551,7 +546,6 @@ int hi6403_hifi_config_init(struct snd_soc_codec *codec,
 
 	ret += hi64xx_hifi_om_init(irqmgr, HI64XX_CODEC_TYPE_6403);
 
-
 	HI64XX_DSP_INFO("%s--\n", __FUNCTION__);
 
 	return ret;
@@ -560,7 +554,6 @@ EXPORT_SYMBOL(hi6403_hifi_config_init);
 
 void hi6403_hifi_config_deinit(void)
 {
-
 	hi64xx_hifi_misc_deinit();
 
 	hi64xx_hifi_img_dl_deinit();

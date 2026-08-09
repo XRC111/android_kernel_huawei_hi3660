@@ -1,5 +1,6 @@
 # hi6402 dsp device driver
-subdir-ccflags-y += -Wall -Werror
+#subdir-ccflags-y += -Wall -Werror
+subdir-ccflags-y += -Wall
 
 ccflags-y += -Idrivers/devkit/audiokit/
 EXTRA_CFLAGS += -Idrivers/hisi/slimbus/
@@ -14,7 +15,6 @@ ifeq ($(kcov),true)
 EXTRA_CFLAGS += -DENABLE_AUDIO_KCOV
 else
 EXTRA_CFLAGS += -DENABLE_HI64XX_HIFI_DEBUG
-obj-y += hi64xx_hifi_file_ops.o
 endif
 #ifeq ($(CONFIG_SND_SOC_CODEC_STUB),y)
 #	EXTRA_CFLAGS += -DHI6XXX_FPGA_CODEC_STUB
@@ -29,20 +29,12 @@ ifeq ($(CFG_CONFIG_HISI_FAMA),true)
 	EXTRA_CFLAGS += -DCONFIG_HISI_FAMA
 endif
 
-ifeq ($(TARGET_VERSION_MODE),factory)
-EXTRA_CFLAGS += -DAUDIO_FACTORY_MODE
-endif
-
 ifeq ($(CONFIG_SND_SOC_HI6402),y)
 obj-$(CONFIG_HI6402_HIFI_MISC) += hi6402_hifi_config.o
 endif
 
 obj-$(CONFIG_HI6402_HIFI_MISC) += hi64xx_hifi_misc.o
 obj-$(CONFIG_HI6402_HIFI_MISC) += hi6403_hifi_config.o
-
-ifeq ($(CONFIG_SND_SOC_HI6405),y)
-obj-$(CONFIG_SND_SOC_HI6405) += hi6405_hifi_config.o
-endif
 
 
 obj-$(CONFIG_HI6402_HIFI_MISC) += hi64xx_hifi_img_dl.o

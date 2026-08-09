@@ -36,12 +36,12 @@
 #include <dsm/dsm_pub.h>
 #include <linux/hisi/rdr_pub.h>
 
-#include <hi64xx_algo_interface.h>
-#include <hi64xx_hifi_interface.h>
+#include "hi64xx_algo_interface.h"
+#include "hi64xx_hifi_interface.h"
 #include <linux/hisi/hi64xx/hi64xx_dsp_regs.h>
 
 #include "hi64xx_hifi_debug.h"
-#include "slimbus.h"
+#include "../slimbus/slimbus.h"
 #include "hi64xx_hifi_img_dl.h"
 
 /*lint -e750 -e838*/
@@ -194,17 +194,13 @@ static void hi64xx_img_page_dl(uint32_t des_addr, uint32_t src_addr, uint32_t si
 
 			/* transfer timeout stop dma */
 			if (0 != hi64xx_codec_dma_stop(DMA_IMG_DL_CH)) {
-				ret = slimbus_track_deactivate(SLIMBUS_DEVICE_HI6403, SLIMBUS_TRACK_IMAGE_LOAD, NULL);
-				if (ret)
-					HI64XX_DSP_WARNING("page dl return ret %d\n", ret);
+				slimbus_track_deactivate(SLIMBUS_DEVICE_HI6403, SLIMBUS_TRACK_IMAGE_LOAD, NULL);
 				hi64xx_hifi_reg_clr_bit(dl_data->dl_config.dspif_clk_en_addr,2);
 				HI64XX_DSP_ERROR("section download error des_addr 0x%pK\n", (void *)(unsigned long)des_addr);
 				return;
 			}
 			if(0 != hi64xx_soc_dma_stop(DMA_IMG_DL_CH)) {
-				ret = slimbus_track_deactivate(SLIMBUS_DEVICE_HI6403, SLIMBUS_TRACK_IMAGE_LOAD, NULL);
-				if (ret)
-					HI64XX_DSP_WARNING("page dl return ret %d\n", ret);
+				slimbus_track_deactivate(SLIMBUS_DEVICE_HI6403, SLIMBUS_TRACK_IMAGE_LOAD, NULL);
 				hi64xx_hifi_reg_clr_bit(dl_data->dl_config.dspif_clk_en_addr,2);
 				HI64XX_DSP_ERROR("section download error des_addr 0x%pK\n", (void *)(unsigned long)des_addr);
 				return;
@@ -214,7 +210,7 @@ static void hi64xx_img_page_dl(uint32_t des_addr, uint32_t src_addr, uint32_t si
 	} while ((readl(ASP_DMAC_CX_CONFIG(DMA_IMG_DL_CH)) & 0x1)
 			||(hi64xx_hifi_read_reg(HI64xx_CX_CONFIG(DMA_IMG_DL_CH)) & 0x1));
 
-	ret = slimbus_track_deactivate(SLIMBUS_DEVICE_HI6403, SLIMBUS_TRACK_IMAGE_LOAD, NULL);
+	ret += slimbus_track_deactivate(SLIMBUS_DEVICE_HI6403, SLIMBUS_TRACK_IMAGE_LOAD, NULL);
 	hi64xx_hifi_reg_clr_bit(dl_data->dl_config.dspif_clk_en_addr,2);
 
 	if (ret)

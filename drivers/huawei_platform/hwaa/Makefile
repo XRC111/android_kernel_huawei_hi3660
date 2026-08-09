@@ -19,7 +19,8 @@ obj-$(CONFIG_HWAA) += src/tee/hwaa_adapter.o \
 		      src/tee/hwaa_alg.o \
 		      src/tee/hwaa_tee.o
 
-EXTRA_CFLAGS := -I../../include/ \
+EXTRA_CFLAGS := -I$(src) \
+		-I../../include/ \
 		-Iinc/base \
 		-Iinc/fek \
 		-Iinc/ioctl \

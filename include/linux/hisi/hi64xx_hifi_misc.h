@@ -41,6 +41,7 @@ enum {
 	HI_FREQ_SCENE_SET_PARA,
 	HI_FREQ_SCENE_OM,
 	HI_FREQ_SCENE_MAD_TEST,
+	HI_FREQ_SCENE_DUMP,
 	HI_FREQ_SCENE_FAULT_INJECT,
 	HI_FREQ_SCENE_PWR_TEST,
 	HI_FREQ_SCENE_ANC,
@@ -52,7 +53,6 @@ enum {
 	HI_FREQ_SCENE_FASTTRANS,
 	HI_FREQ_SCENE_IR_LEARN,
 	HI_FREQ_SCENE_IR_TRANS,
-	HI_FREQ_SCENE_VIRTUAL_BTN,
 	HI_FREQ_SCENE_BUTT,
 };
 
@@ -63,8 +63,6 @@ enum {
 	LOW_FREQ_SCENE_PWR_TEST,
 	LOW_FREQ_SCENE_MSG_PROC,
 	LOW_FREQ_SCENE_MULTI_WAKE_UP,
-	LOW_FREQ_SCENE_VIRTUAL_BTN,
-	LOW_FREQ_SCENE_DUMP,
 	LOW_FREQ_SCENE_BUTT,
 };
 
@@ -72,19 +70,6 @@ enum {
 	HIFI_STATE_UNINIT,
 	HIFI_STATE_INIT,
 	HIFI_STATE_BUTT,
-};
-
-enum {
-	DUMP_TYPE_WHOLE_OCRAM,
-	DUMP_TYPE_WHOLE_IRAM,
-	DUMP_TYPE_WHOLE_DRAM,
-	DUMP_TYPE_PRINT_LOG,
-	DUMP_TYPE_PANIC_LOG,
-	DUMP_TYPE_REG,
-#ifdef ENABLE_HI64XX_HIFI_DEBUG
-	DUMP_TYPE_WAKEUP_PCM,
-	DUMP_TYPE_TOTAL_LOG,
-#endif
 };
 
 struct om_stop_hook_msg;
@@ -135,7 +120,6 @@ struct fake_sync_msg {
 #define HI64XX_HIFI_MISC_IOCTL_KCOV_FAKE_DSP2AP_MSG   _IOWR('A', 0x94, struct fake_dsp2ap_msg)
 #define HI64XX_HIFI_MISC_IOCTL_KCOV_FAKE_SYNCMSG  _IOWR('A', 0x95, struct fake_sync_msg)
 #define HI64XX_HIFI_MISC_IOCTL_KCOV_FAKE_DUMP_LOG  _IOW('A', 0x96, unsigned int)
-#define HI64XX_HIFI_MISC_IOCTL_DMESG_DUMP_LOG     _IOWR('A', 0x97, unsigned int)
 
 /*
  *  dsp img download
@@ -327,11 +311,12 @@ void hi64xx_hifi_reg_write_bits(unsigned int reg,
 bool hi64xx_hifi_is_running(void);
 void hi64xx_watchdog_send_event(void);
 size_t hi64xx_get_dump_reg_size(void);
+size_t hi64xx_append_comment(char *buf, const size_t size);
 unsigned int hi64xx_misc_get_ocram_dump_addr(void);
 unsigned int hi64xx_misc_get_ocram_dump_size(void);
 unsigned int hi64xx_misc_get_log_dump_addr(void);
 unsigned int hi64xx_misc_get_log_dump_size(void);
-void hi64xx_hifi_dump_with_path(const char *path);
+void hi64xx_hifi_dump_with_path(char *path);
 void hi64xx_misc_dump_reg(char *buf, const size_t size);
 void hi64xx_misc_dump_bin(const unsigned int addr, char *buf, const size_t len);
 int hi64xx_hifi_misc_suspend(void);
@@ -355,6 +340,4 @@ unsigned int hi64xx_misc_get_dtcm_size(void);
 void hi64xx_soundtrigger_close_codec_dma(void);
 bool hi64xx_check_i2s2_clk(void);
 bool hi64xx_get_sample_rate_index(unsigned int sample_rate, unsigned char *sel);
-void hi64xx_wakeup_pcm_hook_start(void);
-void hi64xx_wakeup_pcm_hook_stop(void);
 #endif/*__HI6402_DSP_H__*/

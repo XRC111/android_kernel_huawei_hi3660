@@ -2,8 +2,8 @@
 #include <linux/uaccess.h>
 #include <linux/input.h>
 #include <linux/input/mt.h>
-#include <huawei_ts_kit.h>
-#include <huawei_ts_kit_api.h>
+#include "huawei_ts_kit.h"
+#include "huawei_ts_kit_api.h"
 #include <huawei_ts_kit_platform.h>
 #include <huawei_ts_kit_misc.h>
 #include "trace-events-touch.h"

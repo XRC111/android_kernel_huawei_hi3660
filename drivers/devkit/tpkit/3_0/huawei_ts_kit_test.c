@@ -21,7 +21,7 @@
 #include <linux/kthread.h>
 #include <linux/workqueue.h>
 #include <linux/wakelock.h>
-#include <huawei_ts_kit.h>
+#include "huawei_ts_kit.h"
 #include <linux/completion.h>
 
 enum ts_test_item_enum {

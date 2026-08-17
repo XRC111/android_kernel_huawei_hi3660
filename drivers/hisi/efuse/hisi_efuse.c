@@ -36,7 +36,7 @@
 #include <linux/workqueue.h>
 #include <linux/timer.h>
 #include <linux/delay.h>
-#include <global_ddr_map.h>
+#include "../ap/platform/hi3660/global_ddr_map.h"
 #include <linux/clk.h>
 #include <linux/clkdev.h>
 #include <linux/kconfig.h>

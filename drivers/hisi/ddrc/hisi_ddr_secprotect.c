@@ -28,7 +28,7 @@
 #include "securec.h"
 
 #include "hisi_ddr_secprotect.h"
-#include <global_ddr_map.h>
+#include "../ap/platform/hi3660/global_ddr_map.h"
 #include <linux/hisi/rdr_pub.h>
 #include <linux/hisi/util.h>
 #include <linux/hisi/hisi_ddr.h>

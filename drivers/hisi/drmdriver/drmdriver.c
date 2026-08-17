@@ -13,7 +13,7 @@
 #include <linux/platform_device.h>
 #include <linux/interrupt.h>
 #include <linux/module.h>
-#include <global_ddr_map.h>
+#include "../ap/platform/hi3660/global_ddr_map.h"
 #include <linux/hisi/hisi_drmdriver.h>
 
 #define ATFD_MEM_START_ADDRESS  "hisi,share-memory-drm"

@@ -1,19 +1,30 @@
-/* x_tables module for setting the IPv4/IPv6 DSCP field
+/* x_tables module for DSCP field (combined header for Windows case-insensitive FS)
  *
- * (C) 2002 Harald Welte <laforge@gnumonks.org>
- * based on ipt_FTOS.c (C) 2000 by Matthew G. Marsh <mgm@paktronix.com>
- * This software is distributed under GNU GPL v2, 1991
- *
- * See RFC2474 for a description of the DSCP field within the IP Header.
- *
- * xt_DSCP.h,v 1.7 2002/03/14 12:03:13 laforge Exp
-*/
-#ifndef _XT_DSCP_TARGET_H
-#define _XT_DSCP_TARGET_H
-#include <linux/netfilter/xt_dscp.h>
+ * Contains: XT_DSCP_* macros, xt_dscp_info/xt_tos_match_info (match),
+ *           xt_DSCP_info/xt_tos_target_info (target)
+ */
+#ifndef _XT_DSCP_H_COMBINED
+#define _XT_DSCP_H_COMBINED
+
 #include <linux/types.h>
 
-/* target info */
+#define XT_DSCP_MASK	0xfc	/* 11111100 */
+#define XT_DSCP_SHIFT	2
+#define XT_DSCP_MAX	0x3f	/* 00111111 */
+
+/* match info (xt_dscp.h) */
+struct xt_dscp_info {
+	__u8 dscp;
+	__u8 invert;
+};
+
+struct xt_tos_match_info {
+	__u8 tos_mask;
+	__u8 tos_value;
+	__u8 invert;
+};
+
+/* target info (xt_DSCP.h) */
 struct xt_DSCP_info {
 	__u8 dscp;
 };
@@ -23,4 +34,4 @@ struct xt_tos_target_info {
 	__u8 tos_mask;
 };
 
-#endif /* _XT_DSCP_TARGET_H */
+#endif /* _XT_DSCP_H_COMBINED */

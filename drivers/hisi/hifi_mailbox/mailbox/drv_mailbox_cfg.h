@@ -57,18 +57,18 @@ extern "C" {
 #endif
 
 /*****************************************************************************
-  1 ÆäËûÍ·ÎÄ¼þ°üº¬
+  1 ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
-#include "hifi_lpp.h"
+#include "../../hifi_dsp/hifi_lpp.h"
 #include "mdrv_ipc_enum.h"
 
 /*****************************************************************************
-  2 ºê¶¨Òå
+  2 ï¿½ê¶¨ï¿½ï¿½
 *****************************************************************************/
 
-/* ¶¨ÒåÔ´CPU Íù Ä¿±êCPUµÄÓÊÏäÍ¨µÀ, Ã¿Í¨µÀ¶ÔÓ¦¶ÀÁ¢µÄÓÊÏä»º´æ */
+/* ï¿½ï¿½ï¿½ï¿½Ô´CPU ï¿½ï¿½ Ä¿ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½, Ã¿Í¨ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»ºï¿½ï¿½ */
 
-/* °´¹æÔòÉú³ÉÃ¶¾ÙÏîµÄºê¶¨Òå */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½Äºê¶¨ï¿½ï¿½ */
 #define MAILBOX_CHANNEL_BEGIN(src, dst) \
     enum MAILBOX_CHANNEL_##src##2##dst##_ENUM \
     { \
@@ -83,7 +83,7 @@ extern "C" {
 
 /* CCPU -> HIFI */
 MAILBOX_CHANNEL_BEGIN(CCPU, HIFI)
-    /* ÒÔÏÂ¸÷Ã¶¾ÙÏî°´¹æÔòÉú³É, ÐÎÈç: MAILBOX_CHANNEL_CCPU2HIFI_DEFAULT */
+    /* ï¿½ï¿½ï¿½Â¸ï¿½Ã¶ï¿½ï¿½ï¿½î°´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½: MAILBOX_CHANNEL_CCPU2HIFI_DEFAULT */
     MAILBOX_CHANNEL_ITEM(CCPU, HIFI, MSG),
 MAILBOX_CHANNEL_END(CCPU, HIFI)
 
@@ -148,14 +148,14 @@ MAILBOX_CHANNEL_BEGIN(BBE16, HIFI)
     MAILBOX_CHANNEL_ITEM(BBE16, HIFI, MSG),
 MAILBOX_CHANNEL_END(BBE16, HIFI)
 
-/* ÓÐÖúSI½âÎö, ÀûÓÚÔÄ¶Á´úÂë */
+/* ï¿½ï¿½ï¿½ï¿½SIï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ */
 enum MAILBOX_GAP_FOR_SI_PARSE {MAILBOX_GAP_FOR_SI_BUTT};
 
-#define MAILBOX_ID_SRC_CPU_OFFSET       (24)        /*ÓÊ¼þIDÖÐµÄÔ´CPU ID bitÎ»Æ«ÒÆµØÖ·*/
-#define MAILBOX_ID_DST_CPU_OFFSET       (16)        /*ÓÊ¼þIDÖÐµÄÔ´CPU ID bitÎ»Æ«ÒÆµØÖ·*/
-#define MAILBOX_ID_CHANNEL_OFFSET       (8)         /*ÓÊ¼þIDÖÐÓÊÏäÄÚ´æÍ¨µÀ ID bitÎ»Æ«ÒÆµØÖ·*/
+#define MAILBOX_ID_SRC_CPU_OFFSET       (24)        /*ï¿½Ê¼ï¿½IDï¿½Ðµï¿½Ô´CPU ID bitÎ»Æ«ï¿½Æµï¿½Ö·*/
+#define MAILBOX_ID_DST_CPU_OFFSET       (16)        /*ï¿½Ê¼ï¿½IDï¿½Ðµï¿½Ô´CPU ID bitÎ»Æ«ï¿½Æµï¿½Ö·*/
+#define MAILBOX_ID_CHANNEL_OFFSET       (8)         /*ï¿½Ê¼ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Í¨ï¿½ï¿½ ID bitÎ»Æ«ï¿½Æµï¿½Ö·*/
 
-/* ÓÊ±àÆðÊ¼±àºÅºê¶¨Òå */
+/* ï¿½Ê±ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Åºê¶¨ï¿½ï¿½ */
 #define MAILBOX_MAILCODE_CHANNEL(src, dst, channel) \
     ( ((unsigned int)(src) << MAILBOX_ID_SRC_CPU_OFFSET) \
     | ((unsigned int)(dst) << MAILBOX_ID_DST_CPU_OFFSET) \
@@ -178,12 +178,12 @@ enum MAILBOX_GAP_FOR_SI_PARSE {MAILBOX_GAP_FOR_SI_BUTT};
     MAILBOX_MAILCODE_ITEM_RESERVED(src, dst, channel) = MAILBOX_MAILCODE_RESERVED(src, dst, channel)
 /*lint +e773*/
 /*****************************************************************************
-  3 Ã¶¾Ù¶¨Òå
+  3 Ã¶ï¿½Ù¶ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 /*****************************************************************************
- Êµ Ìå Ãû  : MAILBOX_CPUID_E
- ¹¦ÄÜÃèÊö  : ¶¨ÒåÓÊÏäÉæ¼°CPU±àºÅ
+ Êµ ï¿½ï¿½ ï¿½ï¿½  : MAILBOX_CPUID_E
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¼°CPUï¿½ï¿½ï¿½
 *****************************************************************************/
 /* Modified by c64416 for hifi mailbox, 2013/09/24, begin */
 enum MAILBOX_CPUID_ENUM
@@ -199,13 +199,13 @@ enum MAILBOX_CPUID_ENUM
 /* Modified by c64416 for hifi mailbox, 2013/09/24, end */
 
 /*****************************************************************************
- ÊµÌåÃû³Æ  : MAILBOX_MAILCODE_ENUM
- ¹¦ÄÜÃèÊö  : ÓÊ±àÃ¶¾Ù¶¨Òå, ÓÊ±àÎ¨Ò»±êÊ¶ÓÊ¼þ·¢ËÍÄ¿±ê, Ò²¼´ÓÊ¼þÊý¾Ý½ÓÊÕ´¦ÀíÕß
+ Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : MAILBOX_MAILCODE_ENUM
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ê±ï¿½Ã¶ï¿½Ù¶ï¿½ï¿½ï¿½, ï¿½Ê±ï¿½Î¨Ò»ï¿½ï¿½Ê¶ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½, Ò²ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 /*lint -e488*/
 enum MAILBOX_MAILCODE_ENUM
 {
-    /* CCPU->MCU ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* CCPU->MCU ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(CCPU, MCU, MSG),
     MAILBOX_MAILCODE_CCPU_TO_MCU_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_CCPU_TO_MCU_VOS_MSG_URGENT,
@@ -213,24 +213,24 @@ enum MAILBOX_MAILCODE_ENUM
 
     MAILBOX_MAILCODE_ITEM_END(CCPU, MCU, MSG),
 
-    /* CCPU->MCU IFCµ÷ÓÃºÅ¶¨ÒåÔÚÕâÀï */
+    /* CCPU->MCU IFCï¿½ï¿½ï¿½ÃºÅ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(CCPU, MCU, IFC),
     MAILBOX_IFC_CCPU_TO_MCU_TEST_CMP,
     MAILBOX_IFC_CCPU_TO_MCU_TEST,
     MAILBOX_IFC_CCPU_TO_MCU_MCA,
     MAILBOX_MAILCODE_ITEM_END(CCPU, MCU, IFC),
 
-    /* CCPU->HIFI ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* CCPU->HIFI ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(CCPU, HIFI, MSG),
     MAILBOX_MAILCODE_CCPU_TO_HIFI_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_CCPU_TO_HIFI_VOS_MSG_URGENT,
     MAILBOX_MAILCODE_ITEM_END(CCPU, HIFI, MSG),
 
-    /* CCPU->ACPU ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* CCPU->ACPU ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(CCPU, ACPU, MSG),
     MAILBOX_MAILCODE_ITEM_END(CCPU, ACPU, MSG),
 
-    /* CCPU->ACPU IFC±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* CCPU->ACPU IFCï¿½ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(CCPU, ACPU, IFC),
     MAILBOX_IFC_CCPU_TO_ACPU_TEST_CMP,
     MAILBOX_IFC_CCPU_TO_ACPU_TEST,
@@ -249,7 +249,7 @@ enum MAILBOX_MAILCODE_ENUM
     MAILBOX_IFC_ACPU_TO_CCPU_PMIC_IRQEVENT_REPO,
     MAILBOX_MAILCODE_ITEM_END(CCPU, ACPU, IFC),
 
-    /* ACPU->MCU ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* ACPU->MCU ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(ACPU, MCU, MSG),
     MAILBOX_MAILCODE_ACPU_TO_MCU_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_ACPU_TO_MCU_VOS_MSG_URGENT,
@@ -261,7 +261,7 @@ enum MAILBOX_MAILCODE_ENUM
     BSP_MAILBOX_CHANNEL_ACPU_TO_MCU_RST_CH,
     MAILBOX_MAILCODE_ITEM_END(ACPU, MCU, MSG),
 
-    /* ACPU->MCU IFCÔ¶³Ìº¯Êýµ÷ÓÃÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* ACPU->MCU IFCÔ¶ï¿½Ìºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(ACPU, MCU, IFC),
     MAILBOX_IFC_ACPU_TO_MCU_TEST_CMP,
     MAILBOX_IFC_ACPU_TO_MCU_TEST,
@@ -272,7 +272,7 @@ enum MAILBOX_MAILCODE_ENUM
     MAILBOX_MAILCODE_ITEM_END(ACPU, MCU, IFC),
 
 
-    /* ACPU->HIFI ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* ACPU->HIFI ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(ACPU, HIFI, MSG),
     MAILBOX_MAILCODE_ACPU_TO_HIFI_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_ACPU_TO_HIFI_VOS_MSG_URGENT,
@@ -286,12 +286,12 @@ enum MAILBOX_MAILCODE_ENUM
     MAILBOX_MAILCODE_ACPU_TO_HIFI_CCORE_RESET_ID,
     MAILBOX_MAILCODE_ITEM_END(ACPU, HIFI, MSG),
 
-    /* ACPU->CCPU MSGºÅ¶¨ÒåÔÚÕâÀï */
+    /* ACPU->CCPU MSGï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(ACPU, CCPU, MSG),
     MAILBOX_IFC_ACPU_TO_CCPU_CSHELL_START,
     MAILBOX_MAILCODE_ITEM_END(ACPU, CCPU, MSG),
 
-    /* ACPU->CCPU IFCºÅ¶¨ÒåÔÚÕâÀï */
+    /* ACPU->CCPU IFCï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(ACPU, CCPU, IFC),
     MAILBOX_IFC_ACPU_TO_CCPU_TEST_CMP,
     MAILBOX_IFC_ACPU_TO_CCPU_TEST,
@@ -314,13 +314,13 @@ enum MAILBOX_MAILCODE_ENUM
     MAILBOX_IFC_ACPU_TO_CCPU_SYSTEMERROR,
     MAILBOX_MAILCODE_ITEM_END(ACPU, CCPU, IFC),
 
-    /* HIFI->CCPU ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* HIFI->CCPU ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(HIFI, CCPU, MSG),
     MAILBOX_MAILCODE_HIFI_TO_CCPU_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_HIFI_TO_CCPU_VOS_MSG_URGENT,
     MAILBOX_MAILCODE_ITEM_END(HIFI, CCPU, MSG),
 
-    /* HIFI->ACPU ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* HIFI->ACPU ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(HIFI, ACPU, MSG),
     MAILBOX_MAILCODE_HIFI_TO_ACPU_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_HIFI_TO_ACPU_VOS_MSG_URGENT,
@@ -333,20 +333,20 @@ enum MAILBOX_MAILCODE_ENUM
     MAILBOX_MAILCODE_HIFI_TO_ACPU_USB,
     MAILBOX_MAILCODE_ITEM_END(HIFI, ACPU, MSG),
 
-    /* HIFI->BBE16 ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* HIFI->BBE16 ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(HIFI, BBE16, MSG),
     MAILBOX_MAILCODE_HIFI_TO_BBE16_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_HIFI_TO_BBE16_VOS_MSG_URGENT,
     MAILBOX_MAILCODE_ITEM_END(HIFI, BBE16, MSG),
 
-    /* MCU->CCPU ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* MCU->CCPU ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(MCU, CCPU, MSG),
     MAILBOX_MAILCODE_MCU_TO_CCPU_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_MCU_TO_CCPU_VOS_MSG_URGENT,
     BSP_MAILBOX_CHANNEL_MCU_TO_CCPU_MCA_CH,
     MAILBOX_MAILCODE_ITEM_END(MCU, CCPU, MSG),
 
-    /* MCU->CCPU ifcÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* MCU->CCPU ifcï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(MCU, CCPU, IFC),
     MAILBOX_IFC_MCU_TO_CCPU_TEST_CMP,
     MAILBOX_IFC_MCU_TO_CCPU_BASE_TEST2,
@@ -354,7 +354,7 @@ enum MAILBOX_MAILCODE_ENUM
     MAILBOX_IFC_MCU_TO_CCPU_TEST,
     MAILBOX_MAILCODE_ITEM_END(MCU, CCPU, IFC),
 
-    /* MCU->ACPU ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* MCU->ACPU ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(MCU, ACPU, MSG),
     MAILBOX_MAILCODE_MCU_TO_ACPU_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_MCU_TO_ACPU_VOS_MSG_URGENT,
@@ -368,14 +368,14 @@ enum MAILBOX_MAILCODE_ENUM
     MAILBOX_MAILCODE_MCU_TO_ACPU_CCORE_RESET_ID,
     MAILBOX_MAILCODE_ITEM_END(MCU, ACPU, MSG),
 
-    /* MCU->ACPU Ô¶³Ìº¯Êýµ÷ÓÃÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* MCU->ACPU Ô¶ï¿½Ìºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(MCU, ACPU, IFC),
     MAILBOX_IFC_MCU_TO_ACPU_TEST_CMP,
     MAILBOX_IFC_MCU_TO_ACPU_TEST,
     MAILBOX_IFC_MCU_TO_ACPU_PRINT,
     MAILBOX_MAILCODE_ITEM_END(MCU, ACPU, IFC),
 
-    /* BBE16 -> HIFI ÓÊ±àºÅ¶¨ÒåÔÚÕâÀï */
+    /* BBE16 -> HIFI ï¿½Ê±ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     MAILBOX_MAILCODE_ITEM_BEGIN(BBE16, HIFI, MSG),
     MAILBOX_MAILCODE_BBE16_TO_HIFI_VOS_MSG_NORMAL,
     MAILBOX_MAILCODE_BBE16_TO_HIFI_VOS_MSG_URGENT,
@@ -383,58 +383,58 @@ enum MAILBOX_MAILCODE_ENUM
 };
 /*lint +e488*/
 /*****************************************************************************
- Êµ Ìå Ãû  : MAILBOX_RET_ENUM
- ¹¦ÄÜÃèÊö  : ÓÊÏä½Ó¿Ú·µ»ØÖµ
+ Êµ ï¿½ï¿½ ï¿½ï¿½  : MAILBOX_RET_ENUM
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½ï¿½ï¿½Ó¿Ú·ï¿½ï¿½ï¿½Öµ
 *****************************************************************************/
 #define MAILBOX_OK                       0
 #define MAILBOX_ERRO                     0xF7654321
 #define MAILBOX_FULL                     0xF7654322
-#define MAILBOX_NOT_READY                0xF7654323   /*Ä¿±êCPUÓÊÏäÎ´³õÊ¼»¯*/
-#define MAILBOX_TARGET_NOT_READY         MAILBOX_NOT_READY   /*Ä¿±êCPUÓÊÏäÎ´³õÊ¼»¯*/
-#define MAILBOX_TIME_OUT                 0xF7654324     /*·¢ËÍµÈ´ý·µ»Ø³¬Ê±*/
+#define MAILBOX_NOT_READY                0xF7654323   /*Ä¿ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ê¼ï¿½ï¿½*/
+#define MAILBOX_TARGET_NOT_READY         MAILBOX_NOT_READY   /*Ä¿ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ê¼ï¿½ï¿½*/
+#define MAILBOX_TIME_OUT                 0xF7654324     /*ï¿½ï¿½ï¿½ÍµÈ´ï¿½ï¿½ï¿½ï¿½Ø³ï¿½Ê±*/
 #define MAILBOX_HIFI_NOT_LOAD            0xF7654325
 
-/* ÓÊ¼þÐòÁÐºÅµÄ³õÊ¼Öµ */
+/* ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ÐºÅµÄ³ï¿½Ê¼Öµ */
 #define MAILBOX_SEQNUM_START            (0)
 
 /* Modified by c64416 for hifi mailbox, 2013/09/24, begin */
-/* ÓÊÏäÕ¼ÓÃmemory»ùµØÖ· */
+/* ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½memoryï¿½ï¿½ï¿½ï¿½Ö· */
 #define MAILBOX_MEM_BASEADDR            (HIFI_AP_MAILBOX_BASE_ADDR)
 
-/* ÓÊÏäÕ¼ÓÃmemoryÔ¤Áô×Ü³¤¶È, °üÀ¨ÓÊÏä¿ØÖÆÍ·ºÍÓÊÏä¶ÓÁÐ»º´æ */
+/* ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½memoryÔ¤ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ */
 #define MAILBOX_MEM_LENGTH              (HIFI_AP_MAILBOX_TOTAL_SIZE)
 /* Modified by c64416 for hifi mailbox, 2013/09/24, end */
 
 /*****************************************************************************
- Êµ Ìå Ãû  : struct mb_head
- ¹¦ÄÜÃèÊö  : ºË¼äÓÊÏä»º´æÍ·, Í¨¹ý±£»¤×ÖÅÐ¶ÏÓÊÏäÍ¨µÀÓÐÃ»ÓÐ±»³õÊ¼»¯, ´Ë¹¦ÄÜÐèÒª
-             fastbootÍ¬²½ÐÞ¸Ä:ÉÏµç³õÊ¼»¯¶ÔÓÊÏä¹²ÏíÄÚ´æÍ·Êý¾ÝÇåÁã
+ Êµ ï¿½ï¿½ ï¿½ï¿½  : struct mb_head
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½ä»ºï¿½ï¿½Í·, Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð±ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½, ï¿½Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½Òª
+             fastbootÍ¬ï¿½ï¿½ï¿½Þ¸ï¿½:ï¿½Ïµï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä¹²ï¿½ï¿½ï¿½Ú´ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 typedef struct mb_head
 {
-    unsigned int       ulProtectWord1;     /*±£»¤×Ö 0x55AA55AA*/
-    unsigned int       ulProtectWord2;     /*±£»¤×Ö 0x5A5A5A5A*/
-    unsigned int       ulFront;            /*¶ÓÁÐ´ýÐ´µ¥Ôª¾àÀë¶ÓÁÐ(²»º¬±£»¤×Ö)Í·µÄ³¤¶È£¬µ¥Î»32bit */
-    unsigned int       ulRear;             /*¶ÓÁÐ´ý¶Áµ¥Ôª¾àÀë¶ÓÁÐ(²»º¬±£»¤×Ö)Í·µÄ³¤¶È£¬µ¥Î»32bit */
-    unsigned int       ulFrontslice;       /*¸üÐÂÓÊÏä»·ÐÎ¶ÓÁÐµÄÍ·Ö¸ÕëÏµÍ³Ê±¼ä*/
-    unsigned int       ulRearslice;        /*¸üÐÂÓÊÏä»·ÐÎ¶ÓÁÐµÄÎ²Ö¸ÕëÏµÍ³Ê±¼ä*/
-    unsigned short      ausReserve[4];      /*±£Áô*/
-    unsigned int       ulProtectWord3;     /*±£»¤×Ö 0x55AA55AA*/
-    unsigned int       ulProtectWord4;     /*±£»¤×Ö 0x5A5A5A5A*/
+    unsigned int       ulProtectWord1;     /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0x55AA55AA*/
+    unsigned int       ulProtectWord2;     /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0x5A5A5A5A*/
+    unsigned int       ulFront;            /*ï¿½ï¿½ï¿½Ð´ï¿½Ð´ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)Í·ï¿½Ä³ï¿½ï¿½È£ï¿½ï¿½ï¿½Î»32bit */
+    unsigned int       ulRear;             /*ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)Í·ï¿½Ä³ï¿½ï¿½È£ï¿½ï¿½ï¿½Î»32bit */
+    unsigned int       ulFrontslice;       /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»·ï¿½Î¶ï¿½ï¿½Ðµï¿½Í·Ö¸ï¿½ï¿½ÏµÍ³Ê±ï¿½ï¿½*/
+    unsigned int       ulRearslice;        /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»·ï¿½Î¶ï¿½ï¿½Ðµï¿½Î²Ö¸ï¿½ï¿½ÏµÍ³Ê±ï¿½ï¿½*/
+    unsigned short      ausReserve[4];      /*ï¿½ï¿½ï¿½ï¿½*/
+    unsigned int       ulProtectWord3;     /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0x55AA55AA*/
+    unsigned int       ulProtectWord4;     /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0x5A5A5A5A*/
 } MAILBOX_HEAD_STRU;
 
-/* ÓÊÏäÍ·Õ¼ÓÃ¿Õ¼ä×Ü³¤¶È¶¨Òå*/
+/* ï¿½ï¿½ï¿½ï¿½Í·Õ¼ï¿½Ã¿Õ¼ï¿½ï¿½Ü³ï¿½ï¿½È¶ï¿½ï¿½ï¿½*/
 #define MAILBOX_HEAD_LEN                (sizeof(struct mb_head))
 #define MAILBOX_MAX_CHANNEL             (30)
 #define MAILBOX_MEM_HEAD_LEN            (MAILBOX_MAX_CHANNEL * MAILBOX_HEAD_LEN)
 
-/* ¸÷ÓÊÏäÊý¾Ý¶ÓÁÐ³¤¶È¶¨Òå */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½Ð³ï¿½ï¿½È¶ï¿½ï¿½ï¿½ */
 #define MAILBOX_QUEUE_SIZE(src, dst, channel) \
     MAILBOX_QUEUE_SIZE_##src##2##dst##_##channel
 enum MAILBOX_QUEUE_SIZE_ENUM
 {
 /* Modified by c64416 for hifi mailbox, 2013/09/24, begin */
-    /* ÒÔÏÂ¸÷Ã¶¾ÙÏî°´¹æÔòÉú³É, ÐÎÈç: MAILBOX_QUEUE_SIZE_MCU2ACPU_DEFAULT */
+    /* ï¿½ï¿½ï¿½Â¸ï¿½Ã¶ï¿½ï¿½ï¿½î°´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½: MAILBOX_QUEUE_SIZE_MCU2ACPU_DEFAULT */
     MAILBOX_QUEUE_SIZE(MCU,  ACPU, MSG) = 0x00000000,
     MAILBOX_QUEUE_SIZE(ACPU, MCU,  MSG) = 0x00000000,
     MAILBOX_QUEUE_SIZE(MCU, ACPU, IFC)  = 0x00000000,
@@ -461,13 +461,13 @@ enum MAILBOX_QUEUE_SIZE_ENUM
 /* Modified by c64416 for hifi mailbox, 2013/09/24, end */
 };
 
-/* ¸÷ÓÊÏä¿ØÖÆÍ·µØÖ··ÖÅä */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ */
 #define MAILBOX_HEAD_ADDR(src, dst, channel) \
     MAILBOX_HEAD_ADDR_##src##2##dst##_##channel
 /*lint -e575*/
 enum MAILBOX_HEAD_ADDR_ENUM
 {
-    /* ÒÔÏÂ¸÷Ã¶¾ÙÏî°´¹æÔòÉú³É, ÐÎÈç: MAILBOX_HEAD_ADDR_MCU2ACPU_DEFAULT */
+    /* ï¿½ï¿½ï¿½Â¸ï¿½Ã¶ï¿½ï¿½ï¿½î°´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½: MAILBOX_HEAD_ADDR_MCU2ACPU_DEFAULT */
     MAILBOX_HEAD_ADDR(MCU,  ACPU, MSG)  = MAILBOX_MEM_BASEADDR,
     MAILBOX_HEAD_ADDR(ACPU, MCU,  MSG)  = MAILBOX_HEAD_ADDR(MCU,  ACPU, MSG) + MAILBOX_HEAD_LEN,
     MAILBOX_HEAD_ADDR(ACPU, HIFI, MSG)  = MAILBOX_HEAD_ADDR(ACPU, MCU,  MSG) + MAILBOX_HEAD_LEN,
@@ -494,14 +494,14 @@ enum MAILBOX_HEAD_ADDR_ENUM
 
 };
 /*lint +e575*/
-/* ¸÷ÓÊÏäÊý¾Ý¶ÓÁÐµØÖ··ÖÅä */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½Ðµï¿½Ö·ï¿½ï¿½ï¿½ï¿½ */
 #define MAILBOX_QUEUE_ADDR(src, dst, channel) \
     MAILBOX_QUEUE_ADDR_##src##2##dst##_##channel
 #define MAILBOX_QUEUE_BOTTOM_ADDR(src, dst, channel) \
     (MAILBOX_QUEUE_ADDR(src, dst, channel) + MAILBOX_QUEUE_SIZE(src, dst, channel))
 enum MAILBOX_QUEUE_ADDR_ENUM
 {
-    /* ÒÔÏÂ¸÷Ã¶¾ÙÏî°´¹æÔòÉú³É, ÐÎÈç: MAILBOX_QUEUE_ADDR_MCU2ACPU_DEFAULT */
+    /* ï¿½ï¿½ï¿½Â¸ï¿½Ã¶ï¿½ï¿½ï¿½î°´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½: MAILBOX_QUEUE_ADDR_MCU2ACPU_DEFAULT */
     MAILBOX_QUEUE_ADDR(MCU,  ACPU, MSG)  = MAILBOX_MEM_BASEADDR + MAILBOX_MEM_HEAD_LEN,
     MAILBOX_QUEUE_ADDR(ACPU, MCU,  MSG)  = MAILBOX_QUEUE_BOTTOM_ADDR(MCU,  ACPU, MSG),
     MAILBOX_QUEUE_ADDR(ACPU, HIFI, MSG)  = MAILBOX_QUEUE_BOTTOM_ADDR(ACPU, MCU,  MSG),
@@ -528,28 +528,28 @@ enum MAILBOX_QUEUE_ADDR_ENUM
     MAILBOX_MEMORY_BOTTOM_ADDR           = MAILBOX_QUEUE_BOTTOM_ADDR(HIFI, BBE16, MSG)
 };
 
-/*¹²ÏíÄÚ´æÖÐµÄ±£»¤×Ö¶¨Òå*/
-#define MAILBOX_PROTECT1                (0x55AA55AA)    /* ÓÊÏä±£»¤×Ö1£¬ÓÃÓÚÓÊÏäÍ·¼°ÓÊÏä, Í¬Ê±±íÊ¾ÓÊÏä¸Õ³õÊ¼»¯Ã»ÓÐ½ÓÊÕ¹ýÊý¾Ý*/
-#define MAILBOX_PROTECT2                (0x5A5A5A5A)    /* ÓÊÏä±£»¤×Ö2£¬ÓÃÓÚÓÊÏäÍ·¼°ÓÊÏä */
-#define MAILBOX_PROTECT_LEN             (sizeof(int))  /* ÓÊÏä±£»¤×Ö³¤¶È£¬µ¥Î»byte£¬ÓÊÏäÍ·¼°ÓÊÏäÍ·¡¢Î²¾ùÓÐÁ½¸öÕâÑùµÄ±£»¤×Ö */
-#define MAILBOX_MSGHEAD_NUMBER          (0xA5A5A5A5)    /* ¿çºËÏûÏ¢ÏûÏ¢·Ö¸ô×Ö */
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ÐµÄ±ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½*/
+#define MAILBOX_PROTECT1                (0x55AA55AA)    /* ï¿½ï¿½ï¿½ä±£ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, Í¬Ê±ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Õ³ï¿½Ê¼ï¿½ï¿½Ã»ï¿½Ð½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½*/
+#define MAILBOX_PROTECT2                (0x5A5A5A5A)    /* ï¿½ï¿½ï¿½ä±£ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+#define MAILBOX_PROTECT_LEN             (sizeof(int))  /* ï¿½ï¿½ï¿½ä±£ï¿½ï¿½ï¿½Ö³ï¿½ï¿½È£ï¿½ï¿½ï¿½Î»byteï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ */
+#define MAILBOX_MSGHEAD_NUMBER          (0xA5A5A5A5)    /* ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ï¢ï¿½Ö¸ï¿½ï¿½ï¿½ */
 
-#define MAILBOX_DATA_BASE_PROTECT_NUM         (2)    /* ÓÊÏäÍ¨µÀ¹²ÏíÄÚ´æÊý¾ÝÇøÒÔÊ×µØÖ·¿ªÊ¼µÄ±£»¤×Ö¸öÊý*/
-#define MAILBOX_DATA_TAIL_PROTECT_NUM         (2)    /* ÓÊÏäÍ¨µÀ¹²ÏíÄÚ´æÊý¾ÝÇøÒÔÎ²µØÖ·½áÊøµÄ±£»¤×Ö¸öÊý*/
+#define MAILBOX_DATA_BASE_PROTECT_NUM         (2)    /* ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½Ö·ï¿½ï¿½Ê¼ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½*/
+#define MAILBOX_DATA_TAIL_PROTECT_NUM         (2)    /* ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½*/
 
-/* ÓÊÏäÍ¨µÀ¹²ÏíÄÚ´æÊý¾ÝÇø³¤¶ÈÖÐ°üº¬µÄ±£»¤×ÖµÄ¸öÊý£¬°üÀ¨Ê×µØÖ·¿ªÊ¼µÄ2¸ö±£»¤×Ö£¬ºÍÄ©µØÖ·½áÊøµÄ2¸ö±£»¤×Ö*/
+/* ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ÖµÄ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½Ö·ï¿½ï¿½Ê¼ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½Ä©ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 #define MAILBOX_DATA_LEN_PROTECT_NUM          (MAILBOX_DATA_BASE_PROTECT_NUM + MAILBOX_DATA_TAIL_PROTECT_NUM)
 
 
-/* hifiÓÊÏäµØÖ·ÐÅÏ¢±£»¤×Ö */
+/* hifiï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 #define HIFI_MB_ADDR_PROTECT            (0x5a5a5a5a)
 
 /*****************************************************************************
-  3 Ã¶¾Ù¶¨Òå
+  3 Ã¶ï¿½Ù¶ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 /*****************************************************************************
-  ¶¨ÒåÓÊÏäºËÓëºËÖ®¼äµÄIPCÖÐ¶ÏºÅ
+  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½IPCï¿½Ð¶Ïºï¿½
 *****************************************************************************/
 #define MAILBOX_IPC_INT_NUM(src, dst, channel) \
     MAILBOX_IPC_INT_##src##2##dst##_##channel
@@ -562,78 +562,78 @@ enum IPC_MAILBOX_INT_ENUM
     MAILBOX_IPC_INT_NUM(HIFI, ACPU, MSG) = IPC_ACPU_INT_SRC_HIFI_MSG,
 };
 
-/* ¸÷ÓÊÏäÊý¾Ýµ¥¸öÓÊ¼þ×î´ó³¤¶È¶¨Òå */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ó³¤¶È¶ï¿½ï¿½ï¿½ */
 #define MAILBOX_MAILSIZE_MAX(src, dst, channel) \
     MAILBOX_MAILSIZE_MAX_##src##2##dst##_##channel
 enum MAILBOX_MAILSIZE_MAX_ENUM
 {
-    /* ÒÔÏÂ¸÷Ã¶¾ÙÏî°´¹æÔòÉú³É, ÐÎÈç: MAILBOX_MAILSIZE_MAX_MCU2ACPU_DEFAULT */
-    MAILBOX_MAILSIZE_MAX(MCU,  ACPU ,MSG)  = MAILBOX_QUEUE_SIZE(MCU,  ACPU ,MSG)/4, //DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(ACPU, MCU  ,MSG)  = MAILBOX_QUEUE_SIZE(ACPU, MCU  ,MSG)/4, //DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(ACPU, HIFI ,MSG)  = MAILBOX_QUEUE_SIZE(ACPU ,HIFI ,MSG)/4, //DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(HIFI, ACPU ,MSG)  = MAILBOX_QUEUE_SIZE(HIFI ,ACPU ,MSG)/4, //DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(MCU , CCPU ,MSG)  = MAILBOX_QUEUE_SIZE(MCU  ,CCPU ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(CCPU, MCU  ,MSG)  = MAILBOX_QUEUE_SIZE(CCPU ,MCU  ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(CCPU, HIFI ,MSG)  = MAILBOX_QUEUE_SIZE(CCPU ,HIFI ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(HIFI, CCPU ,MSG)  = MAILBOX_QUEUE_SIZE(HIFI ,CCPU ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
+    /* ï¿½ï¿½ï¿½Â¸ï¿½Ã¶ï¿½ï¿½ï¿½î°´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½: MAILBOX_MAILSIZE_MAX_MCU2ACPU_DEFAULT */
+    MAILBOX_MAILSIZE_MAX(MCU,  ACPU ,MSG)  = MAILBOX_QUEUE_SIZE(MCU,  ACPU ,MSG)/4, //DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(ACPU, MCU  ,MSG)  = MAILBOX_QUEUE_SIZE(ACPU, MCU  ,MSG)/4, //DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(ACPU, HIFI ,MSG)  = MAILBOX_QUEUE_SIZE(ACPU ,HIFI ,MSG)/4, //DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(HIFI, ACPU ,MSG)  = MAILBOX_QUEUE_SIZE(HIFI ,ACPU ,MSG)/4, //DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(MCU , CCPU ,MSG)  = MAILBOX_QUEUE_SIZE(MCU  ,CCPU ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(CCPU, MCU  ,MSG)  = MAILBOX_QUEUE_SIZE(CCPU ,MCU  ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(CCPU, HIFI ,MSG)  = MAILBOX_QUEUE_SIZE(CCPU ,HIFI ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(HIFI, CCPU ,MSG)  = MAILBOX_QUEUE_SIZE(HIFI ,CCPU ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 
-    MAILBOX_MAILSIZE_MAX(CCPU, ACPU ,MSG)  = MAILBOX_QUEUE_SIZE(CCPU, ACPU ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(ACPU, CCPU ,MSG)  = MAILBOX_QUEUE_SIZE(ACPU, CCPU ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(CCPU, ACPU ,IFC)  = MAILBOX_QUEUE_SIZE(CCPU, ACPU ,IFC)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(ACPU, CCPU ,IFC)  = MAILBOX_QUEUE_SIZE(ACPU, CCPU ,IFC)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
+    MAILBOX_MAILSIZE_MAX(CCPU, ACPU ,MSG)  = MAILBOX_QUEUE_SIZE(CCPU, ACPU ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(ACPU, CCPU ,MSG)  = MAILBOX_QUEUE_SIZE(ACPU, CCPU ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(CCPU, ACPU ,IFC)  = MAILBOX_QUEUE_SIZE(CCPU, ACPU ,IFC)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(ACPU, CCPU ,IFC)  = MAILBOX_QUEUE_SIZE(ACPU, CCPU ,IFC)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 
-    MAILBOX_MAILSIZE_MAX(CCPU, MCU ,IFC)  = MAILBOX_QUEUE_SIZE(CCPU, MCU ,IFC)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(MCU, CCPU ,IFC)  = MAILBOX_QUEUE_SIZE(MCU, CCPU ,IFC)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
+    MAILBOX_MAILSIZE_MAX(CCPU, MCU ,IFC)  = MAILBOX_QUEUE_SIZE(CCPU, MCU ,IFC)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(MCU, CCPU ,IFC)  = MAILBOX_QUEUE_SIZE(MCU, CCPU ,IFC)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 
-    MAILBOX_MAILSIZE_MAX(ACPU, MCU ,IFC)  = MAILBOX_QUEUE_SIZE(ACPU, MCU ,IFC)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(MCU, ACPU ,IFC)  = MAILBOX_QUEUE_SIZE(MCU, ACPU ,IFC)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
+    MAILBOX_MAILSIZE_MAX(ACPU, MCU ,IFC)  = MAILBOX_QUEUE_SIZE(ACPU, MCU ,IFC)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(MCU, ACPU ,IFC)  = MAILBOX_QUEUE_SIZE(MCU, ACPU ,IFC)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 
-    MAILBOX_MAILSIZE_MAX(BBE16, HIFI ,MSG) = MAILBOX_QUEUE_SIZE(BBE16 ,HIFI ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
-    MAILBOX_MAILSIZE_MAX(HIFI, BBE16 ,MSG) = MAILBOX_QUEUE_SIZE(HIFI ,BBE16 ,MSG)/4,//DOTO:¾ßÌåÖµÐèÒª·ÖÎö
+    MAILBOX_MAILSIZE_MAX(BBE16, HIFI ,MSG) = MAILBOX_QUEUE_SIZE(BBE16 ,HIFI ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    MAILBOX_MAILSIZE_MAX(HIFI, BBE16 ,MSG) = MAILBOX_QUEUE_SIZE(HIFI ,BBE16 ,MSG)/4,//DOTO:ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 };
 
 /*****************************************************************************
-  4 ÏûÏ¢Í·¶¨Òå
+  4 ï¿½ï¿½Ï¢Í·ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 
 /*****************************************************************************
-  5 ÏûÏ¢¶¨Òå
+  5 ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 
 /*****************************************************************************
-  6 STRUCT¶¨Òå
+  6 STRUCTï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 /*****************************************************************************
- Êµ Ìå Ãû  : struct mb_mail
- ¹¦ÄÜÃèÊö  : ºË¼äÓÊ¼þÍ·
+ Êµ ï¿½ï¿½ ï¿½ï¿½  : struct mb_mail
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ë¼ï¿½ï¿½Ê¼ï¿½Í·
 *****************************************************************************/
 typedef struct mb_mail
 {
-    unsigned int       ulPartition;    /*ÏûÏ¢·Ö¸ô×Ö 0xA5A5A5A5*/
-    unsigned int       ulWriteSlice;   /*ÏûÏ¢Ð´ÈëÏµÍ³Ê±¼äÐÅÏ¢ */
-    unsigned int       ulReadSlice;    /*ÏûÏ¢¶Á³öÏµÍ³Ê±¼äÐÅÏ¢ */
-    unsigned int       ulSeqNum;       /*ÏûÏ¢ÐòÁÐºÅ */
-    unsigned int       ulPriority;     /*ÏûÏ¢ÓÅÏÈ¼¶£º½ô¼±¡¢ÆÕÍ¨, ·ÏÆú*/
-    unsigned int       ulMailCode;     /*ÓÊ±à*/
-    unsigned int       ausReserve[2];  /*±£Áô*/
-    unsigned int       ulMsgLength;    /*×ÔulMsgLength×Ö¶Î(²»º¬±¾Éí)ÍùºóµÄÏûÏ¢³¤¶È*/
+    unsigned int       ulPartition;    /*ï¿½ï¿½Ï¢ï¿½Ö¸ï¿½ï¿½ï¿½ 0xA5A5A5A5*/
+    unsigned int       ulWriteSlice;   /*ï¿½ï¿½Ï¢Ð´ï¿½ï¿½ÏµÍ³Ê±ï¿½ï¿½ï¿½ï¿½Ï¢ */
+    unsigned int       ulReadSlice;    /*ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ÏµÍ³Ê±ï¿½ï¿½ï¿½ï¿½Ï¢ */
+    unsigned int       ulSeqNum;       /*ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ðºï¿½ */
+    unsigned int       ulPriority;     /*ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨, ï¿½ï¿½ï¿½ï¿½*/
+    unsigned int       ulMailCode;     /*ï¿½Ê±ï¿½*/
+    unsigned int       ausReserve[2];  /*ï¿½ï¿½ï¿½ï¿½*/
+    unsigned int       ulMsgLength;    /*ï¿½ï¿½ulMsgLengthï¿½Ö¶ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½*/
 } MAILBOX_MSG_HEADER;
 
 /************************************************************************
- ½á¹¹Ãû    : IPC_MAILBOX_QUEUE_STRU
- ½á¹¹ËµÃ÷  : ºË¼äÓÊÏä»º´æ
+ ï¿½á¹¹ï¿½ï¿½    : IPC_MAILBOX_QUEUE_STRU
+ ï¿½á¹¹Ëµï¿½ï¿½  : ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½ä»ºï¿½ï¿½
  ************************************************************************/
-/* ÓÊÏä½á¹¹Ê¾Òâ:
+/* ï¿½ï¿½ï¿½ï¿½á¹¹Ê¾ï¿½ï¿½:
 typedef struct
 {
-    unsigned int      ulProtectWord1;     //±£»¤×Ö 0x55aa55aa
-    unsigned int      ulProtectWord2;     //±£»¤×Ö 0a5a5a5a5a
-    unsigned int      aulMsgQueue[¶ÓÁÐ³¤¶È-4];//»·ÐÎ¶ÓÁÐ´æ·ÅÈô¸É·âÓÊ¼þ
-    unsigned int      ulProtectWord3;     //±£»¤×Ö 0x55aa55aa
-    unsigned int      ulProtectWord4;     //±£»¤×Ö 0x5a5a5a5a
+    unsigned int      ulProtectWord1;     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0x55aa55aa
+    unsigned int      ulProtectWord2;     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0a5a5a5a5a
+    unsigned int      aulMsgQueue[ï¿½ï¿½ï¿½Ð³ï¿½ï¿½ï¿½-4];//ï¿½ï¿½ï¿½Î¶ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½É·ï¿½ï¿½Ê¼ï¿½
+    unsigned int      ulProtectWord3;     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0x55aa55aa
+    unsigned int      ulProtectWord4;     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0x5a5a5a5a
 } MAILBOX_QUEUE_STRU;
 */
 enum
@@ -653,14 +653,14 @@ enum
 
 typedef struct
 {
-	unsigned int enID;				/*µØÖ·Ã¶¾ÙÖµ*/
-	unsigned int uwAddress; 			/*µØÖ·ÎïÀíÖµ*/
+	unsigned int enID;				/*ï¿½ï¿½Ö·Ã¶ï¿½ï¿½Öµ*/
+	unsigned int uwAddress; 			/*ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Öµ*/
 } SOC_HIFI_ADDR_ITEM_STRU;
 
 typedef struct
 {
 	unsigned int uwProtectWord; 				/*0x5a5a5a5a*/
-	SOC_HIFI_ADDR_ITEM_STRU 	astSocAddr[64]; /*µØÖ·Ïî¶¨Òå*/
+	SOC_HIFI_ADDR_ITEM_STRU 	astSocAddr[64]; /*ï¿½ï¿½Ö·ï¿½î¶¨ï¿½ï¿½*/
 } SOC_HIFI_ADDR_SHARE_STRU;
 
 
@@ -676,8 +676,8 @@ typedef struct
 typedef struct
 {
     unsigned int uwProtectWord;                /*0x5a5a5a5a*/
-    unsigned int uwHifi2AarmMailBoxLen;        /* hifiµ½Aarm¿çºËÓÊÏä³¤¶È */
-    unsigned int uwAarm2HifiMailBoxLen;        /* Aarmµ½hifi¿çºËÓÊÏä³¤¶È */
+    unsigned int uwHifi2AarmMailBoxLen;        /* hifiï¿½ï¿½Aarmï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä³¤ï¿½ï¿½ */
+    unsigned int uwAarm2HifiMailBoxLen;        /* Aarmï¿½ï¿½hifiï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä³¤ï¿½ï¿½ */
     unsigned int uwHifiAarmHeadAddr;
     unsigned int uwHifiAarmBodyAddr;
     unsigned int uwAarmHifiHeadAddr;
@@ -686,16 +686,16 @@ typedef struct
 }AARM_HIFI_MAILBOX_STRU;
 
 /*****************************************************************************
- ½á¹¹Ãû    : CARM_HIFI_DYN_ADDR_SHARE_STRU
- Ð­Òé±í¸ñ  :
- ASN.1ÃèÊö :
- ½á¹¹ËµÃ÷  :CARMºÍHIFIµÄ¹²ÏíµØÖ·£¬OAMÐèÒª¸³Öµ²¢¿½±´ÖÁHifi¹²ÏíÊý¾ÝÖÐµÄÏàÓ¦½á¹¹Ìå
+ ï¿½á¹¹ï¿½ï¿½    : CARM_HIFI_DYN_ADDR_SHARE_STRU
+ Ð­ï¿½ï¿½ï¿½ï¿½ï¿½  :
+ ASN.1ï¿½ï¿½ï¿½ï¿½ :
+ ï¿½á¹¹Ëµï¿½ï¿½  :CARMï¿½ï¿½HIFIï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½OAMï¿½ï¿½Òªï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Hifiï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ó¦ï¿½á¹¹ï¿½ï¿½
 *****************************************************************************/
 typedef struct
 {
     unsigned int uwProtectWord;                /*0x5a5a5a5a*/
-    unsigned int uwHifi2CarmMailBoxLen;        /* hifiµ½Carm¿çºËÓÊÏä³¤¶È */
-    unsigned int uwCarm2HifiMailBoxLen;        /* Carmµ½hifi¿çºËÓÊÏä³¤¶È */
+    unsigned int uwHifi2CarmMailBoxLen;        /* hifiï¿½ï¿½Carmï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä³¤ï¿½ï¿½ */
+    unsigned int uwCarm2HifiMailBoxLen;        /* Carmï¿½ï¿½hifiï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä³¤ï¿½ï¿½ */
     unsigned int uwHifiCarmHeadAddr;
     unsigned int uwHifiCarmBodyAddr;
     unsigned int uwCarmHifiHeadAddr;
@@ -716,40 +716,40 @@ typedef struct
 }CARM_HIFI_ICC_STRU;
 
 /*****************************************************************************
- ½á¹¹Ãû    : AARM_HIFI_DYN_ADDR_SHARE_STRU
- Ð­Òé±í¸ñ  :
- ASN.1ÃèÊö :
- ½á¹¹ËµÃ÷  :AARMºÍHIFIµÄ¹²ÏíµØÖ·£¬OAMÐèÒª¸³Öµ²¢¿½±´ÖÁHifi¹²ÏíÊý¾ÝÖÐµÄÏàÓ¦½á¹¹Ìå
+ ï¿½á¹¹ï¿½ï¿½    : AARM_HIFI_DYN_ADDR_SHARE_STRU
+ Ð­ï¿½ï¿½ï¿½ï¿½ï¿½  :
+ ASN.1ï¿½ï¿½ï¿½ï¿½ :
+ ï¿½á¹¹Ëµï¿½ï¿½  :AARMï¿½ï¿½HIFIï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½OAMï¿½ï¿½Òªï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Hifiï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ó¦ï¿½á¹¹ï¿½ï¿½
 *****************************************************************************/
 typedef struct
 {
 	unsigned int uwProtectWord; 		   /*0x5a5a5a5a*/
-	CARM_HIFI_ICC_STRU stCarmHifiMB;	/*CARMºÍHIFIµÄÓÊÏä¹²ÏíÇø¶¨Òå*/
-	AARM_HIFI_MAILBOX_STRU stAarmHifiMB;	/*AARMºÍHIFIµÄÓÊÏä¹²ÏíÇø¶¨Òå*/
-	unsigned int uwNvBaseAddrPhy;		   /*DDRÉÏNV±¸·ÝÇøÊ×µØÖ·µÄÎïÀíµØÖ·*/
-	unsigned int uwNvBaseAddrVirt;		   /*DDRÉÏNV±¸·ÝÇøÊ×µØÖ·µÄARMÐéÄâµØÖ·*/
-	MODEM_HIFI_NV_SHARE_STRU stNVShare;  /*Modem NV¹²ÏíÇø¶¨Òå*/
-	SOC_HIFI_ADDR_SHARE_STRU	stSoCShare;  /*SoC¹²ÏíÇø¶¨Òå*/
+	CARM_HIFI_ICC_STRU stCarmHifiMB;	/*CARMï¿½ï¿½HIFIï¿½ï¿½ï¿½ï¿½ï¿½ä¹²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+	AARM_HIFI_MAILBOX_STRU stAarmHifiMB;	/*AARMï¿½ï¿½HIFIï¿½ï¿½ï¿½ï¿½ï¿½ä¹²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+	unsigned int uwNvBaseAddrPhy;		   /*DDRï¿½ï¿½NVï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·*/
+	unsigned int uwNvBaseAddrVirt;		   /*DDRï¿½ï¿½NVï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½Ö·ï¿½ï¿½ARMï¿½ï¿½ï¿½ï¿½ï¿½Ö·*/
+	MODEM_HIFI_NV_SHARE_STRU stNVShare;  /*Modem NVï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+	SOC_HIFI_ADDR_SHARE_STRU	stSoCShare;  /*SoCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	unsigned int uwReserved[2];
 }CARM_HIFI_DYN_ADDR_SHARE_STRU;
 
 
 /*****************************************************************************
-  7 UNION¶¨Òå
+  7 UNIONï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 
 /*****************************************************************************
-  8 OTHERS¶¨Òå
+  8 OTHERSï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 
 /*****************************************************************************
-  9 È«¾Ö±äÁ¿ÉùÃ÷
+  9 È«ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 /*****************************************************************************
-  10 º¯ÊýÉùÃ÷
+  10 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 

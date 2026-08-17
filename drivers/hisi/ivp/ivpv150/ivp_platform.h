@@ -7,7 +7,7 @@
 #include <linux/miscdevice.h>
 #include <linux/platform_device.h>
 #include <linux/regulator/consumer.h>
-#include "ivp.h"
+#include "../ivp.h"
 
 #define LISTENTRY_SIZE         (0x00600000)
 #define GIC_IRQ_CLEAR_REG      (0xe82b11a4)

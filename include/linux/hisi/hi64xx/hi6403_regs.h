@@ -951,10 +951,6 @@
 #define HI6403_DAC_LTR_MUX_SEL             (BASE_ADDR_PAGE_DIG + 0x14B)
 #define HI6403_DAC_LTR_MUX_BIT             0
 
-#define HI6403_SLIM_UP_EN2                 (BASE_ADDR_PAGE_DIG + 0x1FF)
-#define HI6403_SLIMBUS_UP12_DATA_SEL       0
-#define HI6403_SLIMBUS_UP56_DATA_SEL       1
-
 /* IMP DETECT CONTROL */
 #define HI6403_IMP_DET_CTRL_REG            (BASE_ADDR_PAGE_DIG + 0x23C)
 #define HI6403_IMP_EN_BIT                  7

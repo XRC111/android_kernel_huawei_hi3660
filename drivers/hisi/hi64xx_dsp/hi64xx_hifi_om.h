@@ -21,7 +21,7 @@ extern void hi64xx_hifi_om_hook_stop(void);
 extern int hi64xx_hifi_om_set_hook_path(char *path, unsigned int size);
 extern int hi64xx_hifi_om_set_bw(unsigned short bandwidth);
 extern int hi64xx_hifi_om_set_sponsor(unsigned short sponsor);
-extern void hi64xx_hifi_dump_to_file(const char *buf, unsigned int size, char *path);
+extern void hi64xx_hifi_dump_to_file(char *buf, unsigned int size, char *path);
 extern int hi64xx_hifi_create_hook_dir(const char *path);
 extern int hi64xx_hifi_om_set_dir_count(unsigned int count);
 

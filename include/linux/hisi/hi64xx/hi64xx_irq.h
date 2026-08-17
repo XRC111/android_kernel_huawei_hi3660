@@ -32,7 +32,6 @@ enum hi64xx_irq_type {
 	IRQ_PLUGOUT = 7,
 	IRQ_VAD = 12,
 	IRQ_WTD = 13,
-	IRQ_MAD = 14,
 	IRQ_CMD_VALID = 16,
 	IRQ_PLL_UNLOCK = 20,
 	IRQ_PLL44K1_UNLOCK = 34,
@@ -83,9 +82,9 @@ extern int hi64xx_irq_enable_irq(struct hi64xx_irq *irq_data, int phy_irq);
 
 extern int hi64xx_irq_disable_irq(struct hi64xx_irq *irq_data, int phy_irq);
 
-extern int hi64xx_irq_enable_irqs(struct hi64xx_irq *irq_data, int irq_num, const int* phy_irqs);
+extern int hi64xx_irq_enable_irqs(struct hi64xx_irq *irq_data, int irq_num, int* phy_irqs);
 
-extern int hi64xx_irq_disable_irqs(struct hi64xx_irq *irq_data, int irq_num, const int* phy_irqs);
+extern int hi64xx_irq_disable_irqs(struct hi64xx_irq *irq_data, int irq_num, int* phy_irqs);
 
 extern void hi64xx_irq_resume_wait(struct hi64xx_irq *irq_data);
 

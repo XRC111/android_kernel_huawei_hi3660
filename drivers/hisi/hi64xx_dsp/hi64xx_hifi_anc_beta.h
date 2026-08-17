@@ -11,13 +11,12 @@
 #ifndef __HI64XX_HIFI_ANC_BETA_H__
 #define __HI64XX_HIFI_ANC_BETA_H__
 
-extern void anc_beta_generate_path(hook_pos pos, const char *base_path, char *full_path, unsigned long full_path_len);
+extern void anc_beta_generate_path(hook_pos pos, char *base_path, char *full_path, unsigned long full_path_len);
 extern void anc_beta_set_voice_hook_switch(unsigned short permission);
 extern int anc_beta_start_hook(void);
 extern int anc_beta_stop_hook(void);
 extern int anc_beta_log_upload(void* data);
 extern int dsm_beta_dump_file(void* data, bool create_dir);
 extern int dsm_beta_log_upload(void* data);
-extern int virtual_btn_beta_dump_file(const void* data, unsigned int len, bool create_dir);
-extern int virtual_btn_beta_log_upload(VITRUAL_BNT_DATA_LOG *info);
+
 #endif

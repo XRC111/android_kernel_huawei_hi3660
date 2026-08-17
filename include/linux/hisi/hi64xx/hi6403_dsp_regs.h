@@ -72,6 +72,7 @@
 #define HI6403_SLIM_CTRL_5                 (HI64xx_AUDIO_SUB_BASE + 0xC8)
 
 #define HI6403_SLIM_UP_EN1                 (HI64xx_AUDIO_SUB_BASE + 0x1FE)
+#define HI6403_SLIM_UP_EN2                 (HI64xx_AUDIO_SUB_BASE + 0x1FF)
 
 #define HI6403_SC_CODEC_MUX_SEL3_1		   (HI64xx_AUDIO_SUB_BASE + 0x15)
 #define HI6403_SC_S1_SRC_LR_CTRL_M		   (HI64xx_AUDIO_SUB_BASE + 0x2D)

@@ -57,7 +57,6 @@ struct hs_res_detect_func {
 	void (*hs_res_detect)(struct snd_soc_codec *);
 	void (*hs_path_enable)(struct snd_soc_codec *);
 	void (*hs_path_disable)(struct snd_soc_codec *);
-	void (*hs_res_calibration)(struct snd_soc_codec *);
 };
 
 /* defination of public data */

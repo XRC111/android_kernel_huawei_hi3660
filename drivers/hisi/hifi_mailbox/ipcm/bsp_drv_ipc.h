@@ -6,7 +6,7 @@
 #include <asm/io.h>
 #include "drv_comm.h"
 
-#include "mdrv_ipc_enum.h"
+#include "../mailbox/mdrv_ipc_enum.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -40,32 +40,32 @@ extern void __iomem *ipc_base;
 #define SOC_IPC_CPU_INT_MASK_EN_ADDR(base, i)         SOC_IPC_CPU_INT_DIS_ADDR(base, i)
 
 
-#define BSP_IPC_CPU_RAW_INT(i)      (SOC_IPC_CPU_RAW_INT_ADDR((BSP_U32)ipc_base, i))    /* CPU_i¿ìËÙÖÐ¶ÏÔ­Ê¼ÖÐ¶Ï¼Ä´æÆ÷     */
-#define BSP_IPC_CPU_INT_MASK(i)     (SOC_IPC_CPU_INT_MASK_ADDR((BSP_U32)ipc_base, i))   /* CPU_i¿ìËÙÖÐ¶ÏÑÚÂë¼Ä´æÆ÷         */
-#define BSP_IPC_CPU_INT_STAT(i)     (SOC_IPC_CPU_INT_STAT_ADDR((BSP_U32)ipc_base, i))   /* CPU_iÆÁ±ÎºóµÄ¿ìËÙÖÐ¶Ï×´Ì¬¼Ä´æÆ÷ */
-#define BSP_IPC_CPU_INT_CLR(i)      (SOC_IPC_CPU_INT_CLR_ADDR((BSP_U32)ipc_base, i))    /* CPU_i¿ìËÙÖÐ¶ÏÇå³ý¼Ä´æÆ÷         */
-#define BSP_IPC_INT_MASK_EN(i)      (SOC_IPC_CPU_INT_MASK_EN_ADDR((BSP_U32)ipc_base, i))    /* CPU_i¿ìËÙÖÐ¶ÏÊ¹ÄÜ           */
-#define BSP_IPC_INT_MASK_DIS(i)     (SOC_IPC_CPU_INT_MASK_DIS_ADDR((BSP_U32)ipc_base, i))   /* CPU_i¿ìËÙÖÐ¶ÏÈ¥Ê¹ÄÜ         */
+#define BSP_IPC_CPU_RAW_INT(i)      (SOC_IPC_CPU_RAW_INT_ADDR((BSP_U32)ipc_base, i))    /* CPU_iï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ô­Ê¼ï¿½Ð¶Ï¼Ä´ï¿½ï¿½ï¿½     */
+#define BSP_IPC_CPU_INT_MASK(i)     (SOC_IPC_CPU_INT_MASK_ADDR((BSP_U32)ipc_base, i))   /* CPU_iï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½         */
+#define BSP_IPC_CPU_INT_STAT(i)     (SOC_IPC_CPU_INT_STAT_ADDR((BSP_U32)ipc_base, i))   /* CPU_iï¿½ï¿½ï¿½Îºï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½×´Ì¬ï¿½Ä´ï¿½ï¿½ï¿½ */
+#define BSP_IPC_CPU_INT_CLR(i)      (SOC_IPC_CPU_INT_CLR_ADDR((BSP_U32)ipc_base, i))    /* CPU_iï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½         */
+#define BSP_IPC_INT_MASK_EN(i)      (SOC_IPC_CPU_INT_MASK_EN_ADDR((BSP_U32)ipc_base, i))    /* CPU_iï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ê¹ï¿½ï¿½           */
+#define BSP_IPC_INT_MASK_DIS(i)     (SOC_IPC_CPU_INT_MASK_DIS_ADDR((BSP_U32)ipc_base, i))   /* CPU_iï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½È¥Ê¹ï¿½ï¿½         */
 
-#define BSP_IPC_SEM_RAW_INT(j)      (SOC_IPC_SEM_RAW_INT_ADDR((BSP_U32)ipc_base, j))    /* CPU_jÐÅºÅÁ¿ÊÍ·ÅÔ­Ê¼ÖÐ¶Ï¼Ä´æÆ÷   */
-#define BSP_IPC_SEM_INT_MASK(j)     (SOC_IPC_SEM_INT_MASK_ADDR((BSP_U32)ipc_base, j))   /* CPU_jÐÅºÅÁ¿ÊÍ·ÅÖÐ¶ÏÑÚÂë¼Ä´æÆ÷   */
-#define BSP_IPC_SEM_INT_STAT(j)     (SOC_IPC_SEM_INT_STAT_ADDR((BSP_U32)ipc_base, j))   /* CPU_jÐÅºÅÁ¿ÊÍ·ÅÖÐ¶Ï×´Ì¬¼Ä´æÆ÷   */
-#define BSP_IPC_SEM_INT_CLR(j)      (SOC_IPC_SEM_INT_CLR_ADDR((BSP_U32)ipc_base, j))    /* CPU_jÐÅºÅÁ¿ÊÍ·ÅÖÐ¶ÏÇå³ý¼Ä´æÆ÷   */
-#define BSP_IPC_HS_CTRL(j,k)        (SOC_IPC_HS_CTRL_ADDR((BSP_U32)ipc_base, j, k))     /* CPU_jÐÅºÅÁ¿kÇëÇó¼Ä´æÆ÷      */
-#define BSP_IPC_HS_STAT(j,k)        (SOC_IPC_HS_STAT_ADDR((BSP_U32)ipc_base, j, k))     /* CPU_jÐÅºÅÁ¿k×´Ì¬¼Ä´æÆ÷      */
+#define BSP_IPC_SEM_RAW_INT(j)      (SOC_IPC_SEM_RAW_INT_ADDR((BSP_U32)ipc_base, j))    /* CPU_jï¿½Åºï¿½ï¿½ï¿½ï¿½Í·ï¿½Ô­Ê¼ï¿½Ð¶Ï¼Ä´ï¿½ï¿½ï¿½   */
+#define BSP_IPC_SEM_INT_MASK(j)     (SOC_IPC_SEM_INT_MASK_ADDR((BSP_U32)ipc_base, j))   /* CPU_jï¿½Åºï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½   */
+#define BSP_IPC_SEM_INT_STAT(j)     (SOC_IPC_SEM_INT_STAT_ADDR((BSP_U32)ipc_base, j))   /* CPU_jï¿½Åºï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ð¶ï¿½×´Ì¬ï¿½Ä´ï¿½ï¿½ï¿½   */
+#define BSP_IPC_SEM_INT_CLR(j)      (SOC_IPC_SEM_INT_CLR_ADDR((BSP_U32)ipc_base, j))    /* CPU_jï¿½Åºï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½   */
+#define BSP_IPC_HS_CTRL(j,k)        (SOC_IPC_HS_CTRL_ADDR((BSP_U32)ipc_base, j, k))     /* CPU_jï¿½Åºï¿½ï¿½ï¿½kï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½      */
+#define BSP_IPC_HS_STAT(j,k)        (SOC_IPC_HS_STAT_ADDR((BSP_U32)ipc_base, j, k))     /* CPU_jï¿½Åºï¿½ï¿½ï¿½k×´Ì¬ï¿½Ä´ï¿½ï¿½ï¿½      */
 
-#define BSP_IPC_CPU_RAW_INT_ACPU    (BSP_IPC_CPU_RAW_INT((BSP_U32)IPC_CORE_ACPU))           /* ACPU¿ìËÙÖÐ¶ÏÔ­Ê¼ÖÐ¶Ï¼Ä´æÆ÷     */
-#define BSP_IPC_CPU_INT_MASK_ACPU   (BSP_IPC_CPU_INT_MASK((BSP_U32)IPC_CORE_ACPU))          /* ACPU¿ìËÙÖÐ¶ÏÑÚÂë¼Ä´æÆ÷         */
-#define BSP_IPC_CPU_INT_STAT_ACPU   (BSP_IPC_CPU_INT_STAT((BSP_U32)IPC_CORE_ACPU))          /* ACPUÆÁ±ÎºóµÄ¿ìËÙÖÐ¶Ï×´Ì¬¼Ä´æÆ÷ */
-#define BSP_IPC_CPU_INT_CLR_ACPU    (BSP_IPC_CPU_INT_CLR((BSP_U32)IPC_CORE_ACPU))           /* ACPU¿ìËÙÖÐ¶ÏÇå³ý¼Ä´æÆ÷         */
-#define BSP_IPC_CPU_INT_MASK_EN_ACPU    (BSP_IPC_INT_MASK_EN((BSP_U32)IPC_CORE_ACPU))       /* ACPU¿ìËÙÖÐ¶ÏÊ¹ÄÜ               */
-#define BSP_IPC_CPU_INT_MASK_DIS_ACPU   (BSP_IPC_INT_MASK_DIS((BSP_U32)IPC_CORE_ACPU))      /* ACPU¿ìËÙÖÐ¶ÏÈ¥Ê¹ÄÜ             */
+#define BSP_IPC_CPU_RAW_INT_ACPU    (BSP_IPC_CPU_RAW_INT((BSP_U32)IPC_CORE_ACPU))           /* ACPUï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ô­Ê¼ï¿½Ð¶Ï¼Ä´ï¿½ï¿½ï¿½     */
+#define BSP_IPC_CPU_INT_MASK_ACPU   (BSP_IPC_CPU_INT_MASK((BSP_U32)IPC_CORE_ACPU))          /* ACPUï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½         */
+#define BSP_IPC_CPU_INT_STAT_ACPU   (BSP_IPC_CPU_INT_STAT((BSP_U32)IPC_CORE_ACPU))          /* ACPUï¿½ï¿½ï¿½Îºï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½×´Ì¬ï¿½Ä´ï¿½ï¿½ï¿½ */
+#define BSP_IPC_CPU_INT_CLR_ACPU    (BSP_IPC_CPU_INT_CLR((BSP_U32)IPC_CORE_ACPU))           /* ACPUï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½         */
+#define BSP_IPC_CPU_INT_MASK_EN_ACPU    (BSP_IPC_INT_MASK_EN((BSP_U32)IPC_CORE_ACPU))       /* ACPUï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ê¹ï¿½ï¿½               */
+#define BSP_IPC_CPU_INT_MASK_DIS_ACPU   (BSP_IPC_INT_MASK_DIS((BSP_U32)IPC_CORE_ACPU))      /* ACPUï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½È¥Ê¹ï¿½ï¿½             */
 
-#define UCOM_COMM_UINT32_MAX                (0xffffffff)                          /*32bitÎÞ·ûºÅÊý×î´óÖµ*/
+#define UCOM_COMM_UINT32_MAX                (0xffffffff)                          /*32bitï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ*/
 #define BSP_IPC_MAX_INT_NUM                 (32)                                  /*  */
-#define IPC_MASK                        0xFFFFFF0F       /*ÓÃÓÚÆÁ±Î[4:7]bitÎ»*/
+#define IPC_MASK                        0xFFFFFF0F       /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[4:7]bitÎ»*/
 
-/*ºóÐøÐèÒªÐ´µ½ARM_paxb.hÖÐ*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÐ´ï¿½ï¿½ARM_paxb.hï¿½ï¿½*/
 #define INT_LEV_IPC_CPU             (IRQ_IPC0_S)
 #define INT_LEV_IPC_SEM             (IRQ_IPC1_S)
 

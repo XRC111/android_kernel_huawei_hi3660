@@ -28,7 +28,7 @@
 #include "sensor_debug.h"
 #include "sensor_sys_info.h"
 #include "iomcu_power.h"
-#include <sensor_detect.h>
+#include "sensor_detect.h"
 #include <huawei_platform/inputhub/motionhub.h>
 #include <huawei_platform/inputhub/cahub.h>
 #include <huawei_platform/inputhub/sensorhub.h>
@@ -3138,7 +3138,7 @@ int is_ps_near(void)
 	if(-1 != vibrator_ps_data)
 		return vibrator_ps_data;
 	else
-		return 1;  //Ä¬ÈÏÔ¶Àë
+		return 1;  //Ä¬ï¿½ï¿½Ô¶ï¿½ï¿½
 }
 int is_vibrator_issue_gesture(void)
 {

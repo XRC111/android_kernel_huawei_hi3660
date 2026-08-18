@@ -57,7 +57,7 @@
 #include <bsp_nvim.h>
 #include "../../adrv/adrv.h"
 #include <bsp_rfile.h>
-#include <NVIM_ResumeId.h>
+#include "NVIM_ResumeId.h"
 #include <nv_partition_img.h>
 #include "nv_comm.h"
 #include "nv_ctrl.h"
@@ -219,7 +219,7 @@ u32 nv_debug_init(void)
 
 bool nv_debug_is_reset(void)
 {
-    /* MBB²úÆ·Ä¬ÈÏ²»¸´Î» */
+    /* MBBï¿½ï¿½Æ·Ä¬ï¿½Ï²ï¿½ï¿½ï¿½Î» */
     if(NV_PRODUCT_MBB == nv_debug_product())
     {
         nv_printf("mbb product don't reset system! %d\n",g_nv_debug_cfg.reset);
@@ -233,7 +233,7 @@ bool nv_debug_is_reset(void)
             return true;
         }
 
-        /* ÊÖ»ú²úÆ·²úÏßÉÏ²»¸´Î» */
+        /* ï¿½Ö»ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½Î» */
         if(NV_MODE_FACTORY == g_nv_ctrl.nv_self_ctrl.ulResumeMode)
         {
             nv_printf("phone product don't reset system in factory! %d\n",g_nv_ctrl.nv_self_ctrl.ulResumeMode);
@@ -241,7 +241,7 @@ bool nv_debug_is_reset(void)
         }
         else
         {
-            /* ÊÖ»úbeta½×¶Î¸´Î»£¬ÉÌÓÃ½×¶Î²»¸´Î» */
+            /* ï¿½Ö»ï¿½betaï¿½×¶Î¸ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ã½×¶Î²ï¿½ï¿½ï¿½Î» */
             if(EDITION_USER == bbox_check_edition())
             {
                 nv_printf("phone product don't reset system in user! \n");
@@ -405,11 +405,11 @@ u32 nv_debug_store_file(char * src)
     return NV_OK;
 }
 /*****************************************************************************
- º¯ Êý Ãû  : nv_debug_switch
- ¹¦ÄÜÃèÊö  : nv debug¹¦ÄÜ¿ª¹Ø
- ÊäÈë²ÎÊý  : void
- Êä³ö²ÎÊý  : ÎÞ
- ·µ »Ø Öµ  : ÎÞ
+ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½  : nv_debug_switch
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : nv debugï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : void
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+ ï¿½ï¿½ ï¿½ï¿½ Öµ  : ï¿½ï¿½
 *****************************************************************************/
 u32 nv_debug_switch(debug_ctrl_union_t debug_switch, u32 type)
 {
@@ -448,11 +448,11 @@ u32 nv_debug_switch(debug_ctrl_union_t debug_switch, u32 type)
     return NV_OK;
 }
 /*****************************************************************************
- º¯ Êý Ãû  : nv_debug_record
- ¹¦ÄÜÃèÊö  : ¶Ô¶ÁÐ´²Ù×÷¹ý³Ì¼ÇÂ¼´òµãÊ±¼ä
- ÊäÈë²ÎÊý  : void
- Êä³ö²ÎÊý  : ÎÞ
- ·µ »Ø Öµ  : ÎÞ
+ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½  : nv_debug_record
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ô¶ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½Â¼ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : void
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+ ï¿½ï¿½ ï¿½ï¿½ Öµ  : ï¿½ï¿½
 *****************************************************************************/
 void nv_debug_record(u32 current_state)
 {
@@ -501,11 +501,11 @@ void nv_debug_record(u32 current_state)
     return;
 }
 /*****************************************************************************
- º¯ Êý Ãû  : nv_debug_print_dump_queue
- ¹¦ÄÜÃèÊö  : ´òÓ¡dump¶ÓÁÐÖÐµÄÐÅÏ¢
- ÊäÈë²ÎÊý  : void
- Êä³ö²ÎÊý  : ÎÞ
- ·µ »Ø Öµ  : ÎÞ
+ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½  : nv_debug_print_dump_queue
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½Ó¡dumpï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ï¢
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : void
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+ ï¿½ï¿½ ï¿½ï¿½ Öµ  : ï¿½ï¿½
 *****************************************************************************/
 void nv_debug_print_dump_queue(void)
 {
@@ -557,11 +557,11 @@ void nv_debug_print_dump_queue(void)
     return;
 }
 /*****************************************************************************
- º¯ Êý Ãû  : nv_debug_record_delta_time
- ¹¦ÄÜÃèÊö  : ¼ÇÂ¼²Ù×÷×î´óÊ±¼ä
- ÊäÈë²ÎÊý  : void
- Êä³ö²ÎÊý  : ÎÞ
- ·µ »Ø Öµ  : ÎÞ
+ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½  : nv_debug_record_delta_time
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : void
+ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+ ï¿½ï¿½ ï¿½ï¿½ Öµ  : ï¿½ï¿½
 *****************************************************************************/
 void nv_debug_record_delta_time(u32 type, u32 start, u32 end)
 {
@@ -671,7 +671,7 @@ void nv_show_ref_info(u32 arg1,u32 arg2)
 
     for(i = _min;i<_max;i++)
     {
-        nv_printf("µÚ%dÏî :\n",i);
+        nv_printf("ï¿½ï¿½%dï¿½ï¿½ :\n",i);
         nv_printf("nvid   :0x%-8x, file id : 0x%-8x\n",ref_info->itemid,ref_info->file_id);
         nv_printf("nvlen  :0x%-8x, nv_off  : 0x%-8x, nv_pri 0x%-8x\n",ref_info->nv_len,ref_info->nv_off,ref_info->priority);
         nv_printf("dsda   :0x%-8x\n",ref_info->modem_num);
@@ -799,7 +799,7 @@ void nv_debug(u32 type,u32 reseverd1,u32 reserved2,u32 reserved3,u32 reserved4)
 }
 
 
-/*ÏµÍ³Æô¶¯log¼ÇÂ¼½Ó¿Ú£¬±£´æµ½ NV_LOG_PATH ÖÐ£¬´óÐ¡ÏÞ¶¨ÔÚ NV_LOG_MAX_SIZE*/
+/*ÏµÍ³ï¿½ï¿½ï¿½ï¿½logï¿½ï¿½Â¼ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½æµ½ NV_LOG_PATH ï¿½Ð£ï¿½ï¿½ï¿½Ð¡ï¿½Þ¶ï¿½ï¿½ï¿½ NV_LOG_MAX_SIZE*/
 void nv_record(char* fmt,...)
 {
     char   buffer[256];
@@ -872,13 +872,13 @@ void nv_get_current_sys_time(struct rtc_time *tm)
         nv_error_printf("invalid date/time\n");
         return;
     }
-    /*»ñÈ¡µ½µÄÊ±¼äÎª¸ñÁÖÍþÖÎÊ±¼ä£¬×ª»»Îª±±¾©Ê±¼ä*/
+    /*ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¬×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½*/
     tm->tm_hour+=8;
     return;
 }
 /*****************************************************************************
  Prototype       : nv_debug_is_bak_resume_nv
- Description     : ¼ì²ânvÊÇ·ñÎª±¸·Ý»Ö¸´nv
+ Description     : ï¿½ï¿½ï¿½nvï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½Ý»Ö¸ï¿½nv
  Return Value    : NONE
 *****************************************************************************/
 void nv_debug_is_bak_resume_nv(u16 itemid)
@@ -921,7 +921,7 @@ void nv_debug_is_bak_resume_nv(u16 itemid)
 
 /*****************************************************************************
  Prototype       : nv_debug_chk_invalid_type
- Description     : ¼ì²éÎÄ¼þÊÇ·ñÊÇ²âÊÔ×®¶¨ÒåµÄÎÄ¼þ
+ Description     : ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ç·ï¿½ï¿½Ç²ï¿½ï¿½ï¿½×®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
  Return Value    : NONE
 *****************************************************************************/
 u32 nv_debug_chk_invalid_type(const s8 * path, u32 invalid_type)
@@ -940,7 +940,7 @@ u32 nv_debug_chk_invalid_type(const s8 * path, u32 invalid_type)
 
 /*****************************************************************************
  Prototype       : nv_debug_set_invalid_type
- Description     : ÉèÖÃ²âÊÔ×®¶¨ÒåµÄÎÄ¼þµÄÃû×ÖºÍÊôÐÔ
+ Description     : ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½×®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½
  Return Value    : NONE
 *************************************************************************/
 void nv_debug_set_invalid_type(const s8 * path, u32 invalid_type)
@@ -952,7 +952,7 @@ void nv_debug_set_invalid_type(const s8 * path, u32 invalid_type)
 
 /*****************************************************************************
  Prototype       : nv_debug_set_invalid_type
- Description     : Çå³ý²âÊÔ×®¶¨ÒåµÄÎÄ¼þµÄÃû×ÖºÍÊôÐÔ
+ Description     : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½
  Return Value    : NONE
 *************************************************************************/
 void nv_debug_clear_invalid_type(void)

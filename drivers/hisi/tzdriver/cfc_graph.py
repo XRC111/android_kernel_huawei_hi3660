@@ -92,6 +92,9 @@ class DFAState(object):
 	def __eq__(self, other):
 		return self.idx == other.idx or self.NFAStates == other.NFAStates
 
+	def __hash__(self):
+		return self.idx
+
 	# add a NFAState into NFAStateSet, also merge the flags
 	# TODO: need a conflict detection method
 	def addNFAStateSingle(self, nfaState):

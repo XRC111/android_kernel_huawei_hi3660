@@ -20,7 +20,7 @@
 #include "libhwsecurec/securec.h"
 
 #define MAILBOX_PAGE_MAX (MAILBOX_POOL_SIZE >> PAGE_SHIFT)
-#define MAILBOX_ORDER_MAX get_order(MAILBOX_POOL_SIZE)
+#define MAILBOX_ORDER_MAX (ilog2(MAILBOX_POOL_SIZE) - PAGE_SHIFT)
 
 struct mb_page_t {
 	struct list_head node;

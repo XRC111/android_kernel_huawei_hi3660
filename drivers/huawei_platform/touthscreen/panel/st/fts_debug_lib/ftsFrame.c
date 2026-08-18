@@ -34,7 +34,7 @@
 #include <linux/regulator/consumer.h>
 #include <linux/of_gpio.h>
 //#include <linux/sec_sysfs.h>
-#include <../../../huawei_touchscreen_chips.h>
+#include "../../../huawei_touchscreen_chips.h"
 
 static int sense_len = 0, force_len = 0;
 

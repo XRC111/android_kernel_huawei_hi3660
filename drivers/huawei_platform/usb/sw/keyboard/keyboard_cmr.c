@@ -25,8 +25,8 @@
 #include <linux/hid-debug.h>
 #include <linux/hidraw.h>
 #include <huawei_platform/inputhub/kbhub.h>
-#include "sw_core.h"
-#include "sw_debug.h"
+#include "../sw_core.h"
+#include "../sw_debug.h"
 
 #define HALL_COVERD             (1)
 

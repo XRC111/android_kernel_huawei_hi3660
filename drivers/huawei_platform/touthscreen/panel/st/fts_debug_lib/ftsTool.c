@@ -27,7 +27,7 @@
 #include <linux/uaccess.h>
 #include <linux/power_supply.h>
 #include <linux/firmware.h>
-#include <../../../huawei_touchscreen_chips.h>
+#include "../../../huawei_touchscreen_chips.h"
 
 int readB2(u16 address, u8* outBuf, int len) 
 {

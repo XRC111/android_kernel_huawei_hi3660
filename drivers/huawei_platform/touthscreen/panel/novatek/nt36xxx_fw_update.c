@@ -3,7 +3,7 @@
 #include <linux/vmalloc.h>
 //#include <linux/fs.h>
 #include <asm/uaccess.h>
-#include <../../huawei_touchscreen_chips.h>
+#include "../../huawei_touchscreen_chips.h"
 
 #include "nt36xxx.h"
 

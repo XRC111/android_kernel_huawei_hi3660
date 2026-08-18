@@ -1,5 +1,5 @@
 #include "ftsSoftware.h"
-#include <../../../huawei_touchscreen_chips.h>
+#include "../../../huawei_touchscreen_chips.h"
 
 //#define PATH_FILE_LIMITS					"/storage/emulated/0/Android/data/stm_fts_production_limits.csv"
 #define LIMITS_FILE							"stm_fts_production_limits.csv"

@@ -1,7 +1,7 @@
 #ifndef _LINUX_FTS_I2C_H_
 #define _LINUX_FTS_I2C_H_
 
-#include <../../huawei_touchscreen_chips.h>
+#include "../../huawei_touchscreen_chips.h"
 
 #define FTS_POWER_ON     1
 #define FTS_POWER_OFF    0

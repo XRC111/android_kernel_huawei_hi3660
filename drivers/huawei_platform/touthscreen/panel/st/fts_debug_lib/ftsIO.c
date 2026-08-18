@@ -33,7 +33,7 @@
 #include <linux/i2c.h>
 #include <linux/i2c-dev.h>
 #include <linux/spi/spidev.h>
-#include <../../../huawei_touchscreen_chips.h>
+#include "../../../huawei_touchscreen_chips.h"
 
 static struct i2c_client *client = NULL;
 

@@ -47,7 +47,7 @@ DEFINE_EVENT(hwcam_cfgdev_req_internel, hwcam_cfgdev_send_req_end,
 
 /* This part must be outside protection */
 #undef TRACE_INCLUDE_PATH
-#define TRACE_INCLUDE_PATH .
+#define TRACE_INCLUDE_PATH ../../../../../drivers/media/huawei/camera
 #define TRACE_INCLUDE_FILE trace_hwcam
 #include <trace/define_trace.h>
 

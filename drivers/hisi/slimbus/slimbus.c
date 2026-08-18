@@ -29,8 +29,9 @@
 #include <linux/of.h>
 #include <linux/slab.h>
 #include <linux/pm_runtime.h>
-#include <rdr_hisi_audio_adapter.h>
 #include <dsm_audio/dsm_audio.h>
+
+#include "hi3630_asp_common.h"
 
 #include "slimbus_utils.h"
 #include "slimbus_drv.h"
@@ -1065,7 +1066,7 @@ static int slimbus_check_pm(uint32_t track)
 			ret = pm_runtime_get_sync(pdata->dev);
 			if (ret < 0) {
 				pr_err("[%s:%d] pm resume error, track:%d, ret:%d\n", __FUNCTION__, __LINE__, track, ret);
-				rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+				BUG_ON(true);
 				return ret;
 			}
 			if (!slimbus_trackstate_get()) {
@@ -1257,11 +1258,6 @@ int slimbus_track_deactivate(
 	struct slimbus_device_info *dev = NULL;
 	bool is_fast_soundtrigger = false;
 	slimbus_track_config_t *track_config_t = NULL;
-
-	if (!pdata) {
-		pr_err("pdata is null\n");
-		return -1;
-	}
 
 	if (!slimbus_track_params_is_valid(dev_type, track)) {
 		pr_err("params error, dev_type %d, track %d\n", dev_type, track);
@@ -1483,7 +1479,7 @@ int slimbus_bus_configure(slimbus_bus_config_type_t type)
 		pm_ret = pm_runtime_get_sync(pdata->dev);
 		if (pm_ret < 0) {
 			pr_err("[%s:%d] pm resume error, type:%d pm_ret:%d\n", __FUNCTION__, __LINE__, type, pm_ret);
-			rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+			BUG_ON(true);
 			return pm_ret;
 		}
 	}
@@ -2035,7 +2031,7 @@ static int slimbus_suspend(struct device *device)
 		pm_ret = pm_runtime_get_sync(device);
 		if (pm_ret < 0) {
 			pr_err("[%s:%d] pm resume error, pm_ret:%d\n", __FUNCTION__, __LINE__, pm_ret);
-			rdr_system_error(RDR_AUDIO_RUNTIME_SYNC_FAIL_MODID, 0, 0);
+			BUG_ON(true);
 			return pm_ret;
 		}
 	}

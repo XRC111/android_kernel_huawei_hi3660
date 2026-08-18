@@ -34,21 +34,21 @@
 #endif
 
 #include <bcmutils.h>
-#include <bcmwifi_channels.h>
+#include "bcmwifi_channels.h"
 #include <bcmendian.h>
 #include <proto/ethernet.h>
 #include <proto/802.11.h>
 #include <linux/if_arp.h>
 #include <asm/uaccess.h>
 #ifndef  BRCM_RSDB
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_linux.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_linux.h"
 #include <dhdioctl.h>
 #include <wlioctl.h>
-#include <dhd_cfg80211.h>
+#include "dhd_cfg80211.h"
 #ifdef PNO_SUPPORT
-#include <dhd_pno.h>
+#include "dhd_pno.h"
 #endif /* PNO_SUPPORT */
 #endif
 #include <proto/ethernet.h>
@@ -68,26 +68,26 @@
 #endif
 
 #include <wlioctl.h>
-#include <wldev_common.h>
-#include <wl_cfg80211.h>
-#include <wl_cfgp2p.h>
-#include <wl_android.h>
-#include <dhd_dbg.h>
+#include "wldev_common.h"
+#include "wl_cfg80211.h"
+#include "wl_cfgp2p.h"
+#include "wl_android.h"
+#include "dhd_dbg.h"
 #include <chipset_common/hwnet/hw_event.h>
 #include "hw_wifi.h"
 #ifdef  BRCM_RSDB
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_linux.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_linux.h"
 #include <dhdioctl.h>
 #include <wlioctl.h>
-#include <dhd_cfg80211.h>
-#include <dhd_bus.h>
+#include "dhd_cfg80211.h"
+#include "dhd_bus.h"
 #ifdef PNO_SUPPORT
-#include <dhd_pno.h>
+#include "dhd_pno.h"
 #endif /* PNO_SUPPORT */
 #if defined(WL_VENDOR_EXT_SUPPORT)
-#include <wl_cfgvendor.h>
+#include "wl_cfgvendor.h"
 #endif /* defined(WL_VENDOR_EXT_SUPPORT) */
 
 #ifdef WL_NAN
@@ -96,18 +96,18 @@
 #endif /* BRCM_RSDB */
 
 #ifdef PROP_TXSTATUS
-#include <dhd_wlfc.h>
+#include "dhd_wlfc.h"
 #endif
 #ifndef  BRCM_RSDB
 #if (LINUX_VERSION_CODE > KERNEL_VERSION(3, 13, 0)) || defined(WL_VENDOR_EXT_SUPPORT)
-#include <wl_cfgvendor.h>
+#include "wl_cfgvendor.h"
 #endif /* (LINUX_VERSION_CODE > KERNEL_VERSION(3, 13, 0)) || defined(WL_VENDOR_EXT_SUPPORT) */
 #else
 #ifdef BCMPCIE
-#include <dhd_flowring.h>
+#include "dhd_flowring.h"
 #endif
 #endif  /* BRCM_RSDB */
-#include <dhd_debug.h>
+#include "dhd_debug.h"
 #ifdef WL11U
 #if !defined(WL_ENABLE_P2P_IF) && !defined(WL_CFG80211_P2P_DEV_IF)
 #error You should enable 'WL_ENABLE_P2P_IF' or 'WL_CFG80211_P2P_DEV_IF' \

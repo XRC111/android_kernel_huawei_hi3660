@@ -29,9 +29,9 @@
 #include <linux/kthread.h>
 #include <linux/netdevice.h>
 
-#include <wldev_common.h>
+#include "wldev_common.h"
 #include <bcmutils.h>
-#include <hw_wifi.h>
+#include "hw_wifi.h"
 
 #define htod32(i) (i)
 #define htod16(i) (i)

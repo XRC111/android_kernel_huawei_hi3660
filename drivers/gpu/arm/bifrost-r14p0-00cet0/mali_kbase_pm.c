@@ -27,11 +27,11 @@
  * Base kernel power management APIs
  */
 
-#include <mali_kbase.h>
-#include <mali_midg_regmap.h>
-#include <mali_kbase_vinstr.h>
+#include "mali_kbase.h"
+#include "mali_midg_regmap.h"
+#include "mali_kbase_vinstr.h"
 
-#include <mali_kbase_pm.h>
+#include "mali_kbase_pm.h"
 
 int kbase_pm_powerup(struct kbase_device *kbdev, unsigned int flags)
 {

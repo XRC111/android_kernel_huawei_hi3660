@@ -20,7 +20,7 @@
  *
  */
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 
 /** Show callback for the @c gpu_memory debugfs file.
  *

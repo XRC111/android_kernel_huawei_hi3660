@@ -40,23 +40,23 @@
 #if defined(DHD_DEBUG)
 #include <hnd_cons.h>
 #endif /* defined(DHD_DEBUG) */
-#include <dngl_stats.h>
+#include "dngl_stats.h"
 #include <pcie_core.h>
-#include <dhd.h>
-#include <dhd_bus.h>
-#include <dhd_flowring.h>
-#include <dhd_proto.h>
-#include <dhd_dbg.h>
-#include <dhd_debug.h>
+#include "dhd.h"
+#include "dhd_bus.h"
+#include "dhd_flowring.h"
+#include "dhd_proto.h"
+#include "dhd_dbg.h"
+#include "dhd_debug.h"
 #include <dhdioctl.h>
 #include <sdiovar.h>
 #include <bcmmsgbuf.h>
 #include <pcicfg.h>
-#include <dhd_pcie.h>
+#include "dhd_pcie.h"
 #include <bcmpcie.h>
 #include <bcmendian.h>
 #ifdef DHDTCPACK_SUPPRESS
-#include <dhd_ip.h>
+#include "dhd_ip.h"
 #endif /* DHDTCPACK_SUPPRESS */
 #include <proto/bcmevent.h>
 
@@ -66,7 +66,7 @@
 #ifdef DHD_CTRL_CPU_IRQ_MASK
 #include <linux/irq.h>
 #endif /* DHD_CTRL_CPU_IRQ_MASK */
-#include <hw_wifi.h>
+#include "hw_wifi.h"
 #ifdef BCMEMBEDIMAGE
 #include BCMEMBEDIMAGE
 #endif /* BCMEMBEDIMAGE */

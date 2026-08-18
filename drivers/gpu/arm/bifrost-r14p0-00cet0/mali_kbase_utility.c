@@ -22,7 +22,7 @@
 
 
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 
 bool kbasep_list_member_of(const struct list_head *base, struct list_head *entry)
 {

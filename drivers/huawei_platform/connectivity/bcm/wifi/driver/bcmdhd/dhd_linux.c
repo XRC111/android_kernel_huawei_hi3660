@@ -78,18 +78,18 @@
 #endif
 #include <proto/802.3.h>
 
-#include <dngl_stats.h>
-#include <dhd_linux_wq.h>
-#include <dhd.h>
-#include <dhd_linux.h>
+#include "dngl_stats.h"
+#include "dhd_linux_wq.h"
+#include "dhd.h"
+#include "dhd_linux.h"
 #ifdef PCIE_FULL_DONGLE
-#include <dhd_flowring.h>
+#include "dhd_flowring.h"
 #endif
-#include <dhd_bus.h>
-#include <dhd_proto.h>
-#include <dhd_dbg.h>
-#include <dhd_debug.h>
-#include <hw_wifi.h>
+#include "dhd_bus.h"
+#include "dhd_proto.h"
+#include "dhd_dbg.h"
+#include "dhd_debug.h"
+#include "hw_wifi.h"
 #ifdef CONFIG_HW_WIFI_FREQ_CTRL_FLAG
 #include "hw_wifi_freq_ctrl.h"
 #endif
@@ -97,13 +97,13 @@
 #include <linux/wakelock.h>
 #endif
 #ifdef WL_CFG80211
-#include <wl_cfg80211.h>
+#include "wl_cfg80211.h"
 #endif
 #ifdef PNO_SUPPORT
-#include <dhd_pno.h>
+#include "dhd_pno.h"
 #endif
 #ifdef RTT_SUPPORT
-#include <dhd_rtt.h>
+#include "dhd_rtt.h"
 #endif
 
 #ifdef CONFIG_COMPAT
@@ -115,7 +115,7 @@
 #endif /* DHD_WMF */
 
 #ifdef DHDTCPACK_SUPPRESS
-#include <dhd_ip.h>
+#include "dhd_ip.h"
 #endif /* DHDTCPACK_SUPPRESS */
 
 #if defined(DHD_TRACE_WAKE_LOCK)
@@ -189,10 +189,10 @@ static u32 vendor_oui = CONFIG_DHD_SET_RANDOM_MAC_VAL;
 #endif
 #ifdef PROP_TXSTATUS
 #include <wlfc_proto.h>
-#include <dhd_wlfc.h>
+#include "dhd_wlfc.h"
 #endif
 
-#include <wl_android.h>
+#include "wl_android.h"
 
 /* Maximum STA per radio */
 #define DHD_MAX_STA     32
@@ -246,7 +246,7 @@ static void dhd_hang_work_handler(struct work_struct *work);
 MODULE_LICENSE("GPL v2");
 #endif /* LinuxVer */
 
-#include <dhd_bus.h>
+#include "dhd_bus.h"
 
 #ifdef BCM_FD_AGGR
 #define DBUS_RX_BUFFER_SIZE_DHD(net)	(BCM_RPC_TP_DNGL_AGG_MAX_BYTE)

@@ -37,24 +37,24 @@
 #include <bcmmsgbuf.h>
 #include <bcmendian.h>
 
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_proto.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_proto.h"
 
-#include <dhd_bus.h>
+#include "dhd_bus.h"
 
-#include <dhd_dbg.h>
+#include "dhd_dbg.h"
 #include <siutils.h>
 
 
-#include <dhd_flowring.h>
+#include "dhd_flowring.h"
 
 #include <pcie_core.h>
 #include <bcmpcie.h>
-#include <dhd_pcie.h>
-#include <hw_wifi.h>
+#include "dhd_pcie.h"
+#include "hw_wifi.h"
 #ifdef BCM_PATCH_FOR_DHCP_BASIC_RATE
-#include <dhd_ip.h>
+#include "dhd_ip.h"
 #endif
 /**
  * Host configures a soft doorbell for d2h rings, by specifying a 32bit host

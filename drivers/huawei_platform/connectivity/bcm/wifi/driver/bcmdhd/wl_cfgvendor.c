@@ -35,7 +35,7 @@
 #include <linux/kernel.h>
 
 #include <bcmutils.h>
-#include <bcmwifi_channels.h>
+#include "bcmwifi_channels.h"
 #include <bcmendian.h>
 #include <proto/ethernet.h>
 #include <proto/802.11.h>
@@ -43,18 +43,18 @@
 #include <asm/uaccess.h>
 
 
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dngl_stats.h"
+#include "dhd.h"
 #include <dhdioctl.h>
 #include <wlioctl.h>
-#include <dhd_cfg80211.h>
+#include "dhd_cfg80211.h"
 #ifdef PNO_SUPPORT
-#include <dhd_pno.h>
+#include "dhd_pno.h"
 #endif /* PNO_SUPPORT */
 #ifdef RTT_SUPPORT
-#include <dhd_rtt.h>
+#include "dhd_rtt.h"
 #endif /* RTT_SUPPORT */
-#include <dhd_debug.h>
+#include "dhd_debug.h"
 #include <proto/ethernet.h>
 #include <linux/kernel.h>
 #include <linux/kthread.h>
@@ -69,13 +69,13 @@
 #include <net/rtnetlink.h>
 
 #include <wlioctl.h>
-#include <wldev_common.h>
-#include <wl_cfg80211.h>
-#include <wl_cfgp2p.h>
-#include <wl_android.h>
-#include <wl_cfgvendor.h>
+#include "wldev_common.h"
+#include "wl_cfg80211.h"
+#include "wl_cfgp2p.h"
+#include "wl_android.h"
+#include "wl_cfgvendor.h"
 #ifdef PROP_TXSTATUS
-#include <dhd_wlfc.h>
+#include "dhd_wlfc.h"
 #endif
 #ifdef HW_LINK_COUNTERS
 #include "hw_wifi.h"

@@ -11,10 +11,10 @@
 #include <net/netlink.h>
 
 #include <bcmutils.h>
-#include <wl_cfg80211.h>
-#include <wl_cfgvendor.h>
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "wl_cfg80211.h"
+#include "wl_cfgvendor.h"
+#include "dngl_stats.h"
+#include "dhd.h"
 #include <dhdioctl.h>
 #include <brcm_nl80211.h>
 

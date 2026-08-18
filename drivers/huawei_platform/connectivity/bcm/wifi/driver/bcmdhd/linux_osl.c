@@ -65,7 +65,7 @@
 #endif /* BCM_OBJECT_TRACE */
 
 #ifdef HW_WIFI_DMD_LOG
-#include <hw_wifi.h>
+#include "hw_wifi.h"
 #endif
 
 #define PCI_CFG_RETRY		10

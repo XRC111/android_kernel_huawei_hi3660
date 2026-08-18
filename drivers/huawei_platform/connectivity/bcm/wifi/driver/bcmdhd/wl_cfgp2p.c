@@ -46,17 +46,17 @@
 #include <proto/802.11.h>
 #include <net/rtnetlink.h>
 
-#include <wl_cfg80211.h>
-#include <wl_cfgp2p.h>
-#include <wldev_common.h>
-#include <wl_android.h>
+#include "wl_cfg80211.h"
+#include "wl_cfgp2p.h"
+#include "wldev_common.h"
+#include "wl_android.h"
 #ifdef  BRCM_RSDB
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_linux.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_linux.h"
 #include <dhdioctl.h>
 #include <wlioctl.h>
-#include <dhd_cfg80211.h>
+#include "dhd_cfg80211.h"
 #endif
 static s8 scanparambuf[WLC_IOCTL_SMLEN];
 extern int g_wifi_on;

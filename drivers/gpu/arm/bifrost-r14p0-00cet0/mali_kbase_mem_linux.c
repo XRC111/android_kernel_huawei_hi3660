@@ -45,10 +45,10 @@
 #include <linux/shrinker.h>
 #include <linux/cache.h>
 
-#include <mali_kbase.h>
-#include <mali_kbase_mem_linux.h>
-#include <mali_kbase_tlstream.h>
-#include <mali_kbase_ioctl.h>
+#include "mali_kbase.h"
+#include "mali_kbase_mem_linux.h"
+#include "mali_kbase_tlstream.h"
+#include "mali_kbase_ioctl.h"
 #ifdef CONFIG_MALI_LAST_BUFFER
 #include <platform/hisilicon/last_buffer/mali_kbase_hisi_lb_callback.h>
 #endif

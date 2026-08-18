@@ -45,12 +45,12 @@
 #include <linux/irq.h>
 extern void dhdsdio_isr(void * args);
 #include <bcmutils.h>
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dngl_stats.h"
+#include "dhd.h"
 #if defined(CONFIG_ARCH_ODIN)
 #include <linux/platform_data/gpio-odin.h>
 #endif /* defined(CONFIG_ARCH_ODIN) */
-#include <dhd_linux.h>
+#include "dhd_linux.h"
 #include <bcmsdh.h>
 
 /* driver info, initialized when bcmsdh_register is called */

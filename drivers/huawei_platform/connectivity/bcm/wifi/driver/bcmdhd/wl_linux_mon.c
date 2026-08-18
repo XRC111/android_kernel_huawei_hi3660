@@ -36,9 +36,9 @@
 
 #include <wlioctl.h>
 #include <bcmutils.h>
-#include <dhd_dbg.h>
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dhd_dbg.h"
+#include "dngl_stats.h"
+#include "dhd.h"
 
 typedef enum monitor_states
 {

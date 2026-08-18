@@ -35,16 +35,16 @@
 #include <bcmcdc.h>
 #include <bcmendian.h>
 
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_proto.h>
-#include <dhd_bus.h>
-#include <dhd_dbg.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_proto.h"
+#include "dhd_bus.h"
+#include "dhd_dbg.h"
 
 
 #ifdef PROP_TXSTATUS
 #include <wlfc_proto.h>
-#include <dhd_wlfc.h>
+#include "dhd_wlfc.h"
 #endif
 
 

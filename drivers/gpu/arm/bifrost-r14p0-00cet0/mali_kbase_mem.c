@@ -36,13 +36,13 @@
 #include <linux/log2.h>
 #include <linux/hisi/rdr_hisi_platform.h>
 
-#include <mali_kbase_config.h>
-#include <mali_kbase.h>
-#include <mali_midg_regmap.h>
-#include <mali_kbase_cache_policy.h>
-#include <mali_kbase_hw.h>
-#include <mali_kbase_tlstream.h>
-#include <mali_kbase_gmc.h>
+#include "mali_kbase_config.h"
+#include "mali_kbase.h"
+#include "mali_midg_regmap.h"
+#include "mali_kbase_cache_policy.h"
+#include "mali_kbase_hw.h"
+#include "mali_kbase_tlstream.h"
+#include "mali_kbase_gmc.h"
 #ifdef CONFIG_MALI_LAST_BUFFER
 #include <platform/hisilicon/last_buffer/mali_kbase_hisi_lb_callback.h>
 #endif

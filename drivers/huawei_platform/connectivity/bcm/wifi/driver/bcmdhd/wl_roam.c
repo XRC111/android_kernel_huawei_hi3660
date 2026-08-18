@@ -27,11 +27,11 @@
 
 #include <typedefs.h>
 #include <osl.h>
-#include <bcmwifi_channels.h>
+#include "bcmwifi_channels.h"
 #include <wlioctl.h>
 #include <bcmutils.h>
-#include <wl_cfg80211.h>
-#include <wldev_common.h>
+#include "wl_cfg80211.h"
+#include "wldev_common.h"
 
 #define MAX_ROAM_CACHE		100
 #define MAX_CHANNEL_LIST	20

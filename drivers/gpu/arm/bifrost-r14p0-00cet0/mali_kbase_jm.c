@@ -25,7 +25,7 @@
  * HW access job manager common APIs
  */
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 #include "mali_kbase_hwaccess_jm.h"
 #include "mali_kbase_jm.h"
 

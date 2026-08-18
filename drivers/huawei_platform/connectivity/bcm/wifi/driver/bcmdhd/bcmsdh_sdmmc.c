@@ -40,8 +40,8 @@
 #include <linux/mmc/sdio_func.h>
 #include <linux/mmc/sdio_ids.h>
 
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dngl_stats.h"
+#include "dhd.h"
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 27)) && defined(CONFIG_PM_SLEEP)
 #include <linux/suspend.h>
@@ -49,7 +49,7 @@ extern volatile bool dhd_mmc_suspend;
 #endif
 #include "bcmsdh_sdmmc.h"
 
-#include <hw_wifi.h>
+#include "hw_wifi.h"
 #ifndef BCMSDH_MODULE
 extern int sdio_function_init(void);
 extern void sdio_function_cleanup(void);

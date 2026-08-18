@@ -20,7 +20,7 @@
  *
  */
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 #include <linux/mm.h>
 #include <linux/dma-mapping.h>
 #include <linux/highmem.h>
@@ -29,7 +29,7 @@
 #include <linux/atomic.h>
 #include <linux/version.h>
 #include <linux/delay.h>
-#include <mali_kbase_mgm.h>
+#include "mali_kbase_mgm.h"
 #ifdef CONFIG_MALI_LAST_BUFFER
 #include <linux/hisi/hisi_lb.h>
 #endif

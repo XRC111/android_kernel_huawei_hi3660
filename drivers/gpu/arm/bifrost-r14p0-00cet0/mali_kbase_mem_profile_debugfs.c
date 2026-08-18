@@ -20,7 +20,7 @@
  *
  */
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 
 #ifdef CONFIG_HISI_DEBUG_FS
 

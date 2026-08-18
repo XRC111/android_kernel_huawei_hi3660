@@ -37,7 +37,7 @@
 #include <linux/power/hisi/hisi_bci_battery.h>
 #endif
 
-#include <bq28z610_coul.h>
+#include "bq28z610_coul.h"
 
 #ifdef HWLOG_TAG
 #undef HWLOG_TAG

@@ -42,7 +42,7 @@
 #endif
 #endif /* BCMDRIVER */
 
-#include <bcmwifi_channels.h>
+#include "bcmwifi_channels.h"
 #include "LLT_wifi.h"
 
 #if defined(WIN32) && (defined(BCMDLL) || defined(WLMDLL))

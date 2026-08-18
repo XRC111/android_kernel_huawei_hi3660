@@ -998,6 +998,9 @@ extern struct user_struct root_user;
 
 struct backing_dev_info;
 struct reclaim_state;
+#ifdef CONFIG_HW_RECLAIM_ACCT
+struct reclaim_acct;
+#endif
 
 #ifdef CONFIG_SCHED_INFO
 struct sched_info {
@@ -2174,6 +2177,9 @@ struct task_struct {
 
 /* VM state */
 	struct reclaim_state *reclaim_state;
+#ifdef CONFIG_HW_RECLAIM_ACCT
+struct reclaim_acct *reclaim_acct;
+#endif
 
 	struct backing_dev_info *backing_dev_info;
 

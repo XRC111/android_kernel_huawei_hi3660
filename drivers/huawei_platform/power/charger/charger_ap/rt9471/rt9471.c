@@ -33,7 +33,7 @@
 #include <linux/kthread.h>
 #include <huawei_platform/log/hw_log.h>
 #include <huawei_platform/power/huawei_charger.h>
-#include <../charging_core.h>
+#include "../charging_core.h"
 #ifdef CONFIG_HUAWEI_USB_SHORT_CIRCUIT_PROTECT
 #include <huawei_platform/power/usb_short_circuit_protect.h>
 #endif

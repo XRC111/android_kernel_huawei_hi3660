@@ -12,7 +12,7 @@
 #include <linux/of.h>
 #include <linux/platform_device.h>
 #include <huawei_platform/log/hw_log.h>
-#include <../cpu_buck.h>
+#include "../cpu_buck.h"
 
 #define HWLOG_TAG hi6422v200
 #define HI6422v200_REG_SIZE 3

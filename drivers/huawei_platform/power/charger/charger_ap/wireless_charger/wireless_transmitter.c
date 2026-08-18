@@ -17,7 +17,7 @@
 #include <huawei_platform/power/boost_5v.h>
 #include <linux/power/hisi/hisi_bci_battery.h>
 #include <linux/jiffies.h>
-#include <../charging_core.h>
+#include "../charging_core.h"
 #ifdef CONFIG_DIRECT_CHARGER
 #include <huawei_platform/power/direct_charger.h>
 #endif

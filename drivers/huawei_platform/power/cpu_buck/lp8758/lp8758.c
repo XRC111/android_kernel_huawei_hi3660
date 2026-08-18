@@ -12,7 +12,7 @@
 #include <linux/of.h>
 #include <linux/platform_device.h>
 #include <huawei_platform/log/hw_log.h>
-#include <../cpu_buck.h>
+#include "../cpu_buck.h"
 
 #define HWLOG_TAG lp8758
 #define LP8758_REG_SIZE 2

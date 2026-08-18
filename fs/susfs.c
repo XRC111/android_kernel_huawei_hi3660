@@ -18,6 +18,10 @@
 
 static spinlock_t susfs_spin_lock;
 
+#ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
+unsigned long susfs_hide_sus_mnts_for_all_procs = 0;
+#endif
+
 extern bool susfs_is_current_ksu_domain(void);
 #ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
 extern void ksu_try_umount(const char *mnt, bool check_mnt, int flags, uid_t uid);
@@ -134,6 +138,17 @@ int susfs_sus_ino_for_filldir64(unsigned long ino) {
 			return 1;
 	}
 	return 0;
+}
+
+int susfs_set_i_state_on_external_dir(char *user_pathname, int cmd) {
+	char pathname[SUSFS_MAX_LEN_PATHNAME];
+
+	if (strncpy_from_user(pathname, user_pathname, SUSFS_MAX_LEN_PATHNAME - 1) < 0) {
+		SUSFS_LOGE("failed copying from userspace\n");
+		return 1;
+	}
+	pathname[SUSFS_MAX_LEN_PATHNAME - 1] = '\0';
+	return susfs_update_sus_path_inode(pathname);
 }
 #endif // #ifdef CONFIG_KSU_SUSFS_SUS_PATH
 

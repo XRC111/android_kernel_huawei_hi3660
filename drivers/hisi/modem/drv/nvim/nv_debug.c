@@ -58,7 +58,7 @@
 #include "../../adrv/adrv.h"
 #include <bsp_rfile.h>
 #include "NVIM_ResumeId.h"
-#include <nv_partition_img.h>
+#include "nv_partition_img.h"
 #include "nv_comm.h"
 #include "nv_ctrl.h"
 #include "nv_debug.h"

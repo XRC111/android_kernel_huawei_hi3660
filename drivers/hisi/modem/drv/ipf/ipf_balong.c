@@ -69,10 +69,10 @@
 #include <bsp_ddr.h>
 #include <bsp_psam.h>
 #include <bsp_ipf.h>
-#include <ipf_balong.h>
+#include "ipf_balong.h"
 
 #include <bsp_reset.h>
-/*CºËÆô¶¯(Êý´«ÔÊÐí)±êÊ¾*/
+/*Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½Ê¾*/
 IPF_FORRESET_CONTROL_E* modem_reset_flag = NULL;
 int ccore_rst_idle = 0;
 static IPF_FORRESET_CONTROL_E bsp_ipf_get_control_flag_for_ccore_reset(void);
@@ -82,10 +82,10 @@ IPF_DL_S g_stIpfDl = {0};
 ipf_ctx_t g_ipf_ctx;
 unsigned long long dma_mask;
 
-/*CºËÆô¶¯(Êý´«ÔÊÐí)±êÊ¾£¬¸Ã±êÖ¾ÓÃÓÚAcore¾ö¶¨ÊÇ·ñ½øÐÐÉÏÐÐÊý´«*/
+/*Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ã±ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½Acoreï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 IPF_FORRESET_CONTROL_E g_eCcoreResetFlag = IPF_FORRESET_CONTROL_ALLOW;
 
-/*k3µÍ¹¦ºÄ»Ö¸´±ê¼Ç*/
+/*k3ï¿½Í¹ï¿½ï¿½Ä»Ö¸ï¿½ï¿½ï¿½ï¿½*/
 unsigned int* ipf_acore_init_status = NULL;
 unsigned int* ipf_ccore_init_status = NULL;
 static spinlock_t ipf_filter_spinlock;
@@ -97,17 +97,17 @@ unsigned int g_ipf_ul_start_enable;
 #define IPF_START_STAMP_ENABLE (g_ipf_ul_start_enable)
 
 /*****************************************************************************
-* º¯ Êý Ãû	   : get_ipf_int_stat
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½	   : get_ipf_int_stat
 *
-* ¹¦ÄÜÃèÊö	: ipf»½ÐÑacoreºó´ò¿ª¼ÇÂ¼µÄpm-om¿ª¹Ø
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ipfï¿½ï¿½ï¿½ï¿½acoreï¿½ï¿½ò¿ª¼ï¿½Â¼ï¿½ï¿½pm-omï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý	: ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½ï¿½
 *
-* Êä³ö²ÎÊý	: ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½ï¿½
 *
-* ·µ »Ø Öµ	   : ÎÞ
+* ï¿½ï¿½ ï¿½ï¿½ Öµ	   : ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼	:2015/01/22 ÁúÒã ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼	:2015/01/22 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 static void get_ipf_int_stat(void)
 {
@@ -125,31 +125,31 @@ static void get_ipf_int_stat(void)
 
 
 /*****************************************************************************
-* º¯ Êý Ãû	   : ipf_dl_dpm_prepare
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½	   : ipf_dl_dpm_prepare
 *
-* ¹¦ÄÜÃèÊö	: dpm½øÈë×¼±¸º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: dpmï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý	: Éè±¸Ö¸Õë
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½è±¸Ö¸ï¿½ï¿½
 *
-* Êä³ö²ÎÊý	: ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½ï¿½
 *
-* ·µ »Ø Öµ	   : IPF_ERROR Ê§°Ü
-							IPF_SUCCESS ³É¹¦
+* ï¿½ï¿½ ï¿½ï¿½ Öµ	   : IPF_ERROR Ê§ï¿½ï¿½
+							IPF_SUCCESS ï¿½É¹ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼	:2013Äê6ÔÂ16ÈÕ	 ³Â¶«ÔÀ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼	:2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½	 ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 static int ipf_dl_dpm_prepare(struct device *pdev)
 {
 	unsigned int u32_dl_state;
 
-	/* ¼ì²éCcoreÊÇ·ñÉÏµç£¬Èç¹ûÒÑ¾­ÏÂµç£¬Ìø¹ýµÍ¹¦ºÄ±£´æ»Ö¸´Á÷³Ì*/
+	/* ï¿½ï¿½ï¿½Ccoreï¿½Ç·ï¿½ï¿½Ïµç£¬ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Âµç£¬ï¿½ï¿½ï¿½ï¿½ï¿½Í¹ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	if(IPF_FORRESET_CONTROL_FORBID <= bsp_ipf_get_control_flag_for_ccore_reset())
 	{
 		dev_err(g_ipf_ctx.dev, "%s ccore resetting, skip dpm process\n", __func__);
 		return IPF_SUCCESS;
 	}
 
-	/* ÅÐ¶ÏÏÂÐÐIPFÊÇ·ñ¿ÕÏÐ */
+	/* ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½IPFï¿½Ç·ï¿½ï¿½ï¿½ï¿½ */
 	u32_dl_state = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_STATE_OFFSET);
 
 	if(u32_dl_state != IPF_CHANNEL_STATE_IDLE)
@@ -161,17 +161,17 @@ static int ipf_dl_dpm_prepare(struct device *pdev)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû	   : ipf_dl_dpm_complete
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½	   : ipf_dl_dpm_complete
 *
-* ¹¦ÄÜÃèÊö	: dpm×®º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: dpm×®ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý	: Éè±¸Ö¸Õë
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½è±¸Ö¸ï¿½ï¿½
 *
-* Êä³ö²ÎÊý	: ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½ï¿½
 *
-* ·µ »Ø Öµ	   : ÎÞ
+* ï¿½ï¿½ ï¿½ï¿½ Öµ	   : ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼	:2013Äê6ÔÂ16ÈÕ	 ³Â¶«ÔÀ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼	:2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½	 ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 static void ipf_dl_dpm_complete(struct device *pdev)
 {
@@ -179,26 +179,26 @@ static void ipf_dl_dpm_complete(struct device *pdev)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû	   : ipf_dl_suspend
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½	   : ipf_dl_suspend
 *
-* ¹¦ÄÜÃèÊö	: dpm×®º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: dpm×®ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý	: Éè±¸Ö¸Õë
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½è±¸Ö¸ï¿½ï¿½
 *
-* Êä³ö²ÎÊý	: ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½ï¿½
 *
-* ·µ »Ø Öµ	   : ³É¹¦
+* ï¿½ï¿½ ï¿½ï¿½ Öµ	   : ï¿½É¹ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼	:2013Äê6ÔÂ16ÈÕ	 ³Â¶«ÔÀ  ´´½¨
-			2014Äê1ÔÂ23ÈÕv1.01 ³Â¶«ÔÀ ÐÞ¸Ä ÓÉÓÚK3V3×ÜÏßÉè¼ÆÎÊÌâ£¬
-			ÎÞ·¨ÔÚm3ÉÏ½øÐÐµÍ¹¦ºÄ»Ö¸´£¬ÒÆ¶¯µ½A9ÉÏ½øÐÐ¡£
+* ï¿½Þ¸Ä¼ï¿½Â¼	:2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½	 ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
+			2014ï¿½ï¿½1ï¿½ï¿½23ï¿½ï¿½v1.01 ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½Þ¸ï¿½ ï¿½ï¿½ï¿½ï¿½K3V3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬
+			ï¿½Þ·ï¿½ï¿½ï¿½m3ï¿½Ï½ï¿½ï¿½ÐµÍ¹ï¿½ï¿½Ä»Ö¸ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½A9ï¿½Ï½ï¿½ï¿½Ð¡ï¿½
 *****************************************************************************/
 static int ipf_dl_suspend(struct device *dev)
 {
 	unsigned long ipf_flags = 0;
 	dev_info(g_ipf_ctx.dev, "%s suspend +\n", __func__);
 
-	/* ¼ì²éCcoreÊÇ·ñÉÏµçÈç¹ûÒÑ¾­ÏÂµç£¬Ìø¹ýµÍ¹¦ºÄ±£´æ»Ö¸´Á÷³Ì*/
+	/* ï¿½ï¿½ï¿½Ccoreï¿½Ç·ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Âµç£¬ï¿½ï¿½ï¿½ï¿½ï¿½Í¹ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	if(IPF_FORRESET_CONTROL_FORBID <= bsp_ipf_get_control_flag_for_ccore_reset())
 	{
 		dev_err(g_ipf_ctx.dev, "%s ccore resetting, skip dpm process\n", __func__);
@@ -219,31 +219,31 @@ static int ipf_dl_suspend(struct device *dev)
 
 
 /*****************************************************************************
-* º¯ Êý Ãû	   : ipf_dl_resume
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½	   : ipf_dl_resume
 *
-* ¹¦ÄÜÃèÊö	: dpm×®º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: dpm×®ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý	: Éè±¸Ö¸Õë
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½è±¸Ö¸ï¿½ï¿½
 *
-* Êä³ö²ÎÊý	: ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	: ï¿½ï¿½
 *
-* ·µ »Ø Öµ	   : ³É¹¦
+* ï¿½ï¿½ ï¿½ï¿½ Öµ	   : ï¿½É¹ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼	:2013Äê6ÔÂ16ÈÕ	 ³Â¶«ÔÀ  ´´½¨
-			2014Äê1ÔÂ23ÈÕv1.01 ³Â¶«ÔÀ ÐÞ¸Ä ÓÉÓÚK3V3×ÜÏßÉè¼ÆÎÊÌâ£¬
-			ÎÞ·¨ÔÚm3ÉÏ½øÐÐµÍ¹¦ºÄ»Ö¸´£¬ÒÆ¶¯µ½A9ÉÏ½øÐÐ¡£
+* ï¿½Þ¸Ä¼ï¿½Â¼	:2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½	 ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
+			2014ï¿½ï¿½1ï¿½ï¿½23ï¿½ï¿½v1.01 ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½Þ¸ï¿½ ï¿½ï¿½ï¿½ï¿½K3V3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬
+			ï¿½Þ·ï¿½ï¿½ï¿½m3ï¿½Ï½ï¿½ï¿½ÐµÍ¹ï¿½ï¿½Ä»Ö¸ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½A9ï¿½Ï½ï¿½ï¿½Ð¡ï¿½
 *****************************************************************************/
 static int ipf_dl_resume(struct device *dev)
 {
 	dev_info(g_ipf_ctx.dev, "%s resume +\n", __func__);
-	/* ¼ì²éCcoreÊÇ·ñÉÏµçÈç¹ûÒÑ¾­ÏÂµç£¬Ìø¹ýµÍ¹¦ºÄ±£´æ»Ö¸´Á÷³Ì*/
+	/* ï¿½ï¿½ï¿½Ccoreï¿½Ç·ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Âµç£¬ï¿½ï¿½ï¿½ï¿½ï¿½Í¹ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	if(IPF_FORRESET_CONTROL_FORBID <= bsp_ipf_get_control_flag_for_ccore_reset())
 	{
 		dev_err(g_ipf_ctx.dev, "%s ccore resetting, skip dpm process\n", __func__);
 		return IPF_SUCCESS;
 	}
 
-	/*ÓÉÓÚK3V3×ÜÏßÉè¼ÆÎÊÌâ£¬»Ö¸´¹ýÂËÆ÷ÒÆ¶¯µ½´Ë´¦*/
+	/*ï¿½ï¿½ï¿½ï¿½K3V3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½Ë´ï¿½*/
 	ipf_check_filter_restore();
 	g_ipf_ctx.status->resume++;
 	dev_info(g_ipf_ctx.dev, "%s resume -\n", __func__);
@@ -560,17 +560,17 @@ static irqreturn_t ipf_interuppt(int irq, void* dev)
 }/*lint !e550*/
 
 /*****************************************************************************
-* º¯ Êý Ãû      : ipf_init
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½      : ipf_init
 *
-* ¹¦ÄÜÃèÊö  : IPF³õÊ¼»¯     ÄÚ²¿Ê¹ÓÃ£¬²»×÷Îª½Ó¿Úº¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : IPFï¿½ï¿½Ê¼ï¿½ï¿½     ï¿½Ú²ï¿½Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ó¿Úºï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : void
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ     : IPF_SUCCESS    ³õÊ¼»¯³É¹¦
-*                           IPF_ERROR      ³õÊ¼»¯Ê§°Ü
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : void
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : IPF_SUCCESS    ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½É¹ï¿½
+*                           IPF_ERROR      ï¿½ï¿½Ê¼ï¿½ï¿½Ê§ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2011Äê1ÔÂ21ÈÕ   Â³æÃ  ´´½¨
-				 2013Äê4ÔÂ30ÈÕ    ³Â¶«ÔÀÐÞ¸Ä£¬½«¼Ä´æÆ÷ÅäÖÃ·ÖÅäµ½Á½ºË
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2011ï¿½ï¿½1ï¿½ï¿½21ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
+				 2013ï¿½ï¿½4ï¿½ï¿½30ï¿½ï¿½    ï¿½Â¶ï¿½ï¿½ï¿½ï¿½Þ¸Ä£ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½äµ½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int ipf_init(void)
 {
@@ -601,13 +601,13 @@ int ipf_init(void)
 
     spin_lock_init(&ipf_filter_spinlock);
 
-    /* ÅäÖÃÏÂÐÐÍ¨µÀµÄAD¡¢BDºÍRDÉî¶È */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ADï¿½ï¿½BDï¿½ï¿½RDï¿½ï¿½ï¿½ */
     ipf_writel(IPF_DLRD_DESC_SIZE-1, g_ipf_ctx.regs + HI_IPF_CH1_BDQ_SIZE_OFFSET);
     ipf_writel(IPF_DLRD_DESC_SIZE-1, g_ipf_ctx.regs + HI_IPF_CH1_RDQ_SIZE_OFFSET);
 
 	ipf_writel(IPF_NONE_ADQ_EN, g_ipf_ctx.regs + HI_IPF_CH1_ADQ_CTRL_OFFSET);
 
-    /*ÏÂÐÐÍ¨µÀµÄBDºÍRDÆðÊ¼µØÖ·*/
+    /*ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½BDï¿½ï¿½RDï¿½ï¿½Ê¼ï¿½ï¿½Ö·*/
     ipf_writel((unsigned int)(unsigned long)g_stIpfDl.pstIpfPhyBDQ, g_ipf_ctx.regs + HI_IPF_CH1_BDQ_BADDR_OFFSET);
     ipf_writel((unsigned int)(unsigned long)g_stIpfDl.pstIpfPhyRDQ, g_ipf_ctx.regs + HI_IPF_CH1_RDQ_BADDR_OFFSET);
     ipf_writel((unsigned int)(unsigned long)g_stIpfDl.pstIpfPhyADQ0, g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_BASE_OFFSET);
@@ -650,21 +650,21 @@ int ipf_init(void)
 	return 0;
 }
 
-/*ÓÉÓÚK3V3×ÜÏßÉè¼ÆÎÊÌâ£¬ipfÎÞ·¨ÔÚM3ÉÏ»Ö¸´ipf¼Ä´æÆ÷£¬¹ÊÒÆ¶¯µ½acoreºÍccore*/
+/*ï¿½ï¿½ï¿½ï¿½K3V3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ipfï¿½Þ·ï¿½ï¿½ï¿½M3ï¿½Ï»Ö¸ï¿½ipfï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½acoreï¿½ï¿½ccore*/
 
 /*****************************************************************************
-* º¯ Êý Ãû       : ipf_drx_restore_filter
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½       : ipf_drx_restore_filter
 *
-* ¹¦ÄÜÃèÊö  : Ìá¹©µÄµÍ¹¦ºÄ½Ó¿Ú£¬ÓÃÓÚIPFÉÏµç»Ö¸´
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½á¹©ï¿½ÄµÍ¹ï¿½ï¿½Ä½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½IPFï¿½Ïµï¿½Ö¸ï¿½
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ     : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½ï¿½
 *
-* ×¢Òâ:¸Ãº¯ÊýÐèÒªÔÚËøÖÐ¶ÏµÄÇé¿öÏÂµ÷ÓÃ
-* ÐÞ¸Ä¼ÇÂ¼  : 2013Äê4ÔÂ23ÈÕv1.00 chendongyue ´´½¨
-			2014Äê1ÔÂ23ÈÕv1.01 chendongyue ÒÆÖ²µ½A9core
+* ×¢ï¿½ï¿½:ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ïµï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½
+* ï¿½Þ¸Ä¼ï¿½Â¼  : 2013ï¿½ï¿½4ï¿½ï¿½23ï¿½ï¿½v1.00 chendongyue ï¿½ï¿½ï¿½ï¿½
+			2014ï¿½ï¿½1ï¿½ï¿½23ï¿½ï¿½v1.01 chendongyue ï¿½ï¿½Ö²ï¿½ï¿½A9core
 *****************************************************************************/
 int ipf_drx_restore_filter(void)
 {
@@ -707,17 +707,17 @@ int ipf_drx_restore_filter(void)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû       : ipf_check_filter_restore
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½       : ipf_check_filter_restore
 *
-* ¹¦ÄÜÃèÊö  : Ìá¹©µÄµÍ¹¦ºÄ½Ó¿Ú£¬ÓÃÓÚIPFÉÏµç»Ö¸´
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½á¹©ï¿½ÄµÍ¹ï¿½ï¿½Ä½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½IPFï¿½Ïµï¿½Ö¸ï¿½
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ     : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½ï¿½
 *
 *
-* ÐÞ¸Ä¼ÇÂ¼  : 2014Äê1ÔÂ23ÈÕv1.00 chendongyue´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  : 2014ï¿½ï¿½1ï¿½ï¿½23ï¿½ï¿½v1.00 chendongyueï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 void ipf_check_filter_restore(void)
 {
@@ -774,18 +774,18 @@ int bsp_ipf_srest(void)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû      : bsp_ipf_config_timeout
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½      : bsp_ipf_config_timeout
 *
-* ¹¦ÄÜÃèÊö  : µ÷ÊÔÊ¹ÓÃ£¬ÅäÖÃ³¬Ê±Ê±¼ä½Ó¿Ú
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ã³ï¿½Ê±Ê±ï¿½ï¿½Ó¿ï¿½
 *
-* ÊäÈë²ÎÊý  : unsigned int u32Timeout ÅäÖÃµÄ³¬Ê±Ê±¼ä
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ     : IPF_SUCCESS    ³É¹¦
-*                           BSP_ERR_IPF_INVALID_PARA      ²ÎÊýÎÞÐ§
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : unsigned int u32Timeout ï¿½ï¿½ï¿½ÃµÄ³ï¿½Ê±Ê±ï¿½ï¿½
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : IPF_SUCCESS    ï¿½É¹ï¿½
+*                           BSP_ERR_IPF_INVALID_PARA      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
 *
-* ËµÃ÷              : 1´ú±í256¸öÊ±ÖÓÖÜÆÚ
+* Ëµï¿½ï¿½              : 1ï¿½ï¿½ï¿½ï¿½256ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼   : 2011Äê11ÔÂ30ÈÕ   Â³æÃ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼   : 2011ï¿½ï¿½11ï¿½ï¿½30ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int bsp_ipf_config_timeout(unsigned int u32Timeout)
 {
@@ -802,24 +802,24 @@ int bsp_ipf_config_timeout(unsigned int u32Timeout)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû      : BSP_IPF_PktLen
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½      : BSP_IPF_PktLen
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿ÚÓÃÀ´ÅäÖÃ¹ýÂËÆ÷µÄ×î´óºÍ×îÐ¡°ü³¤
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : unsigned int MaxLen   ×î´ó°ü³¤
-*                           unsigned int MinLen   ×îÐ¡°ü³¤
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : unsigned int MaxLen   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*                           unsigned int MinLen   ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
 *
-* Êä³ö²ÎÊý   : ÎÞ
-* ·µ »Ø Öµ      : IPF_SUCCESS                ³É¹¦
-*                           BSP_ERR_IPF_INVALID_PARA   ²ÎÊý´íÎó(×î´ó°ü³¤±È×îÐ¡°ü³¤Ð¡)
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ      : IPF_SUCCESS                ï¿½É¹ï¿½
+*                           BSP_ERR_IPF_INVALID_PARA   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ð¡)
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2011Äê2ÔÂ17ÈÕ   Â³æÃ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2011ï¿½ï¿½2ï¿½ï¿½17ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int bsp_ipf_set_pktlen(unsigned int u32MaxLen, unsigned int u32MinLen)
 {
     unsigned int u32PktLen = 0;
 
-    /* ²ÎÊý¼ì²é */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     if(u32MaxLen < u32MinLen)
     {
     	dev_err(g_ipf_ctx.dev, "%s para invalid\n", __func__);
@@ -832,26 +832,26 @@ int bsp_ipf_set_pktlen(unsigned int u32MaxLen, unsigned int u32MinLen)
     return IPF_SUCCESS;
 }/*lint !e550*/
 
-/**********************************¿ÉÎ¬¿É²â½Ó¿Úº¯Êý************************************/
+/**********************************ï¿½ï¿½Î¬ï¿½É²ï¿½Ó¿Úºï¿½ï¿½ï¿½************************************/
 void bsp_ipf_help(void)
 {
     IPF_PRINT("===============================================\n");
-    IPF_PRINT("bsp_ipf_info    ²ÎÊý1:Í¨µÀÀàÐÍ  0ÎªÉÏÐÐ£¬1ÎªÏÂÐÐ\n");
-    IPF_PRINT("bsp_ipf_mem 	   ´òÓ¡ipf share ddr ·ÖÅä\n");
-    IPF_PRINT("bsp_ipf_bdinfo  ²ÎÊý1:Í¨µÀÀàÐÍ  ²ÎÊý2:BDÖ¸Õë\n");
-    IPF_PRINT("bsp_ipf_rdinfo  ²ÎÊý1:Í¨µÀÀàÐÍ  ²ÎÊý2:RDÖ¸Õë\n");
-    IPF_PRINT("bsp_ipf_adinfo  ²ÎÊý1:Í¨µÀÀàÐÍ  ²ÎÊý2:ADÖ¸Õë²ÎÊý3:AD ¶ÓÁÐÀàÐÍ0Îª¶Ì,1Îª³¤\n");
+    IPF_PRINT("bsp_ipf_info    ï¿½ï¿½ï¿½ï¿½1:Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  0Îªï¿½ï¿½ï¿½Ð£ï¿½1Îªï¿½ï¿½ï¿½ï¿½\n");
+    IPF_PRINT("bsp_ipf_mem 	   ï¿½ï¿½Ó¡ipf share ddr ï¿½ï¿½ï¿½ï¿½\n");
+    IPF_PRINT("bsp_ipf_bdinfo  ï¿½ï¿½ï¿½ï¿½1:Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½2:BDÖ¸ï¿½ï¿½\n");
+    IPF_PRINT("bsp_ipf_rdinfo  ï¿½ï¿½ï¿½ï¿½1:Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½2:RDÖ¸ï¿½ï¿½\n");
+    IPF_PRINT("bsp_ipf_adinfo  ï¿½ï¿½ï¿½ï¿½1:Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½2:ADÖ¸ï¿½ï¿½ï¿½ï¿½ï¿½3:AD ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0Îªï¿½ï¿½,1Îªï¿½ï¿½\n");
     IPF_PRINT("===============================================\n");
-    IPF_PRINT("bsp_ipf_dump_bdinfo  ²ÎÊý1:Í¨µÀÀàÐÍ\n");
-    IPF_PRINT("bsp_ipf_dump_rdinfo  ²ÎÊý1:Í¨µÀÀàÐÍ\n");
-    IPF_PRINT("bsp_ipf_dump_adinfo  ²ÎÊý1:Í¨µÀÀàÐÍ\n");
+    IPF_PRINT("bsp_ipf_dump_bdinfo  ï¿½ï¿½ï¿½ï¿½1:Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+    IPF_PRINT("bsp_ipf_dump_rdinfo  ï¿½ï¿½ï¿½ï¿½1:Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+    IPF_PRINT("bsp_ipf_dump_adinfo  ï¿½ï¿½ï¿½ï¿½1:Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
     IPF_PRINT("===============================================\n");
-	IPF_PRINT("bsp_ipf_show_status  ´òÓ¡a/cºËÊý´«Ê±ÃèÊö·ûÏà¹ØÐÅÏ¢\n");
+	IPF_PRINT("bsp_ipf_show_status  ï¿½ï¿½Ó¡a/cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢\n");
 	IPF_PRINT("===============================================\n");
-    IPF_PRINT("ipf_enable_ul_time_stamp  ²ÎÊý1:0-disable, 1-enable\n");
-    IPF_PRINT("ipf_enable_dl_time_stamp  ²ÎÊý1:0-disable, 1-enable\n");
-    IPF_PRINT("ipf_clear_time_stamp  Çå³ýÊµ¼Ê´Á¼ÇÂ¼\n");
-    IPF_PRINT("ipf_dump_time_stamp  Linux:ÏÂÐÐÊ±¼ä²î, vxWorks:ÉÏÐÐÊ±¼ä²î\n");
+    IPF_PRINT("ipf_enable_ul_time_stamp  ï¿½ï¿½ï¿½ï¿½1:0-disable, 1-enable\n");
+    IPF_PRINT("ipf_enable_dl_time_stamp  ï¿½ï¿½ï¿½ï¿½1:0-disable, 1-enable\n");
+    IPF_PRINT("ipf_clear_time_stamp  ï¿½ï¿½ï¿½Êµï¿½Ê´ï¿½ï¿½ï¿½Â¼\n");
+    IPF_PRINT("ipf_dump_time_stamp  Linux:ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½, vxWorks:ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½\n");
     IPF_PRINT("===============================================\n");
 }
 void bsp_ipf_show_status(void)
@@ -924,7 +924,7 @@ int bsp_ipf_bdinfo(IPF_CHANNEL_TYPE_E eChnType, unsigned int u32BdqPtr)
                 return IPF_ERROR;
             }
             IPF_PRINT("==========BD Info=========\n");
-            IPF_PRINT("BDÎ»ÖÃ:         %d\n",u32BdqPtr);
+            IPF_PRINT("BDÎ»ï¿½ï¿½:         %d\n",u32BdqPtr);
             IPF_PRINT("u16Attribute:   %d\n",g_stIpfUl.pstIpfBDQ[u32BdqPtr].u16Attribute);
             IPF_PRINT("u16PktLen:      %d\n",g_stIpfUl.pstIpfBDQ[u32BdqPtr].u16PktLen);
             IPF_PRINT("u32InPtr:       0x%x\n",g_stIpfUl.pstIpfBDQ[u32BdqPtr].u32InPtr);
@@ -942,7 +942,7 @@ int bsp_ipf_bdinfo(IPF_CHANNEL_TYPE_E eChnType, unsigned int u32BdqPtr)
                 return IPF_ERROR;
             }
             IPF_PRINT("==========BD Info=========\n");
-            IPF_PRINT("BDÎ»ÖÃ:         %d\n",u32BdqPtr);
+            IPF_PRINT("BDÎ»ï¿½ï¿½:         %d\n",u32BdqPtr);
             IPF_PRINT("u16Attribute:   %d\n",g_stIpfDl.pstIpfBDQ[u32BdqPtr].u16Attribute);
             IPF_PRINT("u16PktLen:      %d\n",g_stIpfDl.pstIpfBDQ[u32BdqPtr].u16PktLen);
             IPF_PRINT("u32InPtr:       0x%x\n",g_stIpfDl.pstIpfBDQ[u32BdqPtr].u32InPtr);
@@ -1012,7 +1012,7 @@ int bsp_ipf_rdinfo(IPF_CHANNEL_TYPE_E eChnType, unsigned int u32RdqPtr)
                 return IPF_ERROR;
             }
             IPF_PRINT("===========RD Info==========\n");
-            IPF_PRINT("RDÎ»ÖÃ:             %d\n",u32RdqPtr);
+            IPF_PRINT("RDÎ»ï¿½ï¿½:             %d\n",u32RdqPtr);
             IPF_PRINT("u16Attribute:       %d\n",g_stIpfUl.pstIpfRDQ[u32RdqPtr].u16Attribute);
             IPF_PRINT("u16PktLen:          %d\n",g_stIpfUl.pstIpfRDQ[u32RdqPtr].u16PktLen);
             IPF_PRINT("u32InPtr:           0x%x\n",g_stIpfUl.pstIpfRDQ[u32RdqPtr].u32InPtr);
@@ -1030,7 +1030,7 @@ int bsp_ipf_rdinfo(IPF_CHANNEL_TYPE_E eChnType, unsigned int u32RdqPtr)
                 return IPF_ERROR;
             }
             IPF_PRINT("============RD Info===========\n");
-            IPF_PRINT("RDÎ»ÖÃ:             %d\n",u32RdqPtr);
+            IPF_PRINT("RDÎ»ï¿½ï¿½:             %d\n",u32RdqPtr);
             IPF_PRINT("u16Attribute:       %d\n",g_stIpfDl.pstIpfRDQ[u32RdqPtr].u16Attribute);
             IPF_PRINT("u16PktLen:          %d\n",g_stIpfDl.pstIpfRDQ[u32RdqPtr].u16PktLen);
             IPF_PRINT("u32InPtr:           0x%x\n",g_stIpfDl.pstIpfRDQ[u32RdqPtr].u32InPtr);
@@ -1090,14 +1090,14 @@ int bsp_ipf_adinfo(IPF_CHANNEL_TYPE_E eChnType, unsigned int u32AdqPtr, unsigned
             if(0 == u32AdType)
             {
                  IPF_PRINT("===========UL AD0 Info==========\n");
-                 IPF_PRINT("ADÎ»ÖÃ:             %d\n",u32AdqPtr);
+                 IPF_PRINT("ADÎ»ï¿½ï¿½:             %d\n",u32AdqPtr);
                  IPF_PRINT("u32OutPtr0(phy_addr, use by hardware):       0x%x\n",g_stIpfUl.pstIpfADQ0[u32AdqPtr].u32OutPtr0);
                  IPF_PRINT("u32OutPtr1(usrfield skb_addr default):          0x%x\n",g_stIpfUl.pstIpfADQ0[u32AdqPtr].u32OutPtr1);
             }
             else
             {
                  IPF_PRINT("===========UL AD1 Info==========\n");
-                 IPF_PRINT("ADÎ»ÖÃ:             %d\n",u32AdqPtr);
+                 IPF_PRINT("ADÎ»ï¿½ï¿½:             %d\n",u32AdqPtr);
                  IPF_PRINT("u32OutPtr0(phy_addr, use by hardware):       0x%x\n",g_stIpfUl.pstIpfADQ1[u32AdqPtr].u32OutPtr0);
                  IPF_PRINT("u32OutPtr1(usrfield skb_addr default):          0x%x\n",g_stIpfUl.pstIpfADQ1[u32AdqPtr].u32OutPtr1);
             }
@@ -1110,14 +1110,14 @@ int bsp_ipf_adinfo(IPF_CHANNEL_TYPE_E eChnType, unsigned int u32AdqPtr, unsigned
             if(0 == u32AdType)
 	      	{
                  IPF_PRINT("===========DL AD0 Info==========\n");
-                 IPF_PRINT("ADÎ»ÖÃ:             %d\n",u32AdqPtr);
+                 IPF_PRINT("ADÎ»ï¿½ï¿½:             %d\n",u32AdqPtr);
                  IPF_PRINT("u32OutPtr0(phy_addr, use by hardware):       0x%x\n",g_stIpfDl.pstIpfADQ0[u32AdqPtr].u32OutPtr0);
                  IPF_PRINT("u32OutPtr1(usrfield skb_addr default):          0x%x\n",g_stIpfDl.pstIpfADQ0[u32AdqPtr].u32OutPtr1);
             }
             else
             {
                  IPF_PRINT("===========DL AD1 Info==========\n");
-                 IPF_PRINT("ADÎ»ÖÃ:             %d\n",u32AdqPtr);
+                 IPF_PRINT("ADÎ»ï¿½ï¿½:             %d\n",u32AdqPtr);
                  IPF_PRINT("u32OutPtr0(phy_addr, use by hardware):       0x%x\n",g_stIpfDl.pstIpfADQ1[u32AdqPtr].u32OutPtr0);
                  IPF_PRINT("u32OutPtr1(usrfield skb_addr default):          0x%x\n",g_stIpfDl.pstIpfADQ1[u32AdqPtr].u32OutPtr1);
             }
@@ -1234,23 +1234,23 @@ int bsp_ipf_info(IPF_CHANNEL_TYPE_E eChnType)
         return 1;
     }
     IPF_PRINT("============================\n");
-    IPF_PRINT("Í¨µÀ ×´Ì¬:            0x%x\n", u32status);
-    IPF_PRINT("BD Éî¶È:            %d\n", u32BdqDepth);
-    IPF_PRINT("BD Ð´Ö¸Õë:          %d\n", u32BdqWptr);
-    IPF_PRINT("BD ¶ÁÖ¸Õë:          %d\n", u32BdqRptr);
-    IPF_PRINT("BD Ð´µØÖ·:          0x%x\n", u32BdqWaddr);
-    IPF_PRINT("BD ¶ÁµØÖ·:          0x%x\n", u32BdqRaddr);
-    IPF_PRINT("RD Éî¶È:            %d\n", u32RdqDepth);
-    IPF_PRINT("RD ¶ÁÖ¸Õë:          %d\n", u32RdqRptr);
-    IPF_PRINT("RD Ð´Ö¸Õë:          %d\n", u32RdqWptr);
-    IPF_PRINT("RD ¶ÁµØÖ·:          0x%x\n", u32RdqRaddr);
-    IPF_PRINT("RD Ð´µØÖ·:          0x%x\n", u32RdqWaddr);
+    IPF_PRINT("Í¨ï¿½ï¿½ ×´Ì¬:            0x%x\n", u32status);
+    IPF_PRINT("BD ï¿½ï¿½ï¿½:            %d\n", u32BdqDepth);
+    IPF_PRINT("BD Ð´Ö¸ï¿½ï¿½:          %d\n", u32BdqWptr);
+    IPF_PRINT("BD ï¿½ï¿½Ö¸ï¿½ï¿½:          %d\n", u32BdqRptr);
+    IPF_PRINT("BD Ð´ï¿½ï¿½Ö·:          0x%x\n", u32BdqWaddr);
+    IPF_PRINT("BD ï¿½ï¿½ï¿½ï¿½Ö·:          0x%x\n", u32BdqRaddr);
+    IPF_PRINT("RD ï¿½ï¿½ï¿½:            %d\n", u32RdqDepth);
+    IPF_PRINT("RD ï¿½ï¿½Ö¸ï¿½ï¿½:          %d\n", u32RdqRptr);
+    IPF_PRINT("RD Ð´Ö¸ï¿½ï¿½:          %d\n", u32RdqWptr);
+    IPF_PRINT("RD ï¿½ï¿½ï¿½ï¿½Ö·:          0x%x\n", u32RdqRaddr);
+    IPF_PRINT("RD Ð´ï¿½ï¿½Ö·:          0x%x\n", u32RdqWaddr);
 
-    IPF_PRINT("AD0 ¶ÁÖ¸Õë:          %d\n", u32Adq0Rptr);
-    IPF_PRINT("AD0 Ð´Ö¸Õë:          %d\n", u32Adq0Wptr);
+    IPF_PRINT("AD0 ï¿½ï¿½Ö¸ï¿½ï¿½:          %d\n", u32Adq0Rptr);
+    IPF_PRINT("AD0 Ð´Ö¸ï¿½ï¿½:          %d\n", u32Adq0Wptr);
 
-    IPF_PRINT("AD1 ¶ÁÖ¸Õë:          %d\n", u32Adq1Rptr);
-    IPF_PRINT("AD1 Ð´Ö¸Õë:          %d\n", u32Adq1Wptr);
+    IPF_PRINT("AD1 ï¿½ï¿½Ö¸ï¿½ï¿½:          %d\n", u32Adq1Rptr);
+    IPF_PRINT("AD1 Ð´Ö¸ï¿½ï¿½:          %d\n", u32Adq1Wptr);
     IPF_PRINT("============================\n");
     return 0;
 }
@@ -1296,24 +1296,24 @@ int bsp_get_init_status(void)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : mdrv_ipf_reinit_dlreg
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : mdrv_ipf_reinit_dlreg
 *
-* ¹¦ÄÜÃèÊö  : Ccore¸´Î»Ê±,IPF»áËæÖ®¸´Î»,Æä¼Ä´æÆ÷ÐÅÏ¢»áÈ«²¿ÏûÊ§¡£
-				  ¸Ãº¯ÊýÔÚccore¸´Î»¡¢½â¸´Î»²¢Æô¶¯³É¹¦ºó,
-				  ÔÚADS»Øµ÷´¦ÀíÖÐÊ×ÏÈµ÷ÓÃ,ÓÃÓÚÖØÐÂÅäÖÃIPFÏÂÐÐÍ¨µÀÏà¹Ø¼Ä´æÆ÷
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : Ccoreï¿½ï¿½Î»Ê±,IPFï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Î»,ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
+				  ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½ccoreï¿½ï¿½Î»ï¿½ï¿½ï¿½â¸´Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½,
+				  ï¿½ï¿½ADSï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IPFï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Ø¼Ä´ï¿½ï¿½ï¿½
 
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ÎÞ
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2013Äê9ÔÂ1ÈÕ   ³Â¶«ÔÀ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2013ï¿½ï¿½9ï¿½ï¿½1ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 void mdrv_ipf_reinit_dlreg(void)
 {
-	/*ÅäÖÃIPFÏÂÐÐÍ¨µÀ¼Ä´æÆ÷*/
+	/*ï¿½ï¿½ï¿½ï¿½IPFï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½*/
     memset((void*)IPF_DLBD_MEM_ADDR, 0x0, IPF_DLDESC_SIZE);
 
     g_stIpfUl.pstIpfBDQ = (IPF_BD_DESC_S*)IPF_ULBD_MEM_ADDR;
@@ -1335,14 +1335,14 @@ void mdrv_ipf_reinit_dlreg(void)
 
     g_stIpfDl.u32IpfCdRptr = (unsigned int*) IPF_DLCDRPTR_MEM_ADDR;
     *(g_stIpfDl.u32IpfCdRptr) = 0;
-    /* ÅäÖÃÏÂÐÐÍ¨µÀµÄAD¡¢BDºÍRDÉî¶È */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ADï¿½ï¿½BDï¿½ï¿½RDï¿½ï¿½ï¿½ */
     ipf_writel(IPF_DLBD_DESC_SIZE - 1, g_ipf_ctx.regs + HI_IPF_CH1_BDQ_SIZE_OFFSET);
     ipf_writel(IPF_DLRD_DESC_SIZE - 1, g_ipf_ctx.regs + HI_IPF_CH1_RDQ_SIZE_OFFSET);
 
 	ipf_writel(IPF_NONE_ADQ_EN, g_ipf_ctx.regs + HI_IPF_CH1_ADQ_CTRL_OFFSET);
 
 
-    /*ÏÂÐÐÍ¨µÀµÄBDºÍRDÆðÊ¼µØÖ·*/
+    /*ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½BDï¿½ï¿½RDï¿½ï¿½Ê¼ï¿½ï¿½Ö·*/
     ipf_writel((unsigned int)(unsigned long)g_stIpfDl.pstIpfPhyBDQ, g_ipf_ctx.regs + HI_IPF_CH1_BDQ_BADDR_OFFSET);
     ipf_writel((unsigned int)(unsigned long)g_stIpfDl.pstIpfPhyRDQ, g_ipf_ctx.regs + HI_IPF_CH1_RDQ_BADDR_OFFSET);
     ipf_writel((unsigned int)(unsigned long)g_stIpfDl.pstIpfPhyADQ0, g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_BASE_OFFSET);
@@ -1360,23 +1360,23 @@ void mdrv_ipf_reinit_dlreg(void)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : mdrv_ipf_get_used_dlad
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : mdrv_ipf_get_used_dlad
 *
-* ¹¦ÄÜÃèÊö  : ¹¦ÄÜÍ¬V9R1µÄÍ¬Ãûº¯Êý£¬ÓÃÓÚ»ñÈ¡ÅäÖÃ¸øAD¶ÓÁÐµÄ£¬
-				  ÇÒÉÐÎ´±»Ó²¼þÊ¹ÓÃµÄADÐÅÏ¢£¬µ÷ÓÃÕßÊÍ·Å»ñÈ¡µÄAD
-				  ÖÐ¶ÔÓ¦µÄskb(IMM_Zc)£¬ÒÔ·ÀÖ¹Ccore resetÊ±ÄÚ´æÐ¹Â¶
-				  µ÷ÓÃ¸Ãº¯ÊýÆÚ¼ä£¬Ó¦½ûÖ¹ÅäÖÃBD¡£
-				  ¸Ãº¯ÊýÔËÐÐÊ±»á¹Ø±ÕÍ¨µÀ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½ï¿½ï¿½Í¬V9R1ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½È¡ï¿½ï¿½ï¿½Ã¸ï¿½ADï¿½ï¿½ï¿½ÐµÄ£ï¿½
+				  ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ó²ï¿½ï¿½Ê¹ï¿½Ãµï¿½ADï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·Å»ï¿½È¡ï¿½ï¿½AD
+				  ï¿½Ð¶ï¿½Ó¦ï¿½ï¿½skb(IMM_Zc)ï¿½ï¿½ï¿½Ô·ï¿½Ö¹Ccore resetÊ±ï¿½Ú´ï¿½Ð¹Â¶
+				  ï¿½ï¿½ï¿½Ã¸Ãºï¿½ï¿½ï¿½ï¿½Ú¼ä£¬Ó¦ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½BDï¿½ï¿½
+				  ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ø±ï¿½Í¨ï¿½ï¿½
 
-* ÊäÈë²ÎÊý  : eAdType: AD¶ÓÁÐÀàÐÍ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : eAdType: ADï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : pu32AdNum: ÐèÒªÊÍ·ÅµÄADÊýÄ¿
-				  pstAdDesc: ÐèÒªÊÍ·ÅµÄADÊý×éÍ·Ö¸Õë
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : pu32AdNum: ï¿½ï¿½Òªï¿½Í·Åµï¿½ADï¿½ï¿½Ä¿
+				  pstAdDesc: ï¿½ï¿½Òªï¿½Í·Åµï¿½ADï¿½ï¿½ï¿½ï¿½Í·Ö¸ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : BSP_ERR_IPF_INVALID_PARA Èë²Î·Ç·¨
-				  IPF_ERROR Ê§°Ü
-*				  IPF_SUCCESS ³É¹¦
-* ÐÞ¸Ä¼ÇÂ¼  :2013Äê9ÔÂ1ÈÕ   ³Â¶«ÔÀ´´½¨
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : BSP_ERR_IPF_INVALID_PARA ï¿½ï¿½Î·Ç·ï¿½
+				  IPF_ERROR Ê§ï¿½ï¿½
+*				  IPF_SUCCESS ï¿½É¹ï¿½
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2013ï¿½ï¿½9ï¿½ï¿½1ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int bsp_ipf_get_used_dlad(IPF_AD_TYPE_E eAdType, unsigned int * pu32AdNum, IPF_AD_DESC_S * pstAdDesc)
 {
@@ -1389,17 +1389,17 @@ int bsp_ipf_get_used_dlad(IPF_AD_TYPE_E eAdType, unsigned int * pu32AdNum, IPF_A
 	unsigned int u32ADQrptr;
 	unsigned int u32ADCtrl;
 
-	/*Èë²Î¼ì²â*/
+	/*ï¿½ï¿½Î¼ï¿½ï¿½*/
 	if((NULL == pu32AdNum)||(NULL == pstAdDesc))
 	{
 		bsp_trace(BSP_LOG_LEVEL_ERROR, BSP_MODU_IPF,"\r BSP_IPF_ConfigDlAd input para ERROR!NULL == pu32AdNum or NULL == pstAdDesc\n");
 		return BSP_ERR_IPF_INVALID_PARA;
 	}
-	/*¹Ø±ÕÏÂÐÐADÅäÖÃ½Ó¿Ú*/
+	/*ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ADï¿½ï¿½ï¿½Ã½Ó¿ï¿½*/
 	if (g_ipf_ctx.status) {
 		g_ipf_ctx.status->init_ok = 0;
 	}
-	/*µÈ´ýÍ¨µÀidle ,200ms³¬Ê±*/
+	/*ï¿½È´ï¿½Í¨ï¿½ï¿½idle ,200msï¿½ï¿½Ê±*/
 	do
 	{
 		u32DlStateValue = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_STATE_OFFSET);
@@ -1414,7 +1414,7 @@ int bsp_ipf_get_used_dlad(IPF_AD_TYPE_E eAdType, unsigned int * pu32AdNum, IPF_A
 		bsp_trace(BSP_LOG_LEVEL_ERROR, BSP_MODU_IPF,"\r After 20ms IPF dl channel still on, unable to free AD \n");
 		return IPF_ERROR;
 	}
-	/*³¢ÊÔ¹Ø±ÕÏÂÐÐÍ¨µÀ*/
+	/*ï¿½ï¿½ï¿½Ô¹Ø±ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½*/
 	u32ChanEnable = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH_EN_OFFSET);
 	u32ChanEnable &= 0xFFFFFFFF ^ (0x1<<IPF_CHANNEL_DOWN);
 	ipf_writel(u32ChanEnable, g_ipf_ctx.regs + HI_IPF_CH_EN_OFFSET);
@@ -1423,12 +1423,12 @@ int bsp_ipf_get_used_dlad(IPF_AD_TYPE_E eAdType, unsigned int * pu32AdNum, IPF_A
 	u32ADCtrl &= IPF_ADQ_EN_MASK;
 	u32ADCtrl |= (IPF_NONE_ADQ_EN);
 
-	/*¹Ø±ÕAD£¬ÓÃÓÚ·ÀÖ¹²úÉúADQÔ¤È¡*/
+	/*ï¿½Ø±ï¿½ADï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ADQÔ¤È¡*/
 	ipf_writel(u32ADCtrl, g_ipf_ctx.regs + HI_IPF_CH1_ADQ_CTRL_OFFSET);
 	if(IPF_AD_0 == eAdType)
 	{
 		u32AdStateValue = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_STAT_OFFSET);/*[false alarm]:fortify*/
-		/*»ØÍËAD¶ÁÖ¸Õë*/
+		/*ï¿½ï¿½ï¿½ï¿½ADï¿½ï¿½Ö¸ï¿½ï¿½*/
 		u32ADQwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_WPTR_OFFSET);
 		u32ADQrptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_RPTR_OFFSET);
 		while(u32ADQrptr != u32ADQwptr)
@@ -1444,7 +1444,7 @@ int bsp_ipf_get_used_dlad(IPF_AD_TYPE_E eAdType, unsigned int * pu32AdNum, IPF_A
 	else if(IPF_AD_1 == eAdType)
 	{
 		u32AdStateValue = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ1_STAT_OFFSET);/*[false alarm]:fortify*/
-		/*»ØÍËAD¶ÁÖ¸Õë*/
+		/*ï¿½ï¿½ï¿½ï¿½ADï¿½ï¿½Ö¸ï¿½ï¿½*/
 		u32ADQwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ1_WPTR_OFFSET);
 		u32ADQrptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ1_RPTR_OFFSET);
 		while(u32ADQrptr != u32ADQwptr)
@@ -1462,7 +1462,7 @@ int bsp_ipf_get_used_dlad(IPF_AD_TYPE_E eAdType, unsigned int * pu32AdNum, IPF_A
 		bsp_trace(BSP_LOG_LEVEL_ERROR, BSP_MODU_IPF,"\r BSP_IPF_ConfigDlAd input para ERROR! u32AdType >= IPF_AD_MAX\n");
 		return BSP_ERR_IPF_INVALID_PARA;
 	}
-	/*·µ»ØAD*/
+	/*ï¿½ï¿½ï¿½ï¿½AD*/
 	*pu32AdNum = u32FreeAdNum;
 	return IPF_SUCCESS;
 
@@ -1475,18 +1475,18 @@ int mdrv_ipf_get_used_dlad(IPF_AD_TYPE_E eAdType, unsigned int * pu32AdNum, IPF_
 
 
 /*****************************************************************************
-* º¯ Êý Ãû     : bsp_ipf_set_control_flag_for_ccore_reset
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : bsp_ipf_set_control_flag_for_ccore_reset
 *
-* ¹¦ÄÜÃèÊö  : modemµ¥¶À¸´Î»ipfÊÊÅäº¯Êý£¬ÓÃÓÚÔÚ¸´Î»Ê±×èÖ¹ÏÂÐÐÊý´«
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : modemï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ipfï¿½ï¿½ï¿½äº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Î»Ê±ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ³É¹¦
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½É¹ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :	2013Äê4ÔÂ19ÈÕ   Â¬ÑåÊ¤´´½¨
-					2013Äê6ÔÂ16ÈÕ   ³Â¶«ÔÀÊÊÅäµ½V7R2
+* ï¿½Þ¸Ä¼ï¿½Â¼  :	2013ï¿½ï¿½4ï¿½ï¿½19ï¿½ï¿½   Â¬ï¿½ï¿½Ê¤ï¿½ï¿½ï¿½ï¿½
+					2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½äµ½V7R2
 *****************************************************************************/
 void bsp_ipf_set_control_flag_for_ccore_reset(IPF_FORRESET_CONTROL_E eResetFlag)
 {
@@ -1495,25 +1495,25 @@ void bsp_ipf_set_control_flag_for_ccore_reset(IPF_FORRESET_CONTROL_E eResetFlag)
         bsp_trace(BSP_LOG_LEVEL_ERROR, BSP_MODU_IPF,"\r bsp_ipf_set_control_flag_for_ccore_reset eResetFlag overflow! \n");
         return;
     }
-    /*ÉèÖÃ±êÖ¾£¬ÖÕÖ¹ÉÏÐÐÊý´«*/
+    /*ï¿½ï¿½ï¿½Ã±ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
     g_eCcoreResetFlag = eResetFlag;
-    /*ÉèÖÃ±êÖ¾£¬ÖÕÖ¹ÏÂÐÐÊý´«*/
+    /*ï¿½ï¿½ï¿½Ã±ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
     *modem_reset_flag = eResetFlag;
     cache_sync();
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : bsp_ipf_get_control_flag_for_ccore_reset
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : bsp_ipf_get_control_flag_for_ccore_reset
 *
-* ¹¦ÄÜÃèÊö  : modemµ¥¶À¸´Î»ipfÊÊÅäº¯Êý£¬ÓÃÓÚÔÚ¸´Î»Ê±×èÖ¹ÏÂÐÐÊý´«
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : modemï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ipfï¿½ï¿½ï¿½äº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Î»Ê±ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ³É¹¦
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½É¹ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2013Äê6ÔÂ16ÈÕ   ³Â¶«ÔÀ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 static IPF_FORRESET_CONTROL_E bsp_ipf_get_control_flag_for_ccore_reset(void)
 {
@@ -1588,20 +1588,20 @@ int bsp_ipf_reset_ccore_cb(DRV_RESET_CB_MOMENT_E eparam, int userdata)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : BSP_IPF_ConfigDlAd
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : BSP_IPF_ConfigDlAd
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿Ú½öÔÚAºËÌá¹©£¬ÓÃÓÚÒÆ¶¯ADQÐ´Ö¸Õë£¬
-				¸ø¿ÕÏÐµÄAD·ÖÅäÐÂµÄÄÚ´æ»º³åÇø£¬Ò»´Î¿ÉÒÔ´¦Àí¶à¸öAD¡£
-				Êý´«Ç°Òªµ÷ÓÃÕâ¸öº¯Êý·ÖÅä»º³åÇø¡£
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿Ú½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ADQÐ´Ö¸ï¿½ë£¬
+				ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ADï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½Ú´æ»ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¿ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADï¿½ï¿½
+				ï¿½ï¿½ï¿½ï¿½Ç°Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : unsigned int u32ADNum0;
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : unsigned int u32ADNum0;
 				 unsigned int u32ADNum1;
 				 void* psk0;
 				 void* psk1
 *
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ      : ÎÞ
-* ÐÞ¸Ä¼ÇÂ¼  :2012Äê11ÔÂ24ÈÕ   ³Â¶«ÔÀ  ´´½¨
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ      : ï¿½ï¿½
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2012ï¿½ï¿½11ï¿½ï¿½24ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int ipf_config_dl_ad(unsigned int u32AdType, unsigned int  u32AdNum, IPF_AD_DESC_S * pstAdDesc)
 {
@@ -1618,7 +1618,7 @@ int ipf_config_dl_ad(unsigned int u32AdType, unsigned int  u32AdNum, IPF_AD_DESC
 		return BSP_ERR_IPF_INVALID_PARA;
 	}
 
-	/* ¼ì²éÄ£¿éÊÇ·ñ³õÊ¼»¯ */
+	/* ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ê¼ï¿½ï¿½ */
 	if(g_ipf_ctx.status && (IPF_ACORE_INIT_SUCCESS != g_ipf_ctx.status->init_ok))
 	{
 		g_ipf_ctx.status->mdrv_called_not_init++;
@@ -1636,7 +1636,7 @@ int ipf_config_dl_ad(unsigned int u32AdType, unsigned int  u32AdNum, IPF_AD_DESC
 			return BSP_ERR_IPF_INVALID_PARA;
 		}
 
-		/*¶Á³öÐ´Ö¸Õë*/
+		/*ï¿½ï¿½ï¿½ï¿½Ð´Ö¸ï¿½ï¿½*/
 		u32ADQwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_WPTR_OFFSET);
 		for(i=0; i < u32AdNum; i++)
 		{
@@ -1652,7 +1652,7 @@ int ipf_config_dl_ad(unsigned int u32AdType, unsigned int  u32AdNum, IPF_AD_DESC
 			pstADDesc++;
 		}
 		g_ipf_ctx.status->cfg_ad_cnt[IPF_AD_0] += u32AdNum;
-		/* ¸üÐÂAD0Ð´Ö¸Õë*/
+		/* ï¿½ï¿½ï¿½ï¿½AD0Ð´Ö¸ï¿½ï¿½*/
 		ipf_writel(u32ADQwptr, g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_WPTR_OFFSET);
 	}
 	else if(IPF_AD_1 == u32AdType)
@@ -1664,7 +1664,7 @@ int ipf_config_dl_ad(unsigned int u32AdType, unsigned int  u32AdNum, IPF_AD_DESC
 			return BSP_ERR_IPF_INVALID_PARA;
 		}
 
-		/*¶Á³öÐ´Ö¸Õë*/
+		/*ï¿½ï¿½ï¿½ï¿½Ð´Ö¸ï¿½ï¿½*/
 		u32ADQwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ1_WPTR_OFFSET);
 		for(i=0; i < u32AdNum; i++)
 		{
@@ -1682,24 +1682,24 @@ int ipf_config_dl_ad(unsigned int u32AdType, unsigned int  u32AdNum, IPF_AD_DESC
 		}
 		g_ipf_ctx.status->cfg_ad_cnt[IPF_AD_1] += u32AdNum;
 
-		/* ¸üÐÂAD1Ð´Ö¸Õë*/
+		/* ï¿½ï¿½ï¿½ï¿½AD1Ð´Ö¸ï¿½ï¿½*/
 		ipf_writel(u32ADQwptr, g_ipf_ctx.regs + HI_IPF_CH1_ADQ1_WPTR_OFFSET);
 	}
 	return IPF_SUCCESS;
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû       : BSP_IPF_GetDlAdNum
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½       : BSP_IPF_GetDlAdNum
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿ÚÖ»ÔÚAºËÌá¹©£¬»ñÈ¡ÏÂÐÐ£¨AºË£©
-					¿ÕÏÐ(¼´ÌîÈë¸ÃADµÄ»º³åÇøÒÑ¾­±»Õ¼ÓÃ)ADÊýÄ¿
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿ï¿½Ö»ï¿½ï¿½Aï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ð£ï¿½Aï¿½Ë£ï¿½
+					ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ADï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½)ADï¿½ï¿½Ä¿
 *
-* ÊäÈë²ÎÊý  :BSP_OK£ºÕý³£·µ»Ø
-                            BSP_ERROR£º³ö´í
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  :BSP_OKï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                            BSP_ERRORï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ     : ÎÞ
-* ÐÞ¸Ä¼ÇÂ¼  : 2011Äê11ÔÂ24ÈÕ   ³Â¶«ÔÀ  ´´½¨
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½ï¿½
+* ï¿½Þ¸Ä¼ï¿½Â¼  : 2011ï¿½ï¿½11ï¿½ï¿½24ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int ipf_get_dl_ad_num(unsigned int* pu32AD0Num,unsigned int* pu32AD1Num)
 {
@@ -1707,9 +1707,9 @@ int ipf_get_dl_ad_num(unsigned int* pu32AD0Num,unsigned int* pu32AD1Num)
 	unsigned int u32DlAdwptr = 0;
 	unsigned int u32DlAdrptr = 0;
 
-	/* ¼ì²éÄ£¿éÊÇ·ñ³õÊ¼»¯ */
+	/* ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ê¼ï¿½ï¿½ */
 
-	/*Èë²Î¼ì²â*/
+	/*ï¿½ï¿½Î¼ï¿½ï¿½*/
 	if((NULL == pu32AD0Num)||(NULL == pu32AD1Num))
 	{
 		g_ipf_ctx.status->invalid_para++;
@@ -1724,10 +1724,10 @@ int ipf_get_dl_ad_num(unsigned int* pu32AD0Num,unsigned int* pu32AD1Num)
 		return BSP_ERR_IPF_NOT_INIT;
 	}
 
-	/* ¼ÆËã¿ÕÏÐAD0ÊýÁ¿ */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AD0ï¿½ï¿½ï¿½ï¿½ */
 	u32DlAdwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_WPTR_OFFSET);
 	u32DlAdrptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ0_RPTR_OFFSET);
-	if (u32DlAdwptr >= u32DlAdrptr)/*Ð´Ö¸ÕëÔÚÇ°£¬Õý³£Ë³Ðò£¬Á½Ö¸ÕëÏàµÈµÄÇé¿öÉî¶ÈÎª0*/
+	if (u32DlAdwptr >= u32DlAdrptr)/*Ð´Ö¸ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0*/
 	{
 		u32DlAdDepth = IPF_DLAD0_DESC_SIZE - (u32DlAdwptr - u32DlAdrptr);
 	}
@@ -1736,7 +1736,7 @@ int ipf_get_dl_ad_num(unsigned int* pu32AD0Num,unsigned int* pu32AD1Num)
 		u32DlAdDepth = u32DlAdrptr -u32DlAdwptr;
 	}
 
-	/*¿Û³ýreserve ad£¬ÓÃÓÚ·ÀÖ¹Ó²¼þ½«ad¶ÓÁÐÂúÊ¶±ð³É¿ÕºÍµÍ¹¦ºÄÒý·¢ÄÚ´æÐ¹Â¶*/
+	/*ï¿½Û³ï¿½reserve adï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½Ö¹Ó²ï¿½ï¿½ï¿½ï¿½adï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½ï¿½É¿ÕºÍµÍ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ð¹Â¶*/
 	if(u32DlAdDepth > IPF_ADQ_RESERVE_NUM)
 	{
 		*pu32AD0Num = u32DlAdDepth - IPF_ADQ_RESERVE_NUM;
@@ -1746,10 +1746,10 @@ int ipf_get_dl_ad_num(unsigned int* pu32AD0Num,unsigned int* pu32AD1Num)
 		*pu32AD0Num = 0;
 	}
 
-	/* ¼ÆËã¿ÕÏÐAD1ÊýÁ¿ */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AD1ï¿½ï¿½ï¿½ï¿½ */
 	u32DlAdwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ1_WPTR_OFFSET);
 	u32DlAdrptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_ADQ1_RPTR_OFFSET);
-	if (u32DlAdwptr >= u32DlAdrptr)/*Ð´Ö¸ÕëÔÚÇ°£¬Õý³£Ë³Ðò*/
+	if (u32DlAdwptr >= u32DlAdrptr)/*Ð´Ö¸ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½*/
 	{
 		u32DlAdDepth = IPF_DLAD1_DESC_SIZE - (u32DlAdwptr - u32DlAdrptr);
 	}
@@ -1759,7 +1759,7 @@ int ipf_get_dl_ad_num(unsigned int* pu32AD0Num,unsigned int* pu32AD1Num)
 	}
 	*pu32AD1Num = u32DlAdDepth;
 
-	/*¿Û³ýreserve ad£¬ÓÃÓÚ·ÀÖ¹Ó²¼þ½«ad¶ÓÁÐÂúÊ¶±ð³É¿ÕºÍµÍ¹¦ºÄÒý·¢ÄÚ´æÐ¹Â¶*/
+	/*ï¿½Û³ï¿½reserve adï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½Ö¹Ó²ï¿½ï¿½ï¿½ï¿½adï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½ï¿½É¿ÕºÍµÍ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ð¹Â¶*/
 	if(u32DlAdDepth > IPF_ADQ_RESERVE_NUM)
 	{
 		*pu32AD1Num = u32DlAdDepth - IPF_ADQ_RESERVE_NUM;
@@ -1774,20 +1774,20 @@ int ipf_get_dl_ad_num(unsigned int* pu32AD0Num,unsigned int* pu32AD1Num)
 
 
 /*****************************************************************************
-* º¯ Êý Ãû     : BSP_IPF_RegisterWakeupDlCb
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : BSP_IPF_RegisterWakeupDlCb
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿ÚÓÃÓÚ×¢²áÏÂÐÐPSÈÎÎñ»Øµ÷º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PSï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : BSP_IPF_WakeupDlkCb *pFnWakeupDl
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : BSP_IPF_WakeupDlkCb *pFnWakeupDl
 *
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ      : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ      : ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2011Äê11ÔÂ30ÈÕ   Â³æÃ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2011ï¿½ï¿½11ï¿½ï¿½30ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int ipf_register_wakeup_dlcb(BSP_IPF_WakeupDlCb pFnWakeupDl)
 {
-    /* ²ÎÊý¼ì²é */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     if(NULL == pFnWakeupDl)
     {
     	g_ipf_ctx.status->invalid_para++;
@@ -1813,21 +1813,21 @@ int ipf_register_ul_bd_empty(ipf_bd_empty bd_handle)
 
 
 /*****************************************************************************
-* º¯ Êý Ãû     : IPF_RegisterAdqEmptyDlCb
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : IPF_RegisterAdqEmptyDlCb
 *
-* ¹¦ÄÜÃèÊö  : ´Ë½Ó¿ÚÖ»ÔÚAºËÌá¹©£¬ÓÃÓÚ×¢²á»½ÐÑÉÏÐÐPSµÄ
-                             ADQ¶ÓÁÐ¿Õ»Øµ÷º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ë½Ó¿ï¿½Ö»ï¿½ï¿½Aï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½á»½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PSï¿½ï¿½
+                             ADQï¿½ï¿½ï¿½Ð¿Õ»Øµï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : BSP_IPF_AdqEmptyCb pAdqEmptyDl
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : BSP_IPF_AdqEmptyCb pAdqEmptyDl
 *
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ      : IPF_SUCCESS ×¢²á³É¹¦
-*                            IPF_ERROR	×¢²áÊ§°Ü
-* ÐÞ¸Ä¼ÇÂ¼  :2012Äê11ÔÂ24ÈÕ   ³Â¶«ÔÀ  ´´½¨
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ      : IPF_SUCCESS ×¢ï¿½ï¿½É¹ï¿½
+*                            IPF_ERROR	×¢ï¿½ï¿½Ê§ï¿½ï¿½
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2012ï¿½ï¿½11ï¿½ï¿½24ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 int ipf_register_adq_empty_dlcb(BSP_IPF_AdqEmptyDlCb pAdqEmptyDl)
 {
-    /* ²ÎÊý¼ì²é */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     if(NULL == pAdqEmptyDl)
     {
     	g_ipf_ctx.status->invalid_para++;
@@ -1884,16 +1884,16 @@ int ipf_rd_rate(unsigned int enable, IPF_CHANNEL_TYPE_E eChnType)
 
 
 /******************************************************************************
-* º¯ Êý Ãû     : mdrv_ipf_get_ulbd_num
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : mdrv_ipf_get_ulbd_num
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿ÚÓÃÓÚ»ñÈ¡ÉÏÐÐ¿ÕÏÐBD ÊýÄ¿
-*                            ·¶Î§: 0~64
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿ï¿½ï¿½ï¿½ï¿½Ú»ï¿½È¡ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½BD ï¿½ï¿½Ä¿
+*                            ï¿½ï¿½Î§: 0~64
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ      : ¿ÕÏÐBDÊýÄ¿
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ      : ï¿½ï¿½ï¿½ï¿½BDï¿½ï¿½Ä¿
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2011Äê11ÔÂ30ÈÕ   Â³æÃ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2011ï¿½ï¿½11ï¿½ï¿½30ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 unsigned int mdrv_ipf_get_ulbd_num(void)
 {
@@ -1901,7 +1901,7 @@ unsigned int mdrv_ipf_get_ulbd_num(void)
     unsigned int u32IdleBd = 0;
 
 	g_ipf_ctx.status->get_bd_num_times++;
-    /* ¼ÆËã¿ÕÏÐBDÊýÁ¿ */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½BDï¿½ï¿½ï¿½ï¿½ */
     u32UlBdDepth = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_DQ_DEPTH_OFFSET);
 
     u32IdleBd = IPF_ULBD_DESC_SIZE - (u32UlBdDepth & IPF_DQ_DEPTH_MASK);
@@ -1915,23 +1915,23 @@ unsigned int mdrv_ipf_get_ulbd_num(void)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : mdrv_ipf_get_ulrd_num
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : mdrv_ipf_get_ulrd_num
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿ÚÓÃÓÚ¶ÁÈ¡ÉÏÐÐRDÊýÄ¿
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½RDï¿½ï¿½Ä¿
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ÉÏÐÐRDÊýÄ¿
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½ï¿½ï¿½ï¿½RDï¿½ï¿½Ä¿
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2013Äê8ÔÂ1ÈÕ   chendongyue  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2013ï¿½ï¿½8ï¿½ï¿½1ï¿½ï¿½   chendongyue  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 unsigned int mdrv_ipf_get_ulrd_num(void)
 {
     unsigned int u32RdqDepth = 0;
 
-    /* ¶ÁÈ¡RDÉî¶È */
+    /* ï¿½ï¿½È¡RDï¿½ï¿½ï¿½ */
     u32RdqDepth = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_DQ_DEPTH_OFFSET);
     u32RdqDepth = (u32RdqDepth>>16)&IPF_DQ_DEPTH_MASK;
     return u32RdqDepth;
@@ -1939,18 +1939,18 @@ unsigned int mdrv_ipf_get_ulrd_num(void)
 
 
 /*****************************************************************************
-* º¯ Êý Ãû     : mdrv_ipf_get_uldesc_num
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : mdrv_ipf_get_uldesc_num
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿Ú¿É¶ÁÈ¡ÉÏÐÐ¿É´«Êä°üÊý
-			ÓÃÓÚ¹æ±ÜipfÓ²¼þ¶ÔÍ·×èÈûÎÊÌâ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿Ú¿É¶ï¿½È¡ï¿½ï¿½ï¿½Ð¿É´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ipfÓ²ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ÉÏÐÐ¿É·¢ËÍ°üÊý
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½ï¿½ï¿½Ð¿É·ï¿½ï¿½Í°ï¿½ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2013Äê8ÔÂ1ÈÕ   chendongyue  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2013ï¿½ï¿½8ï¿½ï¿½1ï¿½ï¿½   chendongyue  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 
 unsigned int mdrv_ipf_get_uldesc_num(void)
@@ -1965,13 +1965,13 @@ unsigned int mdrv_ipf_get_uldesc_num(void)
 
 	u32UlBdNum = mdrv_ipf_get_ulbd_num();
 	if(g_ipf_ctx.ipf_version < IPF_VERSION_120a){
-		/* ¼ÆËã¿ÕÏÐAD0ÊýÁ¿ */
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AD0ï¿½ï¿½ï¿½ï¿½ */
 		u32UlBdDepth = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_DQ_DEPTH_OFFSET);
 		u32UlAdwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_ADQ0_WPTR_OFFSET);
 		u32UlAdrptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_ADQ0_RPTR_OFFSET);
 		u32UlBdDepth = u32UlBdDepth&IPF_DQ_DEPTH_MASK;
 
-		if (u32UlAdwptr >= u32UlAdrptr)/*Ð´Ö¸ÕëÔÚÇ°£¬Õý³£Ë³Ðò*/
+		if (u32UlAdwptr >= u32UlAdrptr)/*Ð´Ö¸ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½*/
 		{
 			u32UlAd0Num = u32UlAdwptr - u32UlAdrptr;
 		}
@@ -1990,13 +1990,13 @@ unsigned int mdrv_ipf_get_uldesc_num(void)
 		}
 
 
-		/* ¼ÆËã¿ÕÏÐAD1ÊýÁ¿ */
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AD1ï¿½ï¿½ï¿½ï¿½ */
 		u32UlBdDepth = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_DQ_DEPTH_OFFSET);
 		u32UlAdwptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_ADQ1_WPTR_OFFSET);
 		u32UlAdrptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_ADQ1_RPTR_OFFSET);
 		u32UlBdDepth = u32UlBdDepth&IPF_DQ_DEPTH_MASK;
 
-		if (u32UlAdwptr >= u32UlAdrptr)/*Ð´Ö¸ÕëÔÚÇ°£¬Õý³£Ë³Ðò*/
+		if (u32UlAdwptr >= u32UlAdrptr)/*Ð´Ö¸ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½*/
 		{
 			u32UlAd1Num = u32UlAdwptr - u32UlAdrptr;
 		}
@@ -2032,20 +2032,20 @@ unsigned int mdrv_ipf_get_uldesc_num(void)
 
 
 /*****************************************************************************
-* º¯ Êý Ãû      : mdrv_ipf_config_ulbd
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½      : mdrv_ipf_config_ulbd
 *
-* ¹¦ÄÜÃèÊö  : IPFÉÏÐÐBDÅäÖÃº¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : IPFï¿½ï¿½ï¿½ï¿½BDï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara
-* Êä³ö²ÎÊý  : ÎÞ
-* ·µ »Ø Öµ      : IPF_SUCCESS    ÅäÖÃ³É¹¦
-*                           IPF_ERROR      ÅäÖÃÊ§°Ü
-*                           BSP_ERR_IPF_NOT_INIT         Ä£¿éÎ´³õÊ¼»¯
-*                           BSP_ERR_IPF_INVALID_PARA     ²ÎÊý´íÎó
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
+* ï¿½ï¿½ ï¿½ï¿½ Öµ      : IPF_SUCCESS    ï¿½ï¿½ï¿½Ã³É¹ï¿½
+*                           IPF_ERROR      ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
+*                           BSP_ERR_IPF_NOT_INIT         Ä£ï¿½ï¿½Î´ï¿½ï¿½Ê¼ï¿½ï¿½
+*                           BSP_ERR_IPF_INVALID_PARA     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2011Äê11ÔÂ30ÈÕ   Â³æÃ  ´´½¨
-				2012Äê11ÔÂ30ÈÕ	³Â¶«ÔÀÐÞ¸ÄÌí¼Ó¶à¹ýÂËÆ÷Á´ºÍ
-									¶¯Ì¬ÒµÎñÄ£Ê½ÅäÖÃµÄÖ§³Ö
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2011ï¿½ï¿½11ï¿½ï¿½30ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
+				2012ï¿½ï¿½11ï¿½ï¿½30ï¿½ï¿½	ï¿½Â¶ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+									ï¿½ï¿½Ì¬Òµï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½Ãµï¿½Ö§ï¿½ï¿½
 *****************************************************************************/
 int mdrv_ipf_config_ulbd(unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara)
 {
@@ -2059,7 +2059,7 @@ int mdrv_ipf_config_ulbd(unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara)
 
 	g_ipf_ctx.status->cfg_bd_times++;
 
-    /* ²ÎÊý¼ì²é */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     if((NULL == pstUlPara)||(0 == u32Num))
     {
     	g_ipf_ctx.status->invalid_para++;
@@ -2067,7 +2067,7 @@ int mdrv_ipf_config_ulbd(unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara)
         return BSP_ERR_IPF_INVALID_PARA;
     }
 
-    /* ¼ì²éÄ£¿éÊÇ·ñ³õÊ¼»¯ */
+    /* ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ê¼ï¿½ï¿½ */
     if(g_ipf_ctx.status && (IPF_ACORE_INIT_SUCCESS != g_ipf_ctx.status->init_ok))
     {
 		g_ipf_ctx.status->mdrv_called_not_init++;
@@ -2075,7 +2075,7 @@ int mdrv_ipf_config_ulbd(unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara)
         return BSP_ERR_IPF_NOT_INIT;
     }
 
-    /* ¼ì²éCcoreÊÇ·ñÉÏµç*/
+    /* ï¿½ï¿½ï¿½Ccoreï¿½Ç·ï¿½ï¿½Ïµï¿½*/
     if(IPF_FORRESET_CONTROL_FORBID <= bsp_ipf_get_control_flag_for_ccore_reset())
     {
        	g_ipf_ctx.status->mdrv_called_not_init++;
@@ -2094,7 +2094,7 @@ int mdrv_ipf_config_ulbd(unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara)
     }
 
     u32TimeStampEn = g_ipf_ctx.status->timestamp_en;
-    /* ¶Á³öBDÐ´Ö¸Õë,½«u32BdqWptr×÷ÎªÁÙÊ±Ð´Ö¸ÕëÊ¹ÓÃ */
+    /* ï¿½ï¿½ï¿½ï¿½BDÐ´Ö¸ï¿½ï¿½,ï¿½ï¿½u32BdqWptrï¿½ï¿½Îªï¿½ï¿½Ê±Ð´Ö¸ï¿½ï¿½Ê¹ï¿½ï¿½ */
     u32BdqWptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH0_BDQ_WPTR_OFFSET);
     u32BD = (u32BdqWptr&IPF_DQ_PTR_MASK);
     for(i = 0; i < u32Num; i++)
@@ -2112,7 +2112,7 @@ int mdrv_ipf_config_ulbd(unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara)
         u32BD = ((u32BD + 1) < IPF_ULBD_DESC_SIZE)? (u32BD + 1) : 0;
     }
 
-    /* ¼ì²éCcoreÊÇ·ñÉÏµç*/
+    /* ï¿½ï¿½ï¿½Ccoreï¿½Ç·ï¿½ï¿½Ïµï¿½*/
     if(IPF_FORRESET_CONTROL_FORBID <= bsp_ipf_get_control_flag_for_ccore_reset())
     {
     	g_ipf_ctx.status->mdrv_called_not_init++;
@@ -2120,7 +2120,7 @@ int mdrv_ipf_config_ulbd(unsigned int u32Num, IPF_CONFIG_ULPARAM_S* pstUlPara)
     }
 	g_ipf_ctx.status->cfg_bd_cnt += u32Num;
 
-    /* ¸üÐÂBDÐ´Ö¸Õë*/
+    /* ï¿½ï¿½ï¿½ï¿½BDÐ´Ö¸ï¿½ï¿½*/
     ipf_writel(u32BD, g_ipf_ctx.regs + HI_IPF_CH0_BDQ_WPTR_OFFSET);
     return IPF_SUCCESS;
 }
@@ -2181,19 +2181,19 @@ static inline void ipf_pm_print_packet(void *buf, size_t len)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : mdrv_ipf_get_dlrd
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : mdrv_ipf_get_dlrd
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿ÚÓÃÓÚ¶ÁÈ¡ÏÂÐÐBD, Ö§³ÖÒ»´Î¶ÁÈ¡¶à¸öBD
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½BD, Ö§ï¿½ï¿½Ò»ï¿½Î¶ï¿½È¡ï¿½ï¿½ï¿½BD
 *
-* ÊäÈë²ÎÊý  : unsigned int* pu32Num
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : unsigned int* pu32Num
 *                           IPF_RD_DESC_S *pstRd
 *
-* Êä³ö²ÎÊý  : unsigned int* pu32Num    Êµ¼Ê¶ÁÈ¡µÄRDÊýÄ¿
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : unsigned int* pu32Num    Êµï¿½Ê¶ï¿½È¡ï¿½ï¿½RDï¿½ï¿½Ä¿
 *
-* ·µ »Ø Öµ     : IPF_SUCCESS               ²Ù×÷³É¹¦
-*                           IPF_ERROR                   ²Ù×÷Ê§°Ü
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : IPF_SUCCESS               ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½
+*                           IPF_ERROR                   ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2011Äê11ÔÂ30ÈÕ   Â³æÃ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2011ï¿½ï¿½11ï¿½ï¿½30ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 void mdrv_ipf_get_dlrd(unsigned int* pu32Num, IPF_RD_DESC_S *pstRd)
 {
@@ -2206,7 +2206,7 @@ void mdrv_ipf_get_dlrd(unsigned int* pu32Num, IPF_RD_DESC_S *pstRd)
 	unsigned int rd_rate_en;
     ipf_desc_attr_t rd_attr;
 
-    /* ¶ÁÈ¡RDÉî¶È */
+    /* ï¿½ï¿½È¡RDï¿½ï¿½ï¿½ */
     u32RdqDepth = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_DQ_DEPTH_OFFSET);
     u32RdqDepth = (u32RdqDepth>>16)&IPF_DQ_DEPTH_MASK;
 
@@ -2221,12 +2221,12 @@ void mdrv_ipf_get_dlrd(unsigned int* pu32Num, IPF_RD_DESC_S *pstRd)
     u32TimeStampEn = g_ipf_ctx.status->timestamp_en;
 	rd_rate_en = g_ipf_ctx.status->rate_en;
 
-    /* ¶ÁÈ¡RD¶ÁÖ¸Õë */
+    /* ï¿½ï¿½È¡RDï¿½ï¿½Ö¸ï¿½ï¿½ */
     u32RdqRptr = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_RDQ_RPTR_OFFSET);
     for(i = 0; i < u32Num; i++)
     {
         rd_attr.u16 = g_stIpfDl.pstIpfRDQ[u32RdqRptr].u16Attribute;
-        /* »ñÈ¡RD */
+        /* ï¿½ï¿½È¡RD */
         pstRd[i].u16Attribute = g_stIpfDl.pstIpfRDQ[u32RdqRptr].u16Attribute;
         pstRd[i].u16PktLen = g_stIpfDl.pstIpfRDQ[u32RdqRptr].u16PktLen;
         pstRd[i].u16Result = g_stIpfDl.pstIpfRDQ[u32RdqRptr].u16Result;
@@ -2237,12 +2237,12 @@ void mdrv_ipf_get_dlrd(unsigned int* pu32Num, IPF_RD_DESC_S *pstRd)
         pstRd[i].u32UsrField3 = g_stIpfDl.pstIpfRDQ[u32RdqRptr].u32UsrField3;
         ipf_record_end_time_stamp(u32TimeStampEn, g_stIpfDl.pstIpfRDQ[u32RdqRptr].u32UsrField2);
         if(ipf_enable == rd_attr.bits.cd_en){
-            /* ¸üÐÂCD¶ÁÖ¸Õë */
+            /* ï¿½ï¿½ï¿½ï¿½CDï¿½ï¿½Ö¸ï¿½ï¿½ */
         	u32CdqRptr = ((unsigned long)SHD_DDR_P2V((void *)(unsigned long)MDDR_FAMA(pstRd[i].u32InPtr)) - (unsigned long)g_stIpfDl.pstIpfCDQ)/sizeof(IPF_CD_DESC_S);
 
             while(g_stIpfDl.pstIpfCDQ[u32CdqRptr].u16Attribute != 1)
             {
-                /* ½«ÊÍ·ÅµÄCD  Çå0 */
+                /* ï¿½ï¿½ï¿½Í·Åµï¿½CD  ï¿½ï¿½0 */
                 g_stIpfDl.pstIpfCDQ[u32CdqRptr].u16Attribute = 0;
                 g_stIpfDl.pstIpfCDQ[u32CdqRptr].u16PktLen = 0;
                 g_stIpfDl.pstIpfCDQ[u32CdqRptr].u32Ptr = 0;
@@ -2255,7 +2255,7 @@ void mdrv_ipf_get_dlrd(unsigned int* pu32Num, IPF_RD_DESC_S *pstRd)
             *(g_stIpfDl.u32IpfCdRptr) = u32CdqRptr;
         }
 		ipf_pm_print_packet((void *)(unsigned long)MDDR_FAMA(pstRd[i].u32OutPtr), pstRd[i].u16PktLen);
-        /* ¸üÐÂRD¶ÁÖ¸Õë */
+        /* ï¿½ï¿½ï¿½ï¿½RDï¿½ï¿½Ö¸ï¿½ï¿½ */
         u32RdqRptr = ((u32RdqRptr+1) < IPF_DLRD_DESC_SIZE)?(u32RdqRptr+1):0;
 		pstRd[i].u16PktLen > (g_ipf_ctx.status->ad_thred)? g_ipf_ctx.status->get_rd_cnt[IPF_AD_1]++:\
 						   		  					   g_ipf_ctx.status->get_rd_cnt[IPF_AD_0]++;
@@ -2278,23 +2278,23 @@ int mdrv_ipf_get_dlad_num (unsigned int* pu32AD0Num, unsigned int* pu32AD1Num)
 
 
 /*****************************************************************************
-* º¯ Êý Ãû     : mdrv_ipf_get_dlrd_num
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : mdrv_ipf_get_dlrd_num
 *
-* ¹¦ÄÜÃèÊö  : ¸Ã½Ó¿ÚÓÃÓÚ¶ÁÈ¡ÏÂÐÐRDÊýÄ¿
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½Ã½Ó¿ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½RDï¿½ï¿½Ä¿
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ÉÏÐÐRDÊýÄ¿
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½ï¿½ï¿½ï¿½RDï¿½ï¿½Ä¿
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2012Äê7ÔÂ16ÈÕ   Â³æÃ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2012ï¿½ï¿½7ï¿½ï¿½16ï¿½ï¿½   Â³ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 unsigned int mdrv_ipf_get_dlrd_num(void)
 {
     unsigned int u32RdqDepth = 0;
 
-    /* ¶ÁÈ¡RDÉî¶È */
+    /* ï¿½ï¿½È¡RDï¿½ï¿½ï¿½ */
     u32RdqDepth = ipf_readl(g_ipf_ctx.regs + HI_IPF_CH1_DQ_DEPTH_OFFSET);
     u32RdqDepth = (u32RdqDepth>>16)&IPF_DQ_DEPTH_MASK;
 	g_ipf_ctx.status->get_rd_num_times++;
@@ -2327,17 +2327,17 @@ void ipf_reset_platform(void)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : ipf_probe
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : ipf_probe
 *
-* ¹¦ÄÜÃèÊö  : Æ½Ì¨Éè±¸×®º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : Æ½Ì¨ï¿½è±¸×®ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ³É¹¦
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½É¹ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2013Äê6ÔÂ16ÈÕ   ³Â¶«ÔÀ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 static int ipf_probe(struct platform_device *pdev)
 {
@@ -2392,17 +2392,17 @@ static int ipf_probe(struct platform_device *pdev)
 }
 
 /*****************************************************************************
-* º¯ Êý Ãû     : ipf_remove
+* ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½     : ipf_remove
 *
-* ¹¦ÄÜÃèÊö  : Æ½Ì¨Éè±¸×®º¯Êý
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : Æ½Ì¨ï¿½è±¸×®ï¿½ï¿½ï¿½ï¿½
 *
-* ÊäÈë²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* Êä³ö²ÎÊý  : ÎÞ
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  : ï¿½ï¿½
 *
-* ·µ »Ø Öµ     : ³É¹¦
+* ï¿½ï¿½ ï¿½ï¿½ Öµ     : ï¿½É¹ï¿½
 *
-* ÐÞ¸Ä¼ÇÂ¼  :2013Äê6ÔÂ16ÈÕ   ³Â¶«ÔÀ  ´´½¨
+* ï¿½Þ¸Ä¼ï¿½Â¼  :2013ï¿½ï¿½6ï¿½ï¿½16ï¿½ï¿½   ï¿½Â¶ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½
 *****************************************************************************/
 static int ipf_remove(struct platform_device *pdev)
 {

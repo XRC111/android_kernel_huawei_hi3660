@@ -25,8 +25,8 @@
 #include <linux/hid-debug.h>
 #include <linux/hidraw.h>
 
-#include "sw_core.h"
-#include "sw_debug.h"
+#include "../sw_core.h"
+#include "../sw_debug.h"
 
 /* Standard Keycode */
 static u8 g_keyboard_hid_report_desc[] = {

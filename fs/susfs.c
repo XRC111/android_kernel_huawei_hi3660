@@ -19,7 +19,7 @@
 static spinlock_t susfs_spin_lock;
 
 #ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
-unsigned long susfs_hide_sus_mnts_for_all_procs = 0;
+bool susfs_hide_sus_mnts_for_all_procs = false;
 #endif
 
 extern bool susfs_is_current_ksu_domain(void);

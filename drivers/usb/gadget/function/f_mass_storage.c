@@ -224,7 +224,7 @@
 
 #include <linux/nospec.h>
 
-#include "configfs.h"
+#include "../configfs.h"
 
 #include <chipset_common/hwusb/hw_usb_rwswitch.h>
 #define SC_REWIND_11 0x11

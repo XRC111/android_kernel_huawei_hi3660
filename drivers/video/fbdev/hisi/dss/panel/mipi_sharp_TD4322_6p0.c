@@ -11,7 +11,7 @@
 *
 */
 /*lint -e569 -e679 -e574*/
-#include "hisi_fb.h"
+#include "../hisi_fb.h"
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4,1,0)
 #include <linux/hisi/hisi_adc.h>
 #else

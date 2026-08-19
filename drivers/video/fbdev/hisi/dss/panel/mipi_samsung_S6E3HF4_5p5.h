@@ -1,4 +1,4 @@
-#include "hisi_fb.h"
+#include "../hisi_fb.h"
 
 #ifndef MIPI_SAMSUNG_S6E3HF4
 #define MIPI_SAMSUNG_S6E3HF4

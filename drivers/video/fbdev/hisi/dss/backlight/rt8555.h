@@ -19,7 +19,7 @@
 #ifndef _BL_RT8555_H_
 #define _BL_RT8555_H_
 
-#include "hisi_fb.h"
+#include "../hisi_fb.h"
 #include "../hisi_fb_panel.h"
 #if defined(CONFIG_LCDKIT_DRIVER)
 #include "lcdkit_panel.h"

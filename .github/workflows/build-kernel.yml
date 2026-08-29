@@ -49,10 +49,12 @@ jobs:
           # HOSTCFLAGS 用于 host 工具（scripts/dtc 等），KCFLAGS 用于内核目标
           make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
 
-      - name: Package kernel.img
+      - name: Package flashable boot.img (gzip + ANDROID header)
         run: |
-          cp arch/arm64/boot/Image kernel.img
-          zip -j kernel-pangu-h9-ksu-susfs.zip kernel.img
+          # 华为 Kirin960 kernel 分区约 20MB，未压缩 Image 40MB 装不下
+          # 参照可刷镜像格式：ANDROID! boot.img + gzip 压缩内核 + ramdisk_size=0
+          python3 .github/scripts/make_huawei_bootimg.py             arch/arm64/boot/Image             kernel-pangu-h9-4.9.194-ksu-susfs.img
+          zip -j kernel-pangu-h9-ksu-susfs.zip kernel-pangu-h9-4.9.194-ksu-susfs.img
 
       - name: Upload kernel image
         uses: actions/upload-artifact@v4
@@ -76,7 +78,9 @@ jobs:
       - name: Publish Release with kernel.img
         uses: softprops/action-gh-release@v2
         with:
-          files: kernel-pangu-h9-ksu-susfs.zip
+          files: |
+            kernel-pangu-h9-ksu-susfs.zip
+            kernel-pangu-h9-4.9.194-ksu-susfs.img
           generate_release_notes: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

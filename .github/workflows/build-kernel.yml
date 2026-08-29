@@ -2,8 +2,17 @@ name: Build Kernel (Hi3660 Pangu + KSU)
 
 on:
   workflow_dispatch:
+    inputs:
+      publish_release:
+        description: '发布到 Release（勾选则上传附件）'
+        type: boolean
+        default: false
+      release_tag:
+        description: 'Release 的 tag 名'
+        required: false
+        default: 'v4.9.194-H9-ksu-susfs'
   push:
-    branches: [ ack-test ]
+    branches: [ ack-test, release-4.9.194 ]
     tags: [ 'v*' ]
 
 jobs:
@@ -17,28 +26,26 @@ jobs:
           fetch-depth: 1
           submodules: false
 
-      - name: Install toolchain
+      - name: Install build dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             libncurses-dev flex bison libssl-dev libelf-dev \
-            bc u-boot-tools device-tree-compiler zip wget xz-utils libstdc++6
+            bc u-boot-tools device-tree-compiler zip wget
 
       - name: Install AOSP GCC 4.9 (aarch64-linux-android)
         run: |
-          # GCC 10+ 编译 4.9 老内核 + 华为私有驱动会产生运行时问题。
+          # GCC 10+ 编译 4.9 老内核 + 华为私有驱动会产生运行时问题（实测卡第一屏）。
           # 可启动参考镜像版本串: 4.9.156-PanguKirin-perf (gcc version 4.9.x)
-          # Linaro releases.linaro.org 已下线，改用 LineageOS 镜像的 AOSP prebuilt
+          # Linaro releases.linaro.org 已下线，改用 LineageOS 镜像的 AOSP prebuilt。
           cd /tmp
           git clone --depth 1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git gcc49
-          # 注意：不要把 gcc49/bin 加进 PATH —— 里面的 ld 是 aarch64 版，
-          # 会覆盖系统 /usr/bin/ld 导致 host 工具（scripts/dtc 等）链接失败。
-          # 改用完整路径传给 CROSS_COMPILE。
+          # 注意: 不要把 gcc49/bin 加进 PATH —— 里面的 ld 是 aarch64 版,
+          # 会覆盖系统 /usr/bin/ld 导致 host 工具 (scripts/dtc) 链接失败。
           /tmp/gcc49/bin/aarch64-linux-android-gcc --version
 
       - name: Normalize line endings (Huawei source is CRLF, Linux toolchain needs LF)
         run: |
-          # 转换 kconfig/shell/perl/python/Makefile 为 LF（Kconfig 解析器对 CRLF 报错）
           find . -path './.git' -prune -o -type f \( \
             -name 'Kconfig' -o -name '*.config' -o -name '*.sh' -o \
             -name '*.pl' -o -name '*.py' -o -name 'Makefile' \) \
@@ -55,17 +62,19 @@ jobs:
         run: |
           export ARCH=arm64
           export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
-          # -fcommon: GCC 10+ 编译 4.9 老内核的兼容参数（默认 -fno-common 报 multiple definition）
-          # -Wno-error: 老内核/华为定制代码在 GCC 11 上的 warning 不报错（VTR 用老 GCC 编译）
-          # HOSTCFLAGS 用于 host 工具（scripts/dtc 等），KCFLAGS 用于内核目标
+          # -fcommon 是给 host 工具用的：系统 GCC 11 默认 -fno-common，
+          # 会导致 scripts/dtc 的 yylloc 重复定义链接失败。
           make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
 
       - name: Package flashable boot.img (gzip + ANDROID header)
         run: |
-          # 华为 Kirin960 kernel 分区约 20MB，未压缩 Image 40MB 装不下
-          # 参照可刷镜像格式：ANDROID! boot.img + gzip 压缩内核 + ramdisk_size=0
-          python3 .github/scripts/make_huawei_bootimg.py             arch/arm64/boot/Image             kernel-pangu-h9-4.9.194-ksu-susfs.img
+          # 华为 Kirin960 kernel 分区约 20MB，未压缩 Image 40MB 装不下。
+          # 参照可启动镜像：ANDROID! boot.img + gzip 内核 + ramdisk_size=0
+          python3 .github/scripts/make_huawei_bootimg.py \
+            arch/arm64/boot/Image \
+            kernel-pangu-h9-4.9.194-ksu-susfs.img
           zip -j kernel-pangu-h9-ksu-susfs.zip kernel-pangu-h9-4.9.194-ksu-susfs.img
+          ls -la kernel-pangu-h9-4.9.194-ksu-susfs.img
 
       - name: Upload kernel image
         uses: actions/upload-artifact@v4
@@ -76,7 +85,7 @@ jobs:
 
   release:
     needs: build
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v') || inputs.publish_release
     runs-on: ubuntu-22.04
     permissions:
       contents: write
@@ -86,12 +95,17 @@ jobs:
         with:
           name: kernel-image
 
+      - name: Unzip for asset upload
+        run: |
+          ls -la
+          unzip -o kernel-pangu-h9-ksu-susfs.zip || true
+          ls -la *.img
+
       - name: Publish Release with kernel.img
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            kernel-pangu-h9-ksu-susfs.zip
-            kernel-pangu-h9-4.9.194-ksu-susfs.img
+          tag_name: ${{ inputs.release_tag || github.ref_name }}
+          files: kernel-pangu-h9-4.9.194-ksu-susfs.img
           generate_release_notes: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

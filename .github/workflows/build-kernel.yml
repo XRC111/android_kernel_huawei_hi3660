@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [ ack-test ]
+    tags: [ 'v*' ]
 
 jobs:
   build:
@@ -22,7 +23,7 @@ jobs:
           sudo apt-get install -y \
             gcc-aarch64-linux-gnu \
             libncurses-dev flex bison libssl-dev libelf-dev \
-            bc u-boot-tools device-tree-compiler
+            bc u-boot-tools device-tree-compiler zip
 
       - name: Normalize line endings (Huawei source is CRLF, Linux toolchain needs LF)
         run: |
@@ -48,9 +49,34 @@ jobs:
           # HOSTCFLAGS 用于 host 工具（scripts/dtc 等），KCFLAGS 用于内核目标
           make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
 
+      - name: Package kernel.img
+        run: |
+          cp arch/arm64/boot/Image kernel.img
+          zip -j kernel-pangu-h9-ksu-susfs.zip kernel.img
+
       - name: Upload kernel image
         uses: actions/upload-artifact@v4
         with:
           name: kernel-image
-          path: arch/arm64/boot/Image
+          path: kernel-pangu-h9-ksu-susfs.zip
           if-no-files-found: warn
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - name: Download kernel package
+        uses: actions/download-artifact@v4
+        with:
+          name: kernel-image
+
+      - name: Publish Release with kernel.img
+        uses: softprops/action-gh-release@v2
+        with:
+          files: kernel-pangu-h9-ksu-susfs.zip
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

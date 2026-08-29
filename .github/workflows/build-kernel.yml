@@ -21,9 +21,18 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            gcc-aarch64-linux-gnu \
             libncurses-dev flex bison libssl-dev libelf-dev \
-            bc u-boot-tools device-tree-compiler zip
+            bc u-boot-tools device-tree-compiler zip wget xz-utils libstdc++6
+
+      - name: Install Linaro GCC 4.9
+        run: |
+          # GCC 10+ 编译 4.9 老内核 + 华为私有驱动会产生运行时问题。
+          # 可启动参考镜像的内核版本串: 4.9.156-PanguKirin-perf (gcc version 4.9.x)
+          cd /tmp
+          wget -q https://releases.linaro.org/components/toolchain/binaries/4.9-2017.01/aarch64-linux-gnu/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-linux-gnu.tar.xz
+          sudo tar -xf gcc-linaro-4.9.4-2017.01-x86_64_aarch64-linux-gnu.tar.xz -C /opt
+          echo /opt/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-linux-gnu/bin >> $GITHUB_PATH
+          /opt/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc --version
 
       - name: Normalize line endings (Huawei source is CRLF, Linux toolchain needs LF)
         run: |

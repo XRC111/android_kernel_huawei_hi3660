@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [ ack-test ]
+    tags: [ 'v*' ]
 
 jobs:
   build:
@@ -20,9 +21,20 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            gcc-aarch64-linux-gnu \
             libncurses-dev flex bison libssl-dev libelf-dev \
-            bc u-boot-tools device-tree-compiler
+            bc u-boot-tools device-tree-compiler zip wget xz-utils libstdc++6
+
+      - name: Install AOSP GCC 4.9 (aarch64-linux-android)
+        run: |
+          # GCC 10+ 编译 4.9 老内核 + 华为私有驱动会产生运行时问题。
+          # 可启动参考镜像版本串: 4.9.156-PanguKirin-perf (gcc version 4.9.x)
+          # Linaro releases.linaro.org 已下线，改用 LineageOS 镜像的 AOSP prebuilt
+          cd /tmp
+          git clone --depth 1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git gcc49
+          # 注意：不要把 gcc49/bin 加进 PATH —— 里面的 ld 是 aarch64 版，
+          # 会覆盖系统 /usr/bin/ld 导致 host 工具（scripts/dtc 等）链接失败。
+          # 改用完整路径传给 CROSS_COMPILE。
+          /tmp/gcc49/bin/aarch64-linux-android-gcc --version
 
       - name: Normalize line endings (Huawei source is CRLF, Linux toolchain needs LF)
         run: |
@@ -35,22 +47,51 @@ jobs:
       - name: Generate defconfig
         run: |
           export ARCH=arm64
-          export CROSS_COMPILE=aarch64-linux-gnu-
+          export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
           make Pangu_Kirin960_defconfig
         continue-on-error: false
 
       - name: Build kernel
         run: |
           export ARCH=arm64
-          export CROSS_COMPILE=aarch64-linux-gnu-
+          export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
           # -fcommon: GCC 10+ 编译 4.9 老内核的兼容参数（默认 -fno-common 报 multiple definition）
           # -Wno-error: 老内核/华为定制代码在 GCC 11 上的 warning 不报错（VTR 用老 GCC 编译）
           # HOSTCFLAGS 用于 host 工具（scripts/dtc 等），KCFLAGS 用于内核目标
           make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
 
+      - name: Package flashable boot.img (gzip + ANDROID header)
+        run: |
+          # 华为 Kirin960 kernel 分区约 20MB，未压缩 Image 40MB 装不下
+          # 参照可刷镜像格式：ANDROID! boot.img + gzip 压缩内核 + ramdisk_size=0
+          python3 .github/scripts/make_huawei_bootimg.py             arch/arm64/boot/Image             kernel-pangu-h9-4.9.194-ksu-susfs.img
+          zip -j kernel-pangu-h9-ksu-susfs.zip kernel-pangu-h9-4.9.194-ksu-susfs.img
+
       - name: Upload kernel image
         uses: actions/upload-artifact@v4
         with:
           name: kernel-image
-          path: arch/arm64/boot/Image
+          path: kernel-pangu-h9-ksu-susfs.zip
           if-no-files-found: warn
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - name: Download kernel package
+        uses: actions/download-artifact@v4
+        with:
+          name: kernel-image
+
+      - name: Publish Release with kernel.img
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            kernel-pangu-h9-ksu-susfs.zip
+            kernel-pangu-h9-4.9.194-ksu-susfs.img
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

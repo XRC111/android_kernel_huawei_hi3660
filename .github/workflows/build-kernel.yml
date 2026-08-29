@@ -31,7 +31,9 @@ jobs:
           # Linaro releases.linaro.org 已下线，改用 LineageOS 镜像的 AOSP prebuilt
           cd /tmp
           git clone --depth 1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git gcc49
-          echo /tmp/gcc49/bin >> $GITHUB_PATH
+          # 注意：不要把 gcc49/bin 加进 PATH —— 里面的 ld 是 aarch64 版，
+          # 会覆盖系统 /usr/bin/ld 导致 host 工具（scripts/dtc 等）链接失败。
+          # 改用完整路径传给 CROSS_COMPILE。
           /tmp/gcc49/bin/aarch64-linux-android-gcc --version
 
       - name: Normalize line endings (Huawei source is CRLF, Linux toolchain needs LF)
@@ -45,14 +47,14 @@ jobs:
       - name: Generate defconfig
         run: |
           export ARCH=arm64
-          export CROSS_COMPILE=aarch64-linux-android-
+          export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
           make Pangu_Kirin960_defconfig
         continue-on-error: false
 
       - name: Build kernel
         run: |
           export ARCH=arm64
-          export CROSS_COMPILE=aarch64-linux-android-
+          export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
           # -fcommon: GCC 10+ 编译 4.9 老内核的兼容参数（默认 -fno-common 报 multiple definition）
           # -Wno-error: 老内核/华为定制代码在 GCC 11 上的 warning 不报错（VTR 用老 GCC 编译）
           # HOSTCFLAGS 用于 host 工具（scripts/dtc 等），KCFLAGS 用于内核目标

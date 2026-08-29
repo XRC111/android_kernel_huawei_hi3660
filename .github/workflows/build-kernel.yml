@@ -47,7 +47,7 @@ jobs:
           # -fcommon: GCC 10+ 编译 4.9 老内核的兼容参数（默认 -fno-common 报 multiple definition）
           # -Wno-error: 老内核/华为定制代码在 GCC 11 上的 warning 不报错（VTR 用老 GCC 编译）
           # HOSTCFLAGS 用于 host 工具（scripts/dtc 等），KCFLAGS 用于内核目标
-          make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
+          make -j$(nproc) KCFLAGS="-Wno-error" Image
 
       - name: Package flashable boot.img (gzip + ANDROID header)
         run: |

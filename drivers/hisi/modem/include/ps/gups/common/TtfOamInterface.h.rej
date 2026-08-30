@@ -1,0 +1,14 @@
+--- drivers/hisi/modem/include/ps/gups/common/TtfOamInterface.h	2026-08-30 19:58:46.732150100 +0800
++++ drivers/hisi/modem/include/ps/gups/common/TtfOamInterface.h	2026-08-30 19:11:28.341594200 +0800
+@@ -59,9 +59,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
++#include "vos.h"
+ #include "TTFLink.h"
+-#include "PsTypeDef.h"
++#include "PsTypeDef.h"
+ 
+ #pragma pack(4)
+ 

@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/usb_analog_hs_module/usb_analog_hs_fsa4476/usb_analog_hs_fsa4476.c	2026-08-30 19:58:49.256140800 +0800
++++ drivers/huawei_platform/audio/usb_analog_hs_module/usb_analog_hs_fsa4476/usb_analog_hs_fsa4476.c	2026-08-30 19:11:32.756115500 +0800
+@@ -28,7 +28,7 @@
+ #include <linux/workqueue.h>
+ #include <linux/uaccess.h>
+ #include <linux/fs.h>
+-#include "huawei_platform/audio/usb_analog_hs_fsa4476.h"
++#include "huawei_platform/audio/usb_analog_hs_fsa4476.h"
+ #include <linux/hisi/hi64xx/hi64xx_mbhc.h>
+ #ifdef CONFIG_SUPERSWITCH_FSC
+ #include "../../../usb/superswitch/fsc/Platform_Linux/fusb3601_global.h"

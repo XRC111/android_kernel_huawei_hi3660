@@ -1,0 +1,15 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_panel.c	2026-08-30 19:58:33.870138800 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_panel.c	2026-08-30 19:11:17.440743400 +0800
+@@ -1,8 +1,8 @@
+-#include "lcdkit_panel.h"
+-#include "lcdkit_dbg.h"
+-#include "lcdkit_parse.h"
++#include "lcdkit_panel.h"
++#include "lcdkit_dbg.h"
++#include "lcdkit_parse.h"
+ #ifndef CONFIG_ARCH_QCOM
+-#include "hisi_fb.h"
++#include "hisi_fb.h"
+ #include <linux/hisi/hw_cmdline_parse.h> //for runmode_is_factory
+ #endif
+ #include <huawei_ts_kit.h>

@@ -1,0 +1,13 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/src/lcd_kit_panel.c	2026-08-30 19:58:34.682139200 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/src/lcd_kit_panel.c	2026-08-30 19:11:18.672008300 +0800
+@@ -11,8 +11,8 @@
+ *
+ */
+ 
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_panel.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_panel.h"
+ 
+ /*
+ ***************************************************

@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/NDIS/Inc/NdisDrv.h	2026-08-30 19:58:47.336146100 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/NDIS/Inc/NdisDrv.h	2026-08-30 19:11:30.324907000 +0800
+@@ -58,7 +58,7 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "mdrv.h"
++#include "mdrv.h"
+ 
+ #if (VOS_OS_VER != VOS_WIN32)
+ #pragma pack(4)

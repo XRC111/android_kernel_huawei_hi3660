@@ -26,7 +26,7 @@ extern "C" {
 #include "wlan_types.h"
 #include "hmac_mgmt_bss_comm.h"
 #include "hmac_device.h"
-#include "mac_device.h"
+#include "hmac_device.h"
 #include "mac_vap.h"
 #include "hmac_scan.h"
 #include "hmac_config.h"

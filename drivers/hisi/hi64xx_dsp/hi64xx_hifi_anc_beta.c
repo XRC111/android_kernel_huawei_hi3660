@@ -11,8 +11,8 @@
 #include "hi64xx_hifi_debug.h"
 #include "hi64xx_hifi_om.h"
 #include "hi64xx_hifi_misc.h"
-#include "huawei_platform/log/imonitor.h"
-#include "huawei_platform/log/imonitor_keys.h"
+#include "../../huawei_platform/log/imonitor.h"
+#include "../../huawei_platform/log/imonitor_keys.h"
 
 
 /*lint -e655 -e838 -e730 -e754 -e747 -e731*/

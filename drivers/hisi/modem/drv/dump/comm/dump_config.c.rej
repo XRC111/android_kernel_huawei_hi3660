@@ -1,0 +1,29 @@
+--- drivers/hisi/modem/drv/dump/comm/dump_config.c	2026-08-30 19:58:45.875139400 +0800
++++ drivers/hisi/modem/drv/dump/comm/dump_config.c	2026-08-30 19:11:25.779164900 +0800
+@@ -49,16 +49,16 @@
+ #include <linux/of.h>
+ #include <linux/delay.h>
+ #include <asm/string.h>
+-#include "osl_types.h"
+-#include "bsp_version.h"
+-#include "bsp_sram.h"
+-#include "bsp_dump_mem.h"
+-#include "bsp_coresight.h"
+-#include "drv_nv_def.h"
+-#include "mdrv_om.h"
+-#include "drv_nv_id.h"
+-#include "bsp_nvim.h" 
+-#include "bsp_dump.h" 
++#include "osl_types.h"
++#include "bsp_version.h"
++#include "bsp_sram.h"
++#include "bsp_dump_mem.h"
++#include "bsp_coresight.h"
++#include "drv_nv_def.h"
++#include "mdrv_om.h"
++#include "drv_nv_id.h"
++#include "bsp_nvim.h" 
++#include "bsp_dump.h" 
+ #include "dump_config.h"
+ #include "dump_print.h"
+ 

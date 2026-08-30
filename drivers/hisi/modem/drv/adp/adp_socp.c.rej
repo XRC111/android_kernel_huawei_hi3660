@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/drv/adp/adp_socp.c	2026-08-30 19:58:45.676138400 +0800
++++ drivers/hisi/modem/drv/adp/adp_socp.c	2026-08-30 19:11:25.222869300 +0800
+@@ -46,8 +46,8 @@
+  *
+  */
+ 
+-#include "bsp_socp.h"
+-#include "bsp_slice.h"
++#include "bsp_socp.h"
++#include "bsp_slice.h"
+ 
+ 
+ 

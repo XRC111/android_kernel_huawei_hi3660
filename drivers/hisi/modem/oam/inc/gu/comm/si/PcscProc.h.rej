@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/oam/inc/gu/comm/si/PcscProc.h	2026-08-30 19:58:47.073142700 +0800
++++ drivers/hisi/modem/oam/inc/gu/comm/si/PcscProc.h	2026-08-30 19:11:29.155448100 +0800
+@@ -59,9 +59,9 @@
+   1 其他头文件包含
+ *****************************************************************************/
+ 
+-#include "vos.h"
+-#include "pamappom.h"
+-#include "UsimPsInterface.h"
++#include "vos.h"
++#include "pamappom.h"
++#include "UsimPsInterface.h"
+ 
+ /*****************************************************************************
+   2 宏定义

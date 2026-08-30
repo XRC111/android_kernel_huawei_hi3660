@@ -1,0 +1,16 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/qcom/lcdkit_fb_util_qcom.c	2026-08-30 19:58:33.906142100 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/qcom/lcdkit_fb_util_qcom.c	2026-08-30 19:11:17.757458100 +0800
+@@ -1,8 +1,8 @@
+-#include "mdss_fb.h"
+-#include "lcdkit_panel.h"
+-#include "mdss_dsi.h"
+-#include "lcdkit_fb_util.h"
+-#include "lcdkit_dbg.h"
++#include "mdss_fb.h"
++#include "lcdkit_panel.h"
++#include "mdss_dsi.h"
++#include "lcdkit_fb_util.h"
++#include "lcdkit_dbg.h"
+ 
+ struct msm_fb_data_type *get_mfd(struct device * dev)
+ {

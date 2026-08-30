@@ -1,0 +1,15 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/include/lcd_kit_disp.h	2026-08-30 19:58:34.603140900 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/include/lcd_kit_disp.h	2026-08-30 19:11:18.135278900 +0800
+@@ -16,9 +16,9 @@
+ /***********************************************************
+ *macro definition
+ ***********************************************************/
+-#include "lcd_kit_common.h"
+-#include "hisi_fb.h"
+-#include "hisi_mipi_dsi.h"
++#include "lcd_kit_common.h"
++#include "hisi_fb.h"
++#include "hisi_mipi_dsi.h"
+ #include "lcd_kit_utils.h"
+ //////////////////////////////macro////////////////////////////////
+ #define DTS_COMP_LCD_KIT_PANEL_TYPE     "huawei,lcd_panel_type"

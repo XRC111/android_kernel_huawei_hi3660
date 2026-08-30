@@ -1,0 +1,13 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/src/bias/mtk_6730_poweric.c	2026-08-30 19:58:34.672139700 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/src/bias/mtk_6730_poweric.c	2026-08-30 19:11:18.785528900 +0800
+@@ -13,8 +13,8 @@
+ #include <linux/regulator/consumer.h>
+ #include <linux/string.h>
+ #include <linux/kernel.h>
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_power.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_power.h"
+ #if defined(CONFIG_RT5081_PMU_DSV) || defined(CONFIG_MT6370_PMU_DSV)
+ static struct regulator *disp_bias_pos = NULL;
+ static struct regulator *disp_bias_neg = NULL;

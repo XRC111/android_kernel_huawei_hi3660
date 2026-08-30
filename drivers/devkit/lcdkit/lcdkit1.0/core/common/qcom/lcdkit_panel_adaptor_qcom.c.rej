@@ -1,0 +1,16 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/qcom/lcdkit_panel_adaptor_qcom.c	2026-08-30 19:58:33.908141100 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/qcom/lcdkit_panel_adaptor_qcom.c	2026-08-30 19:11:17.792578400 +0800
+@@ -1,8 +1,8 @@
+-#include "mdss_fb.h"
+-#include "lcdkit_panel.h"
+-#include "lcdkit_parse.h"
+-#include "lcdkit_dbg.h"
+-#include "mdss_dsi.h"
++#include "mdss_fb.h"
++#include "lcdkit_panel.h"
++#include "lcdkit_parse.h"
++#include "lcdkit_dbg.h"
++#include "mdss_dsi.h"
+ #include <linux/mdss_io_util.h>
+ extern int lcdkit_brightness_ddic_info;
+ extern struct device* lcd_dev;

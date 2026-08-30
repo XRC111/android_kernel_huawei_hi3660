@@ -1,0 +1,11 @@
+--- drivers/vcodec/hi_vcodec/venc/drv/venc/hal_venc.h	2026-08-30 19:59:23.115235000 +0800
++++ drivers/vcodec/hi_vcodec/venc/drv/venc/hal_venc.h	2026-08-30 19:11:58.189041100 +0800
+@@ -2,7 +2,7 @@
+ #define __HAL_VENC_H__
+ 
+ #include <linux/random.h>
+-#include "hi_type.h"
++#include "hi_type.h"
+ #include "drv_venc.h"
+ #include "drv_venc_efl.h"
+ #include "Vedu_RegAll.h"

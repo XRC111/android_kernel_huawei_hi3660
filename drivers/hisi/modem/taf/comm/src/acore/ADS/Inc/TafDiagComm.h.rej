@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/taf/comm/src/acore/ADS/Inc/TafDiagComm.h	2026-08-30 19:58:47.600139900 +0800
++++ drivers/hisi/modem/taf/comm/src/acore/ADS/Inc/TafDiagComm.h	2026-08-30 19:11:30.923899000 +0800
+@@ -52,8 +52,8 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "msp_diag_comm.h"
++#include "vos.h"
++#include "msp_diag_comm.h"
+ 
+ 
+ #ifdef __cplusplus

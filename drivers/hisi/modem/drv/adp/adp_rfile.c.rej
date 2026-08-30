@@ -1,0 +1,28 @@
+--- drivers/hisi/modem/drv/adp/adp_rfile.c	2026-08-30 19:58:45.673138200 +0800
++++ drivers/hisi/modem/drv/adp/adp_rfile.c	2026-08-30 19:11:25.254121500 +0800
+@@ -69,16 +69,16 @@
+ #include <linux/kthread.h>
+ /*lint -restore*/
+ 
+-#include "drv_comm.h"
+-#include "osl_types.h"
+-#include "osl_sem.h"
+-#include "osl_list.h"
+-#include "bsp_trace.h"
+-#include "mdrv_memory.h"
+-#include "bsp_icc.h"
+-#include "bsp_rfile.h"
++#include "drv_comm.h"
++#include "osl_types.h"
++#include "osl_sem.h"
++#include "osl_list.h"
++#include "bsp_trace.h"
++#include "mdrv_memory.h"
++#include "bsp_icc.h"
++#include "bsp_rfile.h"
+ 
+-#include "mdrv_rfile_common.h"
++#include "mdrv_rfile_common.h"
+ 
+ 
+ 

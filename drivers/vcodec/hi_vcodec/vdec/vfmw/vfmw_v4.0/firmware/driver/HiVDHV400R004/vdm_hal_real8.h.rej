@@ -1,0 +1,11 @@
+--- drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiVDHV400R004/vdm_hal_real8.h	2026-08-30 19:59:22.968232500 +0800
++++ drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiVDHV400R004/vdm_hal_real8.h	2026-08-30 19:11:57.838959000 +0800
+@@ -20,7 +20,7 @@
+ #define __VDM_HAL_REAL8_HEADER__
+ 
+ 
+-#include "basedef.h"
++#include "basedef.h"
+ 
+ //// REG & MSG START
+ //¼Ä´æÆ÷×é

@@ -1,0 +1,26 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/lcd_kit_disp.c	2026-08-30 19:58:34.619135900 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/lcd_kit_disp.c	2026-08-30 19:11:18.272043100 +0800
+@@ -11,15 +11,15 @@
+ *
+ */
+ 
+-#include "hisi_fb.h"
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_dbg.h"
++#include "hisi_fb.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_dbg.h"
+ #include <huawei_platform/log/log_jank.h>
+-#include "global_ddr_map.h"
+-#include "lcd_kit_utils.h"
+-#include "lcd_kit_adapt.h"
+-#include "lcd_kit_power.h"
++#include "global_ddr_map.h"
++#include "lcd_kit_utils.h"
++#include "lcd_kit_adapt.h"
++#include "lcd_kit_power.h"
+ #ifdef LV_GET_LCDBK_ON
+ #include <huawei_platform/inputhub/sensor_feima_ext.h>
+ #endif

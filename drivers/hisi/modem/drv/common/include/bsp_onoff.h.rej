@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/common/include/bsp_onoff.h	2026-08-30 19:58:45.773137100 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_onoff.h	2026-08-30 19:11:25.489557600 +0800
+@@ -56,7 +56,7 @@
+ #if defined(__KERNEL__) || defined(__OS_VXWORKS__) || defined(__OS_RTOSCK__) || defined(__OS_RTOSCK_SMP__)
+ #include "power_com.h"
+ 
+-#include "mdrv_sysboot.h"
++#include "mdrv_sysboot.h"
+ void drv_shut_down(DRV_SHUTDOWN_REASON_E enReason);
+ 
+ #define EXCH_ONOFF_LOG_MAX      (0x400*16)

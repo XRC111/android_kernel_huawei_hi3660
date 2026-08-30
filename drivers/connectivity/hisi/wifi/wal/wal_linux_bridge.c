@@ -21,7 +21,7 @@ extern "C" {
 #endif
 
 #include "hmac_vap.h"
-#include "mac_vap.h"
+#include "hmac_vap.h"
 #include "mac_resource.h"
 #include "mac_data.h"
 #include "hmac_ext_if.h"

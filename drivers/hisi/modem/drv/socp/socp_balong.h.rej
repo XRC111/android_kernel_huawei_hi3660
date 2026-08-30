@@ -1,0 +1,30 @@
+--- drivers/hisi/modem/drv/socp/socp_balong.h	2026-08-30 19:58:46.307140100 +0800
++++ drivers/hisi/modem/drv/socp/socp_balong.h	2026-08-30 19:11:27.616376800 +0800
+@@ -57,12 +57,12 @@
+ /**************************************************************************
+   头文件包含
+ **************************************************************************/
+-#include "bsp_memmap.h"
+-#include "soc_interrupts.h"
+-#include "product_config.h"
+-#include "hi_socp.h"
+-#include "bsp_socp.h"
+-#include "bsp_trace.h"
++#include "bsp_memmap.h"
++#include "soc_interrupts.h"
++#include "product_config.h"
++#include "hi_socp.h"
++#include "bsp_socp.h"
++#include "bsp_trace.h"
+ #include <linux/dma-mapping.h>
+ #include <linux/semaphore.h>
+ #include <linux/workqueue.h>
+@@ -77,7 +77,7 @@
+ #include <linux/of_device.h>
+ #include <linux/regulator/consumer.h>
+ #if defined(__OS_RTOSCK__)
+-#include "securec.h"
++#include "securec.h"
+ #endif
+ 
+ /**************************************************************************

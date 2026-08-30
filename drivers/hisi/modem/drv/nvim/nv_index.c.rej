@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/nvim/nv_index.c	2026-08-30 19:58:46.149141400 +0800
++++ drivers/hisi/modem/drv/nvim/nv_index.c	2026-08-30 19:11:27.258282700 +0800
+@@ -53,7 +53,7 @@
+ #include "nv_debug.h"
+ #include "nv_index.h"
+ #include "nv_crc.h"
+-#include "bsp_dump.h"
++#include "bsp_dump.h"
+ 
+ u8* nv_get_item_base(nv_item_info_s *item_info)
+ {

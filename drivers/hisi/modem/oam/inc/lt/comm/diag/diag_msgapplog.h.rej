@@ -1,0 +1,20 @@
+--- drivers/hisi/modem/oam/inc/lt/comm/diag/diag_msgapplog.h	2026-08-30 19:58:47.107138200 +0800
++++ drivers/hisi/modem/oam/inc/lt/comm/diag/diag_msgapplog.h	2026-08-30 19:11:29.358575200 +0800
+@@ -60,12 +60,12 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "vos.h"
+-#include "mdrv.h"
+-#include "NVIM_Interface.h"
+-#include "msp_diag_comm.h"
++#include "vos.h"
++#include "mdrv.h"
++#include "NVIM_Interface.h"
++#include "msp_diag_comm.h"
+ #include "diag_common.h"
+-#include "msp_errno.h"
++#include "msp_errno.h"
+ 
+ 
+ typedef VOS_UINT32 (*DIAG_APPLOG_PROC)(VOS_UINT8 *pData);

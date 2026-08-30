@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/ps/comm/comm/common/STL/Inc/LUPQueue.h	2026-08-30 19:58:47.540143100 +0800
++++ drivers/hisi/modem/ps/comm/comm/common/STL/Inc/LUPQueue.h	2026-08-30 19:11:30.877025900 +0800
+@@ -60,8 +60,8 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "vos.h"
+-#include "PsTypeDef.h"
++#include "vos.h"
++#include "PsTypeDef.h"
+ 
+ 
+ #if (VOS_OS_VER != VOS_WIN32)

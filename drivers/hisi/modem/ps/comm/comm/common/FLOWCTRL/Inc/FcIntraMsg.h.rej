@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/ps/comm/comm/common/FLOWCTRL/Inc/FcIntraMsg.h	2026-08-30 19:58:47.480137900 +0800
++++ drivers/hisi/modem/ps/comm/comm/common/FLOWCTRL/Inc/FcIntraMsg.h	2026-08-30 19:11:30.618681600 +0800
+@@ -53,9 +53,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "PsTypeDef.h"
+-#include "FcInterface.h"
++#include "vos.h"
++#include "PsTypeDef.h"
++#include "FcInterface.h"
+ 
+ 
+ #ifdef __cplusplus

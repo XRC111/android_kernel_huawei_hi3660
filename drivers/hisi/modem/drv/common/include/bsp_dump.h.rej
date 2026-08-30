@@ -1,0 +1,32 @@
+--- drivers/hisi/modem/drv/common/include/bsp_dump.h	2026-08-30 19:58:45.734138400 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_dump.h	2026-08-30 19:11:25.370811800 +0800
+@@ -56,16 +56,16 @@
+ 
+ #include "osl_common.h"
+ #if defined(__KERNEL__) || defined(__VXWORKS__) || defined(__OS_RTOSCK__) ||defined(__OS_RTOSCK_SMP__)
+-#include "mdrv_om.h"
++#include "mdrv_om.h"
+ #else
+-#include "mdrv_om_common.h"
++#include "mdrv_om_common.h"
+ #endif
+ #include "drv_comm.h"
+ #include "bsp_trace.h"
+ #include "bsp_om.h"
+ #if defined(__OS_RTOSCK__) || defined(__OS_RTOSCK_SMP__)
+-#include "sre_task.h"
+-#include "sre_exc.h"
++#include "sre_task.h"
++#include "sre_exc.h"
+ #endif
+ 
+ #if defined(__KERNEL__)
+@@ -73,7 +73,7 @@
+ #endif
+ 
+ #include "bsp_om_enum.h"
+-#include "mdrv_errno.h"
++#include "mdrv_errno.h"
+ 
+ /*****************************************************************************
+   1 ∫Í∂®“Â

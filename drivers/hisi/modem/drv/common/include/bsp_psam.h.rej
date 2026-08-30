@@ -1,0 +1,14 @@
+--- drivers/hisi/modem/drv/common/include/bsp_psam.h	2026-08-30 19:58:45.781136600 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_psam.h	2026-08-30 19:11:25.552060100 +0800
+@@ -56,9 +56,9 @@
+ 
+ #include "bsp_shared_ddr.h"
+ #ifndef __CMSIS_RTOS
+-#include "mdrv_ipf.h"
++#include "mdrv_ipf.h"
+ #else
+-#include "mdrv_ipf_comm.h"
++#include "mdrv_ipf_comm.h"
+ #endif
+ 
+ #define PSAM_BASE_CRG_BAK_ADDR              (unsigned long)((unsigned long)SHM_BASE_ADDR + SHM_OFFSET_PSAM)

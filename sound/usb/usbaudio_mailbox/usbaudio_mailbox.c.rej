@@ -1,0 +1,11 @@
+--- sound/usb/usbaudio_mailbox/usbaudio_mailbox.c	2026-08-30 19:59:40.418369400 +0800
++++ sound/usb/usbaudio_mailbox/usbaudio_mailbox.c	2026-08-30 19:12:12.858340000 +0800
+@@ -16,7 +16,7 @@
+ #include "../hifi/usbaudio_setinterface.h"
+ #include "../hifi/usbaudio_ioctl.h"
+ #ifdef CONFIG_HIFI_MAILBOX
+-#include "drv_mailbox_cfg.h"
++#include "drv_mailbox_cfg.h"
+ #endif
+ #ifdef CONFIG_HISI_DEBUG_FS
+ #include <linux/debugfs.h>

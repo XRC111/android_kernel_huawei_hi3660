@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/oam/gu/comm/osa/vos_Id.c	2026-08-30 19:58:46.983135500 +0800
++++ drivers/hisi/modem/oam/gu/comm/osa/vos_Id.c	2026-08-30 19:11:28.853054000 +0800
+@@ -74,11 +74,11 @@
+ /*                                                                           */
+ /*****************************************************************************/
+ 
+-#include "vos_Id.h"
++#include "vos_Id.h"
+ #include "v_iddef.inc"
+ #include "v_id.inc"
+-#include "v_timer.h"
+-#include "v_int.h"
++#include "v_timer.h"
++#include "v_int.h"
+ 
+ 
+ 

@@ -5,7 +5,7 @@
 #if BUILDING_GCC_VERSION >= 6000
 #include "gcc-plugin.h"
 #else
-#include "plugin.h"
+#include "gcc-plugin.h"
 #endif
 #include "plugin-version.h"
 #include "config.h"
@@ -17,7 +17,7 @@
 #include "tree.h"
 
 #include "tree-inline.h"
-#include "version.h"
+#include "bversion.h"
 #include "rtl.h"
 #include "tm_p.h"
 #include "flags.h"
@@ -72,7 +72,7 @@
  */
 #include "c-family/c-common.h"
 #else
-#include "c-common.h"
+#include "c-family/c-common.h"
 #endif
 
 #if BUILDING_GCC_VERSION <= 4008

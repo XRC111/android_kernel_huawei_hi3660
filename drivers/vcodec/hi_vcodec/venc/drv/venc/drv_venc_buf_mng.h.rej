@@ -1,0 +1,11 @@
+--- drivers/vcodec/hi_vcodec/venc/drv/venc/drv_venc_buf_mng.h	2026-08-30 19:59:23.086232200 +0800
++++ drivers/vcodec/hi_vcodec/venc/drv/venc/drv_venc_buf_mng.h	2026-08-30 19:11:58.003557400 +0800
+@@ -1,7 +1,7 @@
+ #ifndef __DRV_VENC_BUF_MNG_H__
+ #define __DRV_VENC_BUF_MNG_H__
+ 
+-#include "hi_type.h"
++#include "hi_type.h"
+ 
+ #ifdef __cplusplus
+  #if __cplusplus

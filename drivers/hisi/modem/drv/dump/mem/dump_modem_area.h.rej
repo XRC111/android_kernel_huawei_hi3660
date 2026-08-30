@@ -1,0 +1,25 @@
+--- drivers/hisi/modem/drv/dump/mem/dump_modem_area.h	2026-08-30 19:58:45.936141500 +0800
++++ drivers/hisi/modem/drv/dump/mem/dump_modem_area.h	2026-08-30 19:11:26.701113200 +0800
+@@ -4,15 +4,15 @@
+ #define __CP_DUMP_AREA_H__
+ 
+ #include <product_config.h>
+-#include "mntn_interface.h"
++#include "mntn_interface.h"
+ #ifndef __ASSEMBLY__
+-#include "osl_types.h"
+-#include "osl_list.h"
+-#include "osl_spinlock.h"
++#include "osl_types.h"
++#include "osl_list.h"
++#include "osl_spinlock.h"
+ #endif
+-#include "bsp_memmap.h"
+-#include "bsp_s_memory.h"
+-#include "bsp_dump_mem.h"
++#include "bsp_memmap.h"
++#include "bsp_s_memory.h"
++#include "bsp_dump_mem.h"
+ 
+ 
+ /*  dump content

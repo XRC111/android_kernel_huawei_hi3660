@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/anc_hs_module/anc_hs_default/anc_hs_default.c	2026-08-30 19:58:49.106138600 +0800
++++ drivers/huawei_platform/audio/anc_hs_module/anc_hs_default/anc_hs_default.c	2026-08-30 19:11:32.206184700 +0800
+@@ -24,7 +24,7 @@
+ #include <linux/uaccess.h>
+ #include <linux/fs.h>
+ 
+-#include "huawei_platform/audio/anc_hs_default.h"
++#include "huawei_platform/audio/anc_hs_default.h"
+ 
+ #define HWLOG_TAG anc_hs_default
+ 

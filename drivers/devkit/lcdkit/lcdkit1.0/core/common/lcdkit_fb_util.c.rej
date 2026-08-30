@@ -1,0 +1,12 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_fb_util.c	2026-08-30 19:58:33.868138900 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_fb_util.c	2026-08-30 19:11:17.338751200 +0800
+@@ -1,6 +1,6 @@
+-#include "lcdkit_panel.h"
+-#include "lcdkit_dbg.h"
+-#include "lcdkit_fb_util.h"
++#include "lcdkit_panel.h"
++#include "lcdkit_dbg.h"
++#include "lcdkit_fb_util.h"
+ 
+ struct device* lcd_dev;
+ 

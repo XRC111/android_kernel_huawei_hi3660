@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/ppp_atcmd.h	2026-08-30 19:58:47.397137500 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/ppp_atcmd.h	2026-08-30 19:11:30.457207800 +0800
+@@ -31,8 +31,8 @@
+  */
+ 
+ 
+-#include "vos.h"
+-#include "PppInterface.h"
++#include "vos.h"
++#include "PppInterface.h"
+ 
+ #pragma pack(4)
+ 

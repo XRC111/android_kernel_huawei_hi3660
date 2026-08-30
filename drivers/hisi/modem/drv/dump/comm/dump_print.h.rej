@@ -1,0 +1,12 @@
+--- drivers/hisi/modem/drv/dump/comm/dump_print.h	2026-08-30 19:58:45.884141900 +0800
++++ drivers/hisi/modem/drv/dump/comm/dump_print.h	2026-08-30 19:11:26.009096000 +0800
+@@ -1,7 +1,7 @@
+ #ifndef __DUMP_PRINT_H__
+ #define __DUMP_PRINT_H__
+-#include "bsp_om.h"
+-#include "bsp_trace.h"
++#include "bsp_om.h"
++#include "bsp_trace.h"
+ 
+ 
+ /**************************************************************************

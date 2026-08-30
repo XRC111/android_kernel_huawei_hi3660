@@ -1,0 +1,24 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_panel_adaptor_hs.c	2026-08-30 19:58:33.849140500 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_panel_adaptor_hs.c	2026-08-30 19:11:17.689836100 +0800
+@@ -1,8 +1,8 @@
+-#include "hisi_fb.h"
+-#include "lcdkit_panel.h"
+-#include "lcdkit_dbg.h"
++#include "hisi_fb.h"
++#include "lcdkit_panel.h"
++#include "lcdkit_dbg.h"
+ #include "lcdkit_disp.h"
+-#include "lcdkit_parse.h"
++#include "lcdkit_parse.h"
+ #include "../lcdkit_tp.h"
+ /*
+ *name:lcdkit_info_init
+@@ -2911,7 +2911,7 @@
+ 
+ 
+ /*for lcd btb check*/
+-#include "lcdkit_btb_check.h"
++#include "lcdkit_btb_check.h"
+ #define BIT1_0	(0x3)
+ #define BIT31_2	(0xFFFFFFFC)
+ #define DELAY_TIME	(1000)

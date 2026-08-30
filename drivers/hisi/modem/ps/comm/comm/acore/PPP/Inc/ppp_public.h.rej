@@ -1,0 +1,27 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/ppp_public.h	2026-08-30 19:58:47.410154100 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/ppp_public.h	2026-08-30 19:11:30.556180500 +0800
+@@ -42,15 +42,15 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "AtPppInterface.h"
+-#include "product_config.h"
+-#include "TTFUtil.h"
+-#include "v_IO.h"
+-#include "TTFComm.h"
+-#include "ImmInterface.h"
+-#include "TtfNvInterface.h"
+-#include "NVIM_Interface.h"
++#include "vos.h"
++#include "AtPppInterface.h"
++#include "product_config.h"
++#include "TTFUtil.h"
++#include "v_IO.h"
++#include "TTFComm.h"
++#include "ImmInterface.h"
++#include "TtfNvInterface.h"
++#include "NVIM_Interface.h"
+ 
+ #pragma pack(4)
+ 

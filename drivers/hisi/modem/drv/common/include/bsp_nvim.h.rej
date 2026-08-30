@@ -1,0 +1,19 @@
+--- drivers/hisi/modem/drv/common/include/bsp_nvim.h	2026-08-30 19:58:45.766139300 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_nvim.h	2026-08-30 19:11:25.402061800 +0800
+@@ -58,14 +58,14 @@
+ 
+ 
+ #include "bsp_nvim_mem.h"
+-#include "mdrv_nvim_comm.h"
++#include "mdrv_nvim_comm.h"
+ 
+ #if (defined(__KERNEL__) || defined(__OS_VXWORKS__)||defined(__OS_RTOSCK__) ||defined(__OS_RTOSCK_SMP__) || (defined(__CMSIS_RTOS)))
+ #include "osl_common.h"
+ #include "bsp_trace.h"
+ #define BSP_ERR_NV_BASE                         BSP_DEF_ERR(BSP_MODU_NV, 0)
+ #else
+-#include "types.h"
++#include "types.h"
+ #define BSP_ERR_NV_BASE                         0x100f0000
+ #endif
+ 

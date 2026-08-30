@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/drv/mem/mem_balong_drv.h	2026-08-30 19:58:46.085142600 +0800
++++ drivers/hisi/modem/drv/mem/mem_balong_drv.h	2026-08-30 19:11:27.038454300 +0800
+@@ -49,8 +49,8 @@
+ #define    _BSP_MEM_DRV_H_
+ 
+ #include <linux/slab.h>
+-#include "bsp_sram.h"
+-#include "bsp_shared_ddr.h"
++#include "bsp_sram.h"
++#include "bsp_shared_ddr.h"
+ 
+ 
+ #ifdef __cplusplus

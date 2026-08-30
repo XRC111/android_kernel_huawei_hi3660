@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/common/include/ptable_com.h	2026-08-30 19:58:45.850136400 +0800
++++ drivers/hisi/modem/drv/common/include/ptable_com.h	2026-08-30 19:11:25.701039700 +0800
+@@ -201,7 +201,7 @@
+ 
+ #endif /* __ASSEMBLY__ */
+ 
+-#include "product_config.h"
++#include "product_config.h"
+ #define SHM_MEM_PTABLE_ADDR             (SHM_BASE_ADDR + SHM_OFFSET_PTABLE)
+ #define SHM_MEM_PTABLE_SIZE             ( SHM_SIZE_PTABLE)
+ /*entry define */

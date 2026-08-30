@@ -1,0 +1,17 @@
+--- drivers/huawei_platform/usb/pogopin/pogo_otg_id.h	2026-08-30 19:58:56.205738000 +0800
++++ drivers/huawei_platform/usb/pogopin/pogo_otg_id.h	2026-08-30 19:11:34.175895200 +0800
+@@ -3,12 +3,12 @@
+ 
+ /* include platform head-file */
+ #if defined(CONFIG_DEC_USB)
+-#include "dwc_otg_dec.h"
++#include "dwc_otg_dec.h"
+ #else
+ #error "Passable some error, It should be set a platform"
+ #endif
+ 
+-#include "dwc_otg_cil.h"
++#include "dwc_otg_cil.h"
+ 
+ #define SAMPLE_DOING	(0)
+ #define SAMPLE_DONE		(1)

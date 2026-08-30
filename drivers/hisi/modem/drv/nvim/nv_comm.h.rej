@@ -1,0 +1,19 @@
+--- drivers/hisi/modem/drv/nvim/nv_comm.h	2026-08-30 19:58:46.124137000 +0800
++++ drivers/hisi/modem/drv/nvim/nv_comm.h	2026-08-30 19:11:27.116575800 +0800
+@@ -82,12 +82,12 @@
+ #include <bsp_ipc.h>
+ #include <bsp_icc.h>
+ #include <bsp_trace.h>
+-#include "drv_nv_id.h"
+-#include "msp_nv_id.h"
+-#include "drv_nv_def.h"
++#include "drv_nv_id.h"
++#include "msp_nv_id.h"
++#include "drv_nv_def.h"
+ #include "nv_debug.h"
+ #include "nv_partition_upgrade.h"
+-#include "mdrv_rfile_common.h"
++#include "mdrv_rfile_common.h"
+ 
+ extern struct nv_global_ctrl_info_stru  g_nv_ctrl;
+ extern struct nv_global_ctrl_stru * g_flash_emmc_info_ptr;

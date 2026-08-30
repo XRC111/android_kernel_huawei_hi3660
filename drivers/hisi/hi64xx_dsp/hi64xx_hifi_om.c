@@ -34,8 +34,8 @@
 
 #include "hi64xx_hifi_om.h"
 #include "hi64xx_hifi_debug.h"
-#include "slimbus.h"
-#include "hifi_lpp.h"
+#include "../slimbus/slimbus.h"
+#include "../hifi_dsp/hifi_lpp.h"
 #include "hi64xx_hifi_misc.h"
 #include "hi64xx_hifi_anc_beta.h"
 

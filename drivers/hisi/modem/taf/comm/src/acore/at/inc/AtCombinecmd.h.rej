@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/taf/comm/src/acore/at/inc/AtCombinecmd.h	2026-08-30 19:58:47.888138500 +0800
++++ drivers/hisi/modem/taf/comm/src/acore/at/inc/AtCombinecmd.h	2026-08-30 19:11:30.991568400 +0800
+@@ -52,8 +52,8 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "hi_list.h"
++#include "vos.h"
++#include "hi_list.h"
+ 
+ #ifdef __cplusplus
+ #if __cplusplus

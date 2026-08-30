@@ -1,0 +1,17 @@
+--- drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiVDHV400R004/vdm_hal_api.h	2026-08-30 19:59:22.945232700 +0800
++++ drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiVDHV400R004/vdm_hal_api.h	2026-08-30 19:11:57.956683700 +0800
+@@ -2,11 +2,11 @@
+ #define _VDM_HAL_API_HEADER_
+ 
+ 
+-#include "basedef.h"
+-#include "mem_manage.h"
++#include "basedef.h"
++#include "mem_manage.h"
+ #include "../../../vfmw.h"
+ #include "vdm_hal_local.h"
+-#include "vfmw_ctrl.h"
++#include "vfmw_ctrl.h"
+ #ifdef __cplusplus
+ extern "C" {
+ #endif

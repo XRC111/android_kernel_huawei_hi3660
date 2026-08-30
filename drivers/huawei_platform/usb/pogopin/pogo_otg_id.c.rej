@@ -1,0 +1,13 @@
+--- drivers/huawei_platform/usb/pogopin/pogo_otg_id.c	2026-08-30 19:58:56.204738100 +0800
++++ drivers/huawei_platform/usb/pogopin/pogo_otg_id.c	2026-08-30 19:11:34.097772500 +0800
+@@ -14,8 +14,8 @@
+ #include <linux/of_gpio.h>
+ #include <linux/hisi/usb/hisi_usb.h>
+ #include "pogo_otg_id.h"
+-#include "dwc_otg_hicommon.h"
+-#include "hisi_usb_otg_type.h"
++#include "dwc_otg_hicommon.h"
++#include "hisi_usb_otg_type.h"
+ #include <linux/mfd/hisi_pmic.h>
+ #include <pmic_interface.h>
+ #include <linux/hisi/hisi_adc.h>

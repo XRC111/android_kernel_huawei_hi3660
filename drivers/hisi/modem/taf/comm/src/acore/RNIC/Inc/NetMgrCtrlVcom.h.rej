@@ -1,0 +1,32 @@
+--- drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/NetMgrCtrlVcom.h	2026-08-30 19:58:47.745144200 +0800
++++ drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/NetMgrCtrlVcom.h	2026-08-30 19:11:31.662456000 +0800
+@@ -52,10 +52,10 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "v_typdef.h"
+-#include "PsTypeDef.h"
+-#include "product_config.h"
+-#include "TafTypeDef.h"
++#include "v_typdef.h"
++#include "PsTypeDef.h"
++#include "product_config.h"
++#include "TafTypeDef.h"
+ 
+ #if (VOS_OS_VER == VOS_LINUX)
+ #include <linux/module.h>
+@@ -74,11 +74,11 @@
+ #include <linux/spinlock.h>
+ #include <linux/list.h>
+ #else
+-#include "PsCommonDef.h"
+-#include "Linuxstub.h"
++#include "PsCommonDef.h"
++#include "Linuxstub.h"
+ #endif
+ 
+-#include "hi_list.h"
++#include "hi_list.h"
+ 
+ 
+ #ifdef __cplusplus

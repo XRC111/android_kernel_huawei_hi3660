@@ -1,0 +1,17 @@
+--- drivers/huawei_platform/lcd/hw_lcd_panel.c	2026-08-30 19:58:50.612138300 +0800
++++ drivers/huawei_platform/lcd/hw_lcd_panel.c	2026-08-30 19:11:33.335319400 +0800
+@@ -27,12 +27,12 @@
+  *
+  */
+ 
+-#include "hisi_fb.h"
++#include "hisi_fb.h"
+ #include <linux/hisi/hisi_adc.h>
+ #include <linux/hisi/hw_cmdline_parse.h>
+ #include <huawei_platform/touthscreen/huawei_touchscreen.h>
+ #include "hw_lcd_panel.h"
+-#include "hw_lcd_effects.h"
++#include "hw_lcd_effects.h"
+ #include <huawei_platform/log/log_jank.h>
+ #include <securec.h>
+ 

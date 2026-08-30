@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/config/errlog/cproc_errlog_cfg.h	2026-08-30 19:58:45.436143400 +0800
++++ drivers/hisi/modem/config/errlog/cproc_errlog_cfg.h	2026-08-30 19:11:24.977973900 +0800
+@@ -54,7 +54,7 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
++#include "vos.h"
+ 
+ #ifdef __cplusplus
+ #if __cplusplus

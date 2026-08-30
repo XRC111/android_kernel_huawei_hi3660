@@ -1,0 +1,48 @@
+--- drivers/hisi/modem/include/oam/gu/comm/osa/v_typdef.h	2026-08-30 19:58:46.628141600 +0800
++++ drivers/hisi/modem/include/oam/gu/comm/osa/v_typdef.h	2026-08-30 19:11:27.882007000 +0800
+@@ -91,18 +91,18 @@
+ #endif
+ 
+ #if (VOS_VXWORKS == VOS_OS_VER)
+-#include "vxWorks.h"
++#include "vxWorks.h"
+ #endif
+ 
+ #if (VOS_WIN32 == VOS_OS_VER)
+ #define _WIN32_WINNT 0x0400
+-#include "Windows.h"
+-#include "stdarg.h"
++#include "Windows.h"
++#include "stdarg.h"
+ #endif
+ 
+ #if (VOS_NUCLEUS == VOS_OS_VER)
+-#include "nucleus.h"
+-#include "stdadd.h"
++#include "nucleus.h"
++#include "stdadd.h"
+ #endif
+ 
+ #if (VOS_LINUX == VOS_OS_VER)
+@@ -135,14 +135,14 @@
+ #endif
+ 
+ #if (VOS_RTOSCK == VOS_OS_VER)
+-#include "sre_task.h"
+-#include "sre_base.h"
+-#include "sre_mem.h"
+-#include "sre_sem.h"
+-#include "sre_shell.h"
+-#include "sre_sys.h"
++#include "sre_task.h"
++#include "sre_base.h"
++#include "sre_mem.h"
++#include "sre_sem.h"
++#include "sre_shell.h"
++#include "sre_sys.h"
+ #ifdef __OS_RTOSCK_SMP__
+-#include "sre_atomic.h"
++#include "sre_atomic.h"
+ #endif
+ #endif
+ 

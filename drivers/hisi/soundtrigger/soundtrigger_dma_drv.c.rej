@@ -1,0 +1,15 @@
+--- drivers/hisi/soundtrigger/soundtrigger_dma_drv.c	2026-08-30 19:58:48.653144700 +0800
++++ drivers/hisi/soundtrigger/soundtrigger_dma_drv.c	2026-08-30 19:11:32.108250400 +0800
+@@ -48,9 +48,9 @@
+ #include "mlib_static_ringbuffer.h"
+ #include "soundtrigger_dma_drv.h"
+ #include "soundtrigger_log.h"
+-#include "slimbus.h"
+-#include "hifi_lpp.h"
+-#include "asp_dma.h"
++#include "slimbus.h"
++#include "hifi_lpp.h"
++#include "asp_dma.h"
+ #include "soundtrigger_event.h"
+ #include "soundtrigger_socdsp_mailbox.h"
+ #include "soundtrigger_socdsp_pcm.h"

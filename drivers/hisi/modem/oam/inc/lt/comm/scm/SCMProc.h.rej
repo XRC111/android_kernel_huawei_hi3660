@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/oam/inc/lt/comm/scm/SCMProc.h	2026-08-30 19:58:47.142157300 +0800
++++ drivers/hisi/modem/oam/inc/lt/comm/scm/SCMProc.h	2026-08-30 19:11:29.782173900 +0800
+@@ -52,9 +52,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "msp_debug.h"
+-#include "mdrv.h"
++#include "vos.h"
++#include "msp_debug.h"
++#include "mdrv.h"
+ 
+ 
+ #if(VOS_OS_VER == VOS_LINUX)

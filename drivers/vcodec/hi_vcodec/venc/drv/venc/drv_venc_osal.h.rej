@@ -1,0 +1,11 @@
+--- drivers/vcodec/hi_vcodec/venc/drv/venc/drv_venc_osal.h	2026-08-30 19:59:23.100232800 +0800
++++ drivers/vcodec/hi_vcodec/venc/drv/venc/drv_venc_osal.h	2026-08-30 19:11:58.144185800 +0800
+@@ -3,7 +3,7 @@
+ 
+ #include <linux/wait.h>
+ #include <linux/sched.h>
+-#include "hi_type.h"
++#include "hi_type.h"
+ #include "hal_venc.h"
+ 
+ #ifdef __cplusplus

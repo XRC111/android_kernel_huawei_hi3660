@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/usb_analog_hs_module/usb_analog_hs_isl54405/usb_analog_hs_isl54405.c	2026-08-30 19:58:49.269144100 +0800
++++ drivers/huawei_platform/audio/usb_analog_hs_module/usb_analog_hs_isl54405/usb_analog_hs_isl54405.c	2026-08-30 19:11:32.689422200 +0800
+@@ -28,7 +28,7 @@
+ #include <linux/workqueue.h>
+ #include <linux/uaccess.h>
+ #include <linux/fs.h>
+-#include "huawei_platform/audio/usb_analog_hs_isl54405.h"
++#include "huawei_platform/audio/usb_analog_hs_isl54405.h"
+ #include <linux/hisi/hi64xx/hi64xx_mbhc.h>
+ 
+ #define LOG_TAG "usb_analog_hs_isl54405"

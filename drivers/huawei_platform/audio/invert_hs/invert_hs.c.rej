@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/invert_hs/invert_hs.c	2026-08-30 19:58:49.160140100 +0800
++++ drivers/huawei_platform/audio/invert_hs/invert_hs.c	2026-08-30 19:11:32.525951500 +0800
+@@ -30,7 +30,7 @@
+ #include <linux/pinctrl/consumer.h>
+ #include <huawei_platform/log/hw_log.h>
+ 
+-#include "huawei_platform/audio/invert_hs.h"
++#include "huawei_platform/audio/invert_hs.h"
+ 
+ #define HWLOG_TAG invert_hs
+ HWLOG_REGIST();

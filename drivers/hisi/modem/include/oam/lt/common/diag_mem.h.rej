@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/include/oam/lt/common/diag_mem.h	2026-08-30 19:58:46.676151500 +0800
++++ drivers/hisi/modem/include/oam/lt/common/diag_mem.h	2026-08-30 19:11:27.944503900 +0800
+@@ -59,8 +59,8 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "product_config.h"
+-#include "vos.h"
++#include "product_config.h"
++#include "vos.h"
+ 
+ 
+ 

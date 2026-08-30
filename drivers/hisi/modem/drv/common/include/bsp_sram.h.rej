@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/drv/common/include/bsp_sram.h	2026-08-30 19:58:45.802144100 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_sram.h	2026-08-30 19:11:25.638542900 +0800
+@@ -55,8 +55,8 @@
+ 
+ #include "bsp_memmap.h"
+ #include "bsp_s_memory.h"
+-#include "soc_onchiprom.h"
+-#include "product_config.h"
++#include "soc_onchiprom.h"
++#include "product_config.h"
+ #include "bsp_shared_ddr.h"
+ 
+ #ifndef __ASSEMBLY__

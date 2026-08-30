@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/oam/inc/lt/acore/scm/SCMSoftDecode.h	2026-08-30 19:58:47.092152900 +0800
++++ drivers/hisi/modem/oam/inc/lt/acore/scm/SCMSoftDecode.h	2026-08-30 19:11:29.264827800 +0800
+@@ -52,9 +52,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "omringbuffer.h"
+-#include "msp_debug.h"
++#include "vos.h"
++#include "omringbuffer.h"
++#include "msp_debug.h"
+ 
+ 
+ #ifdef __cplusplus

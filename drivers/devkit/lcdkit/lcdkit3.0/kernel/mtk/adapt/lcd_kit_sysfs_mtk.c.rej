@@ -1,0 +1,18 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/adapt/lcd_kit_sysfs_mtk.c	2026-08-30 19:58:34.646137200 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/adapt/lcd_kit_sysfs_mtk.c	2026-08-30 19:11:18.538708900 +0800
+@@ -10,11 +10,11 @@
+ * GNU General Public License for more details.
+ *
+ */
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_sysfs.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_sysfs.h"
+ #include "lcd_kit_sysfs_mtk.h"
+-#include "lcm_drv.h"
++#include "lcm_drv.h"
+ #include <linux/kernel.h>
+ #include "lcd_kit_adapt.h"
+ /* marco define*/

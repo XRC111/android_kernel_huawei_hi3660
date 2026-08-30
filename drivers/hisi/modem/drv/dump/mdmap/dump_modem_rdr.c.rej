@@ -1,0 +1,44 @@
+--- drivers/hisi/modem/drv/dump/mdmap/dump_modem_rdr.c	2026-08-30 19:58:45.907137700 +0800
++++ drivers/hisi/modem/drv/dump/mdmap/dump_modem_rdr.c	2026-08-30 19:11:26.321884700 +0800
+@@ -50,26 +50,26 @@
+ #include <linux/kernel.h>
+ #include <linux/rtc.h>
+ #include <asm/string.h>
+-#include "drv_comm.h"
+-#include "osl_types.h"
+-#include "bsp_dump.h"
+-#include "bsp_slice.h"
+-#include "bsp_reset.h"
+-#include "bsp_coresight.h"
+-#include "bsp_wdt.h"
+-#include "gunas_errno.h"
++#include "drv_comm.h"
++#include "osl_types.h"
++#include "bsp_dump.h"
++#include "bsp_slice.h"
++#include "bsp_reset.h"
++#include "bsp_coresight.h"
++#include "bsp_wdt.h"
++#include "gunas_errno.h"
+ #include "dump_modem.h"
+ #include "dump_modem_rdr.h"
+-#include "dump_config.h"
+-#include "dump_print.h"
++#include "dump_config.h"
++#include "dump_print.h"
+ #include "dump_modem_baseinfo.h"
+-#include "dump_cp_agent.h"
++#include "dump_cp_agent.h"
+ #include "dump_modem_hook.h"
+-#include "dump_modem_area.h"
+-#include "dump_modem_field.h"
+-#include "dump_cp_wdt.h"
++#include "dump_modem_area.h"
++#include "dump_modem_field.h"
++#include "dump_cp_wdt.h"
+ #include "dump_modem_save.h"
+-#include "dump_exc_ctrl.h"
++#include "dump_exc_ctrl.h"
+ 
+ 
+ rdr_exc_info_s     g_rdr_exc_info;

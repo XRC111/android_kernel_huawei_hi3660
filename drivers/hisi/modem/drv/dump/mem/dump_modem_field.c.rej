@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/drv/dump/mem/dump_modem_field.c	2026-08-30 19:58:45.938141100 +0800
++++ drivers/hisi/modem/drv/dump/mem/dump_modem_field.c	2026-08-30 19:11:26.740555400 +0800
+@@ -47,10 +47,10 @@
+  */
+ 
+ #include <product_config.h>
+-#include "bsp_dump_mem.h"
++#include "bsp_dump_mem.h"
+ #include "dump_modem_field.h"
+ #include "dump_modem_area.h"
+-#include "dump_print.h"
++#include "dump_print.h"
+ 
+ struct dump_field_ctrl_info_s   g_st_field_ctrl;
+ u32    g_dump_mem_init = 0;

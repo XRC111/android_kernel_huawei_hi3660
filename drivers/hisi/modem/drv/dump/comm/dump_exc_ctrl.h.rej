@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/dump/comm/dump_exc_ctrl.h	2026-08-30 19:58:45.879138600 +0800
++++ drivers/hisi/modem/drv/dump/comm/dump_exc_ctrl.h	2026-08-30 19:11:25.908214000 +0800
+@@ -48,7 +48,7 @@
+ #ifndef __DUMP_EXC_CTRL_H__
+ #define __DUMP_EXC_CTRL_H__
+ 
+-#include "osl_types.h"
++#include "osl_types.h"
+ 
+ /*modem ap flag ∂®“Â*/
+ #define DUMP_INIT_FLAG_CONFIG                 (0x5B5B0000)

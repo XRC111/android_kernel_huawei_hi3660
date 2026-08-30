@@ -1,0 +1,17 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_disp.h	2026-08-30 19:58:33.834138600 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_disp.h	2026-08-30 19:11:17.474066100 +0800
+@@ -31,10 +31,10 @@
+ /***********************************************************
+ *macro definition
+ ***********************************************************/
+-#include "lcdkit_panel.h"
+-#include "hisi_fb.h"
+-#include "hisi_mipi_dsi.h"
+-#include "voltage/tps65132.h"
++#include "lcdkit_panel.h"
++#include "hisi_fb.h"
++#include "hisi_mipi_dsi.h"
++#include "voltage/tps65132.h"
+ 
+ #define DTS_COMP_LCDKIT_PANEL_TYPE     "huawei,lcd_panel_type"
+ #define LCDKIT_PANEL_COMP_LENGTH       128

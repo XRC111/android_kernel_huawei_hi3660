@@ -24,7 +24,7 @@ extern "C" {
 #include "hmac_device.h"
 #include "hmac_resource.h"
 #include "hmac_scan.h"
-#include "mac_user.h"
+#include "hmac_user.h"
 
 
 #undef  THIS_FILE_ID

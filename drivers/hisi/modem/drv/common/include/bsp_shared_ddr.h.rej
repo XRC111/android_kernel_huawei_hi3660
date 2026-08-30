@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/common/include/bsp_shared_ddr.h	2026-08-30 19:58:45.795141200 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_shared_ddr.h	2026-08-30 19:11:25.607288900 +0800
+@@ -52,7 +52,7 @@
+ extern "C" {
+ #endif
+ 
+-#include "product_config.h"
++#include "product_config.h"
+ #include "bsp_memmap.h"
+ #include "bsp_s_memory.h"
+ #include "bsp_ddr.h"

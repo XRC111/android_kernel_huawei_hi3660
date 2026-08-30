@@ -1,0 +1,11 @@
+--- drivers/connectivity/hi11xx/hi1103/platform/inc/oam/oam_rdr.h	2026-08-30 19:58:30.486140700 +0800
++++ drivers/connectivity/hi11xx/hi1103/platform/inc/oam/oam_rdr.h	2026-08-30 19:11:11.991894100 +0800
+@@ -1,7 +1,7 @@
+ #ifndef _OAM_RDR_H_
+ #define _OAM_RDR_H_
+ 
+-#include "plat_debug.h"
++#include "plat_debug.h"
+ #define RDR_EXCEPTION(modid)           hisi_conn_rdr_system_error(modid,0,0)
+ 
+ #if (defined CONFIG_HISI_BB) && (defined CONFIG_HI110X_PLAT_BB)

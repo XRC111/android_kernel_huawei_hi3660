@@ -1,0 +1,11 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/common/src/lcd_kit_core.c	2026-08-30 19:58:34.578139200 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/common/src/lcd_kit_core.c	2026-08-30 19:11:17.855123500 +0800
+@@ -60,7 +60,7 @@
+ #include <linux/dma-buf.h>
+ #include <linux/genalloc.h>
+ 
+-#include "lcd_kit_core.h"
++#include "lcd_kit_core.h"
+ 
+ /*lcd kit ops*/
+ struct lcd_kit_ops *g_lcd_kit_ops = NULL;

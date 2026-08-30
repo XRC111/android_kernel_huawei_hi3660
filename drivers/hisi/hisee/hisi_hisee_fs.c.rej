@@ -1,0 +1,13 @@
+--- drivers/hisi/hisee/hisi_hisee_fs.c	2026-08-30 19:58:45.086140200 +0800
++++ drivers/hisi/hisee/hisi_hisee_fs.c	2026-08-30 19:11:24.863901400 +0800
+@@ -34,8 +34,8 @@
+ #include <linux/clk.h>
+ #include <linux/mm.h>
+ #include <linux/errno.h>
+-#include "soc_acpu_baseaddr_interface.h"
+-#include "soc_sctrl_interface.h"
++#include "soc_acpu_baseaddr_interface.h"
++#include "soc_sctrl_interface.h"
+ #include "hisi_hisee.h"
+ #include "hisi_hisee_fs.h"
+ 

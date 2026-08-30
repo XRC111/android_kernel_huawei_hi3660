@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/drv/dump/mdmap/dump_modem_baseinfo.c	2026-08-30 19:58:45.892137900 +0800
++++ drivers/hisi/modem/drv/dump/mdmap/dump_modem_baseinfo.c	2026-08-30 19:11:26.087269900 +0800
+@@ -50,9 +50,9 @@
+ #include <linux/syscalls.h>
+ #include <linux/kernel.h>
+ #include <asm/string.h>
+-#include "bsp_dump.h"
+-#include "bsp_slice.h"
+-#include "dump_print.h"
++#include "bsp_dump.h"
++#include "bsp_slice.h"
++#include "dump_print.h"
+ 
+ dump_base_info_t*    g_mdm_dump_base_info = NULL;
+ 

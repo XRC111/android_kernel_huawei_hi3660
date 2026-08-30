@@ -1,0 +1,21 @@
+--- drivers/hisi/modem/drv/adp/adp_nvim.c	2026-08-30 19:58:45.664137500 +0800
++++ drivers/hisi/modem/drv/adp/adp_nvim.c	2026-08-30 19:11:25.191617000 +0800
+@@ -47,12 +47,12 @@
+  */
+ 
+ /*lint -save -e537*/
+-#include "bsp_nvim.h"
+-#include "mdrv_nvim.h"
+-#include "drv_comm.h"
+-#include "drv_nv_id.h"
+-#include "NVIM_ResumeId.h"
+-#include "nv_factory_check.h"
++#include "bsp_nvim.h"
++#include "mdrv_nvim.h"
++#include "drv_comm.h"
++#include "drv_nv_id.h"
++#include "NVIM_ResumeId.h"
++#include "nv_factory_check.h"
+ /*lint -restore +e537*/
+ 
+ /*lint -save -e958 -e438*/

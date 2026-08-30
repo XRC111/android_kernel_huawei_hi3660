@@ -1,0 +1,13 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/common/src/lcd_kit_sysfs.c	2026-08-30 19:58:34.583139700 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/common/src/lcd_kit_sysfs.c	2026-08-30 19:11:18.005425200 +0800
+@@ -11,8 +11,8 @@
+ *
+ */
+ 
+-#include "lcd_kit_dbg.h"
+-#include "lcd_kit_sysfs.h"
++#include "lcd_kit_dbg.h"
++#include "lcd_kit_sysfs.h"
+ 
+ /*function:  this function is used to get the type of LCD
+  *input:

@@ -1,0 +1,15 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/lcd_kit_panel.c	2026-08-30 19:58:34.620138400 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/lcd_kit_panel.c	2026-08-30 19:11:18.334544500 +0800
+@@ -11,9 +11,9 @@
+ *
+ */
+ 
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_panel.h"
+-#include "lcd_kit_sysfs_hs.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_panel.h"
++#include "lcd_kit_sysfs_hs.h"
+ #include "panel/lg_nt36772a.c"
+ #include "panel/boe_hx83112e.c"
+ #include "panel/samsung_ea8076.c"

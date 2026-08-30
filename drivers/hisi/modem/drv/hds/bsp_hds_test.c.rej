@@ -1,0 +1,10 @@
+--- drivers/hisi/modem/drv/hds/bsp_hds_test.c	2026-08-30 19:58:45.990136100 +0800
++++ drivers/hisi/modem/drv/hds/bsp_hds_test.c	2026-08-30 19:11:26.939554800 +0800
+@@ -1,5 +1,5 @@
+-#include "bsp_trace.h"
+-#include "bsp_slice.h"
++#include "bsp_trace.h"
++#include "bsp_slice.h"
+ #include "bsp_hds_ind.h"
+ #include "bsp_hds_service.h"
+ #include <osl_types.h>

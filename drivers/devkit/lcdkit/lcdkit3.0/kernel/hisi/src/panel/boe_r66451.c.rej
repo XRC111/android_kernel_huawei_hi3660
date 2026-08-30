@@ -1,0 +1,17 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/panel/boe_r66451.c	2026-08-30 19:58:34.628138200 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/panel/boe_r66451.c	2026-08-30 19:11:18.408524900 +0800
+@@ -4,10 +4,10 @@
+ *panel:boe_r66451
+ */
+ #include <linux/thermal.h>
+-#include "hisi_fb.h"
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_utils.h"
++#include "hisi_fb.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_utils.h"
+ 
+ extern int g_min_backlight_from_app;
+ extern int g_max_backlight_from_app;

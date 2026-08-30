@@ -15,7 +15,7 @@ extern "C" {
 #include "hmac_main.h"
 #include "hmac_vap.h"
 #include "hmac_protection.h"
-#include "mac_vap.h"
+#include "hmac_vap.h"
 #include "mac_ie.h"
 #include "hmac_config.h"
 

@@ -1,0 +1,9 @@
+--- drivers/hisi/modem/drv/adp/adp_misc.c	2026-08-30 19:58:45.662140000 +0800
++++ drivers/hisi/modem/drv/adp/adp_misc.c	2026-08-30 19:11:25.108319500 +0800
+@@ -1,5 +1,5 @@
+ #include <mdrv.h>
+-#include "bsp_misc.h"
++#include "bsp_misc.h"
+ 
+ 
+ int mdrv_misc_scbackup_ext_write(unsigned char *pRamAddr, unsigned int len)

@@ -1,0 +1,23 @@
+--- drivers/hisi/modem/drv/dump/mdmap/dump_modem_mem.c	2026-08-30 19:58:45.901136800 +0800
++++ drivers/hisi/modem/drv/dump/mdmap/dump_modem_mem.c	2026-08-30 19:11:26.290632400 +0800
+@@ -49,13 +49,13 @@
+ #include <linux/syscalls.h>
+ #include <linux/kernel.h>
+ #include <asm/string.h>
+-#include "bsp_sram.h"
+-#include "bsp_shared_ddr.h"
+-#include "bsp_ddr.h"
+-#include "dump_file.h"
+-#include "dump_config.h"
+-#include "dump_print.h"
+-#include "dump_modem_area.h"
++#include "bsp_sram.h"
++#include "bsp_shared_ddr.h"
++#include "bsp_ddr.h"
++#include "dump_file.h"
++#include "dump_config.h"
++#include "dump_print.h"
++#include "dump_modem_area.h"
+ #include "dump_modem_rdr.h"
+ 
+ 

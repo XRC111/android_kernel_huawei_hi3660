@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/usb_audio_common/usb_audio_common.c	2026-08-30 19:58:49.331141400 +0800
++++ drivers/huawei_platform/audio/usb_audio_common/usb_audio_common.c	2026-08-30 19:11:32.807128700 +0800
+@@ -30,7 +30,7 @@
+ #include <linux/regulator/machine.h>
+ #include <huawei_platform/usb/hw_pd_dev.h>
+ 
+-#include "huawei_platform/audio/usb_audio_common.h"
++#include "huawei_platform/audio/usb_audio_common.h"
+ 
+ #define HWLOG_TAG usb_audio_common
+ HWLOG_REGIST();

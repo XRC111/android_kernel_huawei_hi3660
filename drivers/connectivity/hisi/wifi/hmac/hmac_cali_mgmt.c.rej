@@ -1,0 +1,11 @@
+--- drivers/connectivity/hisi/wifi/hmac/hmac_cali_mgmt.c	2026-08-30 19:58:32.248137700 +0800
++++ drivers/connectivity/hisi/wifi/hmac/hmac_cali_mgmt.c	2026-08-30 19:11:15.455386700 +0800
+@@ -28,7 +28,7 @@
+   1 ?????
+ *****************************************************************************/
+ #include "hmac_cali_mgmt.h"
+-#include "oal_kernel_file.h"
++#include "oal_kernel_file.h"
+ 
+ #undef  THIS_FILE_ID
+ #define THIS_FILE_ID OAM_FILE_ID_HMAC_CALI_MGMT_C

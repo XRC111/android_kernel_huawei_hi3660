@@ -1,0 +1,14 @@
+--- drivers/hisi/modem/drv/dump/mem/dump_modem_area.c	2026-08-30 19:58:45.934140000 +0800
++++ drivers/hisi/modem/drv/dump/mem/dump_modem_area.c	2026-08-30 19:11:26.669863500 +0800
+@@ -49,9 +49,9 @@
+ 
+ #include <product_config.h>
+ #include <bsp_ddr.h>
+-#include "bsp_dump_mem.h"
++#include "bsp_dump_mem.h"
+ #include "dump_modem_area.h"
+-#include "dump_print.h"
++#include "dump_print.h"
+ 
+ struct dump_global_area_ctrl_s g_st_dump_area_ctrl;
+ /*****************************************************************************

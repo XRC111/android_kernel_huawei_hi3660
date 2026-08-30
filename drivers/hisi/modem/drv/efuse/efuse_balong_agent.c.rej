@@ -1,0 +1,36 @@
+--- drivers/hisi/modem/drv/efuse/efuse_balong_agent.c	2026-08-30 19:58:45.962141500 +0800
++++ drivers/hisi/modem/drv/efuse/efuse_balong_agent.c	2026-08-30 19:11:26.806231800 +0800
+@@ -61,20 +61,20 @@
+ #include <linux/seq_file.h>
+ #include <linux/regulator/consumer.h>
+ 
+-#include "product_config.h"
+-#include "osl_bio.h"
+-#include "osl_sem.h"
+-#include "osl_thread.h"
+-#include "osl_wait.h"
+-#include "osl_spinlock.h"
+-#include "soc_clk.h"
+-#include "hi_efuse.h"
+-#include "bsp_memmap.h"
++#include "product_config.h"
++#include "osl_bio.h"
++#include "osl_sem.h"
++#include "osl_thread.h"
++#include "osl_wait.h"
++#include "osl_spinlock.h"
++#include "soc_clk.h"
++#include "hi_efuse.h"
++#include "bsp_memmap.h"
+ 
+-#include "bsp_icc.h"
+-#include "bsp_slice.h"
+-#include "bsp_trace.h"
+-#include "bsp_efuse.h"
++#include "bsp_icc.h"
++#include "bsp_slice.h"
++#include "bsp_trace.h"
++#include "bsp_efuse.h"
+ 
+ #include <mdrv.h>
+ #include "../../adrv/adrv.h"

@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/include/oam/lt/acore/cpm.h	2026-08-30 19:58:46.659141800 +0800
++++ drivers/hisi/modem/include/oam/lt/acore/cpm.h	2026-08-30 19:11:27.913254300 +0800
+@@ -61,9 +61,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "omnvinterface.h"
+-#include "msp_debug.h"
++#include "vos.h"
++#include "omnvinterface.h"
++#include "msp_debug.h"
+ 
+ 
+ #pragma pack(4)

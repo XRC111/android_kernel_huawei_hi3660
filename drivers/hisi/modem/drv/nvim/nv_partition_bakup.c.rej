@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/nvim/nv_partition_bakup.c	2026-08-30 19:58:46.158141300 +0800
++++ drivers/hisi/modem/drv/nvim/nv_partition_bakup.c	2026-08-30 19:11:27.291015500 +0800
+@@ -55,7 +55,7 @@
+ #include "nv_index.h"
+ #include "nv_crc.h"
+ #include "nv_partition_bakup.h"
+-#include "bsp_dump.h"
++#include "bsp_dump.h"
+ 
+ nv_ctrl_info_s      *g_nv_bakup_ctrl    = NULL;
+ nv_global_info_s    *g_nv_bakup_global  = NULL;

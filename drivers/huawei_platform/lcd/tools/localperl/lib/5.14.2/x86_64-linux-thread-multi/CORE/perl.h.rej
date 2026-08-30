@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/lcd/tools/localperl/lib/5.14.2/x86_64-linux-thread-multi/CORE/perl.h	2026-08-30 19:58:53.720744700 +0800
++++ drivers/huawei_platform/lcd/tools/localperl/lib/5.14.2/x86_64-linux-thread-multi/CORE/perl.h	2026-08-30 19:11:33.500902600 +0800
+@@ -6017,7 +6017,7 @@
+ #endif
+ 
+ #ifdef UNDER_CE
+-#include "wince.h"
++#include "wince.h"
+ #endif
+ 
+ /* ISO 6429 NEL - C1 control NExt Line */

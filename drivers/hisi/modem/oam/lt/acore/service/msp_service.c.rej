@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/oam/lt/acore/service/msp_service.c	2026-08-30 19:58:47.210137700 +0800
++++ drivers/hisi/modem/oam/lt/acore/service/msp_service.c	2026-08-30 19:11:30.002026100 +0800
+@@ -49,10 +49,10 @@
+ 
+ 
+ 
+-#include "msp_errno.h"
+-#include "SCMProc.h"
+-#include "diag_common.h"
+-#include "msp_service.h"
++#include "msp_errno.h"
++#include "SCMProc.h"
++#include "diag_common.h"
++#include "msp_service.h"
+ 
+ #define    THIS_FILE_ID        MSP_FILE_ID_MSP_SERVICE_C
+ 

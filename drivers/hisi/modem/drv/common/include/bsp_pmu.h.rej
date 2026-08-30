@@ -1,0 +1,22 @@
+--- drivers/hisi/modem/drv/common/include/bsp_pmu.h	2026-08-30 19:58:45.779136600 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_pmu.h	2026-08-30 19:11:25.520811800 +0800
+@@ -53,16 +53,16 @@
+ extern "C" {
+ #endif
+ 
+-#include "product_config.h"
++#include "product_config.h"
+ #include "osl_types.h"
+ 
+ #if defined(__OS_RTOSCK__) || defined(__OS_VXWORKS__) ||defined(__OS_RTOSCK_SMP__)
+-#include "mdrv_pmu.h"
++#include "mdrv_pmu.h"
+ #endif
+ 
+ #ifdef __FASTBOOT__
+ #include <boot/boot.h>
+-#include "types.h"
++#include "osl_types.h"
+ #endif
+ 
+ #include <hi_pmu.h>

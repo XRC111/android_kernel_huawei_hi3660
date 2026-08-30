@@ -1,0 +1,12 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_display_test.c	2026-08-30 19:58:33.836140600 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_display_test.c	2026-08-30 19:11:17.391937200 +0800
+@@ -1,6 +1,6 @@
+-#include "hisi_fb.h"
+-#include "lcdkit_panel.h"
+-#include "lcdkit_dbg.h"
++#include "hisi_fb.h"
++#include "lcdkit_panel.h"
++#include "lcdkit_dbg.h"
+ #include "lcdkit_disp.h"
+ #include <huawei_ts_kit.h>
+ 

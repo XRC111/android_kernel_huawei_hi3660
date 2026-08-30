@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/oam/inc/lt/comm/ppm/OmSocketPpm.h	2026-08-30 19:58:47.132138800 +0800
++++ drivers/hisi/modem/oam/inc/lt/comm/ppm/OmSocketPpm.h	2026-08-30 19:11:29.657175100 +0800
+@@ -53,8 +53,8 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "omnvinterface.h"
++#include "vos.h"
++#include "omnvinterface.h"
+ 
+ 
+ #ifdef __cplusplus

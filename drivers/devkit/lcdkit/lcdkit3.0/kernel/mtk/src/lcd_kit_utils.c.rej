@@ -1,0 +1,23 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/src/lcd_kit_utils.c	2026-08-30 19:58:34.686139000 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/src/lcd_kit_utils.c	2026-08-30 19:11:18.723030800 +0800
+@@ -11,13 +11,13 @@
+ *
+ */
+ 
+-#include "lcd_kit_utils.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_power.h"
+-#include "lcd_kit_parse.h"
+-#include "lcd_kit_adapt.h"
+-#include "lcd_kit_core.h"
++#include "lcd_kit_utils.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_power.h"
++#include "lcd_kit_parse.h"
++#include "lcd_kit_adapt.h"
++#include "lcd_kit_core.h"
+ 
+ 
+ bool lcd_kit_support(void)

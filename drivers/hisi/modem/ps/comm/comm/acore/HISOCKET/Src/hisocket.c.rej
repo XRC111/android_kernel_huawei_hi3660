@@ -1,0 +1,9 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/HISOCKET/Src/hisocket.c	2026-08-30 19:58:47.296143400 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/HISOCKET/Src/hisocket.c	2026-08-30 19:11:30.040552100 +0800
+@@ -46,5 +46,5 @@
+  *
+  */
+ 
+-#include "product_config.h"
++#include "product_config.h"
+ 

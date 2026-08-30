@@ -1,0 +1,15 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/common/src/lcd_kit_common.c	2026-08-30 19:58:34.576137000 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/common/src/lcd_kit_common.c	2026-08-30 19:11:17.901997000 +0800
+@@ -11,9 +11,9 @@
+ *
+ */
+ 
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_dbg.h"
+-#include "lcd_kit_parse.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_dbg.h"
++#include "lcd_kit_parse.h"
+ 
+ #if defined (CONFIG_HUAWEI_DSM)
+ extern struct dsm_client* lcd_dclient;

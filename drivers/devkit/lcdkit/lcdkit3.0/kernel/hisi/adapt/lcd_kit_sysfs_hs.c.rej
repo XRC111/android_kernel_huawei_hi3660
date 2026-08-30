@@ -1,0 +1,22 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/adapt/lcd_kit_sysfs_hs.c	2026-08-30 19:58:34.598138200 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/adapt/lcd_kit_sysfs_hs.c	2026-08-30 19:11:18.104025500 +0800
+@@ -10,13 +10,13 @@
+ * GNU General Public License for more details.
+ *
+ */
+-#include "hisi_fb.h"
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_core.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_sysfs.h"
++#include "hisi_fb.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_core.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_sysfs.h"
+ #include "lcd_kit_sysfs_hs.h"
+-#include "lcd_kit_bl.h"
++#include "lcd_kit_bl.h"
+ #include <linux/hisi/hw_cmdline_parse.h>
+ 
+ /*oem info*/

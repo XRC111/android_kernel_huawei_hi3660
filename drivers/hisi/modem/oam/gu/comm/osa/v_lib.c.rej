@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/oam/gu/comm/osa/v_lib.c	2026-08-30 19:58:46.964139300 +0800
++++ drivers/hisi/modem/oam/gu/comm/osa/v_lib.c	2026-08-30 19:11:28.915520700 +0800
+@@ -75,10 +75,10 @@
+ /*****************************************************************************/
+ 
+ 
+-#include "v_lib.h"
+-#include "v_blkMem.h"
+-#include "v_IO.h"
+-#include "v_timer.h"
++#include "v_lib.h"
++#include "v_blkMem.h"
++#include "v_IO.h"
++#include "v_timer.h"
+ 
+ /*****************************************************************************
+     协议栈打印打点方式下的.C文件宏定义

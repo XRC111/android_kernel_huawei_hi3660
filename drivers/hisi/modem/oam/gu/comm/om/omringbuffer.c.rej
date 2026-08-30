@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/oam/gu/comm/om/omringbuffer.c	2026-08-30 19:58:46.952141400 +0800
++++ drivers/hisi/modem/oam/gu/comm/om/omringbuffer.c	2026-08-30 19:11:28.821765300 +0800
+@@ -71,8 +71,8 @@
+ /*                                                                           */
+ /*****************************************************************************/
+ 
+-#include "omringbuffer.h"
+-#include "omprivate.h"
++#include "omringbuffer.h"
++#include "omprivate.h"
+ 
+ 
+ 

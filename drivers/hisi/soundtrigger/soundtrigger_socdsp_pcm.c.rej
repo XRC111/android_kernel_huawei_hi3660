@@ -1,0 +1,11 @@
+--- drivers/hisi/soundtrigger/soundtrigger_socdsp_pcm.c	2026-08-30 19:58:48.668141200 +0800
++++ drivers/hisi/soundtrigger/soundtrigger_socdsp_pcm.c	2026-08-30 19:11:32.007143300 +0800
+@@ -6,7 +6,7 @@
+ #include <linux/uaccess.h>
+ #include <linux/io.h>
+ #include <linux/errno.h>
+-#include "hifi_lpp.h"
++#include "hifi_lpp.h"
+ #include "mlib_ringbuffer.h"
+ #include "../../sound/soc/hisilicon/hisi_pcm_hifi.h"
+ 

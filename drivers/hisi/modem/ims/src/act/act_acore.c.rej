@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/ims/src/act/act_acore.c	2026-08-30 19:58:46.363138900 +0800
++++ drivers/hisi/modem/ims/src/act/act_acore.c	2026-08-30 19:11:27.647631200 +0800
+@@ -63,7 +63,7 @@
+ 
+ //BSP
+ //#include "bsp_icc.h"
+-#include "mdrv_icc.h"
++#include "mdrv_icc.h"
+ 
+ #define BUFFERSIZE 256
+ #define DEVICE_MAJOR 250 /*设置一个主设备号*/

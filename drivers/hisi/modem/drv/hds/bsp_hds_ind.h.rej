@@ -1,0 +1,27 @@
+--- drivers/hisi/modem/drv/hds/bsp_hds_ind.h	2026-08-30 19:58:45.977139800 +0800
++++ drivers/hisi/modem/drv/hds/bsp_hds_ind.h	2026-08-30 19:11:26.837452900 +0800
+@@ -50,16 +50,16 @@
+ #endif
+ 
+ #include <product_config.h>
+-#include "osl_types.h"
+-#include "osl_sem.h"
+-#include "osl_spinlock.h"
+-#include "osl_thread.h"
+-#include "osl_common.h"
+-#include "drv_nv_id.h"
++#include "osl_types.h"
++#include "osl_sem.h"
++#include "osl_spinlock.h"
++#include "osl_thread.h"
++#include "osl_common.h"
++#include "drv_nv_id.h"
+ #include <linux/dma-mapping.h>
+-#include "bsp_diag_frame.h"
++#include "bsp_diag_frame.h"
+ #include <bsp_socp.h>
+-#include "soc_socp_adapter.h"
++#include "soc_socp_adapter.h"
+ 
+ extern unsigned long long g_log_dma_test_mask;
+ #define HDS_OK                      (0)

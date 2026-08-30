@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/drv/hds/bsp_hds_service.h	2026-08-30 19:58:45.987139000 +0800
++++ drivers/hisi/modem/drv/hds/bsp_hds_service.h	2026-08-30 19:11:26.899950000 +0800
+@@ -50,9 +50,9 @@
+ #define __BSP_HDS_SERVICE_H__
+ 
+ #include <osl_types.h>
+-#include "bsp_trace.h"
+-#include "bsp_diag_frame.h"
+-#include "mdrv_hds_common.h"
++#include "bsp_trace.h"
++#include "bsp_diag_frame.h"
++#include "mdrv_hds_common.h"
+ 
+ /*´íÎóÂë¶¨Òå*/
+ #define HDS_CMD_ERROR          (0x00abcd00 + 0x1)  /*cmdidÎ´×¢²á´íÎóÂë*/

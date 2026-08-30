@@ -1,0 +1,11 @@
+--- drivers/devkit/tpkit/panel/novatek/nt36xxx_ops.c	2026-08-30 19:58:35.393138400 +0800
++++ drivers/devkit/tpkit/panel/novatek/nt36xxx_ops.c	2026-08-30 19:11:18.937589800 +0800
+@@ -42,7 +42,7 @@
+ #include "../../huawei_ts_kit_algo.h"
+ #include "../../huawei_ts_kit_api.h"
+ #if defined (CONFIG_TEE_TUI)
+-#include "tui.h"
++#include "tui.h"
+ #endif
+ #if defined (CONFIG_HUAWEI_DSM)
+ #include <dsm/dsm_pub.h>

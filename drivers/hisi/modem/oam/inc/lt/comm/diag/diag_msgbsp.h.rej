@@ -1,0 +1,22 @@
+--- drivers/hisi/modem/oam/inc/lt/comm/diag/diag_msgbsp.h	2026-08-30 19:58:47.112142300 +0800
++++ drivers/hisi/modem/oam/inc/lt/comm/diag/diag_msgbsp.h	2026-08-30 19:11:29.440602700 +0800
+@@ -60,13 +60,13 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "vos.h"
+-#include "mdrv.h"
+-#include "NVIM_Interface.h"
+-#include "msp_diag_comm.h"
++#include "vos.h"
++#include "mdrv.h"
++#include "NVIM_Interface.h"
++#include "msp_diag_comm.h"
+ #include "diag_common.h"
+-#include "msp_errno.h"
+-#include "DiagMtaInterface.h"
++#include "msp_errno.h"
++#include "DiagMtaInterface.h"
+ 
+ /*****************************************************************************
+   2 macro

@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/oam/gu/comm/osa/v_int.c	2026-08-30 19:58:46.961144400 +0800
++++ drivers/hisi/modem/oam/gu/comm/osa/v_int.c	2026-08-30 19:11:28.884264500 +0800
+@@ -75,10 +75,10 @@
+ /*                                                                           */
+ /*****************************************************************************/
+ 
+-#include "vos_config.h"
+-#include "v_typdef.h"
+-#include "v_IO.h"
+-#include "v_timer.h"
++#include "vos_config.h"
++#include "v_typdef.h"
++#include "v_IO.h"
++#include "v_timer.h"
+ 
+ 
+ 

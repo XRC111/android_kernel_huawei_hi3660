@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/include/ps/gups/common/TtfLinkInterface.h	2026-08-30 19:58:46.729152800 +0800
++++ drivers/hisi/modem/include/ps/gups/common/TtfLinkInterface.h	2026-08-30 19:11:28.288582200 +0800
+@@ -58,7 +58,7 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "product_config.h"
++#include "product_config.h"
+ 
+ 
+ #pragma pack(4)

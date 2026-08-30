@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/RnicDev.h	2026-08-30 19:58:47.763143700 +0800
++++ drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/RnicDev.h	2026-08-30 19:11:31.397833400 +0800
+@@ -59,8 +59,8 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "AtRnicInterface.h"
++#include "vos.h"
++#include "AtRnicInterface.h"
+ #include "RnicLinuxInterface.h"
+ 
+ 

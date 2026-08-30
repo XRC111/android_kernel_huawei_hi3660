@@ -1,0 +1,16 @@
+--- drivers/hisi/modem/oam/inc/lt/comm/diag/diag_msgbbp.h	2026-08-30 19:58:47.109144400 +0800
++++ drivers/hisi/modem/oam/inc/lt/comm/diag/diag_msgbbp.h	2026-08-30 19:11:29.391541400 +0800
+@@ -61,10 +61,10 @@
+   1 Include Headfile
+ *****************************************************************************/
+ #include  "vos.h"
+-#include "msp_diag_comm.h"
++#include "msp_diag_comm.h"
+ #include "diag_common.h"
+-#include "msp_errno.h"
+-#include "diag_bbp_ds.h"
++#include "msp_errno.h"
++#include "diag_bbp_ds.h"
+ 
+ /*****************************************************************************
+   2 macro

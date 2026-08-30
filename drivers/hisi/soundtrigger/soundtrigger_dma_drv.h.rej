@@ -1,0 +1,11 @@
+--- drivers/hisi/soundtrigger/soundtrigger_dma_drv.h	2026-08-30 19:58:48.655142500 +0800
++++ drivers/hisi/soundtrigger/soundtrigger_dma_drv.h	2026-08-30 19:11:31.974879600 +0800
+@@ -19,7 +19,7 @@
+ #ifndef _AUDIO_AUTO_SOUNDTRIGGER_DMA_DRV_H
+ #define _AUDIO_AUTO_SOUNDTRIGGER_DMA_DRV_H
+ 
+-#include "soc_acpu_baseaddr_interface.h"
++#include "soc_acpu_baseaddr_interface.h"
+ /*slimbus register addr*/
+ #define HI3xxx_SLIMBUS_BASE_REG 							(SOC_ACPU_SLIMBUS_BASE_ADDR)
+ #define HI3xxx_SLIMBUS_REG_SIZE 							(100)

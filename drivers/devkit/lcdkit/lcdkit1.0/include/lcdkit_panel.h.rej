@@ -1,0 +1,11 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/include/lcdkit_panel.h	2026-08-30 19:58:33.975140000 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/include/lcdkit_panel.h	2026-08-30 19:11:17.823874000 +0800
+@@ -1,7 +1,7 @@
+ #ifndef __LCDKIT_PANEL_H_
+ #define __LCDKIT_PANEL_H_
+ 
+-#include "linux/kernel.h"
++#include "linux/kernel.h"
+ #include <linux/console.h>
+ #include <linux/uaccess.h>
+ #include <linux/leds.h>

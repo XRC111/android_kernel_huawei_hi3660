@@ -1,0 +1,30 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/NFEXT/NetfilterEx.h	2026-08-30 19:58:47.357141700 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/NFEXT/NetfilterEx.h	2026-08-30 19:11:30.371791000 +0800
+@@ -58,17 +58,17 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "v_id.h"
+-#include "vos.h"
+-#include "SysNvId.h"
+-#include "NVIM_Interface.h"
++#include "v_id.h"
++#include "vos.h"
++#include "SysNvId.h"
++#include "NVIM_Interface.h"
+ #include "NetWInterface.h"
+-#include "PsTypeDef.h"
+-#include "IpsMntn.h"
+-#include "omringbuffer.h"
+-#include "PsCommonDef.h"
+-#include "LinuxInterface.h"
+-#include "TtfNvInterface.h"
++#include "PsTypeDef.h"
++#include "IpsMntn.h"
++#include "omringbuffer.h"
++#include "PsCommonDef.h"
++#include "LinuxInterface.h"
++#include "TtfNvInterface.h"
+ 
+ /*****************************************************************************
+   2 宏定义

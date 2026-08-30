@@ -1,0 +1,12 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_parse_hs.c	2026-08-30 19:58:33.851143100 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_parse_hs.c	2026-08-30 19:11:17.507419000 +0800
+@@ -1,6 +1,6 @@
+-#include "hisi_fb.h"
+-#include "lcdkit_panel.h"
+-#include "lcdkit_dbg.h"
++#include "hisi_fb.h"
++#include "lcdkit_panel.h"
++#include "lcdkit_dbg.h"
+ #include "lcdkit_disp.h"
+ #include <linux/hisi/hw_cmdline_parse.h> //for runmode_is_factory
+ #include <linux/of.h>

@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/include/ps/tlps/acore/AtNdisInterface.h	2026-08-30 19:58:46.735146700 +0800
++++ drivers/hisi/modem/include/ps/tlps/acore/AtNdisInterface.h	2026-08-30 19:11:28.372848800 +0800
+@@ -59,8 +59,8 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "mdrv.h"
+-#include "msp_at.h"
++#include "mdrv.h"
++#include "msp_at.h"
+ 
+ #if (VOS_OS_VER != VOS_WIN32)
+ #pragma pack(4)

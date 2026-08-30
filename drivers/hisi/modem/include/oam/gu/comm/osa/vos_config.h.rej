@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/include/oam/gu/comm/osa/vos_config.h	2026-08-30 19:58:46.634139000 +0800
++++ drivers/hisi/modem/include/oam/gu/comm/osa/vos_config.h	2026-08-30 19:11:27.725758000 +0800
+@@ -79,8 +79,8 @@
+ #define _V_CONFIG_H
+ 
+ #include "dopra_def.h"
+-#include "PsLogdef.h"
+-#include "product_config.h"
++#include "PsLogdef.h"
++#include "product_config.h"
+ 
+ #ifdef __cplusplus
+ #if __cplusplus

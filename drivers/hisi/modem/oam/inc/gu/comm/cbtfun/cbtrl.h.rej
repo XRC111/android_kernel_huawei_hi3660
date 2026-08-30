@@ -1,0 +1,14 @@
+--- drivers/hisi/modem/oam/inc/gu/comm/cbtfun/cbtrl.h	2026-08-30 19:58:47.047143100 +0800
++++ drivers/hisi/modem/oam/inc/gu/comm/cbtfun/cbtrl.h	2026-08-30 19:11:29.091668900 +0800
+@@ -52,9 +52,9 @@
+ /*****************************************************************************
+   1 头文件包含
+ *****************************************************************************/
+-#include "vos.h"
++#include "vos.h"
+ #if (OSA_CPU_CCPU == VOS_OSA_CPU)
+-#include "msp_diag_comm.h"
++#include "msp_diag_comm.h"
+ #endif
+ 
+ #ifdef __cplusplus

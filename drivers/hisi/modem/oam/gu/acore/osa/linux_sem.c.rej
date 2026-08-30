@@ -1,0 +1,21 @@
+--- drivers/hisi/modem/oam/gu/acore/osa/linux_sem.c	2026-08-30 19:58:46.929138400 +0800
++++ drivers/hisi/modem/oam/gu/acore/osa/linux_sem.c	2026-08-30 19:11:28.741554200 +0800
+@@ -71,12 +71,12 @@
+ /*                                                                           */
+ /*****************************************************************************/
+ 
+-#include "vos_config.h"
+-#include "v_sem.h"
+-#include "v_IO.h"
+-#include "v_task.h"
+-#include "v_int.h"
+-#include "v_private.h"
++#include "vos_config.h"
++#include "v_sem.h"
++#include "v_IO.h"
++#include "v_task.h"
++#include "v_int.h"
++#include "v_private.h"
+ 
+ 
+ 

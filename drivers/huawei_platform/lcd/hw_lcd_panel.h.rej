@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/lcd/hw_lcd_panel.h	2026-08-30 19:58:50.614140600 +0800
++++ drivers/huawei_platform/lcd/hw_lcd_panel.h	2026-08-30 19:11:33.288443600 +0800
+@@ -45,7 +45,7 @@
+ #define CABC_STILL_MODE	(2)
+ #define CABC_MOVING_MODE	(3)
+ 
+-#include "voltage/tps65132.h"
++#include "voltage/tps65132.h"
+ 
+ enum{
+ 	POWER_CTRL_BY_REGULATOR,

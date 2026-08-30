@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/dump/mdmap/dump_modem_hook.h	2026-08-30 19:58:45.900139900 +0800
++++ drivers/hisi/modem/drv/dump/mdmap/dump_modem_hook.h	2026-08-30 19:11:26.256204900 +0800
+@@ -55,7 +55,7 @@
+ 
+ #include <osl_types.h>
+ #include <osl_spinlock.h>
+-#include "mdrv_om_common.h"
++#include "mdrv_om_common.h"
+ 
+ struct dump_hook_s
+ {

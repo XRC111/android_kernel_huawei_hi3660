@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/pppid.h	2026-08-30 19:58:47.413144900 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/pppid.h	2026-08-30 19:11:30.403039800 +0800
+@@ -38,8 +38,8 @@
+ #endif
+ #endif
+ 
+-#include "PppInterface.h"
+-#include "vos.h"
++#include "PppInterface.h"
++#include "vos.h"
+ 
+ 
+ #pragma pack(4)

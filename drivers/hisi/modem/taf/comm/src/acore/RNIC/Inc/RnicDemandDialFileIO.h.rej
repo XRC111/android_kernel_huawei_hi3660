@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/RnicDemandDialFileIO.h	2026-08-30 19:58:47.758143100 +0800
++++ drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/RnicDemandDialFileIO.h	2026-08-30 19:11:31.490580300 +0800
+@@ -52,7 +52,7 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "dopra_def.h"
++#include "dopra_def.h"
+ #if (VOS_OS_VER == VOS_LINUX)
+ #include <linux/module.h>
+ #include <linux/proc_fs.h>

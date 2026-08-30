@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/drv/dump/comm/dump_config.h	2026-08-30 19:58:45.876138700 +0800
++++ drivers/hisi/modem/drv/dump/comm/dump_config.h	2026-08-30 19:11:25.810415100 +0800
+@@ -49,9 +49,9 @@
+ #ifndef __DUMP_CONFIG_H__
+ #define __DUMP_CONFIG_H__
+ 
+-#include "bsp_dump.h"
+-#include "drv_nv_id.h"
+-#include "drv_nv_def.h"
++#include "bsp_dump.h"
++#include "drv_nv_id.h"
++#include "drv_nv_def.h"
+ #ifdef BSP_CONFIG_PHONE_TYPE
+ #include "../../adrv/adrv.h"
+ #else

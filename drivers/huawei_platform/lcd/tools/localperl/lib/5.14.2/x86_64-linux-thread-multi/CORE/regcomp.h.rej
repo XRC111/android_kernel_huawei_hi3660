@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/lcd/tools/localperl/lib/5.14.2/x86_64-linux-thread-multi/CORE/regcomp.h	2026-08-30 19:58:53.748740300 +0800
++++ drivers/huawei_platform/lcd/tools/localperl/lib/5.14.2/x86_64-linux-thread-multi/CORE/regcomp.h	2026-08-30 19:11:33.454024900 +0800
+@@ -496,7 +496,7 @@
+ START_EXTERN_C
+ 
+ #ifdef PLUGGABLE_RE_EXTENSION
+-#include "re_nodes.h"
++#include "re_nodes.h"
+ #else
+ #include "regnodes.h"
+ #endif

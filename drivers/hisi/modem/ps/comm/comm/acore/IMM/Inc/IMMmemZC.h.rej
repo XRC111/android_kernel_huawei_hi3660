@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/IMM/Inc/IMMmemZC.h	2026-08-30 19:58:47.300142800 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/IMM/Inc/IMMmemZC.h	2026-08-30 19:11:30.087424800 +0800
+@@ -53,9 +53,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "PsTypeDef.h"
+-#include "product_config.h"
+-#include "ImmInterface.h"
++#include "PsTypeDef.h"
++#include "product_config.h"
++#include "ImmInterface.h"
+ 
+ #ifdef __cplusplus
+ #if __cplusplus

@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/oam/inc/lt/comm/diag/diag_common.h	2026-08-30 19:58:47.101136100 +0800
++++ drivers/hisi/modem/oam/inc/lt/comm/diag/diag_common.h	2026-08-30 19:11:29.311701200 +0800
+@@ -59,9 +59,9 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "vos.h"
+-#include "msp_diag.h"
+-#include "msp_debug.h"
++#include "vos.h"
++#include "msp_diag.h"
++#include "msp_debug.h"
+ 
+ /*****************************************************************************
+   2 macro

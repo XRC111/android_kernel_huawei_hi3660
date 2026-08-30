@@ -1,0 +1,15 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_fake_panel.c	2026-08-30 19:58:33.838141800 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_fake_panel.c	2026-08-30 19:11:17.587622300 +0800
+@@ -1,8 +1,8 @@
+-#include "hisi_fb.h"
+-#include "lcdkit_panel.h"
++#include "hisi_fb.h"
++#include "lcdkit_panel.h"
+ #include "lcdkit_disp.h"
+-#include "lcdkit_dbg.h"
+-#include "lcdkit_backlight_ic_common.h"
++#include "lcdkit_dbg.h"
++#include "lcdkit_backlight_ic_common.h"
+ #define LCDKIT_DTS_COMP_MIPI_FAKE_PANEL "auo_otm1901a_5p2_1080p_video_default"
+ 
+ static int lcdkit_fake_set_fastboot(struct platform_device* pdev)

@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/socp/socp_ind_delay.h	2026-08-30 19:58:46.311139700 +0800
++++ drivers/hisi/modem/drv/socp/socp_ind_delay.h	2026-08-30 19:11:27.569508100 +0800
+@@ -50,7 +50,7 @@
+ #define _SOCP_IND_DELAY_H
+ #include <product_config.h>
+ 
+-#include "osl_types.h"
++#include "osl_types.h"
+ 
+ #ifdef __cplusplus
+ extern "C"

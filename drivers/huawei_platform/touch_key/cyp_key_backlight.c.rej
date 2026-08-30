@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/touch_key/cyp_key_backlight.c	2026-08-30 19:58:55.764739100 +0800
++++ drivers/huawei_platform/touch_key/cyp_key_backlight.c	2026-08-30 19:11:33.803459800 +0800
+@@ -10,7 +10,7 @@
+ #include <linux/of_device.h>
+ #include <linux/sched.h>
+ #include <linux/timer.h>
+-#include "huawei_platform/sensor/huawei_key.h"
++#include "huawei_platform/sensor/huawei_key.h"
+ #ifdef CONFIG_FB
+ #include <linux/notifier.h>
+ #include <linux/fb.h>

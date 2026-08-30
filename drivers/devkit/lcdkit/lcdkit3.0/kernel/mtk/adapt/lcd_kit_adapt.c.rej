@@ -1,0 +1,21 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/adapt/lcd_kit_adapt.c	2026-08-30 19:58:34.642138400 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/adapt/lcd_kit_adapt.c	2026-08-30 19:11:18.458491300 +0800
+@@ -11,12 +11,12 @@
+ *
+ */
+ 
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_dbg.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_parse.h"
+-#include "lcd_kit_power.h"
+-#include "lcm_drv.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_dbg.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_parse.h"
++#include "lcd_kit_power.h"
++#include "lcm_drv.h"
+ 
+ extern struct LCM_UTIL_FUNCS lcm_util_mtk;
+ extern int do_lcm_vdo_lp_write(struct dsi_cmd_desc *write_table, unsigned int count);

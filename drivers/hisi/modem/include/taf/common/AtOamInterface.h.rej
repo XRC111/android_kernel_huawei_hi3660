@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/include/taf/common/AtOamInterface.h	2026-08-30 19:58:46.823143200 +0800
++++ drivers/hisi/modem/include/taf/common/AtOamInterface.h	2026-08-30 19:11:28.672858700 +0800
+@@ -52,10 +52,10 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "v_msg.h"
+-#include "siapppih.h"
+-#include "siapppb.h"
+-#include "siappstk.h"
++#include "v_msg.h"
++#include "siapppih.h"
++#include "siapppb.h"
++#include "siappstk.h"
+ #include "MnClient.h"
+ #include "MnCallApi.h"
+ 

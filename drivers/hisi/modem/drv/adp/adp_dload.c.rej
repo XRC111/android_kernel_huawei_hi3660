@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/adp/adp_dload.c	2026-08-30 19:58:45.647139300 +0800
++++ drivers/hisi/modem/drv/adp/adp_dload.c	2026-08-30 19:11:25.071728200 +0800
+@@ -46,7 +46,7 @@
+  *
+  */
+ 
+-#include "mdrv_dload.h"
++#include "mdrv_dload.h"
+ 
+ /*lint --e{715,818}*/
+ 

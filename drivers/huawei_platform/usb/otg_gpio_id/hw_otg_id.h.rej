@@ -1,0 +1,13 @@
+--- drivers/huawei_platform/usb/otg_gpio_id/hw_otg_id.h	2026-08-30 19:58:56.025739000 +0800
++++ drivers/huawei_platform/usb/otg_gpio_id/hw_otg_id.h	2026-08-30 19:11:33.928458900 +0800
+@@ -3,8 +3,8 @@
+ 
+ /* include platform head-file */
+ #if defined(CONFIG_DEC_USB)
+-#include "dwc_otg_dec.h"
+-#include "dwc_otg_cil.h"
++#include "dwc_otg_dec.h"
++#include "dwc_otg_cil.h"
+ #endif
+ 
+ 

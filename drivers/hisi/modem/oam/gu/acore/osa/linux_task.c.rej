@@ -1,0 +1,27 @@
+--- drivers/hisi/modem/oam/gu/acore/osa/linux_task.c	2026-08-30 19:58:46.932142000 +0800
++++ drivers/hisi/modem/oam/gu/acore/osa/linux_task.c	2026-08-30 19:11:28.774882200 +0800
+@@ -71,15 +71,15 @@
+ /*                                                                           */
+ /*****************************************************************************/
+ 
+-#include "vos_config.h"
+-#include "v_typdef.h"
+-#include "v_task.h"
+-#include "v_IO.h"
+-#include "v_int.h"
+-#include "vos_Id.h"
+-#include "v_sem.h"
+-#include "v_private.h"
+-#include "mdrv.h"
++#include "vos_config.h"
++#include "v_typdef.h"
++#include "v_task.h"
++#include "v_IO.h"
++#include "v_int.h"
++#include "vos_Id.h"
++#include "v_sem.h"
++#include "v_private.h"
++#include "mdrv.h"
+ 
+ #include <linux/kthread.h>
+ 

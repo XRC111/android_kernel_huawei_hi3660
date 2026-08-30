@@ -1,0 +1,22 @@
+--- drivers/hisi/modem/drv/dump/mdmap/dump_modem_save.c	2026-08-30 19:58:45.911140200 +0800
++++ drivers/hisi/modem/drv/dump/mdmap/dump_modem_save.c	2026-08-30 19:11:26.357320900 +0800
+@@ -54,13 +54,13 @@
+ #include <linux/timex.h>
+ #include <linux/rtc.h>
+ #include <linux/sched.h>
+-#include "dump_file.h"
+-#include "dump_print.h"
++#include "dump_file.h"
++#include "dump_print.h"
+ #include "dump_modem_save.h"
+-#include "dump_config.h"
+-#include "dump_cp_agent.h"
+-#include "dump_apr.h"
+-#include "dump_modem_area.h"
++#include "dump_config.h"
++#include "dump_cp_agent.h"
++#include "dump_apr.h"
++#include "dump_modem_area.h"
+ #include "dump_modem_rdr.h"
+ #include "dump_modem_mem.h"
+ 

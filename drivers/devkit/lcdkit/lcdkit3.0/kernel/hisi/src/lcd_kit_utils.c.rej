@@ -1,0 +1,32 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/lcd_kit_utils.c	2026-08-30 19:58:34.624138700 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/src/lcd_kit_utils.c	2026-08-30 19:11:18.359499500 +0800
+@@ -12,18 +12,18 @@
+ */
+ 
+ #include <linux/hisi/hw_cmdline_parse.h> //for runmode_is_factory
+-#include "global_ddr_map.h"
+-#include "hisi_fb.h"
+-#include "lcd_kit_utils.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_power.h"
+-#include "lcd_kit_parse.h"
+-#include "lcd_kit_adapt.h"
+-#include "lcd_kit_core.h"
+-#include "lcd_kit_effect.h"
++#include "global_ddr_map.h"
++#include "hisi_fb.h"
++#include "lcd_kit_utils.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_power.h"
++#include "lcd_kit_parse.h"
++#include "lcd_kit_adapt.h"
++#include "lcd_kit_core.h"
++#include "lcd_kit_effect.h"
+ #include "lcd_kit_sysfs_hs.h"
+-#include "voltage/ina231.h"
++#include "voltage/ina231.h"
+ #include <linux/ctype.h>
+ 
+ struct hisi_fb_data_type* dev_get_hisifd(struct device* dev)

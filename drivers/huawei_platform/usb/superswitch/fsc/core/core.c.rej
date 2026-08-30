@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/usb/superswitch/fsc/core/core.c	2026-08-30 19:58:56.255739400 +0800
++++ drivers/huawei_platform/usb/superswitch/fsc/core/core.c	2026-08-30 19:11:34.224818000 +0800
+@@ -13,7 +13,7 @@
+ #define HWLOG_TAG FUSB3601_TAG
+ HWLOG_REGIST();
+ #ifdef PLATFORM_ARM
+-#include "stdlib.h"
++#include "stdlib.h"
+ #endif
+ 
+ #define LATENCY_MAX 6000

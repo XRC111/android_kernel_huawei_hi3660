@@ -1,0 +1,23 @@
+--- drivers/hisi/modem/drv/dump/mem/dump_modem_field.h	2026-08-30 19:58:45.940140200 +0800
++++ drivers/hisi/modem/drv/dump/mem/dump_modem_field.h	2026-08-30 19:11:26.774942000 +0800
+@@ -50,13 +50,13 @@
+ #define __DUMP_FIELD_H__
+ 
+ #include <product_config.h>
+-#include "osl_types.h"
+-#include "osl_list.h"
+-#include "osl_spinlock.h"
+-#include "bsp_memmap.h"
+-#include "bsp_s_memory.h"
+-#include "bsp_dump.h"
+-#include "bsp_dump_mem.h"
++#include "osl_types.h"
++#include "osl_list.h"
++#include "osl_spinlock.h"
++#include "bsp_memmap.h"
++#include "bsp_s_memory.h"
++#include "bsp_dump.h"
++#include "bsp_dump_mem.h"
+ 
+ 
+ /* field number supported by area */

@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/anc_hs_module/anc_max14744/anc_max14744.c	2026-08-30 19:58:49.120156200 +0800
++++ drivers/huawei_platform/audio/anc_hs_module/anc_max14744/anc_max14744.c	2026-08-30 19:11:32.458181100 +0800
+@@ -48,7 +48,7 @@
+ #ifdef CONFIG_HUAWEI_DSM
+ #include <dsm_audio/dsm_audio.h>
+ #endif
+-#include "huawei_platform/audio/anc_max14744.h"
++#include "huawei_platform/audio/anc_max14744.h"
+ 
+ #define HWLOG_TAG anc_max14744
+ 

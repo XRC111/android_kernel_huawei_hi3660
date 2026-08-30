@@ -1,0 +1,13 @@
+--- include/linux/hisi/pm/pwrctrl_multi_dfs_stub.h	2026-08-30 19:59:28.673847800 +0800
++++ include/linux/hisi/pm/pwrctrl_multi_dfs_stub.h	2026-08-30 19:12:04.725443000 +0800
+@@ -4,8 +4,8 @@
+ /*
+  *  Stub Includes
+  */
+-#include "stdlib.h"
+-#include "stdio.h"
++#include "stdlib.h"
++#include "stdio.h"
+ #include "../../string.h"
+ 
+ /*

@@ -1,0 +1,21 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/adapt/lcd_kit_debug_hs.c	2026-08-30 19:58:34.596139800 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/adapt/lcd_kit_debug_hs.c	2026-08-30 19:11:18.072779200 +0800
+@@ -11,12 +11,12 @@
+ *
+ */
+ 
+-#include "hisi_fb.h"
+-#include "lcd_kit_common.h"
+-#include "lcd_kit_dbg.h"
+-#include "lcd_kit_disp.h"
+-#include "lcd_kit_parse.h"
+-#include "lcd_kit_power.h"
++#include "hisi_fb.h"
++#include "lcd_kit_common.h"
++#include "lcd_kit_dbg.h"
++#include "lcd_kit_disp.h"
++#include "lcd_kit_parse.h"
++#include "lcd_kit_power.h"
+ 
+ static bool dbg_panel_power_on(void);
+ 

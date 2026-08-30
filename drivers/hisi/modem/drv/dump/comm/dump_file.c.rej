@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/drv/dump/comm/dump_file.c	2026-08-30 19:58:45.880137600 +0800
++++ drivers/hisi/modem/drv/dump/comm/dump_file.c	2026-08-30 19:11:25.939470300 +0800
+@@ -50,9 +50,9 @@
+ #include <linux/syscalls.h>
+ #include <linux/kernel.h> 
+ #include <asm/string.h>
+-#include "bsp_rfile.h"
+-#include "osl_types.h"
+-#include "drv_comm.h"
++#include "bsp_rfile.h"
++#include "osl_types.h"
++#include "drv_comm.h"
+ #include "dump_print.h"
+ 
+ /*****************************************************************************

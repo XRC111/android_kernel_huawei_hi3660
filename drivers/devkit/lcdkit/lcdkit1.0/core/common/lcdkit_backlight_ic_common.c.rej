@@ -1,0 +1,11 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_backlight_ic_common.c	2026-08-30 19:58:33.854138100 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_backlight_ic_common.c	2026-08-30 19:11:17.291867100 +0800
+@@ -1,6 +1,6 @@
+ #include "../../core/common/hisi/lcdkit_bias_bl_utility.h"
+-#include "lcdkit_backlight_ic_common.h"
+-#include "lcdkit_dbg.h"
++#include "lcdkit_backlight_ic_common.h"
++#include "lcdkit_dbg.h"
+ #include "i2c-designware-core.h"
+ 
+ #if defined (CONFIG_HUAWEI_DSM)

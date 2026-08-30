@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/include/oam/gu/comm/osa/v_msg.h	2026-08-30 19:58:46.612145500 +0800
++++ drivers/hisi/modem/include/oam/gu/comm/osa/v_msg.h	2026-08-30 19:11:27.850753800 +0800
+@@ -80,7 +80,7 @@
+ #include "v_typdef.h"
+ #include "vos_config.h"
+ #include "v_blkMem.h"
+-#include "VosPidDef.h"
++#include "VosPidDef.h"
+ 
+ #ifdef __cplusplus
+ #if __cplusplus

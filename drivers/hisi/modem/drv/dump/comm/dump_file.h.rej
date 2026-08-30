@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/dump/comm/dump_file.h	2026-08-30 19:58:45.882139600 +0800
++++ drivers/hisi/modem/drv/dump/comm/dump_file.h	2026-08-30 19:11:25.974981700 +0800
+@@ -48,7 +48,7 @@
+ #ifndef __DUMP_FILE_H__
+ #define __DUMP_FILE_H__
+ 
+-#include "osl_types.h"
++#include "osl_types.h"
+ 
+ #define MODEM_DUMP_FILE_NAME_LENGTH           300
+ 

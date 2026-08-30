@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/ppp_init.h	2026-08-30 19:58:47.403139400 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/PPP/Inc/ppp_init.h	2026-08-30 19:11:30.519708600 +0800
+@@ -43,7 +43,7 @@
+   1 其他头文件包含
+ *****************************************************************************/
+ #include "../../PPP/Inc/ppp_public.h"
+-#include "LinuxInterface.h"
++#include "LinuxInterface.h"
+ 
+ #pragma pack(4)
+ 

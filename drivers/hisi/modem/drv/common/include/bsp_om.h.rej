@@ -1,0 +1,18 @@
+--- drivers/hisi/modem/drv/common/include/bsp_om.h	2026-08-30 19:58:45.770138500 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_om.h	2026-08-30 19:11:25.441528700 +0800
+@@ -57,13 +57,13 @@
+ #include <asm/string.h>
+ #endif
+ 
+-#include "product_config.h"
++#include "product_config.h"
+ #include "osl_common.h"
+ #include <stdarg.h>
+ #include "drv_comm.h"
+ 
+ #if defined(__OS_RTOSCK__) || defined(__OS_RTOSCK_SMP__)
+-#include "sre_shell.h"
++#include "sre_shell.h"
+ #endif
+ 
+ /*****************************************************************************

@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/drv/dump/comm/dump_exc_ctrl.c	2026-08-30 19:58:45.878137000 +0800
++++ drivers/hisi/modem/drv/dump/comm/dump_exc_ctrl.c	2026-08-30 19:11:25.874956800 +0800
+@@ -45,8 +45,8 @@
+  * POSSIBILITY OF SUCH DAMAGE.
+  *
+  */
+-#include "osl_types.h"
+-#include "bsp_dump.h"
++#include "osl_types.h"
++#include "bsp_dump.h"
+ #include "dump_print.h"
+ #include "dump_exc_ctrl.h"
+ dump_reboot_contex_s            g_dump_reboot_contex = {DUMP_CPU_BUTTON,DUMP_REASON_UNDEF};

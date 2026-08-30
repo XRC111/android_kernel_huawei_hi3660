@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/usb_audio_power/usb_audio_power.c	2026-08-30 19:58:49.341155000 +0800
++++ drivers/huawei_platform/audio/usb_audio_power/usb_audio_power.c	2026-08-30 19:11:32.873854200 +0800
+@@ -38,7 +38,7 @@
+ #ifdef CONFIG_BOOST_5V
+ #include <huawei_platform/power/boost_5v.h>
+ #endif
+-#include "huawei_platform/audio/usb_audio_power.h"
++#include "huawei_platform/audio/usb_audio_power.h"
+ 
+ #define HWLOG_TAG usb_audio_power
+ HWLOG_REGIST();

@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/oam/inc/lt/comm/ppm/OmHsicPpm.h	2026-08-30 19:58:47.130138200 +0800
++++ drivers/hisi/modem/oam/inc/lt/comm/ppm/OmHsicPpm.h	2026-08-30 19:11:29.623877500 +0800
+@@ -53,8 +53,8 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "mdrv.h"
++#include "vos.h"
++#include "mdrv.h"
+ 
+ #ifdef __cplusplus
+ #if __cplusplus

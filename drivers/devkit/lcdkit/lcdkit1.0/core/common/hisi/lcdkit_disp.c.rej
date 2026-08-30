@@ -1,0 +1,33 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_disp.c	2026-08-30 19:58:33.832140300 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_disp.c	2026-08-30 19:11:17.721082200 +0800
+@@ -1,20 +1,20 @@
+-#include "hisi_fb.h"
++#include "hisi_fb.h"
+ #include <huawei_ts_kit.h>
+ #include <linux/hisi/hw_cmdline_parse.h> //for runmode_is_factory
+-#include "lcdkit_effect.h"
+-#include "lcdkit_panel.h"
++#include "lcdkit_effect.h"
++#include "lcdkit_panel.h"
+ #include "lcdkit_disp.h"
+-#include "lcdkit_dbg.h"
++#include "lcdkit_dbg.h"
+ #include <soc_sctrl_interface.h>
+ #include <soc_acpu_baseaddr_interface.h>
+ #include <huawei_platform/log/log_jank.h>
+-#include "lcdkit_btb_check.h"
+-#include "lcdkit_ext.h"
+-#include "global_ddr_map.h"
+-#include "lcdkit_bias_ic_common.h"
+-#include "lcdkit_backlight_ic_common.h"
++#include "lcdkit_btb_check.h"
++#include "lcdkit_ext.h"
++#include "global_ddr_map.h"
++#include "lcdkit_bias_ic_common.h"
++#include "lcdkit_backlight_ic_common.h"
+ #if defined(CONFIG_LCDKIT_DRIVER)
+-#include "lcdkit_fb_util.h"
++#include "lcdkit_fb_util.h"
+ #endif
+ #include "../lcdkit_tp.h"
+ #include <huawei_platform/inputhub/sensor_feima_ext.h>

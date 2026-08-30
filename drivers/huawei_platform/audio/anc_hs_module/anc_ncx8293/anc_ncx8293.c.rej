@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/anc_hs_module/anc_ncx8293/anc_ncx8293.c	2026-08-30 19:58:49.130139300 +0800
++++ drivers/huawei_platform/audio/anc_hs_module/anc_ncx8293/anc_ncx8293.c	2026-08-30 19:11:32.372831800 +0800
+@@ -48,7 +48,7 @@
+ #ifdef CONFIG_HUAWEI_DSM
+ #include <dsm_audio/dsm_audio.h>
+ #endif
+-#include "huawei_platform/audio/anc_ncx8293.h"
++#include "huawei_platform/audio/anc_ncx8293.h"
+ 
+ #define HWLOG_TAG anc_ncx8293
+ 

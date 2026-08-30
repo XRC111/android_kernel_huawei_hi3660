@@ -1,0 +1,30 @@
+--- drivers/hisi/modem/drv/dump/mdmcp/dump_cphy_tcm.c	2026-08-30 19:58:45.925137000 +0800
++++ drivers/hisi/modem/drv/dump/mdmcp/dump_cphy_tcm.c	2026-08-30 19:11:26.435448500 +0800
+@@ -49,17 +49,17 @@
+ 
+ 
+ #include <product_config.h>
+-#include "osl_types.h"
+-#include "osl_bio.h"
+-#include "osl_io.h"
+-#include "bsp_rfile.h"
+-#include "bsp_dspload.h"
+-#include "bsp_dsp.h"
+-#include "bsp_ddr.h"
++#include "osl_types.h"
++#include "osl_bio.h"
++#include "osl_io.h"
++#include "bsp_rfile.h"
++#include "bsp_dspload.h"
++#include "bsp_dsp.h"
++#include "bsp_ddr.h"
+ #include "dump_cphy_tcm.h"
+-#include "dump_file.h"
+-#include "dump_print.h"
+-#include "dump_config.h"
++#include "dump_file.h"
++#include "dump_print.h"
++#include "dump_config.h"
+ 
+ 
+ /*****************************************************************************

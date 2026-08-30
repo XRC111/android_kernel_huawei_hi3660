@@ -1,0 +1,23 @@
+--- drivers/hisi/modem/drv/log/bsp_om_log.c	2026-08-30 19:58:46.071140700 +0800
++++ drivers/hisi/modem/drv/log/bsp_om_log.c	2026-08-30 19:11:26.991569600 +0800
+@@ -58,13 +58,13 @@
+ #include <linux/sched.h>
+ #include <linux/uaccess.h>
+ #include <linux/kthread.h>
+-#include "osl_sem.h"
+-#include "osl_spinlock.h"
+-#include "bsp_dump.h"
+-#include "bsp_trace.h"
+-#include "bsp_socp.h"
+-#include "bsp_ipc.h"
+-#include "bsp_hardtimer.h"
++#include "osl_sem.h"
++#include "osl_spinlock.h"
++#include "bsp_dump.h"
++#include "bsp_trace.h"
++#include "bsp_socp.h"
++#include "bsp_ipc.h"
++#include "bsp_hardtimer.h"
+ #include <bsp_modem_log.h>
+ #include "bsp_om_log.h"
+ 

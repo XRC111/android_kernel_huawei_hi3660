@@ -1,0 +1,30 @@
+--- drivers/hisi/modem/drv/rfile/rfile_balong.h	2026-08-30 19:58:46.259139400 +0800
++++ drivers/hisi/modem/drv/rfile/rfile_balong.h	2026-08-30 19:11:27.491382000 +0800
+@@ -96,17 +96,17 @@
+ #include <taskLib.h>
+ #endif /* end of __KERNEL__ */
+ 
+-#include "product_config.h"
+-#include "drv_comm.h"
+-#include "osl_types.h"
+-#include "osl_sem.h"
+-#include "osl_list.h"
+-#include "bsp_trace.h"
+-#include "mdrv_memory.h"
+-#include "bsp_icc.h"
+-#include "bsp_rfile.h"
++#include "product_config.h"
++#include "drv_comm.h"
++#include "osl_types.h"
++#include "osl_sem.h"
++#include "osl_list.h"
++#include "bsp_trace.h"
++#include "mdrv_memory.h"
++#include "bsp_icc.h"
++#include "bsp_rfile.h"
+ //#include "drv_onoff.h"
+-#include "bsp_reset.h"
++#include "bsp_reset.h"
+ 
+ 
+ #pragma pack(4)

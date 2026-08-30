@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/common/include/bsp_hds_cmd.h	2026-08-30 19:58:45.745138700 +0800
++++ drivers/hisi/modem/drv/common/include/bsp_hds_cmd.h	2026-08-30 19:11:25.323939300 +0800
+@@ -52,7 +52,7 @@
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+-#include "mdrv_hds.h"
++#include "mdrv_hds.h"
+ #ifdef __cplusplus
+ }
+ #endif

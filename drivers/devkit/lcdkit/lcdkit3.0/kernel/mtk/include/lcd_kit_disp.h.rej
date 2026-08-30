@@ -1,0 +1,11 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/include/lcd_kit_disp.h	2026-08-30 19:58:34.650137200 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/include/lcd_kit_disp.h	2026-08-30 19:11:18.581192000 +0800
+@@ -16,7 +16,7 @@
+ /***********************************************************
+ *macro definition
+ ***********************************************************/
+-#include "lcd_kit_common.h"
++#include "lcd_kit_common.h"
+ #include "lcd_kit_utils.h"
+ //#include "hisi_fb.h"
+ //#include "hisi_mipi_dsi.h"

@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/oam/lt/acore/cpm/cpm.c	2026-08-30 19:58:47.150141800 +0800
++++ drivers/hisi/modem/oam/lt/acore/cpm/cpm.c	2026-08-30 19:11:29.813419900 +0800
+@@ -58,10 +58,10 @@
+ /*****************************************************************************
+   1 头文件包含
+ *****************************************************************************/
+-#include "cpm.h"
+-#include "NVIM_Interface.h"
+-#include "mdrv.h"
+-#include "diag_api.h"
++#include "cpm.h"
++#include "NVIM_Interface.h"
++#include "mdrv.h"
++#include "diag_api.h"
+ 
+ /*****************************************************************************
+   2 全局变量定义

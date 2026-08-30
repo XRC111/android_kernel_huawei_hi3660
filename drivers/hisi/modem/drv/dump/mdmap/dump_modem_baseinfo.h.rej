@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/dump/mdmap/dump_modem_baseinfo.h	2026-08-30 19:58:45.893136600 +0800
++++ drivers/hisi/modem/drv/dump/mdmap/dump_modem_baseinfo.h	2026-08-30 19:11:26.134099400 +0800
+@@ -47,7 +47,7 @@
+  */
+ #ifndef __DUMP_MODM_BASEINFO_H__
+ #define __DUMP_MODM_BASEINFO_H__
+-#include "osl_types.h"
++#include "osl_types.h"
+ 
+ void dump_save_base_info(u32 mod_id, u32 arg1, u32 arg2, char *data, u32 length);
+ void dump_save_momdem_reset_baseinfo(u32 modid,char* name);

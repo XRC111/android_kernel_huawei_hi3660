@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/nvim/nv_crc.c	2026-08-30 19:58:46.126140100 +0800
++++ drivers/hisi/modem/drv/nvim/nv_crc.c	2026-08-30 19:11:27.069705700 +0800
+@@ -61,7 +61,7 @@
+ #include "nv_partition_img.h"
+ #include "nv_partition_bakup.h"
+ #include "NVIM_ResumeId.h"
+-#include "bsp_dump.h"
++#include "bsp_dump.h"
+ 
+ 
+ /* ¼ÆËã×Ö·û´®µÄCRC */

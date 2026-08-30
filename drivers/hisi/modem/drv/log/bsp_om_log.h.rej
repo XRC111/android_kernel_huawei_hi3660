@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/drv/log/bsp_om_log.h	2026-08-30 19:58:46.073139600 +0800
++++ drivers/hisi/modem/drv/log/bsp_om_log.h	2026-08-30 19:11:26.970805800 +0800
+@@ -49,8 +49,8 @@
+ #ifndef __BSP_OM_LOG_H__
+ #define __BSP_OM_LOG_H__
+ 
+-#include "bsp_trace.h"
+-#include "drv_comm.h"
++#include "bsp_trace.h"
++#include "drv_comm.h"
+ #include <linux/miscdevice.h>
+ #include <linux/wait.h>
+ #include <linux/spinlock.h>

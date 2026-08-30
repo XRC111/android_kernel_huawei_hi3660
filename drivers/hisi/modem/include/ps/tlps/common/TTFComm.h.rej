@@ -1,0 +1,21 @@
+--- drivers/hisi/modem/include/ps/tlps/common/TTFComm.h	2026-08-30 19:58:46.764146700 +0800
++++ drivers/hisi/modem/include/ps/tlps/common/TTFComm.h	2026-08-30 19:11:28.542657100 +0800
+@@ -60,14 +60,14 @@
+ /******************************************************************************
+   1 其他头文件包含
+ ******************************************************************************/
+-#include "vos.h"
+-#include "PsLogdef.h"
++#include "vos.h"
++#include "PsLogdef.h"
+ #include "PsCommonDef.h"
+ #include "PsLib.h"
+ #include "PsTypeDef.h"
+ #include "LPSCommon.h"
+-#include "product_config.h"
+-#include "msp_diag_comm.h"
++#include "product_config.h"
++#include "msp_diag_comm.h"
+ 
+ /******************************************************************************
+   2 宏定义

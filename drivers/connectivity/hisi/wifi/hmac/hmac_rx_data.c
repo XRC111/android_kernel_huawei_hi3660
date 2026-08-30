@@ -22,7 +22,7 @@ extern "C" {
 #include "oal_net.h"
 #include "hmac_frag.h"
 #include "hmac_11i.h"
-#include "mac_vap.h"
+#include "hmac_vap.h"
 #ifdef _PRE_WLAN_FEATURE_CUSTOM_SECURITY
 #include "hmac_custom_security.h"
 #endif

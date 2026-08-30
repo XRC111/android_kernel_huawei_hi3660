@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/nvim/nv_partition_img.c	2026-08-30 19:58:46.162138800 +0800
++++ drivers/hisi/modem/drv/nvim/nv_partition_img.c	2026-08-30 19:11:27.339529700 +0800
+@@ -60,7 +60,7 @@
+ #include "nv_index.h"
+ #include "nv_crc.h"
+ #include "nv_partition_img.h"
+-#include "bsp_dump.h"
++#include "bsp_dump.h"
+ 
+ extern struct nv_path_info_stru g_nv_path;
+ 

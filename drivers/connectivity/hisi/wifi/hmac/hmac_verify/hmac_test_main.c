@@ -25,7 +25,7 @@ extern "C" {
 #include "dmac_ext_if.h"
 #include "../hmac_vap.h"
 #include "dmac_vap.h"
-#include "mac_vap.h"
+#include "hmac_vap.h"
 #endif
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_HMAC_TEST_MAIN_C

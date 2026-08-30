@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/include/oam/comm/nvim/msp_nvim.h	2026-08-30 19:58:46.580138800 +0800
++++ drivers/hisi/modem/include/oam/comm/nvim/msp_nvim.h	2026-08-30 19:11:27.694508800 +0800
+@@ -50,7 +50,7 @@
+ #ifndef __MSP_NVIM_H__
+ #define __MSP_NVIM_H__
+ 
+-#include "vos.h"
++#include "vos.h"
+ #include "NVIM_Interface.h"
+ 
+ #ifdef __cplusplus

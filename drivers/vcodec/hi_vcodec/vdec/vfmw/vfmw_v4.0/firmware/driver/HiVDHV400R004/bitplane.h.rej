@@ -1,0 +1,13 @@
+--- drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiVDHV400R004/bitplane.h	2026-08-30 19:59:22.937232700 +0800
++++ drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiVDHV400R004/bitplane.h	2026-08-30 19:11:57.922368100 +0800
+@@ -5,8 +5,8 @@
+ extern "C" {
+ #endif
+ 
+-#include "public.h"
+-#include "vc1.h"
++#include "public.h"
++#include "vc1.h"
+ 
+ #define WAIT_NO_ISR_MAX 400
+ 

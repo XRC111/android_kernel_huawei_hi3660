@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/include/oam/lt/common/msp_service.h	2026-08-30 19:58:46.684151900 +0800
++++ drivers/hisi/modem/include/oam/lt/common/msp_service.h	2026-08-30 19:11:27.975753900 +0800
+@@ -61,7 +61,7 @@
+   1 Include Headfile
+ *****************************************************************************/
+ 
+-#include "vos.h"
++#include "vos.h"
+ #include "msp_diag_comm.h"
+ 
+ /*****************************************************************************

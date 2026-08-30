@@ -35,7 +35,7 @@
 #include "smu_ucode_xfer_cz.h"
 #include "gca/gfx_8_0_d.h"
 #include "gca/gfx_8_0_sh_mask.h"
-#include "smumgr.h"
+#include "cz_smumgr.h"
 
 #define SIZE_ALIGN_32(x)    (((x) + 31) / 32 * 32)
 

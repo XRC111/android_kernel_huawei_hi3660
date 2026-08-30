@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/RnicLinuxInterface.h	2026-08-30 19:58:47.778154300 +0800
++++ drivers/hisi/modem/taf/comm/src/acore/RNIC/Inc/RnicLinuxInterface.h	2026-08-30 19:11:31.584330300 +0800
+@@ -73,7 +73,7 @@
+ #include <gfp.h>
+ #include <linux/netlink.h>
+ #else
+-#include "Linuxstub.h"
++#include "Linuxstub.h"
+ #endif
+ 
+ /******************************************************************************

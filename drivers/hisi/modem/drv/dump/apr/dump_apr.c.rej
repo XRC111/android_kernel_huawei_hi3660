@@ -1,0 +1,44 @@
+--- drivers/hisi/modem/drv/dump/apr/dump_apr.c	2026-08-30 19:58:45.869140600 +0800
++++ drivers/hisi/modem/drv/dump/apr/dump_apr.c	2026-08-30 19:11:25.841666800 +0800
+@@ -67,25 +67,25 @@
+ #include <linux/wakelock.h>
+ #include <asm/string.h>
+ #include <asm/traps.h>
+-#include "product_config.h"
++#include "product_config.h"
+ #include <linux/syscalls.h>
+-#include "osl_types.h"
+-#include "osl_io.h"
+-#include "osl_bio.h"
+-#include "osl_malloc.h"
+-#include "bsp_dump.h"
+-#include "bsp_nvim.h"
+-#include "bsp_dump_mem.h"
+-#include "drv_nv_def.h"
+-#include "mdrv_om.h"
+-#include "drv_comm.h"
++#include "osl_types.h"
++#include "osl_io.h"
++#include "osl_bio.h"
++#include "osl_malloc.h"
++#include "bsp_dump.h"
++#include "bsp_nvim.h"
++#include "bsp_dump_mem.h"
++#include "drv_nv_def.h"
++#include "mdrv_om.h"
++#include "drv_comm.h"
+ #include <gunas_errno.h>
+-#include "dump_modem_area.h"
++#include "dump_modem_area.h"
+ #include "dump_apr.h"
+-#include "dump_print.h"
+-#include "dump_file.h"
+-#include "dump_config.h"
+-#include "dump_exc_ctrl.h"
++#include "dump_print.h"
++#include "dump_file.h"
++#include "dump_config.h"
++#include "dump_exc_ctrl.h"
+ 
+ 
+ 

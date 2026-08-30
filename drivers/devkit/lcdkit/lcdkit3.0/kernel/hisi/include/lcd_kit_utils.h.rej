@@ -1,0 +1,16 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/include/lcd_kit_utils.h	2026-08-30 19:58:34.611140000 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/hisi/include/lcd_kit_utils.h	2026-08-30 19:11:18.240790200 +0800
+@@ -14,10 +14,10 @@
+ #ifndef __LCD_KIT_UTILS_H_
+ #define __LCD_KIT_UTILS_H_
+ #include <linux/kernel.h>
+-#include "lcd_kit_common.h"
++#include "lcd_kit_common.h"
+ #include "lcd_kit_panel.h"
+-#include "lcd_kit_sysfs.h"
+-#include "lcd_kit_adapt.h"
++#include "lcd_kit_sysfs.h"
++#include "lcd_kit_adapt.h"
+ #include <linux/hisi/hw_cmdline_parse.h> //for runmode_is_factory
+ 
+ /*macro*/

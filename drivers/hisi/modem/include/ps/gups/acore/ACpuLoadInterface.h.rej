@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/include/ps/gups/acore/ACpuLoadInterface.h	2026-08-30 19:58:46.692143700 +0800
++++ drivers/hisi/modem/include/ps/gups/acore/ACpuLoadInterface.h	2026-08-30 19:11:28.007338900 +0800
+@@ -58,7 +58,7 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
++#include "vos.h"
+ 
+ 
+ #pragma pack(4)

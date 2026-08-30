@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/drv/adp/adp_om.c	2026-08-30 19:58:45.666138700 +0800
++++ drivers/hisi/modem/drv/adp/adp_om.c	2026-08-30 19:11:25.158328000 +0800
+@@ -46,9 +46,9 @@
+  *
+  */
+ 
+-#include "bsp_dump.h"
+-#include "bsp_trace.h"
+-#include "osl_irq.h"
++#include "bsp_dump.h"
++#include "bsp_trace.h"
++#include "osl_irq.h"
+ 
+ 
+ void mdrv_om_system_error(int mod_id, int arg1, int arg2, char * arg3, int arg3_len)

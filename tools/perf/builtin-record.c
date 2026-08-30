@@ -37,7 +37,7 @@
 #include "util/llvm-utils.h"
 #include "util/bpf-loader.h"
 #include "util/trigger.h"
-#include "asm/bug.h"
+#include "util/debug.h"
 
 #include <unistd.h>
 #include <sched.h>

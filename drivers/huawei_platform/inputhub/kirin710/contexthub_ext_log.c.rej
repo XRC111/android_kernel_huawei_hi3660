@@ -1,0 +1,9 @@
+--- drivers/huawei_platform/inputhub/kirin710/contexthub_ext_log.c	2026-08-30 19:58:50.476144000 +0800
++++ drivers/huawei_platform/inputhub/kirin710/contexthub_ext_log.c	2026-08-30 19:11:33.108218700 +0800
+@@ -1,5 +1,5 @@
+ #include <linux/err.h>
+-#include "linux/spinlock_types.h"
++#include "linux/spinlock_types.h"
+ #include <linux/types.h>
+ #include <linux/init.h>
+ #include <linux/device.h>

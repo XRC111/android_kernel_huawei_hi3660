@@ -1,0 +1,28 @@
+--- drivers/hisi/modem/include/oam/gu/comm/osa/vos.h	2026-08-30 19:58:46.630135800 +0800
++++ drivers/hisi/modem/include/oam/gu/comm/osa/vos.h	2026-08-30 19:11:27.819539200 +0800
+@@ -81,13 +81,13 @@
+ #include "dopra_def.h"
+ 
+ #if ((VOS_VXWORKS == VOS_OS_VER) || (VOS_RTOSCK == VOS_OS_VER) || (VOS_WIN32 == VOS_OS_VER))
+-#include "stdio.h"
++#include "stdio.h"
+ #endif
+ 
+ #include "vos_config.h"
+ #include "v_typdef.h"
+-#include "v_iddef.h"
+-#include "v_id.h"
++#include "v_iddef.h"
++#include "v_id.h"
+ #include "v_queue.h"
+ #include "v_msg.h"
+ #include "vos_Id.h"
+@@ -99,7 +99,7 @@
+ #include "v_IO.h"
+ #include "v_int.h"
+ #include "v_lib.h"
+-#include "VosTaskPrioDef.h"
++#include "VosTaskPrioDef.h"
+ 
+ #endif /* _VOS_H */
+ 

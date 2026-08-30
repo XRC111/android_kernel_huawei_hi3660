@@ -1,0 +1,23 @@
+--- drivers/hisi/modem/ps/comm/comm/acore/ND/NDSERVER/Inc/IpNdServer.h	2026-08-30 19:58:47.322141800 +0800
++++ drivers/hisi/modem/ps/comm/comm/acore/ND/NDSERVER/Inc/IpNdServer.h	2026-08-30 19:11:30.191608400 +0800
+@@ -52,13 +52,13 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "vos.h"
+-#include "PsTypeDef.h"
+-#include "ImmInterface.h"
+-#include "IpComm.h"
+-#include "IpIpmGlobal.h"
+-#include "AtNdisInterface.h"
+-#include "LUPQueue.h"
++#include "vos.h"
++#include "PsTypeDef.h"
++#include "ImmInterface.h"
++#include "IpComm.h"
++#include "IpIpmGlobal.h"
++#include "AtNdisInterface.h"
++#include "LUPQueue.h"
+ 
+ /*****************************************************************************
+   1.1 Cplusplus Announce

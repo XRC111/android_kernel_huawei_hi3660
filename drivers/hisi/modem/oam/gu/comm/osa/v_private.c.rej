@@ -1,0 +1,23 @@
+--- drivers/hisi/modem/oam/gu/comm/osa/v_private.c	2026-08-30 19:58:46.971141000 +0800
++++ drivers/hisi/modem/oam/gu/comm/osa/v_private.c	2026-08-30 19:11:28.978011900 +0800
+@@ -71,13 +71,13 @@
+ /*****************************************************************************/
+ 
+ 
+-#include "v_typdef.h"
+-#include "v_IO.h"
+-#include "v_int.h"
+-#include "vos_Id.h"
+-#include "v_sem.h"
+-#include "v_private.h"
+-#include "mdrv.h"
++#include "v_typdef.h"
++#include "v_IO.h"
++#include "v_int.h"
++#include "vos_Id.h"
++#include "v_sem.h"
++#include "v_private.h"
++#include "mdrv.h"
+ 
+ /*****************************************************************************
+     协议栈打印打点方式下的.C文件宏定义

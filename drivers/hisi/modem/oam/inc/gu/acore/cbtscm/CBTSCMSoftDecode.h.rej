@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/oam/inc/gu/acore/cbtscm/CBTSCMSoftDecode.h	2026-08-30 19:58:47.033144500 +0800
++++ drivers/hisi/modem/oam/inc/gu/acore/cbtscm/CBTSCMSoftDecode.h	2026-08-30 19:11:29.056137700 +0800
+@@ -52,9 +52,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "omringbuffer.h"
+-#include "msp_debug.h"
++#include "vos.h"
++#include "omringbuffer.h"
++#include "msp_debug.h"
+ 
+ 
+ #ifdef __cplusplus

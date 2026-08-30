@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/drv/dump/mdmcp/dump_cp_agent.h	2026-08-30 19:58:45.920140800 +0800
++++ drivers/hisi/modem/drv/dump/mdmcp/dump_cp_agent.h	2026-08-30 19:11:26.482330900 +0800
+@@ -47,7 +47,7 @@
+  */
+ #ifndef __DUMP_CP_AGENT_H__
+ #define __DUMP_CP_AGENT_H__
+-#include "osl_types.h"
++#include "osl_types.h"
+ 
+ #define OM_SYSCTRL_MAGIC              0x5B5C5C5B
+ 

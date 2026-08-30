@@ -1,0 +1,18 @@
+--- drivers/hisi/soundtrigger/soundtrigger_socdsp_mailbox.c	2026-08-30 19:58:48.665142300 +0800
++++ drivers/hisi/soundtrigger/soundtrigger_socdsp_mailbox.c	2026-08-30 19:11:32.058226600 +0800
+@@ -8,12 +8,12 @@
+ #include <linux/wakelock.h>
+ #include <linux/errno.h>
+ #include "../hi64xx_dsp/hi64xx_algo_interface.h"
+-#include "soundtrigger_socdsp_mailbox.h"
+-#include "hifi_lpp.h"
++#include "soundtrigger_socdsp_mailbox.h"
++#include "hifi_lpp.h"
+ #include "soundtrigger_socdsp_pcm.h"
+ #include "soundtrigger_event.h"
+ 
+-#include "drv_mailbox_cfg.h"
++#include "drv_mailbox_cfg.h"
+ 
+ struct completion start_msg_complete;
+ struct completion stop_msg_complete;

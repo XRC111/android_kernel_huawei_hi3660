@@ -1,0 +1,11 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_bias_ic_common.c	2026-08-30 19:58:33.857140800 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/lcdkit_bias_ic_common.c	2026-08-30 19:11:17.257520600 +0800
+@@ -1,6 +1,6 @@
+ #include "../../core/common/hisi/lcdkit_bias_bl_utility.h"
+-#include "lcdkit_bias_ic_common.h"
+-#include "lcdkit_dbg.h"
++#include "lcdkit_bias_ic_common.h"
++#include "lcdkit_dbg.h"
+ #if defined (CONFIG_HUAWEI_DSM)
+ #include <dsm/dsm_pub.h>
+ extern struct dsm_client *lcd_dclient;

@@ -15,7 +15,7 @@
 #include "evlist.h"
 #include "evsel.h"
 #include "debug.h"
-#include "asm/bug.h"
+#include "debug.h"
 #include <unistd.h>
 
 #include "parse-events.h"

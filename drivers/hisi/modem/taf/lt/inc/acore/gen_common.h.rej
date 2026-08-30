@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/taf/lt/inc/acore/gen_common.h	2026-08-30 19:58:48.268141200 +0800
++++ drivers/hisi/modem/taf/lt/inc/acore/gen_common.h	2026-08-30 19:11:31.838463200 +0800
+@@ -51,7 +51,7 @@
+ #define __GEN_COMMON_H__
+ 
+ 
+-#include "gen_msg.h"
++#include "gen_msg.h"
+ #include <string.h>
+ 
+ 

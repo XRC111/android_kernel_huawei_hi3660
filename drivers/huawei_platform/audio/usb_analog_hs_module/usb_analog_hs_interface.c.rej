@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/usb_analog_hs_module/usb_analog_hs_interface.c	2026-08-30 19:58:49.260141300 +0800
++++ drivers/huawei_platform/audio/usb_analog_hs_module/usb_analog_hs_interface.c	2026-08-30 19:11:32.641518400 +0800
+@@ -12,7 +12,7 @@
+ #include <linux/of_platform.h>
+ #include <linux/mutex.h>
+ 
+-#include "huawei_platform/audio/usb_analog_hs_interface.h"
++#include "huawei_platform/audio/usb_analog_hs_interface.h"
+ 
+ #define LOG_TAG "usb_analog_headset_interface"
+ 

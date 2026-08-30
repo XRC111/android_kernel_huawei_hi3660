@@ -1,0 +1,17 @@
+--- drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_fb_util_hs.c	2026-08-30 19:58:33.847142400 +0800
++++ drivers/devkit/lcdkit/lcdkit1.0/core/common/hisi/lcdkit_fb_util_hs.c	2026-08-30 19:11:17.634490500 +0800
+@@ -1,9 +1,9 @@
+-#include "hisi_fb.h"
+-#include "lcdkit_panel.h"
+-#include "lcdkit_dbg.h"
+-#include "hisi_fb_debug.h"
++#include "hisi_fb.h"
++#include "lcdkit_panel.h"
++#include "lcdkit_dbg.h"
++#include "hisi_fb_debug.h"
+ #include "lcdkit_disp.h"
+-#include "hisi_display_effect.h"
++#include "hisi_display_effect.h"
+ 
+ #define MAX_BUF 60
+ 

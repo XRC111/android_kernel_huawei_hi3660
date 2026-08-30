@@ -1,0 +1,11 @@
+--- drivers/devkit/tpkit/panel/ilitek_tddi/ilitek_firmware.c	2026-08-30 19:58:35.315137900 +0800
++++ drivers/devkit/tpkit/panel/ilitek_tddi/ilitek_firmware.c	2026-08-30 19:11:18.858429500 +0800
+@@ -29,7 +29,7 @@
+ #include "ilitek_flash.h"
+ 
+ #ifdef BOOT_FW_UPGRADE
+-#include "ilitek_fw.h"
++#include "ilitek_fw.h"
+ #endif
+ 
+ /* The size of firmware upgrade */

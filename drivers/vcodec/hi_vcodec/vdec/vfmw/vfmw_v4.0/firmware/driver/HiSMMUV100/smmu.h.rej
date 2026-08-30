@@ -1,0 +1,11 @@
+--- drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiSMMUV100/smmu.h	2026-08-30 19:59:22.928232700 +0800
++++ drivers/vcodec/hi_vcodec/vdec/vfmw/vfmw_v4.0/firmware/driver/HiSMMUV100/smmu.h	2026-08-30 19:11:57.792079300 +0800
+@@ -1,7 +1,7 @@
+ #ifndef __HIVDEC_SMMU_H__
+ #define __HIVDEC_SMMU_H__
+ 
+-#include "sysconfig.h"//for VDM_REG_PHY_ADDR, SCD_REG_PHY_ADDR, BPD_REG_PHY_ADDR
++#include "sysconfig.h"//for VDM_REG_PHY_ADDR, SCD_REG_PHY_ADDR, BPD_REG_PHY_ADDR
+ #include "../../../vfmw.h"
+ 
+ #define SMMU_OK     0

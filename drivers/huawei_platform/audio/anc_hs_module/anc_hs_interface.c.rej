@@ -1,0 +1,11 @@
+--- drivers/huawei_platform/audio/anc_hs_module/anc_hs_interface.c	2026-08-30 19:58:49.109145000 +0800
++++ drivers/huawei_platform/audio/anc_hs_module/anc_hs_interface.c	2026-08-30 19:11:32.573997300 +0800
+@@ -15,7 +15,7 @@
+ #include <linux/mutex.h>
+ #include <huawei_platform/log/hw_log.h>
+ 
+-#include "huawei_platform/audio/anc_hs_interface.h"
++#include "huawei_platform/audio/anc_hs_interface.h"
+ 
+ struct anc_hs_ops *g_anc_ops;
+ 

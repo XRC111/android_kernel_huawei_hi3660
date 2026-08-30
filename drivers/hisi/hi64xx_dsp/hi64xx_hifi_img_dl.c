@@ -41,7 +41,7 @@
 #include <linux/hisi/hi64xx/hi64xx_dsp_regs.h>
 
 #include "hi64xx_hifi_debug.h"
-#include "slimbus.h"
+#include "../slimbus/slimbus.h"
 #include "hi64xx_hifi_img_dl.h"
 
 /*lint -e750 -e838*/

@@ -26,7 +26,7 @@ extern "C" {
 #include "dmac_tx_bss_comm.h"
 #include "dmac_scan.h"
 #include "dmac_alg_if.h"
-#include "mac_vap.h"
+#include "dmac_vap.h"
 #include "dmac_11w.h"
 #include "dmac_dft.h"
 #include "dmac_mgmt_sta.h"

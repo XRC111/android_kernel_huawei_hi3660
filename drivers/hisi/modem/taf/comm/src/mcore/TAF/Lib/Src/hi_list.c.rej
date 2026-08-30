@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/taf/comm/src/mcore/TAF/Lib/Src/hi_list.c	2026-08-30 19:58:48.201139400 +0800
++++ drivers/hisi/modem/taf/comm/src/mcore/TAF/Lib/Src/hi_list.c	2026-08-30 19:11:31.721744600 +0800
+@@ -46,7 +46,7 @@
+ *
+ */
+ 
+-#include "hi_list.h"
++#include "hi_list.h"
+ 
+  /* Insert a new entry between two known consecutive entries.
+ This is only for internal list manipulation where we know

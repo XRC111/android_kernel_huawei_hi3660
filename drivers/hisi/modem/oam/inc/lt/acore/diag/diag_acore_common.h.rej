@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/oam/inc/lt/acore/diag/diag_acore_common.h	2026-08-30 19:58:47.087147300 +0800
++++ drivers/hisi/modem/oam/inc/lt/acore/diag/diag_acore_common.h	2026-08-30 19:11:29.233571800 +0800
+@@ -59,10 +59,10 @@
+ /*****************************************************************************
+   1 Include Headfile
+ *****************************************************************************/
+-#include "vos.h"
+-#include "blist.h"
+-#include "AppRrcInterface.h"
+-#include "msp_diag_comm.h"
++#include "vos.h"
++#include "blist.h"
++#include "AppRrcInterface.h"
++#include "msp_diag_comm.h"
+ #include  <linux/wakelock.h>
+ 
+ 

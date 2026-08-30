@@ -1,0 +1,22 @@
+--- drivers/hisi/modem/include/oam/gu/comm/osa/v_lib.h	2026-08-30 19:58:46.610146800 +0800
++++ drivers/hisi/modem/include/oam/gu/comm/osa/v_lib.h	2026-08-30 19:11:27.788252200 +0800
+@@ -80,15 +80,15 @@
+ #include "dopra_def.h"
+ #include "vos_config.h"
+ #include "v_typdef.h"
+-#include "string.h"
++#include "string.h"
+ 
+ #if (VOS_VXWORKS== VOS_OS_VER)
+-#include "stdio.h"
+-#include "stdlib.h"
++#include "stdio.h"
++#include "stdlib.h"
+ #endif
+ 
+ #if (VOS_RTOSCK == VOS_OS_VER)
+-#include "securec.h"
++#include "securec.h"
+ #endif
+ 
+ #ifdef __cplusplus

@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/oam/lt/comm/list/blist.c	2026-08-30 19:58:47.214140200 +0800
++++ drivers/hisi/modem/oam/lt/comm/list/blist.c	2026-08-30 19:11:29.955115500 +0800
+@@ -49,7 +49,7 @@
+ 
+ 
+ 
+-#include "blist.h"
++#include "blist.h"
+ 
+  /* Insert a new entry between two known consecutive entries.
+ This is only for internal list manipulation where we know

@@ -64,9 +64,9 @@
 #include "nv_debug.h"
 #include "nv_index.h"
 #include "nv_crc.h"
-#include "drv_nv_id.h"
-#include "drv_nv_def.h"
-#include "mdrv_rfile.h"
+#include "../../include/nv/tl/drv/drv_nv_id.h"
+#include "../../include/nv/tl/drv/drv_nv_def.h"
+#include "../../include/drv/acore/mdrv_rfile.h"
 
 NV_DEBUG_CFG_STRU              g_nv_debug_cfg;
 extern struct nv_global_ctrl_info_stru  g_nv_ctrl;

@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/ps/comm/comm/common/IP/Inc/TtfIpComm.h	2026-08-30 19:58:47.492142400 +0800
++++ drivers/hisi/modem/ps/comm/comm/common/IP/Inc/TtfIpComm.h	2026-08-30 19:11:30.720774200 +0800
+@@ -59,9 +59,9 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
+-#include "TTFComm.h"
+-#include "TtfDrvInterface.h"
++#include "vos.h"
++#include "TTFComm.h"
++#include "TtfDrvInterface.h"
+ 
+ #pragma pack(4)
+ 

@@ -25,7 +25,7 @@ extern "C" {
 #include "hmac_ext_if.h"
 #include "hmac_frag.h"
 #include "hmac_11i.h"
-#include "mac_vap.h"
+#include "hmac_vap.h"
 #ifdef _PRE_WLAN_FEATURE_ISOLATION
 #include "hmac_isolation.h"
 #endif

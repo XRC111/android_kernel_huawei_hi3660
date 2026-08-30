@@ -1,0 +1,17 @@
+--- drivers/hisi/modem/taf/lt/src/acore/at/at_lte_set_proc.c	2026-08-30 19:58:48.299141600 +0800
++++ drivers/hisi/modem/taf/lt/src/acore/at/at_lte_set_proc.c	2026-08-30 19:11:31.889458700 +0800
+@@ -46,10 +46,10 @@
+ *
+ */
+ /*lint -save -e537 -e958 -e718 -e746*/
+-#include "osm.h"
+-#include "gen_msg.h"
+-#include "at_lte_common.h"
+-#include "ATCmdProc.h"
++#include "osm.h"
++#include "gen_msg.h"
++#include "at_lte_common.h"
++#include "ATCmdProc.h"
+ 
+ /***************************************************************************** 
+  º¯ Êý Ãû  : atSetTmodePara

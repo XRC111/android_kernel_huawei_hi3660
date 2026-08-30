@@ -38,7 +38,7 @@
 #include "hi3630_log.h"
 #include "hi3630_asp_common.h"
 #include "hi3xxx_asp_dma.h"
-#include "asp_dma.h"
+#include "hi3xxx_asp_dma.h"
 #include "hisi_pcm_hifi.h"
 #include "hifi_lpp.h"
 #include "huawei_platform/log/imonitor.h"

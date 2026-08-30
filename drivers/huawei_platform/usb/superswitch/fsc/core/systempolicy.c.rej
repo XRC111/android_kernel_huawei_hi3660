@@ -1,0 +1,13 @@
+--- drivers/huawei_platform/usb/superswitch/fsc/core/systempolicy.c	2026-08-30 19:58:56.285738800 +0800
++++ drivers/huawei_platform/usb/superswitch/fsc/core/systempolicy.c	2026-08-30 19:11:34.282291700 +0800
+@@ -11,8 +11,8 @@
+ #include "platform.h"
+ 
+ #ifdef FSC_HAVE_USBHID
+-#include "usbd_hid.h"
+-#include "hostcomm.h"
++#include "usbd_hid.h"
++#include "hostcomm.h"
+ #endif /* FSC_HAVE_USBHID */
+ 
+ /* Character buffer for UART receive messages.  Used for debugging, etc. */

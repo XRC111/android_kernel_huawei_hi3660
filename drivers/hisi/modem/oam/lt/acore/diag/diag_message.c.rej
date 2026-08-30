@@ -1,0 +1,21 @@
+--- drivers/hisi/modem/oam/lt/acore/diag/diag_message.c	2026-08-30 19:58:47.176143200 +0800
++++ drivers/hisi/modem/oam/lt/acore/diag/diag_message.c	2026-08-30 19:11:29.923862500 +0800
+@@ -48,12 +48,12 @@
+ 
+ 
+ 
+-#include "diag_common.h"
+-#include "SCMProc.h"
+-#include "diag_api.h"
+-#include "diag_cfg.h"
+-#include "diag_debug.h"
+-#include "soc_socp_adapter.h"
++#include "diag_common.h"
++#include "SCMProc.h"
++#include "diag_api.h"
++#include "diag_cfg.h"
++#include "diag_debug.h"
++#include "soc_socp_adapter.h"
+ 
+ #define    THIS_FILE_ID        MSP_FILE_ID_DIAG_MESSAGE_C
+ 

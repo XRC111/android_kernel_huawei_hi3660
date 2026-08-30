@@ -1,0 +1,16 @@
+--- drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/include/lcd_kit_utils.h	2026-08-30 19:58:34.655138000 +0800
++++ drivers/devkit/lcdkit/lcdkit3.0/kernel/mtk/include/lcd_kit_utils.h	2026-08-30 19:11:18.640762000 +0800
+@@ -14,10 +14,10 @@
+ #ifndef __LCD_KIT_UTILS_H_
+ #define __LCD_KIT_UTILS_H_
+ #include <linux/kernel.h>
+-#include "lcd_kit_common.h"
++#include "lcd_kit_common.h"
+ #include "lcd_kit_panel.h"
+-#include "lcd_kit_sysfs.h"
+-#include "lcd_kit_adapt.h"
++#include "lcd_kit_sysfs.h"
++#include "lcd_kit_adapt.h"
+ 
+ /*macro*/
+ /*default panel*/

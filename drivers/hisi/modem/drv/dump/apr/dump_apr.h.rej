@@ -1,0 +1,15 @@
+--- drivers/hisi/modem/drv/dump/apr/dump_apr.h	2026-08-30 19:58:45.871139200 +0800
++++ drivers/hisi/modem/drv/dump/apr/dump_apr.h	2026-08-30 19:11:25.747923800 +0800
+@@ -48,9 +48,9 @@
+ #ifndef __APR_MODEM_H__
+ #define __APR_MODEM_H__
+ 
+-#include "osl_types.h"
+-#include "bsp_dump.h"
+-#include "bsp_dump_mem.h"
++#include "osl_types.h"
++#include "bsp_dump.h"
++#include "bsp_dump_mem.h"
+ 
+ typedef struct module_info
+ {

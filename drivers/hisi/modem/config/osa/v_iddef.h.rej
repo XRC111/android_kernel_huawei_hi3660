@@ -1,0 +1,13 @@
+--- drivers/hisi/modem/config/osa/v_iddef.h	2026-08-30 19:58:45.554140500 +0800
++++ drivers/hisi/modem/config/osa/v_iddef.h	2026-08-30 19:11:25.040514800 +0800
+@@ -73,8 +73,8 @@
+ #ifndef  _V_IDDEF_H
+ #define  _V_IDDEF_H
+ 
+-#include "v_typdef.h"
+-#include "product_config.h"
++#include "v_typdef.h"
++#include "product_config.h"
+ 
+ 
+ #ifdef __cplusplus

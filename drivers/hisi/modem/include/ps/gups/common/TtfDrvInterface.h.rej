@@ -1,0 +1,11 @@
+--- drivers/hisi/modem/include/ps/gups/common/TtfDrvInterface.h	2026-08-30 19:58:46.727149600 +0800
++++ drivers/hisi/modem/include/ps/gups/common/TtfDrvInterface.h	2026-08-30 19:11:28.194838400 +0800
+@@ -52,7 +52,7 @@
+ /*****************************************************************************
+   1 其他头文件包含
+ *****************************************************************************/
+-#include "vos.h"
++#include "vos.h"
+ #include "TtfLinkInterface.h"
+ 
+ #ifdef __cplusplus

@@ -1,0 +1,120 @@
+name: Build Clean 4.9.148 + KSU
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish_release:
+        description: publish release
+        type: boolean
+        default: false
+      release_tag:
+        description: release tag
+        required: false
+        default: v4.9.148-H9-ksu-susfs
+      enable_ksu:
+        description: integrate KernelSU (manual hooks)
+        type: boolean
+        default: false
+  push:
+    branches: [ clean-4.9.148 ]
+    tags: [ 'v*' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 300
+    steps:
+      - name: Checkout (branch head contains base kernel + .github scripts)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libncurses-dev flex bison libssl-dev libelf-dev bc u-boot-tools device-tree-compiler zip wget
+
+      - name: Install AOSP GCC 4.9
+        run: |
+          cd /tmp
+          git clone --depth 1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git gcc49
+          /tmp/gcc49/bin/aarch64-linux-android-gcc --version
+
+      - name: Apply KernelSU + SUSFS
+        if: inputs.enable_ksu
+        run: |
+          git show ede2147b69b584687b1e52c032d7abe471d25408 > /tmp/ksu.patch
+          git apply --exclude=arch/arm64/configs/Pangu_Kirin960_defconfig --exclude=drivers/gpu/drm/nouveau/nvkm/subdev/i2c/aux.c --exclude=drivers/gpu/drm/nouveau/nvkm/subdev/i2c/aux.h /tmp/ksu.patch || echo "WARN: KSU patch partially failed"
+          ls drivers/kernelsu/Kconfig include/linux/susfs.h fs/susfs.c
+
+      - name: Fix drivers/Kconfig for 4.9.148
+        if: inputs.enable_ksu
+        run: |
+          # KSU patch 的 Kconfig 改动基于 4.9.194 结构，在 148 上会插入错位
+          # （endmenu/menu 不配对）。还原后用追加方式（KSU Kconfig 自带 menuconfig）。
+          git checkout -- drivers/Kconfig
+          echo 'source "drivers/kernelsu/Kconfig"' >> drivers/Kconfig
+          grep -n 'kernelsu' drivers/Kconfig
+          tail -3 drivers/Kconfig
+
+      - name: Setup defconfig (copy merge -> Pangu)
+        run: |
+          cp arch/arm64/configs/merge_hi3660_defconfig arch/arm64/configs/Pangu_Kirin960_defconfig
+          echo 'defconfig ready'
+
+      - name: Enable KSU in defconfig
+        if: inputs.enable_ksu
+        run: |
+          DEFCONF=arch/arm64/configs/Pangu_Kirin960_defconfig
+          if ! grep -q CONFIG_KSU "$DEFCONF"; then printf '\n# KernelSU\nCONFIG_KSU=y\nCONFIG_KSU_DEBUG=y\nCONFIG_KSU_SUSFS=y\nCONFIG_KSU_SUSFS_AUTO_ADD_SUS_BIND_MOUNT=y\nCONFIG_KSU_SUSFS_SUS_MOUNT=y\nCONFIG_KSU_SUSFS_AUTO_ADD_SUS_KSU_DEFAULT_MOUNT=y\nCONFIG_KSU_SUSFS_AUTO_ADD_TRY_UMOUNT_FOR_BIND_MOUNT=y\nCONFIG_KSU_SUSFS_TRY_UMOUNT=y\nCONFIG_KSU_SUSFS_ENABLE_LOG=y\nCONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS=y\nCONFIG_KSU_SUSFS_OPEN_REDIRECT=y\nCONFIG_KSU_SUSFS_SPOOF_PROC_CMDLINE=y\nCONFIG_KSU_SUSFS_SPOOF_UNAME=y\nCONFIG_KSU_SUSFS_SUS_KSTAT=y\nCONFIG_KSU_SUSFS_SUS_OVERLAYFS=y\nCONFIG_KSU_SUSFS_SUS_PATH=y\nCONFIG_KSU_SUSFS_SUS_SU=y\n' >> "$DEFCONF"; fi
+          grep -c CONFIG_KSU "$DEFCONF"
+
+      - name: Normalize line endings
+        run: |
+          find . -path './.git' -prune -o -type f \( -name 'Kconfig' -o -name '*.config' -o -name '*.sh' -o -name '*.pl' -o -name '*.py' -o -name 'Makefile' \) -exec sed -i 's/\r$//' {} +
+
+      - name: Build kernel
+        run: |
+          export ARCH=arm64
+          export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
+          make Pangu_Kirin960_defconfig
+          make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
+
+      - name: Package boot.img
+        run: |
+          if [ "${{ inputs.enable_ksu }}" = "true" ]; then OUT=kernel-pangu-h9-4.9.148-ksu-susfs.img; else OUT=kernel-pangu-h9-4.9.148.img; fi
+          python3 .github/scripts/make_huawei_bootimg.py arch/arm64/boot/Image "$OUT"
+          zip -j kernel-pangu-h9-ksu-susfs.zip "$OUT"
+          ls -la "$OUT"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel-image
+          path: kernel-pangu-h9-ksu-susfs.zip
+          if-no-files-found: warn
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v') || inputs.publish_release
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: kernel-image
+      - name: Unzip
+        run: |
+          unzip -o kernel-pangu-h9-ksu-susfs.zip || true
+          ls -la *.img
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag || github.ref_name }}
+          files: kernel-pangu-h9-4.9.148-ksu-susfs.img
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

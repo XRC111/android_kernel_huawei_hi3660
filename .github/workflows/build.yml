@@ -1,0 +1,58 @@
+name: Build MHA HM2 ReSukiSU
+
+on:
+  push:
+    branches: [ mha-hm2-resuki ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 300
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libncurses-dev flex bison libssl-dev libelf-dev bc u-boot-tools device-tree-compiler zip wget
+
+      - name: Install AOSP GCC 4.9
+        run: |
+          cd /tmp
+          git clone --depth 1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git gcc49
+          /tmp/gcc49/bin/aarch64-linux-android-gcc --version | head -1
+
+      - name: Inject ReSukiSU
+        run: |
+          curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
+          ls -la drivers/ | grep -i ksu || echo "check ksu dir"
+          grep -r "ksu_handle" fs/exec.c | head -2 || true
+
+      - name: Fix script permissions
+        run: |
+          find . -name '*.sh' -exec chmod +x {} \;
+
+      - name: Build kernel
+        run: |
+          export ARCH=arm64
+          export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
+          make merge_hi3660_defconfig
+          make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
+
+      - name: Package boot.img
+        run: |
+          python3 .github/scripts/make_huawei_bootimg.py arch/arm64/boot/Image kernel-mha-hm2-resuki.img
+          zip -j kernel-mha-hm2-resuki.zip kernel-mha-hm2-resuki.img
+          ls -la kernel-mha-hm2-resuki.img
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel-mha-hm2-resuki
+          path: kernel-mha-hm2-resuki.zip
+          if-no-files-found: warn

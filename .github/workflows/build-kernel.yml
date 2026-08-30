@@ -70,6 +70,11 @@ jobs:
           if ! grep -q CONFIG_KSU "$DEFCONF"; then printf '\n# KernelSU\nCONFIG_KSU=y\nCONFIG_KSU_DEBUG=y\nCONFIG_KSU_SUSFS=y\nCONFIG_KSU_SUSFS_AUTO_ADD_SUS_BIND_MOUNT=y\nCONFIG_KSU_SUSFS_SUS_MOUNT=y\nCONFIG_KSU_SUSFS_AUTO_ADD_SUS_KSU_DEFAULT_MOUNT=y\nCONFIG_KSU_SUSFS_AUTO_ADD_TRY_UMOUNT_FOR_BIND_MOUNT=y\nCONFIG_KSU_SUSFS_TRY_UMOUNT=y\nCONFIG_KSU_SUSFS_ENABLE_LOG=y\nCONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS=y\nCONFIG_KSU_SUSFS_OPEN_REDIRECT=y\nCONFIG_KSU_SUSFS_SPOOF_PROC_CMDLINE=y\nCONFIG_KSU_SUSFS_SPOOF_UNAME=y\nCONFIG_KSU_SUSFS_SUS_KSTAT=y\nCONFIG_KSU_SUSFS_SUS_OVERLAYFS=y\nCONFIG_KSU_SUSFS_SUS_PATH=y\nCONFIG_KSU_SUSFS_SUS_SU=y\n' >> "$DEFCONF"; fi
           grep -c CONFIG_KSU "$DEFCONF"
 
+      - name: Fix script permissions (Windows tar lost +x)
+        run: |
+          find . -name '*.sh' -exec chmod +x {} \;
+          find . -path './scripts/*' -type f ! -name '*.c' ! -name '*.h' ! -name '*.pl' -exec chmod +x {} \; 2>/dev/null || true
+
       - name: Normalize line endings
         run: |
           find . -path './.git' -prune -o -type f \( -name 'Kconfig' -o -name '*.config' -o -name '*.sh' -o -name '*.pl' -o -name '*.py' -o -name 'Makefile' \) -exec sed -i 's/\r$//' {} +

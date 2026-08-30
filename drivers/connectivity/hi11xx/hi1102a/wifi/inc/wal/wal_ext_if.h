@@ -15,7 +15,7 @@ extern "C" {
 *****************************************************************************/
 #include "oal_types.h"
 #include "oal_schedule.h"
-#include "wlan_types.h"
+#include "../wlan_types.h"
 
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_WAL_EXT_IF_H

@@ -17,7 +17,7 @@
 #include <linux/irqdomain.h>
 #include <linux/irq.h>
 
-#include "msm_drv.h"
+#include "../../msm_drv.h"
 #include "mdp5_kms.h"
 
 /*

@@ -11,7 +11,7 @@
 *
 */
 
-#include "hisi_fb.h"
+#include "../hisi_fb.h"
 #include <huawei_platform/touthscreen/huawei_touchscreen.h>
 #include <huawei_platform/log/log_jank.h>
 #include "include/lcd_common.h"

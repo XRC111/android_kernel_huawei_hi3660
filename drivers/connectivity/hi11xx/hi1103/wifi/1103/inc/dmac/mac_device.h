@@ -16,12 +16,12 @@ extern "C" {
 #include "oal_ext_if.h"
 #include "oal_workqueue.h"
 #include "oam_ext_if.h"
-#include "wlan_spec.h"
-#include "wlan_mib.h"
+#include "../wlan_spec.h"
+#include "../wlan_mib.h"
 #include "hal_ext_if.h"
 #include "mac_regdomain.h"
 #include "mac_frame.h"
-#include "wlan_types.h"
+#include "../wlan_types.h"
 
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_MAC_DEVICE_H

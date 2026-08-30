@@ -29,12 +29,12 @@ txOHmYcbA60Bs63+OGKQNF92o6GMJhpCg+VxHAv4Rd44IpFVJFtpSg7N99NR2w==*/
 #define __DIVX3_VFMW_H__
 
 
-#include "basedef.h"
-#include "public.h"
+#include "../basedef.h"
+#include "../public.h"
 
-#include "bitstream.h"
-#include "syn_cmn.h"
-#include "vdm_hal.h"
+#include "../bitstream.h"
+#include "../syn_cmn.h"
+#include "../vdm_hal.h"
 
 
 #define DIVX3_VFMW_MAX_PIC_WIDTH   127 //unit: MB

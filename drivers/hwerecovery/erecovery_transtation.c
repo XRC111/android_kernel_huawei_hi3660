@@ -20,7 +20,7 @@
 #include <linux/errno.h>
 #include "erecovery_transtation.h"
 #include <chipset_common/hwerecovery/erecovery.h>
-#include <erecovery_common.h>
+#include "erecovery_common.h"
 #ifdef GTEST
 #define static
 #define inline

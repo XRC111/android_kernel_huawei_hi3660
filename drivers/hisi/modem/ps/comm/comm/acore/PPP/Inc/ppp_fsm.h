@@ -33,8 +33,8 @@
 #define __PPP_FSM_H__
 
 #include "vos.h"
-#include "PPP/Inc/ppp_mbuf.h"
-#include "PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_mbuf.h"
+#include "../../PPP/Inc/ppp_public.h"
 
 #pragma pack(4)
 

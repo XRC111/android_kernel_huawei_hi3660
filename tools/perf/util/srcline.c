@@ -4,9 +4,9 @@
 
 #include <linux/kernel.h>
 
-#include "util/dso.h"
-#include "util/util.h"
-#include "util/debug.h"
+#include "../util/dso.h"
+#include "../util/util.h"
+#include "../util/debug.h"
 
 #include "symbol.h"
 

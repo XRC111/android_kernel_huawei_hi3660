@@ -1,7 +1,7 @@
 #ifndef _PERF_BITOPS_H
 #define _PERF_BITOPS_H
 
-#include <string.h>
+#include "string.h"
 #include <linux/bitops.h>
 #include <stdlib.h>
 

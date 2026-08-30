@@ -40,17 +40,17 @@
 #include <hnd_armtrap.h>
 #include <hnd_cons.h>
 #endif /* defined(DHD_DEBUG) */
-#include <dngl_stats.h>
+#include "dngl_stats.h"
 #include <pcie_core.h>
-#include <dhd.h>
-#include <dhd_bus.h>
-#include <dhd_proto.h>
-#include <dhd_dbg.h>
+#include "dhd.h"
+#include "dhd_bus.h"
+#include "dhd_proto.h"
+#include "dhd_dbg.h"
 #include <dhdioctl.h>
 #include <bcmmsgbuf.h>
 #include <pcicfg.h>
-#include <dhd_pcie.h>
-#include <dhd_linux.h>
+#include "dhd_pcie.h"
+#include "dhd_linux.h"
 #ifdef DHD_WAKE_STATUS
 #include <linux/wakeup_reason.h>
 #endif

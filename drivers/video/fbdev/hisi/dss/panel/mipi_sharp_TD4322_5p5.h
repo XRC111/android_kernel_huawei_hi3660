@@ -1,4 +1,4 @@
-#include "hisi_fb.h"
+#include "../hisi_fb.h"
 
 #ifndef MIPI_SHARP_TD4322_5P5
 #define MIPI_SHARP_TD4322_5P5

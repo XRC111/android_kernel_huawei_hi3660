@@ -19,7 +19,7 @@
 #include <linux/of.h>
 #include <linux/raid/pq.h>
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
-#include <hisi_charging_core.h>
+#include "hisi_charging_core.h"
 
 #ifdef CONFIG_HUAWEI_PLATFORM
 #include <huawei_platform/log/hw_log.h>

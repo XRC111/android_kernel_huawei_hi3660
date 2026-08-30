@@ -10,7 +10,7 @@
 #ifndef ANC_NCX8293
 #define ANC_NCX8293
 
-#include "huawei_platform/audio/anc_hs_interface.h"
+#include "../../huawei_platform/audio/anc_hs_interface.h"
 
 #define ANC_HS_ENABLE_CHARGE    0
 #define ANC_HS_DISABLE_CHARGE   1

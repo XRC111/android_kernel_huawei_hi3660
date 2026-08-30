@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "utils.h"
+#include "../utils.h"
 #include <sched.h>
 
 #define READ_FD 0

@@ -13,7 +13,7 @@ extern "C" {
 /*****************************************************************************
   1 其他头文件包含
 *****************************************************************************/
-#include "platform_spec.h"
+#include "../platform_spec.h"
 #include "oal_types.h"
 #include "oal_mm.h"
 #include "oal_util.h"

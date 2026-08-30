@@ -53,8 +53,8 @@
 extern "C" {
 #endif
 
-#include <bsp_shared_ddr.h>
-#include <of.h>
+#include "bsp_shared_ddr.h"
+#include "of.h"
 #if defined(__OS_VXWORKS__) || defined(__OS_RTOSCK__) || defined(__OS_RTOSCK_SMP__)
 #include <bsp_dpm.h>
 #include <mdrv_dsp.h>

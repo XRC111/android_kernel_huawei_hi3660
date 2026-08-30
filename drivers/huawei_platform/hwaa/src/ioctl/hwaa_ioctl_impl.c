@@ -5,14 +5,14 @@
  * Author: xuejikan 370596
  * Create: 2018-12-10
  */
-#include "inc/ioctl/hwaa_ioctl_impl.h"
+#include "../../inc/ioctl/hwaa_ioctl_impl.h"
 #include <securec.h>
 #include "huawei_platform/hwaa/hwaa_ioctl.h"
-#include "inc/ioctl/hwaa_user_key.h"
-#include "inc/base/hwaa_utils.h"
-#include "inc/base/hwaa_define.h"
-#include "inc/base/hwaa_utils.h"
-#include "inc/tee/hwaa_adapter.h"
+#include "../../inc/ioctl/hwaa_user_key.h"
+#include "../../inc/base/hwaa_utils.h"
+#include "../../inc/base/hwaa_define.h"
+#include "../../inc/base/hwaa_utils.h"
+#include "../../inc/tee/hwaa_adapter.h"
 
 void init_user(struct hwaa_init_user_t *iusr)
 {

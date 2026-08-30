@@ -67,8 +67,8 @@
 
 #include <linux/etherdevice.h>
 #include <net/mac80211.h>
-#include "iwl-io.h"
-#include "iwl-prph.h"
+#include "../iwl-io.h"
+#include "../iwl-prph.h"
 #include "fw-api.h"
 #include "mvm.h"
 #include "time-event.h"

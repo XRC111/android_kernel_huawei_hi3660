@@ -10,11 +10,11 @@ KH5iRSZRm6xUK3S9k/zgZwAgkpLD1yFlD2RD9hrEHgxVIV66bBtzLvJluDB93w==*/
 #ifndef _VC1_HEADER_
 #define _VC1_HEADER_
 
-#include    "basedef.h"
-#include    "public.h"
-#include    "bitstream.h"
-#include	"vdm_hal.h"
-#include    "syn_cmn.h"
+#include "../basedef.h"
+#include "../public.h"
+#include "../bitstream.h"
+#include "../vdm_hal.h"
+#include "../syn_cmn.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -30,25 +30,25 @@
 /* #define DEBUG    1 */
 #include <linux/kernel.h>
 #include <linux/dma-mapping.h>
-#include <mali_kbase.h>
-#include <mali_midg_regmap.h>
+#include "mali_kbase.h"
+#include "mali_midg_regmap.h"
 #if defined(CONFIG_MALI_GATOR_SUPPORT)
-#include <mali_kbase_gator.h>
+#include "mali_kbase_gator.h"
 #endif
-#include <mali_kbase_tlstream.h>
+#include "mali_kbase_tlstream.h"
 #include <mali_kbase_instr_defs.h>
-#include <mali_kbase_debug.h>
+#include "mali_kbase_debug.h"
 #include <linux/hisi/rdr_hisi_platform.h>
 
 #define beenthere(kctx, f, a...)  dev_dbg(kctx->kbdev->dev, "%s:" f, __func__, ##a)
 
-#include <mali_kbase_defs.h>
-#include <mali_kbase_hw.h>
-#include <mali_kbase_mmu_hw.h>
-#include <mali_kbase_hwaccess_jm.h>
+#include "mali_kbase_defs.h"
+#include "mali_kbase_hw.h"
+#include "mali_kbase_mmu_hw.h"
+#include "mali_kbase_hwaccess_jm.h"
 #include <mali_kbase_time.h>
-#include <mali_kbase_mem.h>
-#include <mali_kbase_gmc.h>
+#include "mali_kbase_mem.h"
+#include "mali_kbase_gmc.h"
 
 #include "mali_kbase_config_platform.h"
 #include "mali_kbase_config_hifeatures.h"

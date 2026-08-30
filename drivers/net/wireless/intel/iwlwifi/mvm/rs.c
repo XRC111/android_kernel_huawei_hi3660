@@ -38,7 +38,7 @@
 #include "rs.h"
 #include "fw-api.h"
 #include "sta.h"
-#include "iwl-op-mode.h"
+#include "../iwl-op-mode.h"
 #include "mvm.h"
 #include "debugfs.h"
 

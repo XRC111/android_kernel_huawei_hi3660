@@ -31,8 +31,8 @@
 #define __PPP_ACF_H__
 
 #include "vos.h"
-#include "PPP/Inc/ppp_public.h"
-#include "PPP/Inc/ppp_mbuf.h"
+#include "../../PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_mbuf.h"
 
 
 #pragma pack(4)

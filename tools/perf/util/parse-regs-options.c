@@ -1,8 +1,8 @@
-#include "perf.h"
-#include "util/util.h"
-#include "util/debug.h"
+#include "../perf.h"
+#include "../util/util.h"
+#include "../util/debug.h"
 #include <subcmd/parse-options.h>
-#include "util/parse-regs-options.h"
+#include "../util/parse-regs-options.h"
 
 int
 parse_regs(const struct option *opt, const char *str, int unset)

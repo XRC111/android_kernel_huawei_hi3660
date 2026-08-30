@@ -12,7 +12,7 @@
 #include <linux/types.h>
 
 #ifdef macintosh
-#include <Types.h>
+#include "Types.h"
 #include "linux_type_defs.h"
 #endif
 

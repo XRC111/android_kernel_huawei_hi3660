@@ -28,14 +28,14 @@
 #define	_MSGTRACE_H
 
 #ifndef _TYPEDEFS_H_
-#include <typedefs.h>
+#include "typedefs.h"
 #endif
 
 
 /* This marks the start of a packed structure section. */
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 /* for osl_t */
-#include <osl_decl.h>
+#include "osl_decl.h"
 #define MSGTRACE_VERSION 1
 
 /* Message trace header */
@@ -73,6 +73,6 @@ extern void msgtrace_init(void *hdl1, void *hdl2, msgtrace_func_send_t func_send
 extern bool msgtrace_event_enabled(void);
 
 /* This marks the end of a packed structure section. */
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 
 #endif	/* _MSGTRACE_H */

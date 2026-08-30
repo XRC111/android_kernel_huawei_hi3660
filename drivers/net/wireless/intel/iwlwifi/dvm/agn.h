@@ -63,7 +63,7 @@
 #ifndef __iwl_agn_h__
 #define __iwl_agn_h__
 
-#include "iwl-config.h"
+#include "../iwl-config.h"
 
 #include "dev.h"
 

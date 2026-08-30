@@ -1,7 +1,7 @@
 #ifndef _PERF_UI_BROWSER_HISTS_H_
 #define _PERF_UI_BROWSER_HISTS_H_ 1
 
-#include "ui/browser.h"
+#include "../../ui/browser.h"
 
 struct hist_browser {
 	struct ui_browser   b;

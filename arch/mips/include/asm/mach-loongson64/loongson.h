@@ -14,7 +14,7 @@
 #include <linux/io.h>
 #include <linux/init.h>
 #include <linux/irq.h>
-#include <boot_param.h>
+#include "boot_param.h"
 
 /* loongson internal northbridge initialization */
 extern void bonito_irq_init(void);

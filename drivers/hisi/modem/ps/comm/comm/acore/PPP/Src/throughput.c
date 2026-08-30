@@ -28,8 +28,8 @@
  * $FreeBSD: releng/11.2/usr.sbin/ppp/throughput.c 330449 2018-03-05 07:26:05Z eadler $
  */
 
-#include "PPP/Inc/ppp_public.h"
-#include "PPP/Inc/throughput.h"
+#include "../../PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/throughput.h"
 
 /*****************************************************************************
     协议栈打印打点方式下的.C文件宏定义

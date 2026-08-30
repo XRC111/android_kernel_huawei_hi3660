@@ -24,13 +24,13 @@
 #include <linux/sched/rt.h>
 #include <linux/fb.h>
 #include <linux/workqueue.h>
-#include <huawei_ts_kit.h>
-#include <huawei_ts_kit_platform.h>
-#include <huawei_ts_kit_api.h>
-#include <huawei_ts_kit_misc.h>
+#include "huawei_ts_kit.h"
+#include "huawei_ts_kit_platform.h"
+#include "huawei_ts_kit_api.h"
+#include "huawei_ts_kit_misc.h"
 #include "trace-events-touch.h"
 #include "huawei_ts_kit_algo.h"
-#include <tpkit_platform_adapter.h>
+#include "tpkit_platform_adapter.h"
 
 #if defined (CONFIG_HUAWEI_DSM)
 #include <dsm/dsm_pub.h>

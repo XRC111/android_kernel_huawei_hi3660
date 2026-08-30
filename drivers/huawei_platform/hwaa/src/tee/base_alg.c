@@ -1,5 +1,5 @@
 
-#include "inc/tee/base_alg.h"
+#include "../../inc/tee/base_alg.h"
 #include <linux/err.h>
 #include <linux/scatterlist.h>
 #include <linux/completion.h>
@@ -10,7 +10,7 @@
 #include <crypto/aead.h>
 #include <securec.h>
 #include "huawei_platform/hwaa/hwaa_error.h"
-#include "inc/base/hwaa_utils.h"
+#include "../../inc/base/hwaa_utils.h"
 
 #define HWAA_CBC_AES_ALG "cbc(aes)"
 #define HWAA_HKDF_HMAC_ALG "hmac(sha256)"

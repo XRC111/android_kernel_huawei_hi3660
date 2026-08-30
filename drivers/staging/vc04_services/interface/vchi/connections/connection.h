@@ -38,9 +38,9 @@
 #include <linux/types.h>
 #include <linux/semaphore.h>
 
-#include "interface/vchi/vchi_cfg_internal.h"
-#include "interface/vchi/vchi_common.h"
-#include "interface/vchi/message_drivers/message.h"
+#include "../../../interface/vchi/vchi_cfg_internal.h"
+#include "../../../interface/vchi/vchi_common.h"
+#include "../../../interface/vchi/message_drivers/message.h"
 
 /******************************************************************************
  Global defs

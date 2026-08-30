@@ -31,12 +31,12 @@
 #ifndef _dhdioctl_h_
 #define	_dhdioctl_h_
 
-#include <typedefs.h>
+#include "typedefs.h"
 
 
 /* require default structure packing */
 #define BWL_DEFAULT_PACKING
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 
 
 /* Linux network driver ioctl encoding */
@@ -138,6 +138,6 @@ typedef struct dhd_pktgen {
 
 
 /* require default structure packing */
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 
 #endif /* _dhdioctl_h_ */

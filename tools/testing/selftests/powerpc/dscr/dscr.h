@@ -26,7 +26,7 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 #define SPRN_DSCR	0x11	/* Privilege state SPR */
 #define SPRN_DSCR_USR	0x03	/* Problem state SPR */

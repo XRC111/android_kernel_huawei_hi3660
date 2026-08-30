@@ -17,7 +17,7 @@
 #include <string.h>
 
 #include "tm.h"
-#include "utils.h"
+#include "../utils.h"
 
 int	num_loops	= 10000;
 

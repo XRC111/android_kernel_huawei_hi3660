@@ -53,11 +53,11 @@ extern "C"
 {
 #endif /* __cplusplus */
 
-#include <osl_common.h>
-#include <bsp_sram.h>
-#include <bsp_shared_ddr.h>
+#include "osl_common.h"
+#include "bsp_sram.h"
+#include "bsp_shared_ddr.h"
 #include <mdrv_icc_common.h>
-#include <bsp_ipc.h>
+#include "bsp_ipc.h"
 
 #define ICC_CHAN_NUM_MAX            (32)
 #define ICC_DYNAMIC_CHAN_NUM_MAX            (8)

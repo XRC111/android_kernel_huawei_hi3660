@@ -41,9 +41,9 @@
 #include <linux/mmc/dw_mmc.h>
 #include <mmc/host/dw_mmc.h>
 #endif
-#include <dhd_linux.h>
+#include "dhd_linux.h"
 #include <bcmsdh_sdmmc.h>
-#include <dhd_dbg.h>
+#include "dhd_dbg.h"
 #include <bcmsdh.h>
 #include "hw_wifi.h"
 

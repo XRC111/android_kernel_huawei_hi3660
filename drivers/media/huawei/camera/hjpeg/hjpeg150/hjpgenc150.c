@@ -29,11 +29,11 @@
 #include <linux/version.h>
 
 #include "hjpgenc150.h"
-#include "hjpeg_intf.h"
+#include "../hjpeg_intf.h"
 #include "hjpg150_reg_offset.h"
 #include "hjpg150_reg_offset_field.h"
 #include "hjpg150_table.h"
-#include "cam_log.h"
+#include "../../cam_log.h"
 //lint -save -e740 -e647
 /*TODO:use kernel dump mem space do JPEG IP system verify*/
 #define SMMU 1

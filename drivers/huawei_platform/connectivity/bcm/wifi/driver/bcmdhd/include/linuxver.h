@@ -28,7 +28,7 @@
 #ifndef _linuxver_h_
 #define _linuxver_h_
 
-#include <typedefs.h>
+#include "typedefs.h"
 #include <linux/version.h>
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 0))
 #include <linux/config.h>

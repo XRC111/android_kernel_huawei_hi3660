@@ -9,7 +9,7 @@
 #include <linux/rpmsg.h>
 
 #include "hwsensor.h"
-#include "sensor_commom.h"
+#include "../../sensor_commom.h"
 #include "hw_csi.h"
 //lint -save -e650 -e31
 

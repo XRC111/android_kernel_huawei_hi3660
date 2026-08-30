@@ -26,7 +26,7 @@
 #include <linux/module.h>
 #include <linux/moduleparam.h>
 #include <linux/seq_file.h>
-#include <slowpath_count.h>
+#include "slowpath_count.h"
 #include <linux/version.h>
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(4,14,0))
 #include <linux/sched/signal.h>

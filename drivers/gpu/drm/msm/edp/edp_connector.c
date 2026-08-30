@@ -12,7 +12,7 @@
  */
 
 #include "drm/drm_edid.h"
-#include "msm_kms.h"
+#include "../msm_kms.h"
 #include "edp.h"
 
 struct edp_connector {

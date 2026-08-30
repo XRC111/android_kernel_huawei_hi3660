@@ -19,7 +19,7 @@
 #ifndef _IDTP9221_FW_OTP_H_
 #define _IDTP9221_FW_OTP_H_
 
-#include <idtp9221_fw_otp_030f.h>
+#include "idtp9221_fw_otp_030f.h"
 
 struct fw_otp_info {
 	const char *otp_name;

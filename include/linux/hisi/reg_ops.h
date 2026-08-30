@@ -7,10 +7,10 @@
 
 /* Header file */
 #include <linux/hisi/hi6xxx-iomap.h>                   /* For IO_ADDRESS access */
-#include "linux/printk.h"
+#include "../../linux/printk.h"
 
-#include "linux/io.h"
-#include "linux/spinlock.h"
+#include "../../linux/io.h"
+#include "../../linux/spinlock.h"
 #include "soc_baseaddr_interface.h"
 
 

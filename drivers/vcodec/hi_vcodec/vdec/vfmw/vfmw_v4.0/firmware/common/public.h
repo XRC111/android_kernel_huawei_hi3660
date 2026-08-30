@@ -34,7 +34,7 @@ Nv0DVJKNzjCoYhavLSDl24fCwqYgiOgWzxpZ/6lwJDnTKsRY4a5PQylkmHJMtw==*/
 
 #include "basedef.h"
 #include "sysconfig.h"
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "scd_drv.h"
 #include "vdm_hal.h"
 

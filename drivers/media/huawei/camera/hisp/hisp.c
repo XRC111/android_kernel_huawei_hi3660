@@ -37,7 +37,7 @@
 #include <linux/string.h>
 
 #include "hisp_intf.h"
-#include "cam_log.h"
+#include "../cam_log.h"
 #include <dsm/dsm_pub.h>
 
 #define  DSM_DEV_BUFF_SIZE 1024

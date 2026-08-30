@@ -19,7 +19,7 @@
 #define TCPC_TIMER_H_INCLUDED
 
 #include <linux/kernel.h>
-#include "include/tcpci_config.h"
+#include "../include/tcpci_config.h"
 
 struct tcpc_device;
 enum {

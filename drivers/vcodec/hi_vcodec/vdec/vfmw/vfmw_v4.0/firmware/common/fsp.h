@@ -14,7 +14,7 @@ extern "C"{
 #endif
 
 #include "public.h"
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "syn_cmn.h"
 
 #define USE_FSP  1

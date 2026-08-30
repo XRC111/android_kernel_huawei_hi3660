@@ -19,7 +19,7 @@
 #ifndef _STWLC33_FW_NVM_H_
 #define _STWLC33_FW_NVM_H_
 
-#include <stwlc33_fw_nvm_1100.h>
+#include "stwlc33_fw_nvm_1100.h"
 
 struct st_fw_nvm_info {
 	const int sec_no;

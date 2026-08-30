@@ -51,9 +51,9 @@
 #include <product_config.h>
 
 #if defined(__KERNEL__) || defined(__OS_VXWORKS__) || defined(__OS_RTOSCK__) ||defined(__OS_RTOSCK_SMP__)/* acore/ccore */
-#include <osl_types.h>
-#include <osl_bio.h>
-#include <osl_irq.h>
+#include "osl_types.h"
+#include "osl_bio.h"
+#include "osl_irq.h"
 
 #elif defined(__CMSIS_RTOS)                     /* mcore */
 #include <ARMCM3.h>
@@ -125,9 +125,9 @@ do {                           \
 
 /*end:list*/
 #else  /* !OS_K3V3_USE_LPM3_API */
-#include <osl_types.h>
-#include <osl_bio.h>
-#include <osl_irq.h>
+#include "osl_types.h"
+#include "osl_bio.h"
+#include "osl_irq.h"
 #include <irq.h>
 #include <printk.h>
 #include <libc.h>

@@ -54,7 +54,7 @@ extern "C"
 {
 #endif /* __cplusplus */
 
-#include <osl_types.h>
+#include "osl_types.h"
 #include "bsp_sram.h"
 
 

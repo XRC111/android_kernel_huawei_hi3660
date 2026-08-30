@@ -35,8 +35,8 @@
 #include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/fs.h>
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dngl_stats.h"
+#include "dhd.h"
 #ifdef DHD_WMF
 #include <dhd_wmf_linux.h>
 #endif

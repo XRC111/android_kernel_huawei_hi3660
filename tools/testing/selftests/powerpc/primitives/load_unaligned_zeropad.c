@@ -29,7 +29,7 @@ static inline unsigned long __fls(unsigned long x);
 
 #include "word-at-a-time.h"
 
-#include "utils.h"
+#include "../utils.h"
 
 static inline unsigned long __fls(unsigned long x)
 {

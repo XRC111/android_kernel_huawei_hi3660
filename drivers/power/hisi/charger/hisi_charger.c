@@ -38,7 +38,7 @@
 #include <linux/power/hisi/hisi_bci_battery.h>
 #include <linux/power/hisi/charger/hisi_charger.h>
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
-#include <hisi_charging_core.h>
+#include "hisi_charging_core.h"
 #ifdef CONFIG_SWITCH_FSA9685
 #include <huawei_platform/usb/switch/switch_fsa9685.h>
 #endif

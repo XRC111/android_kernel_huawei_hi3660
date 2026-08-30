@@ -15,9 +15,9 @@
 #ifndef _RTW_EVENT_H_
 #define _RTW_EVENT_H_
 
-#include <osdep_service.h>
+#include "osdep_service.h"
 
-#include <wlan_bssdef.h>
+#include "wlan_bssdef.h"
 #include <linux/mutex.h>
 #include <linux/sem.h>
 

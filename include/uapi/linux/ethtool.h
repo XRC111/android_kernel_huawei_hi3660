@@ -18,7 +18,7 @@
 #include <linux/if_ether.h>
 
 #ifndef __KERNEL__
-#include <limits.h> /* for INT_MAX */
+#include "limits.h" /* for INT_MAX */
 #endif
 
 /* All structures exposed to userland should be defined such that they

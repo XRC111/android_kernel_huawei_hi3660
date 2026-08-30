@@ -64,8 +64,8 @@
 #include <linux/etherdevice.h>
 #include "mvm.h"
 #include "time-event.h"
-#include "iwl-io.h"
-#include "iwl-prph.h"
+#include "../iwl-io.h"
+#include "../iwl-prph.h"
 
 #define TU_TO_US(x) (x * 1024)
 #define TU_TO_MS(x) (TU_TO_US(x) / 1000)

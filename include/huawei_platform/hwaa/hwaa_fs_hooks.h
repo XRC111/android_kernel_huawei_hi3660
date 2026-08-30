@@ -4,8 +4,8 @@
 
 #include <linux/types.h>
 #include <linux/fs.h>
-#include "huawei_platform/hwaa/hwaa_error.h"
-#include "huawei_platform/hwaa/hwaa_ioctl.h"
+#include "../../huawei_platform/hwaa/hwaa_error.h"
+#include "../../huawei_platform/hwaa/hwaa_ioctl.h"
 
 #ifdef CONFIG_HWAA
 

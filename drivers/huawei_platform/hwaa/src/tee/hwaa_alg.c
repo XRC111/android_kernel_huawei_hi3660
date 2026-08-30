@@ -1,11 +1,11 @@
 
-#include "inc/tee/hwaa_alg.h"
+#include "../../inc/tee/hwaa_alg.h"
 #include <linux/string.h>
 #include <linux/random.h>
 #include <linux/slab.h>
 #include <securec.h>
-#include "inc/base/hwaa_utils.h"
-#include "inc/tee/base_alg.h"
+#include "../../inc/base/hwaa_utils.h"
+#include "../../inc/tee/base_alg.h"
 
 s32 hwaa_kdf_is_valid(const u8 *phase1_key, u32 phase1_key_len,
 	const u8 *ciphertext, u32 ciphertext_len)

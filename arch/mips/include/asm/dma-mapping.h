@@ -6,7 +6,7 @@
 #include <asm/cache.h>
 
 #ifndef CONFIG_SGI_IP27 /* Kludge to fix 2.6.39 build for IP27 */
-#include <dma-coherence.h>
+#include "dma-coherence.h"
 #endif
 
 extern struct dma_map_ops *mips_dma_map_ops;

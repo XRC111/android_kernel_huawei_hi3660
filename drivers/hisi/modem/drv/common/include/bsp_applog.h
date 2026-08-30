@@ -53,7 +53,7 @@
 extern "C"
 {
 #endif
-#include <osl_types.h>
+#include "osl_types.h"
 
 
 //#ifdef CONFIG_APPLOG

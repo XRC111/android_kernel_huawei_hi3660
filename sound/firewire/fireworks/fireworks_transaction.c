@@ -29,7 +29,7 @@
  * I note that the address for response can be changed by command. But this
  * module uses the default address.
  */
-#include "./fireworks.h"
+#include "fireworks.h"
 
 #define MEMORY_SPACE_EFW_COMMAND	0xecc000000000ULL
 #define MEMORY_SPACE_EFW_RESPONSE	0xecc080000000ULL

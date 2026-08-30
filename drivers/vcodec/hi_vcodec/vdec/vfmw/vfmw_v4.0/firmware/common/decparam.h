@@ -15,7 +15,7 @@ LABw5QT6aTBE2WLB1/meeWZmsf3FcL+w7ehf4hF56Qz5NmBbxluDT29RS/BrGg==*/
 extern "C" {
 #endif
 
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "basedef.h"
 /************************************************************************/
 /*   ³£Êý                                                               */

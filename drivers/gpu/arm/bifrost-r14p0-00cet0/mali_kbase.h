@@ -25,9 +25,9 @@
 #ifndef _KBASE_H_
 #define _KBASE_H_
 
-#include <mali_malisw.h>
+#include "mali_malisw.h"
 
-#include <mali_kbase_debug.h>
+#include "mali_kbase_debug.h"
 
 #include <linux/atomic.h>
 #include <linux/highmem.h>
@@ -48,7 +48,7 @@
 #include <linux/workqueue.h>
 
 #include "mali_base_kernel.h"
-#include <mali_kbase_linux.h>
+#include "mali_kbase_linux.h"
 
 /*
  * Include mali_kbase_defs.h first as this provides types needed by other local

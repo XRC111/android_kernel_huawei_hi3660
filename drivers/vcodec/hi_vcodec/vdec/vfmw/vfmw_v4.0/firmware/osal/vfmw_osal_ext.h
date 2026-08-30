@@ -2,7 +2,7 @@
 #ifndef __VFMW_OSAL_EXT_HEADER__
 #define __VFMW_OSAL_EXT_HEADER__
 
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "mem_manage.h"
 
 

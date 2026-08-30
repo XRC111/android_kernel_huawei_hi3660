@@ -28,7 +28,7 @@
 
 #include <altivec.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "tm.h"
 
 #define MAX_ATTEMPT 500000

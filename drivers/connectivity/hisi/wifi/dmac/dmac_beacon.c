@@ -44,7 +44,7 @@ extern "C" {
 #include "dmac_lpm_test.h"
 #endif
 #ifdef _PRE_WLAN_DFT_STAT
-#include "mac_device.h"
+#include "dmac_device.h"
 #include "dmac_dft.h"
 #endif
 #ifdef _PRE_WLAN_FEATURE_STA_PM

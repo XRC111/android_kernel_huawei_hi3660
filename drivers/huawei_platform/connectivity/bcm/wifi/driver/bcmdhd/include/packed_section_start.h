@@ -12,7 +12,7 @@
  *    some_struct_members;
  * } BWL_POST_PACKED_STRUCT foobar_t;
  *
- * #include <packed_section_end.h>
+ * #include "packed_section_end.h"
  *
  *
  * Copyright (C) 1999-2014, Broadcom Corporation

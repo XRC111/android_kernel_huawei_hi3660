@@ -5,9 +5,9 @@
  * Create: 2020-10-10
  */
 
-#include "inc/base/hwaa_list.h"
+#include "../../inc/base/hwaa_list.h"
 #include <linux/slab.h>
-#include "inc/base/hwaa_define.h"
+#include "../../inc/base/hwaa_define.h"
 
 static struct list_entry_t *get_list_node(u64 list_key, struct list_head *head)
 {

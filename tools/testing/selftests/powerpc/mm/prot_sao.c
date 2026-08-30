@@ -10,7 +10,7 @@
 
 #include <asm/cputable.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 #define SIZE (64 * 1024)
 

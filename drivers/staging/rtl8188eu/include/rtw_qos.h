@@ -15,7 +15,7 @@
 #ifndef _RTW_QOS_H_
 #define _RTW_QOS_H_
 
-#include <osdep_service.h>
+#include "osdep_service.h"
 
 struct	qos_priv	{
 	unsigned int	  qos_option;	/* bit mask option: u-apsd,

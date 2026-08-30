@@ -38,10 +38,10 @@
 #include <bcmutils.h>
 #include <bcmendian.h>
 #include <bcmdevs.h>
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_dbg.h>
-#include <dhd_linux_wq.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_dbg.h"
+#include "dhd_linux_wq.h"
 
 struct dhd_deferred_event_t {
 	u8	event; /* holds the event */

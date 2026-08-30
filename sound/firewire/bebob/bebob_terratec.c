@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./bebob.h"
+#include "bebob.h"
 
 static enum snd_bebob_clock_type phase88_rack_clk_src_types[] = {
 	SND_BEBOB_CLOCK_TYPE_INTERNAL,

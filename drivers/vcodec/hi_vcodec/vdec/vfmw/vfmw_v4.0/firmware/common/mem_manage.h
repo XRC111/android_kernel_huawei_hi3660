@@ -13,7 +13,7 @@ JAn8RF8M3jQSd3Nfj2JPRwvfmbARLxPLAu9A0+xLYgFf4jjC9vd7JeBKfrlxLA==*/
 extern "C" {
 #endif
 
-#include "vfmw.h"
+#include "../../vfmw.h"
 
 
 /*######################################################################*/

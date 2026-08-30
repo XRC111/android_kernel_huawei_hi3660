@@ -40,7 +40,7 @@
 #include "product_config.h"
 
 #if(FEATURE_ON == FEATURE_PPP)
-#include "PPP/Inc/hdlc_interface.h"
+#include "../../PPP/Inc/hdlc_interface.h"
 
 #ifdef __cplusplus
     #if __cplusplus

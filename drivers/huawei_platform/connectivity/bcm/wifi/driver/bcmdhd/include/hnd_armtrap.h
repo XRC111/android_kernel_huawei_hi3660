@@ -58,7 +58,7 @@
 
 #ifndef	_LANGUAGE_ASSEMBLY
 
-#include <typedefs.h>
+#include "typedefs.h"
 
 typedef struct _trap_struct {
 	uint32		type;

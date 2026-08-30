@@ -14,8 +14,8 @@ extern "C" {
   1 其他头文件包含
 *****************************************************************************/
 #include "oal_ext_if.h"
-#include "wlan_spec.h"
-#include "wlan_types.h"
+#include "../wlan_spec.h"
+#include "../wlan_types.h"
 #include "hal_commom_ops.h"
 
 #undef  THIS_FILE_ID

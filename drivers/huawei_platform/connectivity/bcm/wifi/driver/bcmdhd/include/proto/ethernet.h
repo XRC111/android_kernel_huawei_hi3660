@@ -28,7 +28,7 @@
 #define _NET_ETHERNET_H_
 
 #ifndef _TYPEDEFS_H_
-#include "typedefs.h"
+#include "../typedefs.h"
 #endif
 
 /* This marks the start of a packed structure section. */

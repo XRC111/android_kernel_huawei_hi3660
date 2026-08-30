@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <linux/perf_event.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 
 struct event {

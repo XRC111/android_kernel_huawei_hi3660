@@ -23,7 +23,7 @@
 
 #include "tcm.h"
 #include "u_tcm.h"
-#include "configfs.h"
+#include "../configfs.h"
 
 #define TPG_INSTANCES		1
 

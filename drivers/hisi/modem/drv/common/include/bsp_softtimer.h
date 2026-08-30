@@ -49,10 +49,10 @@
 #ifndef __BSP_SOFTTIMER_H__
 #define __BSP_SOFTTIMER_H__
 
-#include <osl_common.h>
-#include <osl_list.h>
+#include "osl_common.h"
+#include "osl_list.h"
 #include <product_config.h>
-#include <bsp_slice.h>
+#include "bsp_slice.h"
 typedef void (*softtimer_func)(void*);
 #define TIMER_TRUE 1
 #define TIMER_FALSE 0

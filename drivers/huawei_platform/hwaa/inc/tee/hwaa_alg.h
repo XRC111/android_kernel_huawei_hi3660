@@ -2,7 +2,7 @@
 #ifndef _HWAA_ALG_H
 #define _HWAA_ALG_H
 #include <linux/types.h>
-#include "inc/base/hwaa_define.h"
+#include "../../inc/base/hwaa_define.h"
 
 #define SHA256_MAX_OBJECT_LENGTH 256
 #define SHA256_HASH_BYTES 32

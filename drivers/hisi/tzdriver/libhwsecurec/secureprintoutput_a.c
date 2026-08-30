@@ -33,6 +33,6 @@ typedef char TCHAR;
 
 /*extern const UINT8T securec__lookuptable_s[];*/
 
-//#include "output.h"
+#include "secureprintoutput.h"
 
 

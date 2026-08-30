@@ -26,8 +26,8 @@
 #ifndef	_PCIE_CORE_H
 #define	_PCIE_CORE_H
 
-#include <sbhnddma.h>
-#include <siutils.h>
+#include "sbhnddma.h"
+#include "siutils.h"
 
 /* cpp contortions to concatenate w/arg prescan */
 #ifndef PAD

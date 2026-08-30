@@ -34,7 +34,7 @@
 #define __PPP_AUTH_H__
 
 #include "PppInterface.h"
-#include "PPP/Inc/ppp_fsm.h"
+#include "../../PPP/Inc/ppp_fsm.h"
 
 #pragma pack(4)
 

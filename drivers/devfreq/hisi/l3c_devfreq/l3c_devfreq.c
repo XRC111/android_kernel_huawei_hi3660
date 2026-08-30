@@ -8,7 +8,7 @@
 #include <linux/slab.h>
 #include <linux/workqueue.h>
 #include <linux/version.h>
-#include "governor.h"
+#include "../../governor.h"
 
 #include <linux/hisi/hisi_mailbox.h>
 #include <linux/hisi/hisi_rproc.h>

@@ -32,9 +32,9 @@
 #ifndef __PPP_LCP_H__
 #define __PPP_LCP_H__
 
-#include  "PPP/Inc/ppp_fsm.h"
-#include  "PPP/Inc/hdlc.h"
-#include  "PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_fsm.h"
+#include "../../PPP/Inc/hdlc.h"
+#include "../../PPP/Inc/ppp_public.h"
 
 #pragma pack(4)
 

@@ -1,7 +1,7 @@
 #ifndef _SELFTESTS_POWERPC_PMU_EBB_LMR_H
 #define _SELFTESTS_POWERPC_PMU_EBB_LMR_H
 
-#include "reg.h"
+#include "../../reg.h"
 
 #ifndef PPC_FEATURE2_ARCH_3_00
 #define PPC_FEATURE2_ARCH_3_00 0x00800000

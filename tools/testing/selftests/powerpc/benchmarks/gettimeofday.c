@@ -6,7 +6,7 @@
 #include <sys/time.h>
 #include <stdio.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 static int test_gettimeofday(void)
 {

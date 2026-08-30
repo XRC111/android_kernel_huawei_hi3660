@@ -20,7 +20,7 @@ extern "C" {
 #include "oal_net.h"
 #include "frw_ext_if.h"
 #include "wal_ext_if.h"
-#include "wlan_types.h"
+#include "../wlan_types.h"
 #include "mac_frame.h"
 #include "mac_device.h"
 #include "mac_user.h"

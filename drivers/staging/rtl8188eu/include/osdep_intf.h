@@ -16,8 +16,8 @@
 #ifndef __OSDEP_INTF_H_
 #define __OSDEP_INTF_H_
 
-#include <osdep_service.h>
-#include <drv_types.h>
+#include "osdep_service.h"
+#include "drv_types.h"
 
 extern char *rtw_initmac;
 extern int rtw_mc2u_disable;

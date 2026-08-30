@@ -48,8 +48,8 @@
 #ifndef __BSP_SLICE_H__
 #define __BSP_SLICE_H__
 #include <product_config.h>
-#include <osl_bio.h>
-#include <osl_types.h>
+#include "osl_bio.h"
+#include "osl_types.h"
 /*****************************************************************************
 * º¯ Êý Ãû  :get_timer_slice_delta
 *

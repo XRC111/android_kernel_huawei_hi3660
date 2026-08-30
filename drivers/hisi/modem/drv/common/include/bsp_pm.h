@@ -49,7 +49,7 @@
 #define __BSP_PM_H__
 
 #include <product_config.h>
-#include <osl_types.h>
+#include "osl_types.h"
 #include <mdrv_pm.h>
 #if defined (__OS_RTOSCK__) || defined(__VXWORKS__)||defined(__OS_RTOSCK_SMP__)
 #include <bsp_notifier.h>

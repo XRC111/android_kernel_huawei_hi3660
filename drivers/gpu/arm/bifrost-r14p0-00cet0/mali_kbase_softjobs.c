@@ -22,20 +22,20 @@
 
 
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 
 #if defined(CONFIG_DMA_SHARED_BUFFER)
 #include <linux/dma-buf.h>
 #include <asm/cacheflush.h>
 #endif /* defined(CONFIG_DMA_SHARED_BUFFER) */
 #if defined(CONFIG_SYNC) || defined(CONFIG_SYNC_FILE)
-#include <mali_kbase_sync.h>
+#include "mali_kbase_sync.h"
 #endif
 #include <linux/dma-mapping.h>
-#include <mali_base_kernel.h>
-#include <mali_kbase_hwaccess_time.h>
-#include <mali_kbase_mem_linux.h>
-#include <mali_kbase_tlstream.h>
+#include "mali_base_kernel.h"
+#include "mali_kbase_hwaccess_time.h"
+#include "mali_kbase_mem_linux.h"
+#include "mali_kbase_tlstream.h"
 #include <linux/version.h>//lint !e451
 #include <linux/ktime.h>
 #include <linux/pfn.h>

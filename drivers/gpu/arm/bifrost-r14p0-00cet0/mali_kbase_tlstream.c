@@ -31,9 +31,9 @@
 #include <linux/timer.h>
 #include <linux/wait.h>
 
-#include <mali_kbase.h>
-#include <mali_kbase_jm.h>
-#include <mali_kbase_tlstream.h>
+#include "mali_kbase.h"
+#include "mali_kbase_jm.h"
+#include "mali_kbase_tlstream.h"
 
 /*****************************************************************************/
 

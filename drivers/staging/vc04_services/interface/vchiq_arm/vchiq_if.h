@@ -34,7 +34,7 @@
 #ifndef VCHIQ_IF_H
 #define VCHIQ_IF_H
 
-#include "interface/vchi/vchi_mh.h"
+#include "../../interface/vchi/vchi_mh.h"
 
 #define VCHIQ_SERVICE_HANDLE_INVALID 0
 

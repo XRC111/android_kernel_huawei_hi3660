@@ -8,7 +8,7 @@
 #include <linux/rpmsg.h>
 
 #include "hwsensor.h"
-#include "sensor_commom.h"
+#include "../../sensor_commom.h"
 #include "hw_csi.h"
 #include <linux/pinctrl/consumer.h>
 #include "../pmic/hw_pmic.h"

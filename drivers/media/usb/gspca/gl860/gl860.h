@@ -19,7 +19,7 @@
 #ifndef GL860_DEV_H
 #define GL860_DEV_H
 
-#include "gspca.h"
+#include "../gspca.h"
 
 #define MODULE_NAME "gspca_gl860"
 #define DRIVER_VERSION "0.9d10"

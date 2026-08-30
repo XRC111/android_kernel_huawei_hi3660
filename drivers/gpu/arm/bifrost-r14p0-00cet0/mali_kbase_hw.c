@@ -26,9 +26,9 @@
  * Run-time work-arounds helpers
  */
 
-#include <mali_base_hwconfig_features.h>
-#include <mali_base_hwconfig_issues.h>
-#include <mali_midg_regmap.h>
+#include "mali_base_hwconfig_features.h"
+#include "mali_base_hwconfig_issues.h"
+#include "mali_midg_regmap.h"
 #include "mali_kbase.h"
 #include "mali_kbase_hw.h"
 /*lint -e661*/

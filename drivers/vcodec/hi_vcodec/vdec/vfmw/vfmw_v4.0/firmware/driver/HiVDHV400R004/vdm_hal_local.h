@@ -5,7 +5,7 @@
 
 #include "basedef.h"
 #include "mem_manage.h"
-#include "vfmw.h"
+#include "../../../vfmw.h"
 #include "vdm_hal.h"
 
 #ifdef _cplusplus

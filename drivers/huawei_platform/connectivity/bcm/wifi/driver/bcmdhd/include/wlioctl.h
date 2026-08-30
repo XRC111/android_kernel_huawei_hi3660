@@ -30,7 +30,7 @@
 #ifndef _wlioctl_h_
 #define	_wlioctl_h_
 
-#include <typedefs.h>
+#include "typedefs.h"
 #include <proto/ethernet.h>
 #include <proto/bcmip.h>
 #include <proto/bcmeth.h>
@@ -38,13 +38,13 @@
 #include <proto/bcmevent.h>
 #include <proto/802.11.h>
 #include <proto/802.1d.h>
-#include <bcmwifi_channels.h>
-#include <bcmwifi_rates.h>
+#include "bcmwifi_channels.h"
+#include "bcmwifi_rates.h"
 #include <devctrl_if/wlioctl_defs.h>
 
 
-#include <bcm_mpool_pub.h>
-#include <bcmcdc.h>
+#include "bcm_mpool_pub.h"
+#include "bcmcdc.h"
 
 
 
@@ -127,7 +127,7 @@ typedef struct wl_sa_query {
 
 /* require default structure packing */
 #define BWL_DEFAULT_PACKING
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 
 
 /* Flags for OBSS IOVAR Parameters */
@@ -3775,7 +3775,7 @@ typedef BWL_PRE_PACKED_STRUCT struct pcie_bus_tput_stats {
 } BWL_POST_PACKED_STRUCT pcie_bus_tput_stats_t;
 
 /* no default structure packing */
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 
 typedef struct keepalives_max_idle {
 	uint16  keepalive_count;        /* nmbr of keepalives per bss_max_idle period */
@@ -3788,7 +3788,7 @@ typedef struct keepalives_max_idle {
 #define PM_IGNORE_BCMC_ALL_DMS_ACCEPTED (1 << 1)
 
 /* require strict packing */
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 
 /* ##### Power Stats section ##### */
 
@@ -4274,7 +4274,7 @@ typedef BWL_PRE_PACKED_STRUCT struct wlc_ipfo_route_tbl {
 #define WL_MAX_IPFO_ROUTE_TBL_ENTRY	64
 
 /* no strict structure packing */
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 
 	/* Global ASSERT Logging */
 #define ASSERTLOG_CUR_VER	0x0100
@@ -5127,7 +5127,7 @@ typedef struct wl_proxd_iovar {
  */
 
 /* require strict packing */
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 
 typedef	BWL_PRE_PACKED_STRUCT struct	wl_proxd_params_common	{
 	chanspec_t	chanspec;	/* channel spec */
@@ -5679,7 +5679,7 @@ typedef struct wl_wsec_info {
 } wl_wsec_info_t;
 
 /* no default structure packing */
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 
 enum rssi_reason {
 	RSSI_REASON_UNKNOW = 0,
@@ -6092,7 +6092,7 @@ wl_wlc_version_t;
 #define WL_SUPPORTED_WLC_VER_MINOR 0
 
 /* require strict packing */
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 
 #define WL_PROXD_API_VERSION 0x0300	/* version 3.0 */
 
@@ -6717,7 +6717,7 @@ typedef struct wl_ant_qual_event {
 #endif
 
 /* no default structure packing */
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 #ifdef  BRCM_RSDB
 /* Data structures for Interface Create/Remove  */
 

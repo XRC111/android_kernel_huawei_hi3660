@@ -35,7 +35,7 @@
 #include <asm/ioctl.h>
 #include <linux/semaphore.h>
 
-#include "vfmw_osal_ext.h"
+#include "../vfmw_osal_ext.h"
 
 
 /*======================================================================*/

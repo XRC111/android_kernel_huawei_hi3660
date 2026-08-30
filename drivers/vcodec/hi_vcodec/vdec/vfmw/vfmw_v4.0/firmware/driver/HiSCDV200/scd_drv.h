@@ -11,7 +11,7 @@ A5wpkuCOLyY0p4IKcYTiIEZbrsb1n1hRS7WzsFt54x169Mk2ksGtrpprIK5AmA==*/
 
 #include "basedef.h"
 #include "mem_manage.h"
-#include "vfmw.h"
+#include "../../../vfmw.h"
 
 
 /*######################################################

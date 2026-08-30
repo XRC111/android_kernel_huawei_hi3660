@@ -21,7 +21,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 /* Number of times each thread should receive the signal */
 #define ITERATIONS 10

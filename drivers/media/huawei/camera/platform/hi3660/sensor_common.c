@@ -12,7 +12,7 @@
 
 #include <linux/delay.h>
 #include <linux/clk.h>
-#include "sensor_commom.h"
+#include "../sensor_commom.h"
 #include "hw_cci.h"
 #include "hw_isp_io.h"
 #include "hw_pmic.h"

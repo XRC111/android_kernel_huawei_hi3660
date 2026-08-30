@@ -23,9 +23,9 @@
 #include <asm/arch_timer.h>
 #include <linux/time.h>
 #include <linux/jiffies.h>
-#include "cam_log.h"
-#include "hisp_intf.h"
-#include "platform/sensor_commom.h"
+#include "../../cam_log.h"
+#include "../hisp_intf.h"
+#include "../../platform/sensor_commom.h"
 #include <linux/wakelock.h>
 #include <linux/hisi/hisi_ion.h>
 #include <linux/hisi-iommu.h>

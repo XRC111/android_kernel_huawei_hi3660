@@ -18,9 +18,9 @@
 #include <sys/wait.h>
 #include <libgen.h>
 
-#include "idle_monitor/cpupower-monitor.h"
-#include "idle_monitor/idle_monitors.h"
-#include "helpers/helpers.h"
+#include "../idle_monitor/cpupower-monitor.h"
+#include "../idle_monitor/idle_monitors.h"
+#include "../helpers/helpers.h"
 
 /* Define pointers to all monitors.  */
 #define DEF(x) & x ## _monitor ,

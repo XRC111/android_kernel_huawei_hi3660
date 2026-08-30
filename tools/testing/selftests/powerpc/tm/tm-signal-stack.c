@@ -21,7 +21,7 @@
 #include <stdio.h>
 #include <signal.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "tm.h"
 
 void signal_segv(int signum)

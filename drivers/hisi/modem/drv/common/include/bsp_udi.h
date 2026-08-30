@@ -49,7 +49,7 @@
 #define    _BSP_UDI_H_
 
 
-#include  <osl_types.h>
+#include "osl_types.h"
 #include  <mdrv.h>
 
 #ifdef __cplusplus

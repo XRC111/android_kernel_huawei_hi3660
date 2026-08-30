@@ -30,8 +30,8 @@
  * $FreeBSD: releng/11.2/usr.sbin/ppp/chap.c 330449 2018-03-05 07:26:05Z eadler $
  */
 
-#include "PPP/Inc/link.h"
-#include "PPP/Inc/ppp_fsm.h"
+#include "../../PPP/Inc/link.h"
+#include "../../PPP/Inc/ppp_fsm.h"
 
 /*****************************************************************************
     协议栈打印打点方式下的.C文件宏定义

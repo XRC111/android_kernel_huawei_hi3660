@@ -24,7 +24,7 @@
 #include <linux/hisi/hi64xx_hifi_misc.h>
 #include <linux/hisi/hi64xx/hi64xx_dsp_regs.h>
 
-#include "rdr_print.h"
+#include "../rdr_print.h"
 #include "rdr_hisi_audio_adapter.h"
 #include "rdr_hisi_audio_codec.h"
 

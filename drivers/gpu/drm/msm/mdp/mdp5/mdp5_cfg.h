@@ -14,7 +14,7 @@
 #ifndef __MDP5_CFG_H__
 #define __MDP5_CFG_H__
 
-#include "msm_drv.h"
+#include "../../msm_drv.h"
 
 /*
  * mdp5_cfg

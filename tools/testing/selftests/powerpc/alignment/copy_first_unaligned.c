@@ -13,8 +13,8 @@
 
 #include <string.h>
 #include <unistd.h>
-#include "utils.h"
-#include "instructions.h"
+#include "../utils.h"
+#include "../instructions.h"
 #include "copy_paste_unaligned_common.h"
 
 unsigned int expected_instruction = PPC_INST_COPY_FIRST;

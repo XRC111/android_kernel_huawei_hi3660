@@ -19,34 +19,46 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y libncurses-dev flex bison libssl-dev libelf-dev bc u-boot-tools device-tree-compiler zip wget
+          sudo apt-get install -y libncurses-dev flex bison libssl-dev libelf-dev bc u-boot-tools device-tree-compiler zip wget gcc-arm-linux-gnueabi binutils-aarch64-linux-gnu
 
       - name: Install AOSP GCC 4.9
         run: |
           cd /tmp
           git clone --depth 1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git gcc49
-          /tmp/gcc49/bin/aarch64-linux-android-gcc --version | head -1
 
-      - name: Inject ReSukiSU
+      - name: Inject ReSukiSU (direct github, manual)
         run: |
-          curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
-          ls -la drivers/ | grep -i ksu || echo "check ksu dir"
-          grep -r "ksu_handle" fs/exec.c | head -2 || true
+          set -e
+          git clone --depth 1 https://github.com/ReSukiSU/ReSukiSU KernelSU
+          ln -sf "$(realpath --relative-to=drivers KernelSU/kernel)" drivers/kernelsu
+          grep -q "kernelsu" drivers/Makefile || printf "\nobj-\$(CONFIG_KSU) += kernelsu/\n" >> drivers/Makefile
+          grep -q "source \"drivers/kernelsu/Kconfig\"" drivers/Kconfig || sed -i "/endmenu/i\source \"drivers/kernelsu/Kconfig\"" drivers/Kconfig
+          echo '--- verify ---'
+          ls drivers/kernelsu/ | head -5
+          ls KernelSU/kernel/ | head -5
+
+      - name: SELinux permissive + PM tag
+        run: |
+          sed -i 's/^# CONFIG_SECURITY_SELINUX_DEVELOP is not set$/CONFIG_SECURITY_SELINUX_DEVELOP=y/' arch/arm64/configs/merge_hi3660_defconfig
+          sed -i 's/^\(CONFIG_LOCALVERSION=".*\)\(_xixiaobei[^"]*@Github"\)$/\1_PM\2/' arch/arm64/configs/merge_hi3660_defconfig
+          grep -E "SELINUX_DEVELOP|CONFIG_LOCALVERSION" arch/arm64/configs/merge_hi3660_defconfig
 
       - name: Fix script permissions
         run: |
           find . -name '*.sh' -exec chmod +x {} \;
 
-      - name: Build kernel
+      - name: Build kernel (O=out)
         run: |
           export ARCH=arm64
-          export CROSS_COMPILE=/tmp/gcc49/bin/aarch64-linux-android-
-          make merge_hi3660_defconfig
-          make -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
+          export PATH=/tmp/gcc49/bin:$PATH
+          export CROSS_COMPILE=aarch64-linux-android-
+          export CROSS_COMPILE_ARM32=arm-linux-gnueabi-
+          make O=out merge_hi3660_defconfig
+          make O=out -j$(nproc) KCFLAGS="-fcommon -Wno-error" HOSTCFLAGS="-fcommon -Wno-error" Image
 
       - name: Package boot.img
         run: |
-          python3 .github/scripts/make_huawei_bootimg.py arch/arm64/boot/Image kernel-mha-hm2-resuki.img
+          python3 .github/scripts/make_huawei_bootimg.py out/arch/arm64/boot/Image kernel-mha-hm2-resuki.img
           zip -j kernel-mha-hm2-resuki.zip kernel-mha-hm2-resuki.img
           ls -la kernel-mha-hm2-resuki.img
 

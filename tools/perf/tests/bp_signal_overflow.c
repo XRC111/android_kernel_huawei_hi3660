@@ -23,7 +23,7 @@
 
 #include "tests.h"
 #include "debug.h"
-#include "perf.h"
+#include "../perf.h"
 #include "cloexec.h"
 
 static int overflows;

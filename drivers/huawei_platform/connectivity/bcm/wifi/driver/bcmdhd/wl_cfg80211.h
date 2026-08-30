@@ -39,7 +39,7 @@
 #include <net/cfg80211.h>
 #include <linux/rfkill.h>
 
-#include <wl_cfgp2p.h>
+#include "wl_cfgp2p.h"
 #ifdef BRCM_RSDB
 #include <linux/time.h>
 #endif

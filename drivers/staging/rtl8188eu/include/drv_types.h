@@ -24,26 +24,26 @@
 
 #define DRV_NAME "r8188eu"
 
-#include <osdep_service.h>
-#include <wlan_bssdef.h>
-#include <rtw_ht.h>
-#include <rtw_cmd.h>
-#include <rtw_xmit.h>
-#include <rtw_recv.h>
-#include <hal_intf.h>
-#include <hal_com.h>
-#include <rtw_qos.h>
-#include <rtw_security.h>
-#include <rtw_pwrctrl.h>
-#include <rtw_eeprom.h>
-#include <sta_info.h>
-#include <rtw_mlme.h>
-#include <rtw_debug.h>
-#include <rtw_rf.h>
-#include <rtw_event.h>
-#include <rtw_led.h>
-#include <rtw_mlme_ext.h>
-#include <rtw_ap.h>
+#include "osdep_service.h"
+#include "wlan_bssdef.h"
+#include "rtw_ht.h"
+#include "rtw_cmd.h"
+#include "rtw_xmit.h"
+#include "rtw_recv.h"
+#include "hal_intf.h"
+#include "hal_com.h"
+#include "rtw_qos.h"
+#include "rtw_security.h"
+#include "rtw_pwrctrl.h"
+#include "rtw_eeprom.h"
+#include "sta_info.h"
+#include "rtw_mlme.h"
+#include "rtw_debug.h"
+#include "rtw_rf.h"
+#include "rtw_event.h"
+#include "rtw_led.h"
+#include "rtw_mlme_ext.h"
+#include "rtw_ap.h"
 
 #define SPEC_DEV_ID_NONE		BIT(0)
 #define SPEC_DEV_ID_DISABLE_HT		BIT(1)

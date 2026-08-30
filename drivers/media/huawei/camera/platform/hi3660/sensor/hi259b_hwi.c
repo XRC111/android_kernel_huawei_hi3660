@@ -9,7 +9,7 @@
 #include <linux/pinctrl/consumer.h>
 
 #include "hwsensor.h"
-#include "sensor_commom.h"
+#include "../../sensor_commom.h"
 #include "hw_csi.h"
 
 #define I2S(i) container_of(i, sensor_t, intf)

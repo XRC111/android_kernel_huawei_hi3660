@@ -28,7 +28,7 @@
 #include <assert.h>
 #include <asm/tm.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "tm.h"
 
 #define SPRN_DSCR       0x03

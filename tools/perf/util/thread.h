@@ -7,8 +7,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include "symbol.h"
-#include <strlist.h>
-#include <intlist.h>
+#include "strlist.h"
+#include "intlist.h"
 
 struct thread_stack;
 struct unwind_libunwind_ops;

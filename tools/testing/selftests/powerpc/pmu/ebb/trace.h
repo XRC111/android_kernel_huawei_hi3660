@@ -6,7 +6,7 @@
 #ifndef _SELFTESTS_POWERPC_PMU_EBB_TRACE_H
 #define _SELFTESTS_POWERPC_PMU_EBB_TRACE_H
 
-#include "utils.h"
+#include "../../utils.h"
 
 #define TRACE_TYPE_REG		1
 #define TRACE_TYPE_COUNTER	2

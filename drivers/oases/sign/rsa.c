@@ -16,7 +16,7 @@
 
 #include "public_key.h"
 
-//#include "util.h"
+//#include "../util.h"
 //#define kenter oases_debug
 //#define kleave oases_debug
 

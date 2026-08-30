@@ -33,14 +33,14 @@
 #include <proto/802.11.h>
 #include <proto/802.11_bta.h>
 #include <proto/bt_amp_hci.h>
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_bus.h>
-#include <dhd_proto.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_bus.h"
+#include "dhd_proto.h"
 #include <dhdioctl.h>
-#include <dhd_dbg.h>
+#include "dhd_dbg.h"
 
-#include <dhd_bta.h>
+#include "dhd_bta.h"
 
 
 #ifdef SEND_HCI_CMD_VIA_IOCTL

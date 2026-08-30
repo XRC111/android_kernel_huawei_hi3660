@@ -30,11 +30,11 @@
 
 #include <linux/kernel.h>
 
-#include "iwl-io.h"
-#include "iwl-agn-hw.h"
-#include "iwl-trans.h"
-#include "iwl-fh.h"
-#include "iwl-op-mode.h"
+#include "../iwl-io.h"
+#include "../iwl-agn-hw.h"
+#include "../iwl-trans.h"
+#include "../iwl-fh.h"
+#include "../iwl-op-mode.h"
 
 #include "dev.h"
 #include "agn.h"

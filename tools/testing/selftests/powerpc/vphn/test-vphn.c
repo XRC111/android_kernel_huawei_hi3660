@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <byteswap.h>
-#include "utils.h"
-#include "subunit.h"
+#include "../utils.h"
+#include "../subunit.h"
 
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
 #define cpu_to_be32(x)		bswap_32(x)

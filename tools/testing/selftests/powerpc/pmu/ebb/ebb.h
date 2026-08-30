@@ -9,7 +9,7 @@
 #include "../event.h"
 #include "../lib.h"
 #include "trace.h"
-#include "reg.h"
+#include "../../reg.h"
 
 #define PMC_INDEX(pmc)	((pmc)-1)
 

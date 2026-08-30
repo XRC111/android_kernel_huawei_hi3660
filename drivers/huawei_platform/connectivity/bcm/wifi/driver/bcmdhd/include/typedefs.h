@@ -335,5 +335,5 @@ typedef float64 float_t;
  * Including the bcmdefs.h here, to make sure everyone including typedefs.h
  * gets this automatically
 */
-#include <bcmdefs.h>
+#include "bcmdefs.h"
 #endif /* _TYPEDEFS_H_ */

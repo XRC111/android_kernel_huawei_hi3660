@@ -58,23 +58,23 @@
 #include <proto/802.1d.h>
 #include <proto/802.11.h>
 
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_bus.h>
-#include <dhd_proto.h>
-#include <dhd_dbg.h>
-#include <dhd_debug.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_bus.h"
+#include "dhd_proto.h"
+#include "dhd_dbg.h"
+#include "dhd_debug.h"
 #include <dhdioctl.h>
 #include <sdiovar.h>
 
 #ifdef PROP_TXSTATUS
-#include <dhd_wlfc.h>
+#include "dhd_wlfc.h"
 #endif
 #ifdef DHDTCPACK_SUPPRESS
-#include <dhd_ip.h>
+#include "dhd_ip.h"
 #endif /* DHDTCPACK_SUPPRESS */
 #include <proto/bcmevent.h>
-#include <hw_wifi.h>
+#include "hw_wifi.h"
 
 #ifdef HW_NVRAM_VARS_CALIBRATE
 #include <linux/mtd/hisi_nve_interface.h>

@@ -16,7 +16,7 @@
  */
 
 
-#include "msm_drv.h"
+#include "../msm_drv.h"
 #include "mdp_kms.h"
 
 

@@ -53,7 +53,7 @@
 extern "C" {
 #endif
 
-#include <bsp_sram.h>
+#include "bsp_sram.h"
 
 struct image_head
 {

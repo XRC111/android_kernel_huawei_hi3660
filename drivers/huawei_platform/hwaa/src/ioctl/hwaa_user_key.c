@@ -1,9 +1,9 @@
 
-#include "inc/ioctl/hwaa_user_key.h"
+#include "../../inc/ioctl/hwaa_user_key.h"
 #include <uapi/linux/keyctl.h>
 #include <keys/user-type.h>
 #include <securec.h>
-#include "inc/base/hwaa_utils.h"
+#include "../../inc/base/hwaa_utils.h"
 
 static s32 get_user_key_from_keyring(struct key *keyring_key, u8 *user_key,
 	u32 *user_key_len)

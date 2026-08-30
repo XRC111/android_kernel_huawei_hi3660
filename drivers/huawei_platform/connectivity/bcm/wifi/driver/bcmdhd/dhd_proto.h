@@ -33,7 +33,7 @@
 #include <dhdioctl.h>
 #include <wlioctl.h>
 #ifdef BCMPCIE
-#include <dhd_flowring.h>
+#include "dhd_flowring.h"
 #endif
 
 #define DEFAULT_IOCTL_RESP_TIMEOUT	2000

@@ -29,10 +29,10 @@ Lm31zdoF6uSknVe/21QSVHGiD9iQTGx8zLjcy7sOSTWslqLK/TWJMY2jp4O8bQ==*/
 #define __MPEG4_H__
 
 
-#include "basedef.h"
-#include "public.h"
-#include "vfmw.h"
-#include "vdm_hal.h"
+#include "../basedef.h"
+#include "../public.h"
+#include "../../../vfmw.h"
+#include "../vdm_hal.h"
 #include "syntax.h"
 
 /* ·µ»Ø×´Ì¬ºê¶¨Òå*/

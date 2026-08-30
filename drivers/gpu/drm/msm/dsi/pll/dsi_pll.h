@@ -17,7 +17,7 @@
 #include <linux/clk.h>
 #include <linux/clk-provider.h>
 
-#include "dsi.h"
+#include "../dsi.h"
 
 #define NUM_DSI_CLOCKS_MAX	6
 #define MAX_DSI_PLL_EN_SEQS	10

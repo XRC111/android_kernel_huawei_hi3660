@@ -4,7 +4,7 @@
 #include <sched.h>
 #include "evlist.h"
 #include "evsel.h"
-#include "perf.h"
+#include "../perf.h"
 #include "debug.h"
 #include "tests.h"
 

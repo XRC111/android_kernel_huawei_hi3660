@@ -13,7 +13,7 @@
 #include <sys/mount.h>
 
 #include "fs.h"
-#include "debug-internal.h"
+#include "../debug-internal.h"
 
 #define _STR(x) #x
 #define STR(x) _STR(x)

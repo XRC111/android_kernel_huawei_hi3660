@@ -31,7 +31,7 @@
 #define _KBASE_CONFIG_H_
 
 #include <linux/mm.h>
-#include <mali_malisw.h>
+#include "mali_malisw.h"
 #include <mali_kbase_backend_config.h>
 #include <linux/rbtree.h>
 

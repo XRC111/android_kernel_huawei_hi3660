@@ -25,7 +25,7 @@ iUuE6IIWAMymzsapnNhLNA48hh3b+prrZETi0raYtzCm5UEoQTZQxhbBlWsayQ==*/
 
 #ifndef __VDM_DRV_HEADER__
 #define __VDM_DRV_HEADER__
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "sysconfig.h"
 
 #ifdef __cplusplus

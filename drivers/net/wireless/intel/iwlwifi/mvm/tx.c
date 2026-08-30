@@ -70,8 +70,8 @@
 #include <net/ip.h>
 #include <net/ipv6.h>
 
-#include "iwl-trans.h"
-#include "iwl-eeprom-parse.h"
+#include "../iwl-trans.h"
+#include "../iwl-eeprom-parse.h"
 #include "mvm.h"
 #include "sta.h"
 #include "fw-dbg.h"

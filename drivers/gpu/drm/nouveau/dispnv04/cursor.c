@@ -1,8 +1,8 @@
 #include <drm/drmP.h>
 #include <drm/drm_mode.h>
-#include "nouveau_drv.h"
-#include "nouveau_reg.h"
-#include "nouveau_crtc.h"
+#include "../nouveau_drv.h"
+#include "../nouveau_reg.h"
+#include "../nouveau_crtc.h"
 #include "hw.h"
 
 static void

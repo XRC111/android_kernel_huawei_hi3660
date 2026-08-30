@@ -21,7 +21,7 @@
 #include "drm_mipi_dsi.h"
 #include "drm_panel.h"
 
-#include "msm_drv.h"
+#include "../msm_drv.h"
 
 #define DSI_0	0
 #define DSI_1	1

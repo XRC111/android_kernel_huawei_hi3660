@@ -17,7 +17,7 @@
 
 #include <linux/cache.h>
 
-#include "rtl818x.h"
+#include "../rtl818x.h"
 #include "leds.h"
 
 #define RTL8187_EEPROM_TXPWR_BASE	0x05

@@ -17,10 +17,10 @@ extern "C" {
 #include "mac_resource.h"
 #include "mac_regdomain.h"
 #include "dmac_ext_if.h"
-#include "dmac_vap.h"
-#include "dmac_main.h"
+#include "../dmac_vap.h"
+#include "../dmac_main.h"
 #include "dmac_wmm_test.h"
-#include "dmac_config.h"
+#include "../dmac_config.h"
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_DMAC_WMM_TEST_C
 

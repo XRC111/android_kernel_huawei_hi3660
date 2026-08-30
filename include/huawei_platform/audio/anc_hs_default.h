@@ -10,7 +10,7 @@
 #ifndef ANC_DEFAULT
 #define ANC_DEFAULT
 
-#include "huawei_platform/audio/anc_hs_interface.h"
+#include "../../huawei_platform/audio/anc_hs_interface.h"
 
 #ifdef CONFIG_ANC_DEFAULT
 void anc_max14744_refresh_headset_type(int headset_type);

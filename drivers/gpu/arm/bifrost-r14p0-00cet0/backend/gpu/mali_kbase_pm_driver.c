@@ -49,7 +49,7 @@
 #include <linux/hisi/rdr_hisi_platform.h>
 #include <linux/of.h>
 #include <linux/hisi/hisi_drmdriver.h>
-#include "mali_kbase_js_defs.h"
+#include "../../mali_kbase_js_defs.h"
 
 #if MALI_MOCK_TEST
 #define MOCKABLE(function) function##_original

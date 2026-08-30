@@ -9,7 +9,7 @@
 #ifndef __ASM_TXX9IRQ_H
 #define __ASM_TXX9IRQ_H
 
-#include <irq.h>
+#include "irq.h"
 
 #ifdef CONFIG_IRQ_MIPS_CPU
 #define TXX9_IRQ_BASE	(MIPS_CPU_IRQ_BASE + 8)

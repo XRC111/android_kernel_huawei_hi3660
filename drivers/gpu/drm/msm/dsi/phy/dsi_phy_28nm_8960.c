@@ -12,7 +12,7 @@
  */
 
 #include "dsi_phy.h"
-#include "dsi.xml.h"
+#include "../dsi.xml.h"
 
 static void dsi_28nm_dphy_set_timing(struct msm_dsi_phy *phy,
 		struct msm_dsi_dphy_timing *timing)

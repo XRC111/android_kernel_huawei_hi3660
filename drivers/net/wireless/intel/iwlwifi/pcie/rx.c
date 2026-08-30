@@ -32,10 +32,10 @@
 #include <linux/wait.h>
 #include <linux/gfp.h>
 
-#include "iwl-prph.h"
-#include "iwl-io.h"
+#include "../iwl-prph.h"
+#include "../iwl-io.h"
 #include "internal.h"
-#include "iwl-op-mode.h"
+#include "../iwl-op-mode.h"
 
 /******************************************************************************
  *

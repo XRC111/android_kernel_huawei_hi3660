@@ -29,12 +29,12 @@ P1ZjwMetuOZOkqHSgxpjoZKEYTlarpPw3gg/o6cSzZAROquO60jzTwA22LF3Yw==*/
 #define __REAL9_VFMW_H__
 
 
-#include "basedef.h"
-#include "public.h"
+#include "../basedef.h"
+#include "../public.h"
 
-#include "bitstream.h"
-#include "syn_cmn.h"
-#include "vdm_hal.h"
+#include "../bitstream.h"
+#include "../syn_cmn.h"
+#include "../vdm_hal.h"
 
 
 #define REAL9_VFMW_MAX_PIC_WIDTH   127 //unit: MB

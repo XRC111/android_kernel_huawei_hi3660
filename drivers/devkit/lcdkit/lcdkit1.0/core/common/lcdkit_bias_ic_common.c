@@ -1,4 +1,4 @@
-#include "lcdkit_bias_bl_utility.h"
+#include "../../core/common/hisi/lcdkit_bias_bl_utility.h"
 #include "lcdkit_bias_ic_common.h"
 #include "lcdkit_dbg.h"
 #if defined (CONFIG_HUAWEI_DSM)

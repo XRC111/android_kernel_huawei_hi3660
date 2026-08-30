@@ -30,7 +30,7 @@
 #include <linux/iommu.h>
 #include <media/huawei/flash_cfg.h>
 #include "hw_subdev.h"
-#include "cam_log.h"
+#include "../../cam_log.h"
 #include <dsm/dsm_pub.h>
 #include <securec.h>
 //lint -save -e607

@@ -18,8 +18,8 @@ extern "C" {
 #include "mac_regdomain.h"
 #include "dmac_ext_if.h"
 #include "oam_ext_if.h"
-#include "dmac_vap.h"
-#include "dmac_main.h"
+#include "../dmac_vap.h"
+#include "../dmac_main.h"
 #include "dmac_test_main.h"
 
 #undef  THIS_FILE_ID

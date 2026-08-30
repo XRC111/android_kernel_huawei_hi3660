@@ -15,7 +15,7 @@
 
 #include <huawei_platform/power/power_dsm.h>
 
-#include <cpu_buck.h>
+#include "cpu_buck.h"
 #ifdef CONFIG_HISI_COUL
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
 #endif

@@ -48,7 +48,7 @@
 #include <linux/hisi/kirin_partition.h>
 #include <linux/platform_data/remoteproc-hisi.h>
 #include "hisi_partition.h"
-#include "partition.h"
+#include "hisi_partition.h"
 #include <dsm/dsm_pub.h>
 #include <isp_ddr_map.h>
 #include <linux/list.h>

@@ -1,5 +1,5 @@
-#include "tests/tests.h"
-#include "perf.h"
+#include "../../../tests/tests.h"
+#include "../../../perf.h"
 #include "cloexec.h"
 #include "debug.h"
 #include "evlist.h"

@@ -40,10 +40,10 @@
 #include <asm/cacheflush.h>
 
 #ifdef CONFIG_HISI_SMARTPOOL_OPT
-#include "hisi/hisi_ion_smart_pool.h"
+#include "../hisi/hisi_ion_smart_pool.h"
 #endif
 #ifdef CONFIG_HISI_SPECIAL_SCENE_POOL
-#include "hisi/hisi_ion_scene_pool.h"
+#include "../hisi/hisi_ion_scene_pool.h"
 #endif
 
 #include <linux/hisi/hisi_idle_sleep.h>

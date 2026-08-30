@@ -18,8 +18,8 @@
 
 #include <linux/of_irq.h>
 
-#include "msm_drv.h"
-#include "msm_mmu.h"
+#include "../../msm_drv.h"
+#include "../../msm_mmu.h"
 #include "mdp5_kms.h"
 
 static const char *iommu_ports[] = {

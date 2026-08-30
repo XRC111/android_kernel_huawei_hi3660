@@ -65,9 +65,9 @@
  *****************************************************************************/
 #include <net/mac80211.h>
 
-#include "iwl-debug.h"
-#include "iwl-io.h"
-#include "iwl-prph.h"
+#include "../iwl-debug.h"
+#include "../iwl-io.h"
+#include "../iwl-prph.h"
 #include "fw-dbg.h"
 #include "mvm.h"
 #include "fw-api-rs.h"

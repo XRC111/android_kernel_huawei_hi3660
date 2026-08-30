@@ -20,7 +20,7 @@
 #include <linux/bitmap.h>
 #include <linux/time64.h>
 
-#include "perf.h"
+#include "../perf.h"
 #include "svghelper.h"
 #include "util.h"
 #include "cpumap.h"

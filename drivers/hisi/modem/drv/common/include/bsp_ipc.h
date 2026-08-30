@@ -48,7 +48,7 @@
 #ifndef _BSP_IPC_H_
 #define _BSP_IPC_H_
 #ifdef __ASSEMBLY__
-#include <bsp_memmap.h>
+#include "bsp_memmap.h"
 
 /* c->m send ipc_int  addr & bit  */
 //#define  PM_C2M_IPC_ADDR       (HI_IPCM_REGBASE_ADDR+IPC_CPU_RAW_INT_M3)
@@ -60,8 +60,8 @@
 #else
 
 #include <product_config.h>
-#include <osl_spinlock.h>
-#include <osl_common.h>
+#include "osl_spinlock.h"
+#include "osl_common.h"
 #include <mdrv_ipc.h>
 #include <mdrv_ipc_enum.h>
 #ifdef __cplusplus

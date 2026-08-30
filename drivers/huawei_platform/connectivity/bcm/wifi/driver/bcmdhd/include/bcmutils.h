@@ -36,7 +36,7 @@ extern "C" {
 #endif
 
 #ifdef PKTQ_LOG
-#include <wlioctl.h>
+#include "wlioctl.h"
 #endif
 
 /* ctype replacement */
@@ -82,9 +82,9 @@ struct bcmstrbuf {
 
 /* ** driver-only section ** */
 #ifdef BCMDRIVER
-#include <osl.h>
-#include <hnd_pktq.h>
-#include <hnd_pktpool.h>
+#include "osl.h"
+#include "hnd_pktq.h"
+#include "hnd_pktpool.h"
 
 #define GPIO_PIN_NOTDEFINED 	0x20	/* Pin not defined */
 
@@ -731,7 +731,7 @@ extern void prhex(const char *msg, uchar *buf, uint len);
 /* IE parsing */
 
 /* packing is required if struct is passed across the bus */
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 
 /* tag_ID/length/value_buffer tuple */
 typedef BWL_PRE_PACKED_STRUCT struct bcm_tlv {
@@ -748,7 +748,7 @@ typedef BWL_PRE_PACKED_STRUCT struct bcm_xtlv {
 } BWL_POST_PACKED_STRUCT bcm_xtlv_t;
 
 /* no default structure packing */
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 
 
 /* descriptor of xtlv data src or dst  */

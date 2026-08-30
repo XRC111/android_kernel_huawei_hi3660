@@ -25,7 +25,7 @@
 #include <linux/bitmap.h>
 #include <linux/stringify.h>
 #include <linux/time64.h>
-#include "asm/bug.h"
+#include "util/debug.h"
 #include "util/mem-events.h"
 
 static char const		*script_name;

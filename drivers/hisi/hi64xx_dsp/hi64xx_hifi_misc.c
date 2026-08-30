@@ -50,14 +50,14 @@
 #include <dsm_audio/dsm_audio.h>
 #include <rdr_hisi_audio_codec.h>
 #include <rdr_hisi_audio_adapter.h>
-#include <hi64xx_algo_interface.h>
-#include <hi64xx_hifi_interface.h>
+#include "hi64xx_algo_interface.h"
+#include "hi64xx_hifi_interface.h"
 #include "hi64xx_hifi_debug.h"
 #include "hi64xx_hifi_img_dl.h"
-#include "slimbus.h"
+#include "../slimbus/slimbus.h"
 #include "hi64xx_hifi_om.h"
 #include "hi64xx_hifi_anc_beta.h"
-#include "soundtrigger_dma_drv.h"
+#include "../soundtrigger/soundtrigger_dma_drv.h"
 /*lint -e655 -e838 -e730 -e747*/
 
 #define UNUSED_PARAMETER(x) (void)(x)

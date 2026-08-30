@@ -28,11 +28,11 @@
 #ifndef _sdiovar_h_
 #define _sdiovar_h_
 
-#include <typedefs.h>
+#include "typedefs.h"
 
 /* require default structure packing */
 #define BWL_DEFAULT_PACKING
-#include <packed_section_start.h>
+#include "packed_section_start.h"
 
 typedef struct sdreg {
 	int func;
@@ -53,6 +53,6 @@ typedef struct sdreg {
 #define NUM_PREV_TRANSACTIONS	16
 
 
-#include <packed_section_end.h>
+#include "packed_section_end.h"
 
 #endif /* _sdiovar_h_ */

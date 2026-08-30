@@ -38,7 +38,7 @@
 #ifndef _TYPEDEFS_H_
 #include <typedefs.h>
 #endif
-/* #include <ethernet.h> -- TODO: req., excluded to overwhelming coupling (break up ethernet.h) */
+/* #include "ethernet.h" -- TODO: req., excluded to overwhelming coupling (break up ethernet.h) */
 #include <proto/bcmeth.h>
 #ifdef BCM_PATCH_CVE_2016_0801
 #include <proto/dnglevent.h>

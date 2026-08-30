@@ -36,8 +36,8 @@
 #include <media/huawei/hjpeg_cfg.h>
 
 #include "hjpeg_intf.h"
-#include "hwcam_intf.h"
-#include "cam_log.h"
+#include "../hwcam_intf.h"
+#include "../cam_log.h"
 //lint -save -e429
 
 typedef struct _tag_hjpeg

@@ -36,15 +36,15 @@
 #include <net/ip6_checksum.h>
 #include <net/tso.h>
 
-#include "iwl-debug.h"
-#include "iwl-csr.h"
-#include "iwl-prph.h"
-#include "iwl-io.h"
-#include "iwl-scd.h"
-#include "iwl-op-mode.h"
+#include "../iwl-debug.h"
+#include "../iwl-csr.h"
+#include "../iwl-prph.h"
+#include "../iwl-io.h"
+#include "../iwl-scd.h"
+#include "../iwl-op-mode.h"
 #include "internal.h"
 /* FIXME: need to abstract out TX command (once we know what it looks like) */
-#include "dvm/commands.h"
+#include "../dvm/commands.h"
 
 #define IWL_TX_CRC_SIZE 4
 #define IWL_TX_DELIMITER_SIZE 4

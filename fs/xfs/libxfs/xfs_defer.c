@@ -17,7 +17,7 @@
  * along with this program; if not, write the Free Software Foundation,
  * Inc.,  51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#include "xfs.h"
+#include "../xfs.h"
 #include "xfs_fs.h"
 #include "xfs_shared.h"
 #include "xfs_format.h"
@@ -25,10 +25,10 @@
 #include "xfs_trans_resv.h"
 #include "xfs_bit.h"
 #include "xfs_sb.h"
-#include "xfs_mount.h"
+#include "../xfs_mount.h"
 #include "xfs_defer.h"
-#include "xfs_trans.h"
-#include "xfs_trace.h"
+#include "../xfs_trans.h"
+#include "../xfs_trace.h"
 
 /*
  * Deferred Operations in XFS

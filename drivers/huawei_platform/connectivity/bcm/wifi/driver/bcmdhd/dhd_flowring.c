@@ -38,18 +38,18 @@
 
 #include <proto/ethernet.h>
 #include <proto/bcmevent.h>
-#include <dngl_stats.h>
+#include "dngl_stats.h"
 
-#include <dhd.h>
+#include "dhd.h"
 
-#include <dhd_flowring.h>
-#include <dhd_bus.h>
-#include <dhd_proto.h>
-#include <dhd_dbg.h>
+#include "dhd_flowring.h"
+#include "dhd_bus.h"
+#include "dhd_proto.h"
+#include "dhd_dbg.h"
 #include <proto/802.1d.h>
 #include <pcie_core.h>
 #include <bcmmsgbuf.h>
-#include <dhd_pcie.h>
+#include "dhd_pcie.h"
 
 
 static INLINE int dhd_flow_queue_throttle(flow_queue_t *queue);

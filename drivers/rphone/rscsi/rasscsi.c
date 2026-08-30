@@ -20,8 +20,8 @@
 #include <linux/random.h>
 #include "../rasbase/rasbase.h"
 #include "../rasbase/rasproc.h"
-#include "drivers/scsi/ufs/ufshcd.h"
-#include "drivers/scsi/sd.h"
+#include "../../../drivers/scsi/ufs/ufshcd.h"
+#include "../../../drivers/scsi/sd.h"
 
 #define FAULT_MAX 16
 #define TIMEOUT_REQUEST -1

@@ -24,7 +24,7 @@
 
 #ifndef __HICAM_BUF_PRIV_H_INCLUDED__
 #define __HICAM_BUF_PRIV_H_INCLUDED__
-#include "hicam_buf.h"
+#include "../hicam_buf.h"
 
 struct device;
 int hicam_internal_map_iommu(struct device *dev,

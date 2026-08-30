@@ -23,7 +23,7 @@ extern "C" {
 #include "mac_device.h"
 #include "mac_resource.h"
 #include "mac_vap.h"
-//#include "mac_11i.h"
+#include "hmac_11i.h"
 #include "hmac_11i.h"
 #ifdef _PRE_WLAN_FEATURE_WAPI
 #include "hmac_wapi.h"

@@ -14,7 +14,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include "helpers/sysfs.h"
+#include "../helpers/sysfs.h"
 
 unsigned int sysfs_read_file(const char *path, char *buf, size_t buflen)
 {

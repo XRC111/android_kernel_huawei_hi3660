@@ -9,7 +9,7 @@
 #ifndef __ASM_RTLX_H_
 #define __ASM_RTLX_H_
 
-#include <irq.h>
+#include "irq.h"
 
 #define RTLX_MODULE_NAME "rtlx"
 

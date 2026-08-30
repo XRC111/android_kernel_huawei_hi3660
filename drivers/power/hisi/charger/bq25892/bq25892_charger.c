@@ -40,7 +40,7 @@
 #include <linux/raid/pq.h>
 #include <linux/power/hisi/charger/hisi_charger.h>
 #include <linux/power/hisi/hisi_bci_battery.h>
-#include <bq25892_charger.h>
+#include "bq25892_charger.h"
 #include <linux/huawei/hisi_adc.h>
 
 #define HWLOG_TAG bq25892_charger

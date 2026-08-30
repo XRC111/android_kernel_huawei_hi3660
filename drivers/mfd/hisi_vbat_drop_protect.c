@@ -14,7 +14,7 @@
 #include <linux/of_address.h>
 #include <linux/of_device.h>
 #include <linux/of_irq.h>
-#include <hisi_vbat_drop_protect.h>
+#include "hisi_vbat_drop_protect.h"
 #include <linux/irq.h>
 #include <linux/jiffies.h>
 #include <linux/power/hisi/coul/hisi_coul_drv.h>

@@ -30,7 +30,7 @@
 #include <assert.h>
 
 #include "tm.h"
-#include "utils.h"
+#include "../utils.h"
 
 int test_vmxcopy()
 {

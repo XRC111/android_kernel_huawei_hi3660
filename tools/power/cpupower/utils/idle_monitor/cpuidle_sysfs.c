@@ -12,8 +12,8 @@
 #include <limits.h>
 #include <cpuidle.h>
 
-#include "helpers/helpers.h"
-#include "idle_monitor/cpupower-monitor.h"
+#include "../helpers/helpers.h"
+#include "../idle_monitor/cpupower-monitor.h"
 
 #define CPUIDLE_STATES_MAX 10
 static cstate_t cpuidle_cstates[CPUIDLE_STATES_MAX];

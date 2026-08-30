@@ -30,9 +30,9 @@
 #define _dhd_ip_h_
 
 #ifdef DHDTCPACK_SUPPRESS
-#include <dngl_stats.h>
+#include "dngl_stats.h"
 #include <bcmutils.h>
-#include <dhd.h>
+#include "dhd.h"
 #endif /* DHDTCPACK_SUPPRESS */
 
 typedef enum pkt_frag

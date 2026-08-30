@@ -1,4 +1,4 @@
-#include "symbol/kallsyms.h"
+#include "../symbol/kallsyms.h"
 #include <stdio.h>
 #include <stdlib.h>
 

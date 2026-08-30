@@ -67,9 +67,9 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <osl_err.h>
-#include <osl_types.h>
-#include <osl_generic.h>
-#include <bsp_trace.h>
+#include "osl_types.h"
+#include "osl_generic.h"
+#include "bsp_trace.h"
 
 struct boot_param_header {
 	__be32	magic;

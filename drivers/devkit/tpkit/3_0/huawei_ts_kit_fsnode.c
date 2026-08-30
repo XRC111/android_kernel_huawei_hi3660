@@ -24,9 +24,9 @@
 #include <linux/sched/rt.h>
 #include <linux/fb.h>
 #include <linux/workqueue.h>
-#include <huawei_ts_kit.h>
-#include <huawei_ts_kit_platform.h>
-#include <huawei_ts_kit_api.h>
+#include "huawei_ts_kit.h"
+#include "huawei_ts_kit_platform.h"
+#include "huawei_ts_kit_api.h"
 
 #define MAX_LOTUS_NUM   6
 #define DEC_BASE_DATA   10

@@ -2,7 +2,7 @@
 #define _HISI_SCHARGER_SOH_H_
 
 #include <soc_schargerV600_interface.h>
-#include <./../../charger/schargerV600/hisi_scharger_v600.h>
+#include "../../charger/schargerV600/hisi_scharger_v600.h"
 
 #ifndef BIT
 #define BIT(x)      (1 << (x))

@@ -21,7 +21,7 @@
 #include <net/mac80211.h>
 
 #include <brcmu_utils.h>
-#include <aiutils.h>
+#include "aiutils.h"
 #include "types.h"
 #include "main.h"
 #include "dma.h"

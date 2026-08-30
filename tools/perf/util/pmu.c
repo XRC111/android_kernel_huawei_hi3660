@@ -13,7 +13,7 @@
 #include "parse-events.h"
 #include "cpumap.h"
 #include "header.h"
-#include "pmu-events/pmu-events.h"
+#include "../pmu-events/pmu-events.h"
 #include "cache.h"
 
 struct perf_pmu_format {

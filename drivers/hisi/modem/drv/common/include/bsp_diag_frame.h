@@ -52,7 +52,7 @@
 extern "C"
 {
 #endif
-#include <osl_types.h>
+#include "osl_types.h"
 
 /* DIAG_SERVICE_HEAD_STRU:ssid4b */
 typedef enum _diag_frame_ssid_type

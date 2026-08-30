@@ -19,12 +19,12 @@
 #ifndef _IDTP9221_FW_SRAM_H_
 #define _IDTP9221_FW_SRAM_H_
 
-#include <idtp9221_fw_sram_020b.h>
-#include <idtp9221_rxfw_sram_0318.h>
-#include <idtp9221_txfw_sram_031a.h>
+#include "idtp9221_fw_sram_020b.h"
+#include "idtp9221_rxfw_sram_0318.h"
+#include "idtp9221_txfw_sram_031a.h"
 
-#include <stwlc33_rxfw_sram_1100.h>
-#include <stwlc33_txfw_sram_1100.h>
+#include "stwlc33_rxfw_sram_1100.h"
+#include "stwlc33_txfw_sram_1100.h"
 
 #include <huawei_platform/power/wireless_charger.h>
 

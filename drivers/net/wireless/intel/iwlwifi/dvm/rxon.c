@@ -26,8 +26,8 @@
  *****************************************************************************/
 
 #include <linux/etherdevice.h>
-#include "iwl-trans.h"
-#include "iwl-modparams.h"
+#include "../iwl-trans.h"
+#include "../iwl-modparams.h"
 #include "dev.h"
 #include "agn.h"
 #include "calib.h"

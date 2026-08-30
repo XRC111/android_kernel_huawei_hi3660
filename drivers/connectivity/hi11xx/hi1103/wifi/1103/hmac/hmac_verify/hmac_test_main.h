@@ -22,7 +22,7 @@ extern "C" {
 #include "alg_ext_if.h"
 #endif
 #include "hmac_ext_if.h"
-#include "hmac_vap.h"
+#include "../hmac_vap.h"
 
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_HMAC_TEST_MAIN_H

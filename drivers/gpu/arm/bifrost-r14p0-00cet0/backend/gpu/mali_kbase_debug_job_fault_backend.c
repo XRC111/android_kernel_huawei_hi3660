@@ -22,7 +22,7 @@
 
 #include <mali_kbase.h>
 #include <backend/gpu/mali_kbase_device_internal.h>
-#include "mali_kbase_debug_job_fault.h"
+#include "../../mali_kbase_debug_job_fault.h"
 
 #ifdef CONFIG_HISI_DEBUG_FS
 

@@ -22,8 +22,8 @@
 #include <linux/platform_device.h>
 #include <linux/regulator/consumer.h>
 
-#include "msm_drv.h"
-#include "msm_kms.h"
+#include "../msm_drv.h"
+#include "../msm_kms.h"
 #include "mdp_common.xml.h"
 
 struct mdp_kms;

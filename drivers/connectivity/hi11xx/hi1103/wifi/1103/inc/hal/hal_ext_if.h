@@ -16,7 +16,7 @@ extern "C" {
 #include "oal_ext_if.h"
 #include "oam_ext_if.h"
 #include "frw_ext_if.h"
-#include "wlan_types.h"
+#include "../wlan_types.h"
 #include "hal_commom_ops.h"
 #include "oal_hardware.h"
 #undef  THIS_FILE_ID

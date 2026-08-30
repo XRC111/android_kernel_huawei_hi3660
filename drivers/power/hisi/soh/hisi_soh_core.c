@@ -14,7 +14,7 @@
 #include <linux/of_platform.h>
 #include <linux/reboot.h>
 #include <linux/timer.h>
-#include <hisi_soh_core.h>
+#include "hisi_soh_core.h"
 #include <linux/power/hisi/coul/hisi_coul_event.h>
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
 #include <linux/power/hisi/hisi_bci_battery.h>

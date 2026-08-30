@@ -4,10 +4,10 @@
 #include <sys/mman.h>
 
 #include "tests.h"
-#include "util/evsel.h"
-#include "util/evlist.h"
-#include "util/cpumap.h"
-#include "util/thread_map.h"
+#include "../util/evsel.h"
+#include "../util/evlist.h"
+#include "../util/cpumap.h"
+#include "../util/thread_map.h"
 
 #define NR_LOOPS  10000000
 

@@ -6,7 +6,7 @@
 #include <linux/syscalls.h>
 #include <linux/module.h>
 #include "hisi_pmic_soh.h"
-#include <./../hisi_soh_core.h>
+#include "../hisi_soh_core.h"
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
 
 #ifndef STATIC

@@ -16,7 +16,7 @@
 #include <sys/time.h>
 #include <stdlib.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "tm.h"
 
 extern int getppid_tm_active(void);

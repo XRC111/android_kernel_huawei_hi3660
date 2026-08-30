@@ -17,7 +17,7 @@
 
 #include <linux/irq.h>
 
-#include "msm_drv.h"
+#include "../../msm_drv.h"
 #include "mdp5_kms.h"
 
 void mdp5_set_irqmask(struct mdp_kms *mdp_kms, uint32_t irqmask,

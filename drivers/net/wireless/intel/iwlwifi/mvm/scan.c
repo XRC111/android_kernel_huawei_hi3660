@@ -70,7 +70,7 @@
 
 #include "mvm.h"
 #include "fw-api-scan.h"
-#include "iwl-io.h"
+#include "../iwl-io.h"
 
 #define IWL_DENSE_EBS_SCAN_RATIO 5
 #define IWL_SPARSE_EBS_SCAN_RATIO 1

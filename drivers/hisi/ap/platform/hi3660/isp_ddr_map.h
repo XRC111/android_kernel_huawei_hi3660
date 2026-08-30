@@ -1,6 +1,6 @@
 #ifndef __ISP_DDR_MAP_H__
 #define __ISP_DDR_MAP_H__ 
-#include <global_ddr_map.h>
+#include "global_ddr_map.h"
 #ifdef __cplusplus
 #if __cplusplus
 extern "C" {

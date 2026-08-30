@@ -31,27 +31,27 @@
 #include <linux/compat.h>
 #endif
 
-#include <wl_android.h>
-#include <wldev_common.h>
+#include "wl_android.h"
+#include "wldev_common.h"
 #include <wlioctl.h>
 #include <bcmutils.h>
 #include <linux_osl.h>
-#include <dhd_dbg.h>
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dhd_dbg.h"
+#include "dngl_stats.h"
+#include "dhd.h"
 #include <proto/bcmip.h>
 #ifdef PNO_SUPPORT
-#include <dhd_pno.h>
+#include "dhd_pno.h"
 #endif
 #ifdef BCMSDIO
 #include <bcmsdbus.h>
 #endif
 #ifdef WL_CFG80211
-#include <wl_cfg80211.h>
+#include "wl_cfg80211.h"
 #endif
-#include <hw_wifi.h>
+#include "hw_wifi.h"
 
-#include <wl_dbg.h>
+#include "wl_dbg.h"
 #undef WL_ERROR
 #define WL_ERROR(x) printk x
 #undef WL_TRACE

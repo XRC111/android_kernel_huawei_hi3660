@@ -1,8 +1,8 @@
 #ifndef __USB_ANALOG_HS_FSA4476__
 #define __USB_ANALOG_HS_FSA4476__
 
-#include "huawei_platform/audio/usb_analog_hs_interface.h"
-#include "huawei_platform/usb/hw_pd_dev.h"
+#include "../../huawei_platform/audio/usb_analog_hs_interface.h"
+#include "../../huawei_platform/usb/hw_pd_dev.h"
 
 extern void pd_dpm_send_event(enum pd_dpm_cable_event_type event);
 

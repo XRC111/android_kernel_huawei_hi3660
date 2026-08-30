@@ -17,7 +17,7 @@ extern "C" {
 #include "frw_ext_if.h"
 #include "hal_ext_if.h"
 #include "dmac_ext_if.h"
-#include "dmac_vap.h"
+#include "../dmac_vap.h"
 #ifdef _PRE_WLAN_ALG_ENABLE
 #include "alg_ext_if.h"
 #endif

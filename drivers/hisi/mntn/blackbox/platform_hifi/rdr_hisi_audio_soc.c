@@ -35,9 +35,9 @@
 #include <linux/wakelock.h>
 #include <linux/of_irq.h>
 #include <linux/version.h>
-#include "rdr_print.h"
-#include "rdr_inner.h"
-#include "rdr_field.h"
+#include "../rdr_print.h"
+#include "../rdr_inner.h"
+#include "../rdr_field.h"
 
 #include "rdr_hisi_audio_adapter.h"
 #include "rdr_hisi_audio_soc.h"

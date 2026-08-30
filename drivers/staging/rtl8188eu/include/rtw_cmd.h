@@ -15,12 +15,12 @@
 #ifndef __RTW_CMD_H_
 #define __RTW_CMD_H_
 
-#include <wlan_bssdef.h>
-#include <rtw_rf.h>
-#include <rtw_led.h>
+#include "wlan_bssdef.h"
+#include "rtw_rf.h"
+#include "rtw_led.h"
 
-#include <osdep_service.h>
-#include <ieee80211.h> /*  <ieee80211/ieee80211.h> */
+#include "osdep_service.h"
+#include "ieee80211.h" /*  <ieee80211/ieee80211.h> */
 
 #define MAX_CMDSZ	1024
 #define MAX_RSPSZ	512

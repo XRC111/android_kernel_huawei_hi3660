@@ -24,7 +24,7 @@
 #include <linux/regulator/consumer.h>
 #include <linux/hdmi.h>
 
-#include "msm_drv.h"
+#include "../msm_drv.h"
 #include "hdmi.xml.h"
 
 #define HDMI_MAX_NUM_GPIO	6

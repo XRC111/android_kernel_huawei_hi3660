@@ -5,9 +5,9 @@
 extern "C" {
 #endif
 #endif
-#include <soc_lpmcu_baseaddr_interface.h>
-#include <soc_acpu_baseaddr_interface.h>
-#include <m3_ddr_map.h>
+#include "soc_lpmcu_baseaddr_interface.h"
+#include "soc_acpu_baseaddr_interface.h"
+#include "m3_ddr_map.h"
 #ifdef __FASTBOOT__
 #define M3_SRAM_BASE (LPMCU_FIRMWARE_BACKUP_ADDR)
 #else

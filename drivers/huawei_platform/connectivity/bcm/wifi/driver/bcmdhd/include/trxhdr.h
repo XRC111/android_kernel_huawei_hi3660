@@ -27,7 +27,7 @@
 #ifndef _TRX_HDR_H
 #define _TRX_HDR_H
 
-#include <typedefs.h>
+#include "typedefs.h"
 
 #define TRX_MAGIC	0x30524448	/* "HDR0" */
 #define TRX_MAX_LEN	0x3B0000	/* Max length */

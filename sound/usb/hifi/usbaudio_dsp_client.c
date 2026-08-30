@@ -32,11 +32,11 @@
 #include "usbaudio_dsp_client.h"
 #include "usbaudio_ioctl.h"
 
-#include "usbaudio.h"
-#include "card.h"
-#include "helper.h"
-#include "format.h"
-#include "clock.h"
+#include "../usbaudio.h"
+#include "../card.h"
+#include "../helper.h"
+#include "../format.h"
+#include "../clock.h"
 
 /*lint -e429 -e514 -e574*/
 #define USB_REQ_SET_VOLUME 0x2

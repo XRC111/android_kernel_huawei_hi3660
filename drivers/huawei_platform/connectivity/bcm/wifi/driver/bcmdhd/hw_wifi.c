@@ -3,16 +3,16 @@
 #include <wlioctl.h>
 #include <linux/string.h>
 #include <linux/errno.h>
-#include <hw_wifi.h>
+#include "hw_wifi.h"
 #include "dhd_dbg.h"
-#include <wl_cfg80211.h>
+#include "wl_cfg80211.h"
 #ifdef HW_WIFI_WAKEUP_SRC_PARSE
 #include <linux/ip.h>
 #include <net/tcp.h>
 #include <net/udp.h>
 #include <net/icmp.h>
 #include <linux/ieee80211.h>
-#include <wl_android.h>
+#include "wl_android.h"
 #include <proto/bcmevent.h>
 #include <bcmendian.h>
 #include <linux/types.h>
@@ -28,7 +28,7 @@
 #endif
 
 #ifdef CONFIG_HW_WLANFTY_STATUS
-#include <dhd.h>
+#include "dhd.h"
 int wlanfty_status_value = 0;
 EXPORT_SYMBOL(wlanfty_status_value);
 #endif
@@ -36,7 +36,7 @@ EXPORT_SYMBOL(wlanfty_status_value);
 #define HW_BCN_TIMEOUT 10
 
 #ifdef HW_WIFI_DRIVER_NORMALIZE
-#include <hw_country_code.h>
+#include "hw_country_code.h"
 #endif /* HW_WIFI_DRIVER_NORMALIZE */
 
 #ifdef CONFIG_HW_ABS

@@ -2,7 +2,7 @@
 #include "thread.h"
 #include "session.h"
 #include "debug.h"
-#include "arch/common.h"
+#include "../arch/common.h"
 
 struct unwind_libunwind_ops __weak *local_unwind_libunwind_ops;
 struct unwind_libunwind_ops __weak *x86_32_unwind_libunwind_ops;

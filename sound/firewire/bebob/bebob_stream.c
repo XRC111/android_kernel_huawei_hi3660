@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./bebob.h"
+#include "bebob.h"
 
 #define CALLBACK_TIMEOUT	2000
 #define FW_ISO_RESOURCE_DELAY	1000

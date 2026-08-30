@@ -1,7 +1,7 @@
 #include <api/fd/array.h>
 #include <poll.h>
-#include "util/debug.h"
-#include "tests/tests.h"
+#include "../util/debug.h"
+#include "../tests/tests.h"
 
 static void fdarray__init_revents(struct fdarray *fda, short revents)
 {

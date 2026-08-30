@@ -82,7 +82,7 @@ static inline unsigned int read_ccsidr(void)
 }
 #else /* CONFIG_CPU_V7M */
 #include <linux/io.h>
-#include "asm/v7m.h"
+#include "../asm/v7m.h"
 
 static inline void set_csselr(unsigned int cache_selector)
 {

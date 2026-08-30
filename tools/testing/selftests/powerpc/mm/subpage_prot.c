@@ -25,7 +25,7 @@
 #include <ucontext.h>
 #include <unistd.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 char *file_name;
 

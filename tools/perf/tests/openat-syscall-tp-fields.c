@@ -1,5 +1,5 @@
 #include <linux/err.h>
-#include "perf.h"
+#include "../perf.h"
 #include "evlist.h"
 #include "evsel.h"
 #include "thread_map.h"

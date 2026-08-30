@@ -1,8 +1,8 @@
 #ifndef _ARCH_POWERPC_BOOT_LIBFDT_ENV_H
 #define _ARCH_POWERPC_BOOT_LIBFDT_ENV_H
 
-#include <types.h>
-#include <string.h>
+#include "types.h"
+#include "string.h"
 
 #include "of.h"
 

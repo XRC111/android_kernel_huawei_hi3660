@@ -20,9 +20,9 @@
  *
  */
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 #include <linux/spinlock.h>
-#include <mali_kbase_hwaccess_jm.h>
+#include "mali_kbase_hwaccess_jm.h"
 
 #ifdef CONFIG_HISI_DEBUG_FS
 

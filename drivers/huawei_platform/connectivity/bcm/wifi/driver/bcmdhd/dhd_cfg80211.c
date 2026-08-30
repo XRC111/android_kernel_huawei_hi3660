@@ -28,13 +28,13 @@
 #include <net/rtnetlink.h>
 
 #include <bcmutils.h>
-#include <wldev_common.h>
-#include <wl_cfg80211.h>
-#include <dhd_cfg80211.h>
+#include "wldev_common.h"
+#include "wl_cfg80211.h"
+#include "dhd_cfg80211.h"
 
 #ifdef PKT_FILTER_SUPPORT
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dngl_stats.h"
+#include "dhd.h"
 #endif
 
 extern struct bcm_cfg80211 *g_bcm_cfg;
@@ -47,14 +47,14 @@ extern void dhd_pktfilter_offload_enable(dhd_pub_t * dhd, char *arg, int enable,
 
 static int dhd_dongle_up = FALSE;
 
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dngl_stats.h"
+#include "dhd.h"
 #include <dhdioctl.h>
 #include <wlioctl.h>
 #include <brcm_nl80211.h>
-#include <dhd_cfg80211.h>
+#include "dhd_cfg80211.h"
 #ifdef PCIE_FULL_DONGLE
-#include <dhd_flowring.h>
+#include "dhd_flowring.h"
 #endif
 
 static s32 wl_dongle_up(struct net_device *ndev);

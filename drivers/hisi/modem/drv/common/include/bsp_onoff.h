@@ -49,8 +49,8 @@
 #ifndef _BSP_ONOFF_H_
 #define _BSP_ONOFF_H_
 
-#include <osl_common.h>
-#include <osl_sem.h>
+#include "osl_common.h"
+#include "osl_sem.h"
 #include "bsp_softtimer.h"
 
 #if defined(__KERNEL__) || defined(__OS_VXWORKS__) || defined(__OS_RTOSCK__) || defined(__OS_RTOSCK_SMP__)

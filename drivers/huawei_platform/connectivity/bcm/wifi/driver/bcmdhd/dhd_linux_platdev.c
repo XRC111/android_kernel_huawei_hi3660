@@ -30,13 +30,13 @@
 #include <linux/platform_device.h>
 #include <bcmutils.h>
 #include <linux_osl.h>
-#include <dhd_dbg.h>
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_bus.h>
-#include <dhd_linux.h>
-#include <wl_android.h>
-#include <hw_wifi.h>
+#include "dhd_dbg.h"
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_bus.h"
+#include "dhd_linux.h"
+#include "wl_android.h"
+#include "hw_wifi.h"
 
 #ifdef HW_WIFI_SHUTDOWN
 extern void wifi_plat_dev_drv_shutdown(struct platform_device *pdev);

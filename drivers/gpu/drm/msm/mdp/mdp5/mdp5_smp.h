@@ -19,7 +19,7 @@
 #ifndef __MDP5_SMP_H__
 #define __MDP5_SMP_H__
 
-#include "msm_drv.h"
+#include "../../msm_drv.h"
 
 struct mdp5_client_smp_state {
 	mdp5_smp_state_t inuse;

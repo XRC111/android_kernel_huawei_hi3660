@@ -24,7 +24,7 @@
 #include <linux/slab.h>
 #include <huawei_platform/log/hw_log.h>
 #include <huawei_platform/power/huawei_charger.h>
-#include <dual_charger.h>
+#include "dual_charger.h"
 #ifdef CONFIG_HISI_COUL
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
 #endif

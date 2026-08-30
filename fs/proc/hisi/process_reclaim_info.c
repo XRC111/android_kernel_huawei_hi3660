@@ -20,7 +20,7 @@
 #include <linux/seq_file.h>
 #include <linux/slab.h>
 #include <linux/sched.h>
-#include "internal.h"
+#include "../internal.h"
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(4,14,0))
 #include <linux/sched/task.h>

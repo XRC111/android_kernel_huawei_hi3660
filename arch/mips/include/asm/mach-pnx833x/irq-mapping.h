@@ -37,7 +37,7 @@
  * numbers 65..80 for (virtual) GPIO interrupts.
  *
  */
-#include <irq.h>
+#include "irq.h"
 
 #define PNX833X_TIMER_IRQ				(MIPS_CPU_IRQ_BASE + 7)
 

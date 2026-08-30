@@ -30,7 +30,7 @@
 #include <linux/vmalloc.h>
 #include <teek_client_api.h>
 #include <libhwsecurec/securec.h>
-#include "tpm.h"
+#include "../tpm.h"
 
 #define TPMTEE_ERROR (-1)
 

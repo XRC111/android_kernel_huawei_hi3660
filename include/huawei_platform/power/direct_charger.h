@@ -40,7 +40,7 @@
 #include <huawei_platform/power/wireless_charger.h>
 #endif
 #ifdef CONFIG_DP_AUX_SWITCH
-#include "huawei_platform/dp_aux_switch/dp_aux_switch.h"
+#include "../../huawei_platform/dp_aux_switch/dp_aux_switch.h"
 #endif
 
 #include <huawei_platform/power/charger_protocol/charger_protocol.h>

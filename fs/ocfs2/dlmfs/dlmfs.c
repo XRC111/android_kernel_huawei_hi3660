@@ -47,11 +47,11 @@
 
 #include <asm/uaccess.h>
 
-#include "stackglue.h"
+#include "../stackglue.h"
 #include "userdlm.h"
 
 #define MLOG_MASK_PREFIX ML_DLMFS
-#include "cluster/masklog.h"
+#include "../cluster/masklog.h"
 
 
 static const struct super_operations dlmfs_ops;

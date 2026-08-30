@@ -54,7 +54,7 @@
 
 #else /* __KERNEL__ */
 
-#include <osl_types.h>
+#include "osl_types.h"
 #include <asm/byteorder.h>
 #include <asm/memory.h>
 #include <asm-generic/pci_iomap.h>

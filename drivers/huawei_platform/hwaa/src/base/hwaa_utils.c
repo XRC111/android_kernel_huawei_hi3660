@@ -1,5 +1,5 @@
 
-#include "inc/base/hwaa_utils.h"
+#include "../../inc/base/hwaa_utils.h"
 #include <linux/err.h>
 #include <linux/file.h>
 #include <linux/fs.h>
@@ -12,7 +12,7 @@
 #include <linux/uaccess.h>
 #include <linux/rcupdate.h>
 #include <securec.h>
-#include "inc/base/hwaa_define.h"
+#include "../../inc/base/hwaa_define.h"
 #include "huawei_platform/hwaa/hwaa_limits.h"
 
 #define EXE_MAX_ARG_STRLEN 256

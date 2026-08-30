@@ -27,9 +27,9 @@
 #include <linuxver.h>
 #include <osl.h>
 #include <bcmutils.h>
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_linux.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_linux.h"
 
 #include <wlioctl.h>
 

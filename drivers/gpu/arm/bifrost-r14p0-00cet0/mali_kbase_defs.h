@@ -32,16 +32,16 @@
 #ifndef _KBASE_DEFS_H_
 #define _KBASE_DEFS_H_
 
-#include <mali_kbase_config.h>
-#include <mali_base_hwconfig_features.h>
-#include <mali_base_hwconfig_issues.h>
-#include <mali_kbase_mem_lowlevel.h>
-#include <mali_kbase_mmu_hw.h>
+#include "mali_kbase_config.h"
+#include "mali_base_hwconfig_features.h"
+#include "mali_base_hwconfig_issues.h"
+#include "mali_kbase_mem_lowlevel.h"
+#include "mali_kbase_mmu_hw.h"
 #include <mali_kbase_instr_defs.h>
-#include <mali_kbase_pm.h>
-#include <mali_kbase_gpuprops_types.h>
+#include "mali_kbase_pm.h"
+#include "mali_kbase_gpuprops_types.h"
 #include <mali_kbase_hisilicon.h>
-#include <protected_mode_switcher.h>
+#include "protected_mode_switcher.h"
 
 
 #include <linux/atomic.h>

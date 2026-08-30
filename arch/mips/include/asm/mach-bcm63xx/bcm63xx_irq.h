@@ -1,7 +1,7 @@
 #ifndef BCM63XX_IRQ_H_
 #define BCM63XX_IRQ_H_
 
-#include <bcm63xx_cpu.h>
+#include "bcm63xx_cpu.h"
 
 #define IRQ_INTERNAL_BASE		8
 #define IRQ_EXTERNAL_BASE		100

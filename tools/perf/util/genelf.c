@@ -23,7 +23,7 @@
 #include <dwarf.h>
 #endif
 
-#include "perf.h"
+#include "../perf.h"
 #include "genelf.h"
 #include "../util/jitdump.h"
 

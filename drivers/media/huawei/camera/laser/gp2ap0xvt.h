@@ -40,8 +40,8 @@
 #include <linux/regulator/consumer.h>
 #include <linux/regulator/driver.h>
 #include <linux/regulator/machine.h>
-#include "cam_log.h"
-#include "hwcam_intf.h"
+#include "../cam_log.h"
+#include "../hwcam_intf.h"
 #include "laser_common.h"
 
 #define LOW                             0

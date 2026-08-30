@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./oxfw.h"
+#include "oxfw.h"
 
 static void proc_read_formation(struct snd_info_entry *entry,
 				struct snd_info_buffer *buffer)

@@ -7,7 +7,7 @@
  * Create: 2016-06-18
  */
 
-#include "./include/kcode.h"
+#include "include/kcode.h"
 
 #ifdef CONFIG_HW_ROOT_SCAN_ENG_DEBUG
 #define MAX_CODE_SIZE (50000000)

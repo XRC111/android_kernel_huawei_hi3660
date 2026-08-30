@@ -24,7 +24,7 @@
 #include <linux/types.h>
 #include <xen/xen.h>
 
-#include "i915_drv.h"
+#include "../i915_drv.h"
 
 struct intel_gvt_host intel_gvt_host;
 

@@ -30,10 +30,10 @@
 
 #include <net/mac80211.h>
 
-#include "iwl-config.h"
+#include "../iwl-config.h"
 
 #include "fw-api.h"
-#include "iwl-trans.h"
+#include "../iwl-trans.h"
 
 struct iwl_rs_rate_info {
 	u8 plcp;	  /* uCode API:  IWL_RATE_6M_PLCP, etc. */

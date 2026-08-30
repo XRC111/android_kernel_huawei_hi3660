@@ -15,8 +15,8 @@
 #ifndef PD_DPM_CORE_H
 #define PD_DPM_CORE_H
 
-#include "include/tcpci.h"
-#include "include/pd_core.h"
+#include "../include/tcpci.h"
+#include "../include/pd_core.h"
 
 struct dpm_pdo_info_t {
 	uint8_t type;

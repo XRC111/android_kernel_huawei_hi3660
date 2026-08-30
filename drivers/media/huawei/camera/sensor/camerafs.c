@@ -29,7 +29,7 @@
 #include <linux/kernel.h>
 #include <linux/device.h>
 #include <linux/fs.h>
-#include "cam_log.h"
+#include "../cam_log.h"
 #include <linux/printk.h>
 #include <linux/of.h>
 #include <linux/of_device.h>

@@ -9,10 +9,10 @@ T+OY0HJZSkYOzcKiB8FNopeTlI886WO0OcK1Z+/YJNlqebQfZGLnvvrX7PxscPht8pYDPvw7
 #ifndef __SYNTAX_DEC_HEADER__
 #define __SYNTAX_DEC_HEADER__
 
-#include "basedef.h"
+#include "../basedef.h"
 #include "scd_drv.h"
-#include "vfmw.h"
-#include "syn_cmn.h"
+#include "../../../vfmw.h"
+#include "../syn_cmn.h"
 #ifdef VFMW_MPEG2_SUPPORT
 #include "mpeg2.h"
 #endif

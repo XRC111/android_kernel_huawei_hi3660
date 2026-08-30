@@ -31,8 +31,8 @@
  */
 
 
-#include "PPP/Inc/ppp_public.h"
-#include "PPP/Inc/ppp_mbuf.h"
+#include "../../PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_mbuf.h"
 
 
 

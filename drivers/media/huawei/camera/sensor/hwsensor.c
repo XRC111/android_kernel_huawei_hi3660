@@ -14,10 +14,10 @@
 #include <media/v4l2-subdev.h>
 #include <linux/hisi/hw_cmdline_parse.h>
 
-#include "hwcam_intf.h"
+#include "../hwcam_intf.h"
 #include "hwsensor.h"
 #include "sensor_commom.h"
-#include "cam_log.h"
+#include "../cam_log.h"
 
 typedef struct _tag_hwsensor
 {

@@ -16,7 +16,7 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 
 #define DO_TEST(_name, _num)	\

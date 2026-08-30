@@ -40,7 +40,7 @@
 #include "himax_platform.h"
 #include <linux/regulator/consumer.h>
 #include <dsm/dsm_pub.h>
-#include "huawei_ts_kit.h"
+#include "../../huawei_ts_kit.h"
 
 #if defined(CONFIG_FB)
 #include <linux/notifier.h>

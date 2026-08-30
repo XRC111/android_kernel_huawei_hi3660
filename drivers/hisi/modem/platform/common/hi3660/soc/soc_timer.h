@@ -1,11 +1,11 @@
 #ifndef __SOC_TIMER_H__
 #define __SOC_TIMER_H__ 
-#include <hi_base.h>
-#include <hi_timer.h>
+#include "hi_base.h"
+#include "hi_timer.h"
 #include <bsp_memmap.h>
 #include <osl_bio.h>
-#include <soc_interrupts.h>
-#include <soc_clk.h>
+#include "soc_interrupts.h"
+#include "soc_clk.h"
 #define UDELAY_TIMER_CLK 1920000
 #define CCORE_SYS_TIMER_CLK 19200000
 #define CCORE_SYS_TIMER_BASE_ADDR 0xe0206000

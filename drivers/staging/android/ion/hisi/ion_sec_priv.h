@@ -22,8 +22,8 @@
 #include <teek_client_id.h>
 #include <teek_client_constants.h>
 
-#include "ion.h"
-#include "ion_priv.h"
+#include "../ion.h"
+#include "../ion_priv.h"
 
 enum SECSG_HEAP_TYPE {
 	HEAP_NORMAL = 0,

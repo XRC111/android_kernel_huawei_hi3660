@@ -22,8 +22,8 @@
 
 #include <linux/debugfs.h>
 
-#include <mali_kbase.h>
-#include <mali_kbase_as_fault_debugfs.h>
+#include "mali_kbase.h"
+#include "mali_kbase_as_fault_debugfs.h"
 
 #ifdef CONFIG_HISI_DEBUG_FS
 #ifdef CONFIG_MALI_DEBUG

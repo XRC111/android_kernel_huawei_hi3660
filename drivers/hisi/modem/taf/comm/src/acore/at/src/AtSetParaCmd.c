@@ -72,7 +72,7 @@
 #include "AtDeviceCmd.h"
 #include "AtRnicInterface.h"
 #include "AtTafAgentInterface.h"
-#include "TafAgentInterface.h"
+#include "AtTafAgentInterface.h"
 #include "TafAppXsmsInterface.h"
 
 #include "AtMtaInterface.h"

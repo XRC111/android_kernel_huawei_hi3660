@@ -5,8 +5,8 @@
 #include <stdbool.h>
 #include <linux/atomic.h>
 
-#include "perf.h"
-#include "util/debug.h"
+#include "../perf.h"
+#include "../util/debug.h"
 
 struct cpu_map {
 	atomic_t refcnt;

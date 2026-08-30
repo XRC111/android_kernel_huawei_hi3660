@@ -34,13 +34,13 @@
 #include <linux/kernel.h>
 #include <linux/list.h>
 #include <linux/sort.h>
-#include <dngl_stats.h>
+#include "dngl_stats.h"
 #include <wlioctl.h>
 
 #include <proto/bcmevent.h>
-#include <dhd.h>
-#include <dhd_rtt.h>
-#include <dhd_dbg.h>
+#include "dhd.h"
+#include "dhd_rtt.h"
+#include "dhd_dbg.h"
 #define GET_RTTSTATE(dhd) ((rtt_status_info_t *)dhd->rtt_state)
 static DEFINE_SPINLOCK(noti_list_lock);
 #define NULL_CHECK(p, s, err)  \

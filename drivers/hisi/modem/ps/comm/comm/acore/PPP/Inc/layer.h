@@ -31,7 +31,7 @@
 #define __PPP_LAYER_H__
 
 #include "vos.h"
-#include "PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_public.h"
 
 #pragma pack(4)
 #define    LAYER_ASYNC    2

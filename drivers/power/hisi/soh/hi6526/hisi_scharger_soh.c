@@ -11,7 +11,7 @@
 #include <linux/module.h>
 #include <linux/init.h>
 #include "hisi_scharger_soh.h"
-#include <./../hisi_soh_core.h>
+#include "../hisi_soh_core.h"
 #include <linux/gpio.h>
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
 #ifndef STATIC

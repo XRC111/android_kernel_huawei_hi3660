@@ -64,7 +64,7 @@
  *****************************************************************************/
 #include <linux/etherdevice.h>
 #include <linux/skbuff.h>
-#include "iwl-trans.h"
+#include "../iwl-trans.h"
 #include "mvm.h"
 #include "fw-api.h"
 #include "fw-dbg.h"

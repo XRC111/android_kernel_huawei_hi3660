@@ -29,8 +29,8 @@
 #ifndef _bcmmsgbuf_h_
 #define	_bcmmsgbuf_h_
 #include <proto/ethernet.h>
-#include <wlioctl.h>
-#include <bcmpcie.h>
+#include "wlioctl.h"
+#include "bcmpcie.h"
 
 #define MSGBUF_MAX_MSG_SIZE   ETHER_MAX_LEN
 

@@ -6,7 +6,7 @@
  *
  * Licensed under the terms of the GNU General Public License, version 2.
  */
-#include "./fireworks.h"
+#include "fireworks.h"
 
 /*
  * NOTE:

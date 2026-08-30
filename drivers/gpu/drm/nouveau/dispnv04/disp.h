@@ -3,7 +3,7 @@
 #include <subdev/bios.h>
 #include <subdev/bios/pll.h>
 
-#include "nouveau_display.h"
+#include "../nouveau_display.h"
 
 enum nv04_fp_display_regs {
 	FP_DISPLAY_END,

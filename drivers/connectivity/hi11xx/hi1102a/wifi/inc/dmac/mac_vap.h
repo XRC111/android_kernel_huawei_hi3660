@@ -14,7 +14,7 @@ extern "C" {
   1 其他头文件包含
 *****************************************************************************/
 #include "oal_ext_if.h"
-#include "wlan_mib.h"
+#include "../wlan_mib.h"
 #include "mac_user.h"
 #include "oam_ext_if.h"
 #include "mac_regdomain.h"

@@ -27,7 +27,7 @@
 #define _MALI_GMC_H
 
 #include <linux/gmc.h>
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 #include <kernel.h>
 
 #if defined (CONFIG_MALI_NORR) || defined (CONFIG_MALI_SIGURD) || defined (CONFIG_MALI_TRYM) || defined (CONFIG_MALI_GONDUL)

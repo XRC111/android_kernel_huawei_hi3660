@@ -41,8 +41,8 @@
 #include <linux/regulator/consumer.h>
 #include <linux/regulator/driver.h>
 #include <linux/regulator/machine.h>
-#include "cam_log.h"
-#include "hwcam_intf.h"
+#include "../cam_log.h"
+#include "../hwcam_intf.h"
 
 #define LDO_IOVDD_1P8V              (1800000)
 #define LDO_AVDD_2P85V              (2850000)

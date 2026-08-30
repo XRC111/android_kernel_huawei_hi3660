@@ -8,7 +8,7 @@
  */
 
 #include "util.h"
-#include "ui/ui.h"
+#include "../ui/ui.h"
 #include "sort.h"
 #include "build-id.h"
 #include "color.h"

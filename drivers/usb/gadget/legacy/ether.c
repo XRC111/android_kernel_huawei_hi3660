@@ -98,7 +98,7 @@ static inline bool has_rndis(void)
 #include "u_gether.h"
 #ifdef	USB_ETH_RNDIS
 #include "u_rndis.h"
-#include "rndis.h"
+#include "u_rndis.h"
 #else
 #define rndis_borrow_net(...) do {} while (0)
 #endif

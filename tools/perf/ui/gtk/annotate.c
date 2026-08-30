@@ -1,8 +1,8 @@
 #include "gtk.h"
-#include "util/debug.h"
-#include "util/annotate.h"
-#include "util/evsel.h"
-#include "ui/helpline.h"
+#include "../../util/debug.h"
+#include "../../util/annotate.h"
+#include "../../util/evsel.h"
+#include "../../ui/helpline.h"
 
 
 enum {

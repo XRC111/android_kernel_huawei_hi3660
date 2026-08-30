@@ -28,7 +28,7 @@
 #ifndef	_bcmpcie_h_
 #define	_bcmpcie_h_
 
-#include <bcmutils.h>
+#include "bcmutils.h"
 
 #define ADDR_64(x)			(x.addr)
 #define HIGH_ADDR_32(x)     ((uint32) (((sh_addr_t) x).high_addr))

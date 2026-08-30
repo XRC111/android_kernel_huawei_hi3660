@@ -4,7 +4,7 @@
 #include "map.h"
 #include "event.h"
 #include "debug.h"
-#include "tests/tests.h"
+#include "../../../tests/tests.h"
 
 #define STACK_SIZE 8192
 

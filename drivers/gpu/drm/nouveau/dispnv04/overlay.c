@@ -27,11 +27,11 @@
 #include <drm/drm_crtc.h>
 #include <drm/drm_fourcc.h>
 
-#include "nouveau_drv.h"
+#include "../nouveau_drv.h"
 
-#include "nouveau_bo.h"
-#include "nouveau_connector.h"
-#include "nouveau_display.h"
+#include "../nouveau_bo.h"
+#include "../nouveau_connector.h"
+#include "../nouveau_display.h"
 #include "nvreg.h"
 
 

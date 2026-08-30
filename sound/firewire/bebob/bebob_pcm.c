@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./bebob.h"
+#include "bebob.h"
 
 static int
 hw_rule_rate(struct snd_pcm_hw_params *params, struct snd_pcm_hw_rule *rule)

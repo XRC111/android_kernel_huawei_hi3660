@@ -74,15 +74,15 @@
 #include <linux/vmalloc.h>
 #include <linux/pm_runtime.h>
 
-#include "iwl-drv.h"
-#include "iwl-trans.h"
-#include "iwl-csr.h"
-#include "iwl-prph.h"
-#include "iwl-scd.h"
-#include "iwl-agn-hw.h"
-#include "iwl-fw-error-dump.h"
+#include "../iwl-drv.h"
+#include "../iwl-trans.h"
+#include "../iwl-csr.h"
+#include "../iwl-prph.h"
+#include "../iwl-scd.h"
+#include "../iwl-agn-hw.h"
+#include "../iwl-fw-error-dump.h"
 #include "internal.h"
-#include "iwl-fh.h"
+#include "../iwl-fh.h"
 
 /* extended range in FW SRAM */
 #define IWL_FW_MEM_EXTENDED_START	0x40000

@@ -18,7 +18,7 @@
 #ifndef __LINUX_TCPCI_TYPEC_H
 #define __LINUX_TCPCI_TYPEC_H
 
-#include "include/tcpci.h"
+#include "../include/tcpci.h"
 
 struct tcpc_device;
 

@@ -15,8 +15,8 @@
 #ifndef __RECV_OSDEP_H_
 #define __RECV_OSDEP_H_
 
-#include <osdep_service.h>
-#include <drv_types.h>
+#include "osdep_service.h"
+#include "drv_types.h"
 
 
 int _rtw_init_recv_priv(struct recv_priv *precvpriv, struct adapter *padapter);

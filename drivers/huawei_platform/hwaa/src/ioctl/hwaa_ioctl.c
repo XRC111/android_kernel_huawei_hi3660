@@ -21,12 +21,12 @@
 #include "huawei_platform/hwaa/hwaa_fs_hooks.h"
 #include "huawei_platform/hwaa/hwaa_limits.h"
 
-#include "inc/fek/hwaa_fs_callbacks.h"
-#include "inc/base/hwaa_list.h"
-#include "inc/tee/hwaa_tee.h"
-#include "inc/base/hwaa_define.h"
-#include "inc/base/hwaa_utils.h"
-#include "inc/tee/hwaa_adapter.h"
+#include "../../inc/fek/hwaa_fs_callbacks.h"
+#include "../../inc/base/hwaa_list.h"
+#include "../../inc/tee/hwaa_tee.h"
+#include "../../inc/base/hwaa_define.h"
+#include "../../inc/base/hwaa_utils.h"
+#include "../../inc/tee/hwaa_adapter.h"
 
 #define HWAA_FIRST_MINOR 0
 #define HWAA_MINOR_CNT 1

@@ -5,7 +5,7 @@
  */
 #include <unistd.h>
 #include <string.h>
-#include "builtin.h"
+#include "../builtin.h"
 #include "hist.h"
 #include "intlist.h"
 #include "tests.h"

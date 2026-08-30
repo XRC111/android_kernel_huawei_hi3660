@@ -26,8 +26,8 @@
 #ifndef	_hnd_cons_h_
 #define	_hnd_cons_h_
 
-#include <typedefs.h>
-#include <siutils.h>
+#include "typedefs.h"
+#include "siutils.h"
 
 #if defined(RWL_DONGLE) || defined(UART_REFLECTOR)
 /* For Dongle uart tranport max cmd len is 256 bytes + header length (16 bytes)

@@ -1,4 +1,4 @@
-#include "hisi_fb.h"
+#include "../hisi_fb.h"
 /*lint -e569*/
 #ifndef MIPI_LG_NT35695
 #define MIPI_LG_NT35695

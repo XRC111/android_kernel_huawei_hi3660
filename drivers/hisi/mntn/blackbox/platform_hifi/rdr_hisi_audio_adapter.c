@@ -24,8 +24,8 @@
 #include <linux/hisi/util.h>
 #include <linux/hisi/rdr_hisi_ap_hook.h>
 
-#include "rdr_print.h"
-#include "rdr_inner.h"
+#include "../rdr_print.h"
+#include "../rdr_inner.h"
 #include "rdr_hisi_audio_adapter.h"
 #include "rdr_hisi_audio_codec.h"
 #include "rdr_hisi_audio_soc.h"

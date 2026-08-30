@@ -15,8 +15,8 @@ extern "C" {
 #include "mac_device.h"
 #include "dmac_ext_if.h"
 #include "oam_ext_if.h"
-#include "dmac_vap.h"
-#include "dmac_main.h"
+#include "../dmac_vap.h"
+#include "../dmac_main.h"
 
 #if  defined(_PRE_WLAN_CHIP_TEST) && (_PRE_OS_VERSION_LINUX == _PRE_OS_VERSION)
 

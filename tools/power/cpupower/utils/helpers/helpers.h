@@ -13,7 +13,7 @@
 #include <libintl.h>
 #include <locale.h>
 
-#include "helpers/bitmask.h"
+#include "../helpers/bitmask.h"
 #include <cpupower.h>
 
 /* Internationalization ****************************/

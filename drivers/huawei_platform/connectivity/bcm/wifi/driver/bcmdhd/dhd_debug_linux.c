@@ -29,13 +29,13 @@
 #include <bcmutils.h>
 #include <bcmendian.h>
 #include <bcmpcie.h>
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_dbg.h>
-#include <dhd_debug.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_dbg.h"
+#include "dhd_debug.h"
 
 #include <net/cfg80211.h>
-#include <wl_cfgvendor.h>
+#include "wl_cfgvendor.h"
 
 typedef void (*dbg_ring_send_sub_t)(void *ctx, const int ring_id, const void *data,
 	const uint32 len, const dhd_dbg_ring_status_t ring_status);

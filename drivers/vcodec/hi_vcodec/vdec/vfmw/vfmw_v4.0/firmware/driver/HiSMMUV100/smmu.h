@@ -2,7 +2,7 @@
 #define __HIVDEC_SMMU_H__
 
 #include "sysconfig.h"//for VDM_REG_PHY_ADDR, SCD_REG_PHY_ADDR, BPD_REG_PHY_ADDR
-#include "vfmw.h"
+#include "../../../vfmw.h"
 
 #define SMMU_OK     0
 #define SMMU_ERR   -1

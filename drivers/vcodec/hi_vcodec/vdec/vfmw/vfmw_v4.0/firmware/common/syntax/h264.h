@@ -34,11 +34,11 @@ T3m1EvksJQYyOkUwWnXwbecgyWljjly1GP1nDuCr9S/dCoL3OWMnPu1upIAmwA==*/
 extern "C" {
 #endif
 
-#include "basedef.h"
-#include "vfmw.h"
-#include "public.h"
-#include "bitstream.h"
-#include "vdm_hal.h"
+#include "../basedef.h"
+#include "../../../vfmw.h"
+#include "../public.h"
+#include "../bitstream.h"
+#include "../vdm_hal.h"
 
 
 /************************ se err check define *********************/

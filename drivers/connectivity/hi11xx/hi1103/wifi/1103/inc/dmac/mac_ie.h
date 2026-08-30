@@ -14,10 +14,10 @@ extern "C" {
   1 其他头文件包含
 *****************************************************************************/
 #include "oal_ext_if.h"
-#include "wlan_spec.h"
+#include "../wlan_spec.h"
 #include "mac_frame.h"
-#include "wlan_mib.h"
-#include "wlan_types.h"
+#include "../wlan_mib.h"
+#include "../wlan_types.h"
 #include "mac_user.h"
 #include "mac_vap.h"
 

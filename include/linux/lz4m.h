@@ -46,7 +46,7 @@
 
 #ifndef __LZ4M_H
 #define __LZ4M_H
-#include <stddef.h>
+#include "stddef.h"
 #include <linux/types.h>
 
 #define memcpy __builtin_memcpy

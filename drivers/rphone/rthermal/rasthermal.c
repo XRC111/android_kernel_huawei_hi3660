@@ -81,7 +81,7 @@ static int clean(void)
 }
 
 #ifdef CONFIG_HISI_THERMAL_PERIPHERAL
-#include "drivers/thermal/hisi/hisi_peripheral_tm.h"
+#include "../../../drivers/thermal/hisi/hisi_peripheral_tm.h"
 static int rasprobe_handler(hisi_peripheral_ntc_2_temp) (
 	struct rasprobe_instance *ri, struct pt_regs *regs) {
 	int temp;

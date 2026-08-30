@@ -22,7 +22,7 @@
 
 #include <linux/firmware.h>
 
-#include "msm_gpu.h"
+#include "../msm_gpu.h"
 
 #include "adreno_common.xml.h"
 #include "adreno_pm4.xml.h"

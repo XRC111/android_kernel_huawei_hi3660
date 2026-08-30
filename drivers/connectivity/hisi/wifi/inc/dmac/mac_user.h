@@ -15,9 +15,9 @@ extern "C" {
 *****************************************************************************/
 #include "oal_ext_if.h"
 #include "frw_ext_if.h"
-#include "wlan_spec.h"
-#include "wlan_types.h"
-#include "wlan_mib.h"
+#include "../wlan_spec.h"
+#include "../wlan_types.h"
+#include "../wlan_mib.h"
 #include "mac_frame.h"
 
 #undef  THIS_FILE_ID

@@ -1,7 +1,7 @@
 #ifndef BCM63XX_IOREMAP_H_
 #define BCM63XX_IOREMAP_H_
 
-#include <bcm63xx_cpu.h>
+#include "bcm63xx_cpu.h"
 
 static inline phys_addr_t fixup_bigphys_addr(phys_addr_t phys_addr, phys_addr_t size)
 {

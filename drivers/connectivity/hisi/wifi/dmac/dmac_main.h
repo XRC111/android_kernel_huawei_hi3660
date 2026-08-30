@@ -20,7 +20,7 @@ extern "C" {
 #include "mac_device.h"
 #include "dmac_vap.h"
 #include "mac_resource.h"
-#include "mac_vap.h"
+#include "dmac_vap.h"
 
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_DMAC_MAIN_H

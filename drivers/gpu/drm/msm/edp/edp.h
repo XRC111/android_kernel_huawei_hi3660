@@ -21,7 +21,7 @@
 
 #include "drm_crtc.h"
 #include "drm_dp_helper.h"
-#include "msm_drv.h"
+#include "../msm_drv.h"
 
 #define edp_read(offset) msm_readl((offset))
 #define edp_write(offset, data) msm_writel((data), (offset))

@@ -18,9 +18,9 @@
 #ifndef __MDP5_KMS_H__
 #define __MDP5_KMS_H__
 
-#include "msm_drv.h"
-#include "msm_kms.h"
-#include "mdp/mdp_kms.h"
+#include "../../msm_drv.h"
+#include "../../msm_kms.h"
+#include "../../mdp/mdp_kms.h"
 #include "mdp5_cfg.h"	/* must be included before mdp5.xml.h */
 #include "mdp5.xml.h"
 #include "mdp5_ctl.h"

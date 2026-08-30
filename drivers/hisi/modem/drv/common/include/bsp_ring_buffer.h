@@ -54,7 +54,7 @@ extern "C"
 {
 #endif
 
-#include <osl_types.h>
+#include "osl_types.h"
 
 struct ring_buffer
 {

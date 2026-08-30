@@ -13,8 +13,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "helpers/helpers.h"
-#include "idle_monitor/cpupower-monitor.h"
+#include "../helpers/helpers.h"
+#include "../idle_monitor/cpupower-monitor.h"
 
 #define MSR_PKG_C3_RESIDENCY	0x3F8
 #define MSR_PKG_C6_RESIDENCY	0x3F9

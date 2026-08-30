@@ -1,6 +1,6 @@
 #ifndef _LPMCU_RUNTIME_H_
 #define _LPMCU_RUNTIME_H_ 
-#include <m3_sram_map.h>
+#include "m3_sram_map.h"
 #ifndef BYTE_REF
 #define BYTE_REF(address) (* ((unsigned char volatile * ) (uintptr_t)(address)))
 #endif

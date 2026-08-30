@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "tm.h"
 
 int test_fork(void)

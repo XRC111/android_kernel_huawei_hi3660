@@ -37,8 +37,8 @@
 #include <linux/gpio.h>
 #include <media/v4l2-subdev.h>
 #include <media/huawei/ois_cfg.h>
-#include "cam_log.h"
-#include "hwcam_intf.h"
+#include "../../cam_log.h"
+#include "../../hwcam_intf.h"
 #include "../../cci/hw_cci.h"
 
 typedef struct _tag_hw_ois_vtbl hw_ois_vtbl_t;

@@ -34,9 +34,9 @@
 #ifndef VCHI_H_
 #define VCHI_H_
 
-#include "interface/vchi/vchi_cfg.h"
-#include "interface/vchi/vchi_common.h"
-#include "interface/vchi/connections/connection.h"
+#include "../../interface/vchi/vchi_cfg.h"
+#include "../../interface/vchi/vchi_common.h"
+#include "../../interface/vchi/connections/connection.h"
 #include "vchi_mh.h"
 
 

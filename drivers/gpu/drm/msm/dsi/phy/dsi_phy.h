@@ -16,7 +16,7 @@
 
 #include <linux/regulator/consumer.h>
 
-#include "dsi.h"
+#include "../dsi.h"
 
 #define dsi_phy_read(offset) msm_readl((offset))
 #define dsi_phy_write(offset, data) msm_writel((data), (offset))

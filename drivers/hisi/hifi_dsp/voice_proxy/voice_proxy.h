@@ -45,8 +45,8 @@
 #include <asm/types.h>
 
 #include "drv_mailbox_cfg.h"
-#include "audio_hifi.h"
-#include "hifi_om.h"
+#include "../audio_hifi.h"
+#include "../hifi_om.h"
 
 /* The size limit for the in and out parameters of read/write/mailbox*/
 #define VOICE_PROXY_LIMIT_PARAM_SIZE (300)

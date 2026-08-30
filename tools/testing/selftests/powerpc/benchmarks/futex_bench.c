@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include <linux/futex.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 #define ITERATIONS 100000000
 

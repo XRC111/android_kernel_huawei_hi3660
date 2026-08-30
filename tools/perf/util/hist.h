@@ -7,7 +7,7 @@
 #include "evsel.h"
 #include "header.h"
 #include "color.h"
-#include "ui/progress.h"
+#include "../ui/progress.h"
 
 struct hist_entry;
 struct hist_entry_ops;

@@ -27,7 +27,7 @@
 #ifndef _osl_h_
 #define _osl_h_
 
-#include <osl_decl.h>
+#include "osl_decl.h"
 
 #define OSL_PKTTAG_SZ	32 /* Size of PktTag */
 
@@ -40,7 +40,7 @@ typedef void  (*osl_wreg_fn_t)(void *ctx, volatile void *reg, unsigned int val, 
 
 
 
-#include <linux_osl.h>
+#include "linux_osl.h"
 
 #ifndef PKTDBG_TRACE
 #define PKTDBG_TRACE(osh, pkt, bit)	BCM_REFERENCE(osh)

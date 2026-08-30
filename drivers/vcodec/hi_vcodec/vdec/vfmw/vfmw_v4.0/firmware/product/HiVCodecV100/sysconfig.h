@@ -8,7 +8,7 @@ ZguGQVqcOAJQbE96v6175DqhuprKgQB8R+2fu7VD3qtX+ZJh/t0512oqv+e8YA==*/
 #ifndef __VFMW_SYSCONFIG_HEADER__
 #define __VFMW_SYSCONFIG_HEADER__
 
-#include "vfmw.h"
+#include "../../../vfmw.h"
 
 
 /* valid vdh num */

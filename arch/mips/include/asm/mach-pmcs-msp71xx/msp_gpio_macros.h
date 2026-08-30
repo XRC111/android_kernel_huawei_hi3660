@@ -29,8 +29,8 @@
 #ifndef __MSP_GPIO_MACROS_H__
 #define __MSP_GPIO_MACROS_H__
 
-#include <msp_regops.h>
-#include <msp_regs.h>
+#include "msp_regops.h"
+#include "msp_regs.h"
 
 #ifdef CONFIG_PMC_MSP7120_GW
 #define MSP_NUM_GPIOS		20

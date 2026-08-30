@@ -58,7 +58,7 @@
 #include <linux/cpu.h>
 #include <linux/perf_event.h>
 
-#include "governor.h"
+#include "../../governor.h"
 
 #define CREATE_TRACE_POINTS
 #include <trace/events/dsu_pctrl.h>

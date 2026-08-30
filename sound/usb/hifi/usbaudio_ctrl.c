@@ -40,11 +40,11 @@
 #include <huawei_platform/audio/usb_audio_power_v600.h>
 #include <linux/wakelock.h>
 
-#include "usbaudio.h"
-#include "card.h"
-#include "helper.h"
-#include "format.h"
-#include "clock.h"
+#include "../usbaudio.h"
+#include "../card.h"
+#include "../helper.h"
+#include "../format.h"
+#include "../clock.h"
 #include "usbaudio_dsp_client.h"
 #include "usbaudio_ioctl.h"
 #include "huawei_platform/log/imonitor.h"

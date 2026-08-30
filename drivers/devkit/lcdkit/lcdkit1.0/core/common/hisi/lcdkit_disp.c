@@ -16,7 +16,7 @@
 #if defined(CONFIG_LCDKIT_DRIVER)
 #include "lcdkit_fb_util.h"
 #endif
-#include "lcdkit_tp.h"
+#include "../lcdkit_tp.h"
 #include <huawei_platform/inputhub/sensor_feima_ext.h>
 
 

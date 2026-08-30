@@ -14,7 +14,7 @@
 #ifndef __MDP5_CTL_H__
 #define __MDP5_CTL_H__
 
-#include "msm_drv.h"
+#include "../../msm_drv.h"
 
 /*
  * CTL Manager prototypes:

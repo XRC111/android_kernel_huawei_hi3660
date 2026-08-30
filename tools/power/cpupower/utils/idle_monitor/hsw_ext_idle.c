@@ -14,8 +14,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "helpers/helpers.h"
-#include "idle_monitor/cpupower-monitor.h"
+#include "../helpers/helpers.h"
+#include "../idle_monitor/cpupower-monitor.h"
 
 #define MSR_PKG_C8_RESIDENCY           0x00000630
 #define MSR_PKG_C9_RESIDENCY           0x00000631

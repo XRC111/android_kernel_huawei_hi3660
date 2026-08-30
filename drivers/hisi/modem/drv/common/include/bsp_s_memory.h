@@ -52,7 +52,7 @@ extern "C" {
 #endif
 
 #ifndef __ASSEMBLY__
-#include <osl_types.h>
+#include "osl_types.h"
 struct mem_ctrl{
 	void* sram_virt_addr;
 	void* sram_phy_addr;

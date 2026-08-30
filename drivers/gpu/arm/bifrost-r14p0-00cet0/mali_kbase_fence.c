@@ -23,9 +23,9 @@
 #include <linux/atomic.h>
 #include <linux/list.h>
 #include <linux/spinlock.h>
-#include <mali_kbase_fence_defs.h>
-#include <mali_kbase_fence.h>
-#include <mali_kbase.h>
+#include "mali_kbase_fence_defs.h"
+#include "mali_kbase_fence.h"
+#include "mali_kbase.h"
 
 /* Spin lock protecting all Mali fences as fence->lock. */
 static DEFINE_SPINLOCK(kbase_fence_lock);

@@ -21,7 +21,7 @@
 
 #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
 
-#include "gspca.h"
+#include "../gspca.h"
 #include "gl860.h"
 
 MODULE_AUTHOR("Olivier Lorin <o.lorin@laposte.net>");

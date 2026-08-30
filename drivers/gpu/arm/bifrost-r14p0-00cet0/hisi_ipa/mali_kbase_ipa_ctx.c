@@ -41,7 +41,7 @@ struct ipa_group {
 			struct ipa_group *);
 };
 
-#include "hisi_ipa/mali_kbase_ipa_tables_ctx.h"
+#include "../hisi_ipa/mali_kbase_ipa_tables_ctx.h"
 
 /**
  * struct kbase_ipa_context - IPA context per device

@@ -7,7 +7,7 @@
 #include <linux/syscalls.h>
 #include <linux/module.h>
 #include "hi6531_soh.h"
-#include <./../hisi_soh_core.h>
+#include "../hisi_soh_core.h"
 #include <linux/power/hisi/coul/hisi_coul_drv.h>
 #include <linux/power/hisi/hisi_bci_battery.h>
 #include "securec.h"

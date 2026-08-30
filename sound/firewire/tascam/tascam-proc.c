@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./tascam.h"
+#include "tascam.h"
 
 static void proc_read_firmware(struct snd_info_entry *entry,
 			       struct snd_info_buffer *buffer)

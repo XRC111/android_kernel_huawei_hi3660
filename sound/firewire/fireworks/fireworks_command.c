@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./fireworks.h"
+#include "fireworks.h"
 
 /*
  * This driver uses transaction version 1 or later to use extended hardware

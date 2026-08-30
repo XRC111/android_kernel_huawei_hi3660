@@ -29,7 +29,7 @@
 
 #include "sbpcmcia.h"
 #include "wlioctl.h"
-#include <bcmsrom_fmt.h>
+#include "bcmsrom_fmt.h"
 
 typedef struct {
 	const char *name;

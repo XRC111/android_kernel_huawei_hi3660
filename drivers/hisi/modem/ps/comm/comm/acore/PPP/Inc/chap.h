@@ -33,7 +33,7 @@
 #ifndef __PPP_CHAP_H__
 #define __PPP_CHAP_H__
 
-#include "PPP/Inc/auth.h"
+#include "../../PPP/Inc/auth.h"
 
 #pragma pack(4)
 

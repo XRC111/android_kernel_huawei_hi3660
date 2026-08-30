@@ -17,7 +17,7 @@
 #include <sys/wait.h>
 #include <stdlib.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 extern int test_fpu(double *darray, pid_t *pid);
 

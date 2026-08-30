@@ -58,7 +58,7 @@ extern "C"
   头文件包含
 **************************************************************************/
 #include "hi_ipf.h"
-#include <bsp_shared_ddr.h>
+#include "bsp_shared_ddr.h"
 #ifndef __CMSIS_RTOS
 #include "mdrv_ipf.h"
 
@@ -66,8 +66,8 @@ extern "C"
 #include "mdrv_ipf_comm.h"
 #endif
 
-#include <bsp_trace.h>
-#include <bsp_dump.h>
+#include "bsp_trace.h"
+#include "bsp_dump.h"
 #ifdef CONFIG_BALONG_MODEM_RESET
 #include "mdrv_sysboot.h"
 #endif

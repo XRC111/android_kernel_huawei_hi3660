@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <stdint.h>
 
-#include "helpers/helpers.h"
+#include "../helpers/helpers.h"
 
 /* Intel specific MSRs */
 #define MSR_IA32_PERF_STATUS		0x198

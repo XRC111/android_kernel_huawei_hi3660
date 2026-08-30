@@ -1,7 +1,7 @@
 #ifndef __ASM_MACH_BCM963XX_CPU_FEATURE_OVERRIDES_H
 #define __ASM_MACH_BCM963XX_CPU_FEATURE_OVERRIDES_H
 
-#include <bcm63xx_cpu.h>
+#include "bcm63xx_cpu.h"
 
 #define cpu_has_tlb			1
 #define cpu_has_4kex			1

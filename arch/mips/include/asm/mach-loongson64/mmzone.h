@@ -13,7 +13,7 @@
 #ifndef _ASM_MACH_MMZONE_H
 #define _ASM_MACH_MMZONE_H
 
-#include <boot_param.h>
+#include "boot_param.h"
 #define NODE_ADDRSPACE_SHIFT 44
 #define NODE0_ADDRSPACE_OFFSET 0x000000000000UL
 #define NODE1_ADDRSPACE_OFFSET 0x100000000000UL

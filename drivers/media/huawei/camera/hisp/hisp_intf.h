@@ -27,8 +27,8 @@
 #include <linux/clk.h>
 #include <linux/dma-buf.h>
 
-#include "hwcam_intf.h"
-#include "cam_log.h"
+#include "../hwcam_intf.h"
+#include "../cam_log.h"
 
 typedef struct _tag_hisp_vtbl hisp_vtbl_t;
 typedef struct _tag_hisp_intf hisp_intf_t;

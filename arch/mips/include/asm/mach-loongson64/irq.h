@@ -1,7 +1,7 @@
 #ifndef __ASM_MACH_LOONGSON64_IRQ_H_
 #define __ASM_MACH_LOONGSON64_IRQ_H_
 
-#include <boot_param.h>
+#include "boot_param.h"
 
 #ifdef CONFIG_CPU_LOONGSON3
 

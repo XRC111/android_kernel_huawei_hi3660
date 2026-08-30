@@ -31,9 +31,9 @@
 #include <linux/module.h>
 #include <linux/slab.h>
 #include <net/mac80211.h>
-#include "iwl-io.h"
-#include "iwl-modparams.h"
-#include "iwl-debug.h"
+#include "../iwl-io.h"
+#include "../iwl-modparams.h"
+#include "../iwl-debug.h"
 #include "agn.h"
 #include "dev.h"
 #include "commands.h"

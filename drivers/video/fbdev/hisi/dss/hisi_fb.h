@@ -109,7 +109,7 @@
 
 #ifndef CONFIG_SYNC_FILE
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4,1,0)
-#include "sync.h"
+#include "hisi_dss_sync.h"
 #include "sw_sync.h"
 #else
 #include <linux/sync.h>

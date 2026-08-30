@@ -1,6 +1,6 @@
 #ifndef __PLATFORM_MEMORY_DEF_H__
 #define __PLATFORM_MEMORY_DEF_H__ 
-#include <global_ddr_map.h>
+#include "global_ddr_map.h"
 #define HISI_BL31_BASE HISI_RESERVED_BL31_PHYMEM_BASE
 #define HISI_BL31_RAM_ADDR HISI_BL31_BASE
 #define HISI_BL31_RAM_SIZE (0x70000)

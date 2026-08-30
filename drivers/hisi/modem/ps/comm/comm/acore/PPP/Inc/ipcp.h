@@ -32,9 +32,9 @@
 #ifndef __PPP_IPCP_H__
 #define __PPP_IPCP_H__
 
-#include "PPP/Inc/ppp_fsm.h"
-#include "PPP/Inc/ppp_public.h"
-#include "PPP/Inc/throughput.h"
+#include "../../PPP/Inc/ppp_fsm.h"
+#include "../../PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/throughput.h"
 
 
 #pragma pack(4)

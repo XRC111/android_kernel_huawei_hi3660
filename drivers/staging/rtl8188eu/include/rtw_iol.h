@@ -15,8 +15,8 @@
 #ifndef __RTW_IOL_H_
 #define __RTW_IOL_H_
 
-#include <osdep_service.h>
-#include <drv_types.h>
+#include "osdep_service.h"
+#include "drv_types.h"
 
 bool rtw_IOL_applied(struct adapter  *adapter);
 

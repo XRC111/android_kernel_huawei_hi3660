@@ -67,18 +67,18 @@
 #include <linux/netdevice.h>
 #include <linux/acpi.h>
 
-#include "iwl-trans.h"
-#include "iwl-op-mode.h"
-#include "iwl-fw.h"
-#include "iwl-debug.h"
-#include "iwl-csr.h" /* for iwl_mvm_rx_card_state_notif */
-#include "iwl-io.h" /* for iwl_mvm_rx_card_state_notif */
-#include "iwl-prph.h"
-#include "iwl-eeprom-parse.h"
+#include "../iwl-trans.h"
+#include "../iwl-op-mode.h"
+#include "../iwl-fw.h"
+#include "../iwl-debug.h"
+#include "../iwl-csr.h" /* for iwl_mvm_rx_card_state_notif */
+#include "../iwl-io.h" /* for iwl_mvm_rx_card_state_notif */
+#include "../iwl-prph.h"
+#include "../iwl-eeprom-parse.h"
 
 #include "mvm.h"
 #include "fw-dbg.h"
-#include "iwl-phy-db.h"
+#include "../iwl-phy-db.h"
 
 #define MVM_UCODE_ALIVE_TIMEOUT	HZ
 #define MVM_UCODE_CALIB_TIMEOUT	(2*HZ)

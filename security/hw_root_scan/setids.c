@@ -5,7 +5,7 @@
  * Create: 2018-03-13
  */
 
-#include "./include/setids.h"
+#include "include/setids.h"
 
 uint get_setids(void)
 {

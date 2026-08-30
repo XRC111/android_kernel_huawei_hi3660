@@ -53,14 +53,14 @@
 extern "C"
 {
 #endif /* __cplusplus */
-#include <osl_common.h>
-#include <bsp_memmap.h>
+#include "osl_common.h"
+#include "bsp_memmap.h"
 #include <mdrv_sysboot.h>
-#include <bsp_ipc.h>
-#include <bsp_trace.h>
-#include <bsp_shared_ddr.h>
-#include <bsp_slice.h>
-#include <bsp_sysctrl.h>
+#include "bsp_ipc.h"
+#include "bsp_trace.h"
+#include "bsp_shared_ddr.h"
+#include "bsp_slice.h"
+#include "bsp_sysctrl.h"
 
 #define RESET_OK                       (0)
 #define RESET_ERROR                    (-1)

@@ -2,10 +2,10 @@
 #define _BSP_FIQ_H
 
 #include <product_config.h>
-#include <drv_comm.h>
-#include <bsp_shared_ddr.h>
-#include <bsp_slice.h>
-#include <osl_bio.h>
+#include "drv_comm.h"
+#include "bsp_shared_ddr.h"
+#include "bsp_slice.h"
+#include "osl_bio.h"
 #if defined(__OS_RTOSCK__) ||defined(__OS_RTOSCK_SMP__)
 #include <sre_exc.h>
 #endif

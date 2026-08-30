@@ -25,11 +25,11 @@
 #include <drm/drmP.h>
 #include <drm/drm_crtc_helper.h>
 
-#include "nouveau_drv.h"
-#include "nouveau_reg.h"
+#include "../nouveau_drv.h"
+#include "../nouveau_reg.h"
 #include "hw.h"
-#include "nouveau_encoder.h"
-#include "nouveau_connector.h"
+#include "../nouveau_encoder.h"
+#include "../nouveau_connector.h"
 
 int
 nv04_display_create(struct drm_device *dev)

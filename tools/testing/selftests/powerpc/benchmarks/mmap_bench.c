@@ -8,7 +8,7 @@
 #include <sys/mman.h>
 #include <time.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 #define ITERATIONS 5000000
 

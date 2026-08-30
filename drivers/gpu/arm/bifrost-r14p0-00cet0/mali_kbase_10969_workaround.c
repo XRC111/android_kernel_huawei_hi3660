@@ -20,8 +20,8 @@
  *
  */
 #include <linux/dma-mapping.h>
-#include <mali_kbase.h>
-#include <mali_kbase_10969_workaround.h>
+#include "mali_kbase.h"
+#include "mali_kbase_10969_workaround.h"
 
 /* Mask of X and Y coordinates for the coordinates words in the descriptors*/
 #define X_COORDINATE_MASK 0x00000FFF

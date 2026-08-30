@@ -32,12 +32,12 @@ aFoyZRNIVvdUeEYZ0dndmLIFDAtpOryc4N6uuH5CJ2K3bfF3+oRE/DerseujA==*/
 extern "C" {
 #endif
 
-#include "basedef.h"
-#include "vfmw.h"
-#include "public.h"
-#include "vdm_hal.h"
-#include "bitstream.h"
-#include "syn_cmn.h"
+#include "../basedef.h"
+#include "../../../vfmw.h"
+#include "../public.h"
+#include "../vdm_hal.h"
+#include "../bitstream.h"
+#include "../syn_cmn.h"
 
 #define VP8_MB_FEATURE_TREE_PROBS   3
 

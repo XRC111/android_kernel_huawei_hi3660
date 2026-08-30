@@ -18,7 +18,7 @@
 static char *table;
 static u64 mem_size;
 
-#include <io.h>
+#include "io.h"
 
 static void platform_fixups(void)
 {

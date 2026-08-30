@@ -72,7 +72,7 @@
 #include <net/ipv6.h>
 #include <net/tcp.h>
 #include <net/addrconf.h>
-#include "iwl-modparams.h"
+#include "../iwl-modparams.h"
 #include "fw-api.h"
 #include "mvm.h"
 

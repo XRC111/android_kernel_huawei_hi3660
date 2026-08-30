@@ -1,7 +1,7 @@
 #ifndef __VFMW_EXT_H__
 #define __VFMW_EXT_H__
 
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "vfmw_dts.h"
 
 typedef HI_VOID  (*FN_VFMW_OpenModule)(HI_VOID);

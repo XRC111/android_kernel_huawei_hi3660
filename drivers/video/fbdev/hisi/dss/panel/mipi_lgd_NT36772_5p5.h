@@ -1,4 +1,4 @@
-#include "hisi_fb.h"
+#include "../hisi_fb.h"
 
 #ifndef MIPI_LGD_NT36772
 #define MIPI_LGD_NT36772

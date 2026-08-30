@@ -26,7 +26,7 @@
 
 #include <linux/module.h>
 #include <linux/netdevice.h>
-#include <wldev_common.h>
+#include "wldev_common.h"
 
 /* If any feature uses the Generic Netlink Interface, put it here to enable WL_GENL
  * automatically

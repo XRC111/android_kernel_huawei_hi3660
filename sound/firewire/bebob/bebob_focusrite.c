@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./bebob.h"
+#include "bebob.h"
 
 #define ANA_IN	"Analog In"
 #define DIG_IN	"Digital In"

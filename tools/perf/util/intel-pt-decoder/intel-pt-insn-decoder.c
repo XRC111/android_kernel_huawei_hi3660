@@ -18,7 +18,7 @@
 #include <endian.h>
 #include <byteswap.h>
 
-#include "event.h"
+#include "../event.h"
 
 #include "insn.h"
 

@@ -27,9 +27,9 @@
 #ifndef _hndpmu_h_
 #define _hndpmu_h_
 
-#include <typedefs.h>
-#include <osl_decl.h>
-#include <siutils.h>
+#include "typedefs.h"
+#include "osl_decl.h"
+#include "siutils.h"
 
 
 extern void si_pmu_otp_power(si_t *sih, osl_t *osh, bool on, uint32* min_res_mask);

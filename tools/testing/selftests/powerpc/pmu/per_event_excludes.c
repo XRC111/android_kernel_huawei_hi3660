@@ -14,7 +14,7 @@
 
 #include "event.h"
 #include "lib.h"
-#include "utils.h"
+#include "../utils.h"
 
 /*
  * Test that per-event excludes work.

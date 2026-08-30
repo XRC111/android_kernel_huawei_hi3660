@@ -20,7 +20,7 @@ extern "C" {
 #include "alg_ext_if.h"
 #endif
 #include "dmac_ext_if.h"
-#include "dmac_vap.h"
+#include "../dmac_vap.h"
 
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_DMAC_ACS_TEST_H

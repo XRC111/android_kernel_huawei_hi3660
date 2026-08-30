@@ -62,8 +62,8 @@
  *****************************************************************************/
 
 #include <linux/leds.h>
-#include "iwl-io.h"
-#include "iwl-csr.h"
+#include "../iwl-io.h"
+#include "../iwl-csr.h"
 #include "mvm.h"
 
 /* Set led register on */

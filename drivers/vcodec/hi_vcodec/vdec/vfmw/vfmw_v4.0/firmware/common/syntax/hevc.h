@@ -15,11 +15,11 @@ RayGpFVcZP2jwV373Es88+89ViuQe+xqRB+5/wxEME+GfkI/h2axUkiy/BNSVQ==*/
 extern "C" {
 #endif
 
-#include "basedef.h"
-#include "vfmw.h"
-#include "public.h"
-#include "bitstream.h"
-#include "vdm_hal.h"
+#include "../basedef.h"
+#include "../../../vfmw.h"
+#include "../public.h"
+#include "../bitstream.h"
+#include "../vdm_hal.h"
 
 #define HEVC_SYNTAX_OPT
 

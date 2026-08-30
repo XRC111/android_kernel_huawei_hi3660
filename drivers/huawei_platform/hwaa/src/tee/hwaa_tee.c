@@ -1,13 +1,13 @@
 
-#include "inc/tee/hwaa_tee.h"
+#include "../../inc/tee/hwaa_tee.h"
 #include <linux/spinlock.h>
 #include <linux/mutex.h>
 #include <linux/slab.h>
 #include <linux/sched.h>
 #include <linux/init.h>
 #include <securec.h>
-#include "inc/base/hwaa_define.h"
-#include "inc/base/hwaa_utils.h"
+#include "../../inc/base/hwaa_define.h"
+#include "../../inc/base/hwaa_utils.h"
 EXPORT_SYMBOL(saved_command_line);
 
 static struct workqueue_struct *g_hwaa_workqueue = NULL;

@@ -15,7 +15,7 @@
 #ifndef __OSDEP_SERVICE_H_
 #define __OSDEP_SERVICE_H_
 
-#include <basic_types.h>
+#include "basic_types.h"
 
 #define _FAIL		0
 #define _SUCCESS	1

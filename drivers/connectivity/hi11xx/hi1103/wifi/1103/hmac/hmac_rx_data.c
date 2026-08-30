@@ -25,7 +25,7 @@ extern "C" {
 #include "hmac_ext_if.h"
 #include "hmac_frag.h"
 #include "hmac_11i.h"
-#include "mac_vap.h"
+#include "hmac_vap.h"
 #ifdef _PRE_WLAN_FEATURE_ISOLATION
 #include "hmac_isolation.h"
 #endif
@@ -70,7 +70,7 @@ extern "C" {
 #include <linux/inetdevice.h>
 #endif
 
-#include<hmac_auto_adjust_freq.h>  //为hmac_auto_adjust_freq.c统计收包数准备
+#include "hmac_auto_adjust_freq.h"  //为hmac_auto_adjust_freq.c统计收包数准备
 
 #ifdef _PRE_WLAN_PKT_TIME_STAT
 #include  <hwnet/ipv4/wifi_delayst.h>

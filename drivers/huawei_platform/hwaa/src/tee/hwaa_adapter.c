@@ -6,17 +6,17 @@
  * History: 2020-10-10 add list
  */
 
-#include "inc/tee/hwaa_adapter.h"
+#include "../../inc/tee/hwaa_adapter.h"
 #include <linux/uaccess.h>
 #include <linux/init.h>
 #include <linux/random.h>
 #include <linux/spinlock.h>
 #include <linux/slab.h>
 #include <securec.h>
-#include "inc/base/hwaa_utils.h"
-#include "inc/tee/base_alg.h"
-#include "inc/tee/hwaa_alg.h"
-#include "inc/tee/hwaa_tee.h"
+#include "../../inc/base/hwaa_utils.h"
+#include "../../inc/tee/base_alg.h"
+#include "../../inc/tee/hwaa_alg.h"
+#include "../../inc/tee/hwaa_tee.h"
 
 static DEFINE_RWLOCK(g_phase1_key_lock);
 

@@ -26,11 +26,11 @@
 #include <linux/semaphore.h>
 
 #include <linux/hisi/usb/hisi_tcpm.h>
-#include "include/tcpci_timer.h"
-#include "include/tcpci_config.h"
+#include "../include/tcpci_timer.h"
+#include "../include/tcpci_config.h"
 
 #ifdef CONFIG_USB_POWER_DELIVERY_SUPPORT
-#include "include/pd_core.h"
+#include "../include/pd_core.h"
 #endif
 
 struct tcpc_device;

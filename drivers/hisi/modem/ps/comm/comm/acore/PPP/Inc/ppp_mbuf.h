@@ -32,7 +32,7 @@
 #ifndef __PPP_MBUF_H__
 #define __PPP_MBUF_H__
 
-#include "PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_public.h"
 
 #ifdef __cplusplus
     #if __cplusplus

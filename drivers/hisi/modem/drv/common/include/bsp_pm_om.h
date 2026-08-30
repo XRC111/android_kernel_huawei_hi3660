@@ -54,20 +54,20 @@ extern "C"
 {
 #endif
 
-#include <osl_types.h>
-#include <osl_spinlock.h>
-#include <osl_list.h>
+#include "osl_types.h"
+#include "osl_spinlock.h"
+#include "osl_list.h"
 #include <mdrv_pm.h>
 #include <mdrv_ipc.h>
-#include <bsp_icc.h>
+#include "bsp_icc.h"
 
 #ifndef PMOM_CAT_APP
 #include <drv_nv_id.h>
 #include <drv_nv_def.h>
-#include <bsp_trace.h>
-#include <bsp_ring_buffer.h>
+#include "bsp_trace.h"
+#include "bsp_ring_buffer.h"
 #endif
-#include <bsp_modem_log.h>
+#include "bsp_modem_log.h"
 
 /*
  * 模块id，增加或修改模块ID的同时需要同步修改:

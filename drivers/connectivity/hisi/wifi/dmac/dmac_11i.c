@@ -20,7 +20,7 @@ extern "C" {
 #include "wlan_types.h"
 #include "mac_vap.h"
 #include "mac_user.h"
-//#include "mac_11i.h"
+#include "dmac_11i.h"
 #include "dmac_main.h"
 #include "oal_net.h"
 #include "dmac_tx_bss_comm.h"

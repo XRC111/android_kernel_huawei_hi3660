@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-#include "helpers/helpers.h"
+#include "../helpers/helpers.h"
 
 static const char *cpu_vendor_table[X86_VENDOR_MAX] = {
 	"Unknown", "GenuineIntel", "AuthenticAMD",

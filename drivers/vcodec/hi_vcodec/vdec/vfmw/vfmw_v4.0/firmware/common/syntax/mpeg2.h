@@ -29,11 +29,11 @@ mSMf7J4FkTpfv/JzwTgKEHe/9N4yU5rqhEDGFnkG4/S4FxOOB/C/wNlmJJL1crdwYm/aqTyh
 #define __MPEG2_H__
 
 
-#include "basedef.h"
-#include "public.h"
-#include "bitstream.h"
-#include "syn_cmn.h"
-#include "vdm_hal.h"
+#include "../basedef.h"
+#include "../public.h"
+#include "../bitstream.h"
+#include "../syn_cmn.h"
+#include "../vdm_hal.h"
 
 
 #ifdef MPEG2_ENABLE

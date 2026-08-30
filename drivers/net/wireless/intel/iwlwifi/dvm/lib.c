@@ -32,10 +32,10 @@
 #include <linux/sched.h>
 #include <net/mac80211.h>
 
-#include "iwl-io.h"
-#include "iwl-agn-hw.h"
-#include "iwl-trans.h"
-#include "iwl-modparams.h"
+#include "../iwl-io.h"
+#include "../iwl-agn-hw.h"
+#include "../iwl-trans.h"
+#include "../iwl-modparams.h"
 
 #include "dev.h"
 #include "agn.h"

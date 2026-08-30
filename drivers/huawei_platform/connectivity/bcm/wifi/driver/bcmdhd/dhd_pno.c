@@ -37,18 +37,18 @@
 #include <linux/kernel.h>
 #include <linux/list.h>
 #include <linux/sort.h>
-#include <dngl_stats.h>
+#include "dngl_stats.h"
 #include <wlioctl.h>
 
 #include <proto/bcmevent.h>
-#include <dhd.h>
-#include <dhd_pno.h>
-#include <dhd_dbg.h>
+#include "dhd.h"
+#include "dhd_pno.h"
+#include "dhd_dbg.h"
 #ifdef GSCAN_SUPPORT
 #include <linux/gcd.h>
 #endif /* GSCAN_SUPPORT */
 #ifdef WL_CFG80211
-#include <wl_cfg80211.h>
+#include "wl_cfg80211.h"
 #endif /* WL_CFG80211 */
 
 #ifdef __BIG_ENDIAN

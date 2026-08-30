@@ -22,7 +22,7 @@
 #include "include/pd_policy_engine.h"
 #include "include/pd_dpm_core.h"
 
-#include <pd_dpm_prv.h>
+#include "pd_dpm_prv.h"
 
 #include "securec.h"
 

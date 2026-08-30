@@ -65,10 +65,10 @@
 #include <linux/devcoredump.h>
 
 #include "fw-dbg.h"
-#include "iwl-io.h"
+#include "../iwl-io.h"
 #include "mvm.h"
-#include "iwl-prph.h"
-#include "iwl-csr.h"
+#include "../iwl-prph.h"
+#include "../iwl-csr.h"
 
 static ssize_t iwl_mvm_read_coredump(char *buffer, loff_t offset, size_t count,
 				     void *data, size_t datalen)

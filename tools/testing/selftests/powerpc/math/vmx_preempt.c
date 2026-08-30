@@ -23,7 +23,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 /* Time to wait for workers to get preempted (seconds) */
 #define PREEMPT_TIME 20

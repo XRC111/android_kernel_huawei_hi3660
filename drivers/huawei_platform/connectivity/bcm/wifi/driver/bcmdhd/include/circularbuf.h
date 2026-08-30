@@ -9,9 +9,9 @@
 #ifndef __CIRCULARBUF_H_INCLUDED__
 #define __CIRCULARBUF_H_INCLUDED__
 
-#include <osl.h>
-#include <typedefs.h>
-#include <bcmendian.h>
+#include "osl.h"
+#include "typedefs.h"
+#include "bcmendian.h"
 
 /* Enumerations of return values provided by MsgBuf implementation */
 typedef enum {

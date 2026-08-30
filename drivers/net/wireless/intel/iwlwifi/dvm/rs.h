@@ -29,7 +29,7 @@
 
 #include <net/mac80211.h>
 
-#include "iwl-config.h"
+#include "../iwl-config.h"
 
 #include "commands.h"
 

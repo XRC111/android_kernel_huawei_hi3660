@@ -6,7 +6,7 @@
  * Declaring packed structures is compiler specific. In order to handle all
  * cases, packed structures should be delared as:
  *
- * #include <packed_section_start.h>
+ * #include "packed_section_start.h"
  *
  * typedef BWL_PRE_PACKED_STRUCT struct foobar_t {
  *    some_struct_members;

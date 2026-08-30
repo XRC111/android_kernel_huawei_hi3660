@@ -1,5 +1,5 @@
-#include "hisi_fb.h"
-#include "hisi_fb_panel.h"
+#include "../hisi_fb.h"
+#include "../hisi_fb_panel.h"
 #include <huawei_platform/log/log_jank.h>
 #include "include/lcd_common.h"
 

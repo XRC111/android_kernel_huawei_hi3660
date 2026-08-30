@@ -31,8 +31,8 @@
  */
 
 
-#include "PPP/Inc/ppp_public.h"
-#include "PPP/Inc/pppid.h"
+#include "../../PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/pppid.h"
 
 /*****************************************************************************
     协议栈打印打点方式下的.C文件宏定义

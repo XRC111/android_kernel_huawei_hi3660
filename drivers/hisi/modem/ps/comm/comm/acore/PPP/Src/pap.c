@@ -31,20 +31,20 @@
  */
 
 
-#include "PPP/Inc/ppp_public.h"
-#include "PPP/Inc/layer.h"
-#include "PPP/Inc/ppp_mbuf.h"
-#include "PPP/Inc/hdlc.h"
-#include "PPP/Inc/throughput.h"
-#include "PPP/Inc/proto.h"
-#include "PPP/Inc/ppp_fsm.h"
-#include "PPP/Inc/lcp.h"
-#include "PPP/Inc/async.h"
-#include "PPP/Inc/auth.h"
-#include "PPP/Inc/ipcp.h"
-#include "PPP/Inc/pppid.h"
-#include "PPP/Inc/link.h"
-#include "PPP/Inc/pap.h"
+#include "../../PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/layer.h"
+#include "../../PPP/Inc/ppp_mbuf.h"
+#include "../../PPP/Inc/hdlc.h"
+#include "../../PPP/Inc/throughput.h"
+#include "../../PPP/Inc/proto.h"
+#include "../../PPP/Inc/ppp_fsm.h"
+#include "../../PPP/Inc/lcp.h"
+#include "../../PPP/Inc/async.h"
+#include "../../PPP/Inc/auth.h"
+#include "../../PPP/Inc/ipcp.h"
+#include "../../PPP/Inc/pppid.h"
+#include "../../PPP/Inc/link.h"
+#include "../../PPP/Inc/pap.h"
 
 
 static const VOS_CHAR * const papcodes[] = {

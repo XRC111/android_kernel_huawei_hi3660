@@ -6,7 +6,7 @@
 
 #include <pci/pci.h>
 
-#include "helpers/helpers.h"
+#include "../helpers/helpers.h"
 
 #define MSR_AMD_PSTATE_STATUS	0xc0010063
 #define MSR_AMD_PSTATE		0xc0010064

@@ -17,8 +17,8 @@
 
 #include <pci/pci.h>
 
-#include "idle_monitor/cpupower-monitor.h"
-#include "helpers/helpers.h"
+#include "../idle_monitor/cpupower-monitor.h"
+#include "../helpers/helpers.h"
 
 #define PCI_NON_PC0_OFFSET	0xb0
 #define PCI_PC1_OFFSET		0xb4

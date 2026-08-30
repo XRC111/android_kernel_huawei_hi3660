@@ -14,7 +14,7 @@
 #include <linux/blk_types.h>
 #include <linux/blkdev.h>
 #include <linux/f2fs_fs.h>
-#include "fs/f2fs/f2fs.h"
+#include "../../../fs/f2fs/f2fs.h"
 
 enum fault_type {
 	FAULT_NONE = 0,

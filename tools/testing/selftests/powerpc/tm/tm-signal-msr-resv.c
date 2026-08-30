@@ -18,7 +18,7 @@
 #include <signal.h>
 #include <unistd.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "tm.h"
 
 int segv_expected = 0;

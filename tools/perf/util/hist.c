@@ -7,7 +7,7 @@
 #include "evlist.h"
 #include "evsel.h"
 #include "annotate.h"
-#include "ui/progress.h"
+#include "../ui/progress.h"
 #include <math.h>
 
 static bool hists__filter_entry_by_dso(struct hists *hists,

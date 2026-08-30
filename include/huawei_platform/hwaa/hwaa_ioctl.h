@@ -5,8 +5,8 @@
 #ifdef __KERNEL__
 #include <linux/types.h>
 #include <linux/ioctl.h>
-#include "huawei_platform/hwaa/hwaa_error.h"
-#include "huawei_platform/hwaa/hwaa_limits.h"
+#include "../../huawei_platform/hwaa/hwaa_error.h"
+#include "../../huawei_platform/hwaa/hwaa_limits.h"
 #else
 #include <stdbool.h>
 #include <sys/ioctl.h>

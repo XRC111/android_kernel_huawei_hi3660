@@ -15,8 +15,8 @@
 #ifndef PD_PROCESS_EVT_H_
 #define PD_PROCESS_EVT_H_
 
-#include "include/tcpci.h"
-#include "include/pd_policy_engine.h"
+#include "../include/tcpci.h"
+#include "../include/pd_policy_engine.h"
 
 typedef struct __pe_state_transition {
 	uint8_t curr_state; /*state, msg, or cmd */

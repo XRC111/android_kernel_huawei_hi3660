@@ -31,7 +31,7 @@
 #include <pthread.h>
 #include <string.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "tm.h"
 
 int	num_loops	= 10000;

@@ -36,7 +36,7 @@
  * This platform is for the ARM M0.
  */
 #ifdef PLATFORM_ARM
-#include "../Platform_ARM/app/FSCTypes.h"
+#include "../Platform_None/FSCTypes.h"
 #endif // PLATFORM_ARM
 
 /* PLATFORM_ARM_M7
@@ -44,7 +44,7 @@
  * This platform is for the ARM M7.
  */
 #ifdef PLATFORM_ARM_M7
-#include "../Platform_ARM_M7/app/FSCTypes.h"
+#include "../Platform_None/FSCTypes.h"
 #endif // PLATFORM_ARM_M7
 
 /* FSC_PLATFORM_LINUX

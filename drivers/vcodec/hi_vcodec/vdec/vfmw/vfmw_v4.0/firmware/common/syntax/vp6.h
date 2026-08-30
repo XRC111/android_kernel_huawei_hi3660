@@ -28,11 +28,11 @@ T9U12Jp1W6xVVsbyX8rLwXKx5TCg+BJ6TPW93skjGPid32Yyz50MRvx1ZIVPsA==*/
 #ifndef __VP6_HEADER__
 #define __VP6_HEADER__
 
-#include "basedef.h"
-#include "public.h"
-#include "vfmw.h"
-#include "bitstream.h"
-#include "syn_cmn.h"
+#include "../basedef.h"
+#include "../public.h"
+#include "../../../vfmw.h"
+#include "../bitstream.h"
+#include "../syn_cmn.h"
 #ifdef VP6_ENABLE
 
 #define HUFF_LUT_LEVELS   6

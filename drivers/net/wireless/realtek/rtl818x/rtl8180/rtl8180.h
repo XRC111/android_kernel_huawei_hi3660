@@ -1,7 +1,7 @@
 #ifndef RTL8180_H
 #define RTL8180_H
 
-#include "rtl818x.h"
+#include "../rtl818x.h"
 
 #define MAX_RX_SIZE IEEE80211_MAX_RTS_THRESHOLD
 

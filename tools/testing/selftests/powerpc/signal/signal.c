@@ -19,7 +19,7 @@
 
 #include <altivec.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 #define MAX_ATTEMPT 500000
 #define TIMEOUT 5

@@ -57,10 +57,10 @@ extern "C" {
 #include <mdrv_version.h>
 #endif
 #include "product_config.h"
-#include <osl_types.h>
+#include "osl_types.h"
 #include <drv_nv_def.h>
-#include <bsp_trace.h>
-#include <bsp_shared_ddr.h>
+#include "bsp_trace.h"
+#include "bsp_shared_ddr.h"
 
 #ifndef VER_ERROR
 #define VER_ERROR (-1)

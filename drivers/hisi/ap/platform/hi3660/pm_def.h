@@ -1,6 +1,6 @@
 #ifndef __PM_DEF_H__
 #define __PM_DEF_H__ 
-#include <soc_crgperiph_interface.h>
+#include "soc_crgperiph_interface.h"
 #define AP_WAKE_INT_MASK (BIT(SOC_SCTRL_SCINT_MASK_gpio_22_int_START) | \
                       BIT(SOC_SCTRL_SCINT_MASK_gpio_23_int_START) | \
                       BIT(SOC_SCTRL_SCINT_MASK_gpio_24_int_START) | \

@@ -24,7 +24,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <linux/futex.h>
-#include "kselftest.h"
+#include "../../kselftest.h"
 
 /*
  * Define PASS, ERROR, and FAIL strings with and without color escape

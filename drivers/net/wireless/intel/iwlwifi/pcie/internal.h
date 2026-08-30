@@ -39,12 +39,12 @@
 #include <linux/timer.h>
 #include <linux/cpu.h>
 
-#include "iwl-fh.h"
-#include "iwl-csr.h"
-#include "iwl-trans.h"
-#include "iwl-debug.h"
-#include "iwl-io.h"
-#include "iwl-op-mode.h"
+#include "../iwl-fh.h"
+#include "../iwl-csr.h"
+#include "../iwl-trans.h"
+#include "../iwl-debug.h"
+#include "../iwl-io.h"
+#include "../iwl-op-mode.h"
 
 /* We need 2 entries for the TX command and header, and another one might
  * be needed for potential data in the SKB's head. The remaining ones can

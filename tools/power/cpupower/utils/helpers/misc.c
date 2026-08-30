@@ -1,6 +1,6 @@
 #if defined(__i386__) || defined(__x86_64__)
 
-#include "helpers/helpers.h"
+#include "../helpers/helpers.h"
 
 int cpufreq_has_boost_support(unsigned int cpu, int *support, int *active,
 			int *states)

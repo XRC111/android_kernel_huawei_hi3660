@@ -54,7 +54,7 @@ extern "C"
 {
 #endif
 
-#include <bsp_shared_ddr.h>
+#include "bsp_shared_ddr.h"
 #ifndef __CMSIS_RTOS
 #include "mdrv_ipf.h"
 #else

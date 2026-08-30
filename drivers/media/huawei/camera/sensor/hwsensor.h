@@ -14,7 +14,7 @@
 #include <media/v4l2-subdev.h>
 #include <media/huawei/sensor_cfg.h>
 #include <linux/videodev2.h>
-#include "hwcam_intf.h"
+#include "../hwcam_intf.h"
 /**
  * @brief the power state of sensor.
  */

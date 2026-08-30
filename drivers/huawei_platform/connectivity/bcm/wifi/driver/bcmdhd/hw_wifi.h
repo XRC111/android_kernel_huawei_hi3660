@@ -15,8 +15,8 @@ HUAWEI-2014.007:       0728             set bcn_timeout for beacon loss and roam
 #include <linuxver.h>
 #include <osl.h>
 #include <bcmutils.h>
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "dngl_stats.h"
+#include "dhd.h"
 #include <wlioctl.h>
 #ifdef HW_WIFI_DMD_LOG
 #include <dsm/dsm_pub.h>

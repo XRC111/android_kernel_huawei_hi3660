@@ -30,12 +30,12 @@ zibAWkQD7zNqwz+DJLtRasoIL+bHdVYpeHqK9L0kKwMCJvQuwyni6W2V7sroGA==*/
 #define __REAL8_VFMW_H__
 
 
-#include "basedef.h"
-#include "public.h"
+#include "../basedef.h"
+#include "../public.h"
 
-#include "bitstream.h"
-#include "syn_cmn.h"
-#include "vdm_hal.h"
+#include "../bitstream.h"
+#include "../syn_cmn.h"
+#include "../vdm_hal.h"
 
 
 #define REAL8_VFMW_MAX_PIC_WIDTH   127 //unit: MB

@@ -75,17 +75,17 @@
 #include <net/ieee80211_radiotap.h>
 #include <net/tcp.h>
 
-#include "iwl-op-mode.h"
-#include "iwl-io.h"
+#include "../iwl-op-mode.h"
+#include "../iwl-io.h"
 #include "mvm.h"
 #include "sta.h"
 #include "time-event.h"
-#include "iwl-eeprom-parse.h"
-#include "iwl-phy-db.h"
+#include "../iwl-eeprom-parse.h"
+#include "../iwl-phy-db.h"
 #include "testmode.h"
-#include "iwl-fw-error-dump.h"
-#include "iwl-prph.h"
-#include "iwl-nvm-parse.h"
+#include "../iwl-fw-error-dump.h"
+#include "../iwl-prph.h"
+#include "../iwl-nvm-parse.h"
 #include "fw-dbg.h"
 
 static const struct ieee80211_iface_limit iwl_mvm_limits[] = {

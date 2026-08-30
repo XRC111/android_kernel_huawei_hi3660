@@ -11,7 +11,7 @@
 #ifndef ANC_HS_H
 #define ANC_HS_H
 
-#include "huawei_platform/audio/anc_hs_interface.h"
+#include "../../huawei_platform/audio/anc_hs_interface.h"
 
 #define ANC_HS_ENABLE_CHARGE 0
 #define ANC_HS_DISABLE_CHARGE 1

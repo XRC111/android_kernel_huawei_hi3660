@@ -27,12 +27,12 @@
 #include <linux/delay.h>
 #include <linux/usb/class-dual-role.h>
 
-#include "include/pd_dbg_info.h"
-#include "include/tcpci_core.h"
-#include "include/tcpci_timer.h"
+#include "../include/pd_dbg_info.h"
+#include "../include/tcpci_core.h"
+#include "../include/tcpci_timer.h"
 
 #ifdef CONFIG_USB_POWER_DELIVERY_SUPPORT
-#include "include/pd_core.h"
+#include "../include/pd_core.h"
 #endif /* CONFIG_USB_POWER_DELIVERY_SUPPORT */
 
 #include "../hisi-usb-typec.h"

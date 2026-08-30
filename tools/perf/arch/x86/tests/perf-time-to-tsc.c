@@ -9,7 +9,7 @@
 #include "thread_map.h"
 #include "cpumap.h"
 #include "tsc.h"
-#include "tests/tests.h"
+#include "../../../tests/tests.h"
 
 #include "arch-tests.h"
 

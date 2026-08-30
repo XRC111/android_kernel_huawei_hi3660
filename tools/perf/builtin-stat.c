@@ -64,7 +64,7 @@
 #include "util/session.h"
 #include "util/tool.h"
 #include "util/group.h"
-#include "asm/bug.h"
+#include "util/debug.h"
 
 #include <linux/time64.h>
 #include <api/fs/fs.h>

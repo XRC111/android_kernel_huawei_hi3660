@@ -7,7 +7,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./fireworks.h"
+#include "fireworks.h"
 
 static inline const char*
 get_phys_name(struct snd_efw_phys_grp *grp, bool input)

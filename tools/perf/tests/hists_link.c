@@ -1,4 +1,4 @@
-#include "perf.h"
+#include "../perf.h"
 #include "tests.h"
 #include "debug.h"
 #include "symbol.h"

@@ -11,7 +11,7 @@
  * GNU General Public License for more details.
  */
 
-#include "msm_kms.h"
+#include "../msm_kms.h"
 #include "dsi.h"
 
 #define DSI_CLOCK_MASTER	DSI_0

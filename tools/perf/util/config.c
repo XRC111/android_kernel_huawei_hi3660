@@ -11,8 +11,8 @@
 #include "util.h"
 #include "cache.h"
 #include <subcmd/exec-cmd.h>
-#include "util/hist.h"  /* perf_hist_config */
-#include "util/llvm-utils.h"   /* perf_llvm_config */
+#include "../util/hist.h"  /* perf_hist_config */
+#include "../util/llvm-utils.h"   /* perf_llvm_config */
 #include "config.h"
 
 #define MAXNAME (256)

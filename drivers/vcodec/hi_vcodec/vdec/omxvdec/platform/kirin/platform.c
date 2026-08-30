@@ -6,7 +6,7 @@
 #include <linux/file.h>
 #include <linux/major.h>
 
-#include "omxvdec.h"
+#include "../../omxvdec.h"
 #include "platform.h"
 #include "vfmw_ext.h"
 

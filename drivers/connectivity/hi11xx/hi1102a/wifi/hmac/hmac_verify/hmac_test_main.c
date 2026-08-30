@@ -18,12 +18,12 @@ extern "C" {
 #include "mac_regdomain.h"
 #include "hmac_ext_if.h"
 #include "oam_ext_if.h"
-#include "hmac_vap.h"
-#include "hmac_main.h"
+#include "../hmac_vap.h"
+#include "../hmac_main.h"
 #include "hmac_test_main.h"
 #ifdef _PRE_WLAN_FEATURE_SMP_SUPPORT
 #include "dmac_ext_if.h"
-#include "hmac_vap.h"
+#include "../hmac_vap.h"
 #include "dmac_vap.h"
 #include "mac_vap.h"
 #endif

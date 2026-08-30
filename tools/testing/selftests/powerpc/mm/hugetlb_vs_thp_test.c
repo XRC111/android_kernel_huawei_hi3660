@@ -2,7 +2,7 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
-#include "utils.h"
+#include "../utils.h"
 
 /* This must match the huge page & THP size */
 #define SIZE	(16 * 1024 * 1024)

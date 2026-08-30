@@ -28,8 +28,8 @@
 #ifndef __DHD_CFG80211__
 #define __DHD_CFG80211__
 
-#include <wl_cfg80211.h>
-#include <wl_cfgp2p.h>
+#include "wl_cfg80211.h"
+#include "wl_cfgp2p.h"
 
 #ifndef WL_ERR
 #define WL_ERR CFG80211_ERR

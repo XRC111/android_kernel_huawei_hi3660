@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 
-#include "utils.h"
+#include "../utils.h"
 #include "lib.h"
 
 

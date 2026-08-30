@@ -44,7 +44,7 @@
 #include <scsi/scsi_ioctl.h>
 #include <linux/interrupt.h>
 
-#include "scsi.h"
+#include "../scsi.h"
 #include <scsi/scsi_host.h>
 #include "../qlogicfas408.h"
 

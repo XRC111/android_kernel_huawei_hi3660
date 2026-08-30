@@ -30,10 +30,10 @@
 #include <bcmutils.h>
 
 #include <bcmendian.h>
-#include <dngl_stats.h>
+#include "dngl_stats.h"
 #include <wlioctl.h>
-#include <dhd.h>
-#include <dhd_ip.h>
+#include "dhd.h"
+#include "dhd_ip.h"
 #include <proto/bcmevent.h>
 #include <proto/dnglevent.h>
 
@@ -42,23 +42,23 @@
 #endif /* SHOW_LOGTRACE */
 
 #ifdef BCMPCIE
-#include <dhd_flowring.h>
+#include "dhd_flowring.h"
 #endif
 
-#include <dhd_bus.h>
-#include <dhd_proto.h>
-#include <dhd_dbg.h>
-#include <dhd_debug.h>
+#include "dhd_bus.h"
+#include "dhd_proto.h"
+#include "dhd_dbg.h"
+#include "dhd_debug.h"
 #include <msgtrace.h>
 
 #ifdef WL_CFG80211
-#include <wl_cfg80211.h>
+#include "wl_cfg80211.h"
 #endif
 #ifdef PNO_SUPPORT
-#include <dhd_pno.h>
+#include "dhd_pno.h"
 #endif
 #ifdef RTT_SUPPORT
-#include <dhd_rtt.h>
+#include "dhd_rtt.h"
 #endif
 
 #define htod32(i) (i)
@@ -70,11 +70,11 @@
 
 #ifdef PROP_TXSTATUS
 #include <wlfc_proto.h>
-#include <dhd_wlfc.h>
+#include "dhd_wlfc.h"
 #endif
 
 #ifdef DHD_WMF
-#include <dhd_linux.h>
+#include "dhd_linux.h"
 #include <dhd_wmf_linux.h>
 #endif /* DHD_WMF */
 

@@ -14,7 +14,7 @@
 #include <linux/clk-provider.h>
 
 #include "dsi_pll.h"
-#include "dsi.xml.h"
+#include "../dsi.xml.h"
 
 /*
  * DSI PLL 28nm (8960/A family) - clock diagram (eg: DSI1):

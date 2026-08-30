@@ -72,8 +72,8 @@
 #include <linux/pci-aspm.h>
 #include <linux/acpi.h>
 
-#include "iwl-trans.h"
-#include "iwl-drv.h"
+#include "../iwl-trans.h"
+#include "../iwl-drv.h"
 #include "internal.h"
 
 #define IWL_PCI_DEVICE(dev, subdev, cfg) \

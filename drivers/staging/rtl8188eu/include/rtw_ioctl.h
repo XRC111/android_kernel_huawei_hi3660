@@ -15,8 +15,8 @@
 #ifndef _RTW_IOCTL_H_
 #define _RTW_IOCTL_H_
 
-#include <osdep_service.h>
-#include <drv_types.h>
+#include "osdep_service.h"
+#include "drv_types.h"
 
 
 #ifndef OID_802_11_CAPABILITY

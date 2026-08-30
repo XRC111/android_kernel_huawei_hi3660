@@ -16,8 +16,8 @@
 #ifndef __RTW_LED_H_
 #define __RTW_LED_H_
 
-#include <osdep_service.h>
-#include <drv_types.h>
+#include "osdep_service.h"
+#include "drv_types.h"
 
 #define LED_BLINK_NO_LINK_INTERVAL_ALPHA	1000
 #define LED_BLINK_LINK_INTERVAL_ALPHA		500	/* 500 */

@@ -16,7 +16,7 @@ extern "C" {
 #include "oal_types.h"
 #include "oal_mm.h"
 #include "arch/oal_util.h"
-#include "platform_oneimage_define.h"
+#include "../platform_oneimage_define.h"
 
 /*****************************************************************************
   2 ∫Í∂®“Â
@@ -297,7 +297,7 @@ extern "C" {
 #ifdef CONFIG_PRINTK
 #include <linux/module.h>
 
-#include "platform_oneimage_define.h"
+#include "../platform_oneimage_define.h"
 #ifndef HI11XX_LOG_MODULE_NAME
 #define HI11XX_LOG_MODULE_NAME "[HI11XX]"
 extern oal_int32 hi11xx_loglevel;

@@ -31,9 +31,9 @@
 #include <linux/module.h>
 #include <linux/sched.h>
 #include <linux/ieee80211.h>
-#include "iwl-io.h"
-#include "iwl-trans.h"
-#include "iwl-agn-hw.h"
+#include "../iwl-io.h"
+#include "../iwl-trans.h"
+#include "../iwl-agn-hw.h"
 #include "dev.h"
 #include "agn.h"
 

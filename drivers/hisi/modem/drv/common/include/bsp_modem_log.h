@@ -53,8 +53,8 @@ extern "C"
 {
 #endif
 
-#include <osl_types.h>
-#include <bsp_ring_buffer.h>
+#include "osl_types.h"
+#include "bsp_ring_buffer.h"
 
 #define MODEM_LOG_WAKEUP_INTERVAL       (3000)
 

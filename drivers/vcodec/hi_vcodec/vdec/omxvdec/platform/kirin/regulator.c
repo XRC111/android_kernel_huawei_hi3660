@@ -1,5 +1,5 @@
 
-#include "omxvdec.h"
+#include "../../omxvdec.h"
 #include "platform.h"
 #include "regulator.h"
 

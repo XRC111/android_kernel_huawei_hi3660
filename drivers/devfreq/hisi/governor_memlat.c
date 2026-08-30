@@ -31,7 +31,7 @@
 #include <linux/slab.h>
 #include <linux/cpu_pm.h>
 #include <linux/cpufreq.h>
-#include "governor.h"
+#include "../governor.h"
 #include "governor_memlat.h"
 
 #include <trace/events/power.h>

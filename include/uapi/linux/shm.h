@@ -4,7 +4,7 @@
 #include <linux/ipc.h>
 #include <linux/errno.h>
 #ifndef __KERNEL__
-#include <unistd.h>
+#include "unistd.h"
 #endif
 
 /*

@@ -27,7 +27,7 @@
 #ifndef _linux_osl_h_
 #define _linux_osl_h_
 
-#include <typedefs.h>
+#include "typedefs.h"
 #define DECLSPEC_ALIGN(x)	__attribute__ ((aligned(x)))
 
 /* Linux Kernel: File Operations: start */
@@ -221,7 +221,7 @@ extern void osl_cpu_relax(void);
 
 /* register access macros */
 #if defined(BCMSDIO)
-	#include <bcmsdh.h>
+	#include "bcmsdh.h"
 	#define OSL_WRITE_REG(osh, r, v) (bcmsdh_reg_write(osl_get_bus_handle(osh), \
 		(uintptr)(r), sizeof(*(r)), (v)))
 	#define OSL_READ_REG(osh, r) (bcmsdh_reg_read(osl_get_bus_handle(osh), \
@@ -265,7 +265,7 @@ extern int osl_error(int bcmerror);
  * BINOSL selects the slightly slower function-call-based binary compatible osl.
  * Macros expand to calls to functions defined in linux_osl.c .
  */
-#include <linuxver.h>           /* use current 2.4.x calling conventions */
+#include "linuxver.h"           /* use current 2.4.x calling conventions */
 #include <linux/kernel.h>       /* for vsn/printf's */
 #include <linux/string.h>       /* for mem*, str* */
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 4, 29)
@@ -365,7 +365,7 @@ extern bool osl_pcie_linkdown(osl_t *osh);
 /* Because the non BINOSL implemenation of the PKT OSL routines are macros (for
  * performance reasons),  we need the Linux headers.
  */
-#include <linuxver.h>		/* use current 2.4.x calling conventions */
+#include "linuxver.h"		/* use current 2.4.x calling conventions */
 
 /* packet primitives */
 #ifdef BCMDBG_CTRACE

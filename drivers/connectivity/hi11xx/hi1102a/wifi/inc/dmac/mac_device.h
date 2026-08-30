@@ -15,7 +15,7 @@ extern "C" {
 *****************************************************************************/
 #include "oal_ext_if.h"
 #include "oam_ext_if.h"
-#include "wlan_spec.h"
+#include "../wlan_spec.h"
 #include "hal_ext_if.h"
 #include "mac_vap.h"
 #include "hal_commom_ops.h"

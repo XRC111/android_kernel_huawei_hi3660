@@ -19,13 +19,13 @@ extern "C" {
 #include "mac_regdomain.h"
 #include "dmac_ext_if.h"
 #include "oam_ext_if.h"
-#include "dmac_vap.h"
-#include "dmac_main.h"
+#include "../dmac_vap.h"
+#include "../dmac_main.h"
 #include "dmac_test_main.h"
 #include "dmac_lpm_test.h"
-#include "dmac_mgmt_ap.h"
-#include "dmac_scan.h"
-#include "dmac_tx_bss_comm.h"
+#include "../dmac_mgmt_ap.h"
+#include "../dmac_scan.h"
+#include "../dmac_tx_bss_comm.h"
 
 #undef  THIS_FILE_ID
 #define THIS_FILE_ID OAM_FILE_ID_DMAC_LPM_TEST_C

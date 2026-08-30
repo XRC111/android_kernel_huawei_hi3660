@@ -20,7 +20,7 @@
 #include <linux/usb/composite.h>
 
 #include "g_zero.h"
-#include "u_f.h"
+#include "../u_f.h"
 
 /*
  * LOOPBACK FUNCTION ... a testing vehicle for USB peripherals,

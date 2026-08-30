@@ -50,13 +50,13 @@
 
 #include <soc_interrupts.h>
 #include <soc_clk.h>
-#include <bsp_memmap.h>
-#include <bsp_trace.h>
-#include <bsp_hardtimer.h>
+#include "bsp_memmap.h"
+#include "bsp_trace.h"
+#include "bsp_hardtimer.h"
 #include <drv_nv_id.h>
 #include <drv_nv_def.h>
-#include <bsp_nvim.h>
-#include <bsp_softtimer.h>
+#include "bsp_nvim.h"
+#include "bsp_softtimer.h"
 
 
 

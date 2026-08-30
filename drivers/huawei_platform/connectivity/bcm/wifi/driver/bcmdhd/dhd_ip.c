@@ -32,13 +32,13 @@
 #include <proto/bcmip.h>
 #include <bcmendian.h>
 #include <bcmutils.h>
-#include <dhd_dbg.h>
+#include "dhd_dbg.h"
 
-#include <dhd_ip.h>
+#include "dhd_ip.h"
 
 #ifdef DHDTCPACK_SUPPRESS
-#include <dhd_bus.h>
-#include <dhd_proto.h>
+#include "dhd_bus.h"
+#include "dhd_proto.h"
 #include <proto/bcmtcp.h>
 #endif /* DHDTCPACK_SUPPRESS */
 

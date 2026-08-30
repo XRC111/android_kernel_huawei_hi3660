@@ -10,7 +10,7 @@ hM8q2dhunY8jp/u6QpgzJvwo7rSN1KKZTEW7P0aDZsZKvGq0bsnXO4Q55MsTZw==*/
 #define __SYNTAX_COMMON_HEADER__
 
 #include "basedef.h"
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "scd_drv.h"
 
 

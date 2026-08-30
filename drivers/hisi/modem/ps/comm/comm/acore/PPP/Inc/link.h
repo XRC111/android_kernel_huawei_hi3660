@@ -37,10 +37,10 @@
     #endif
 #endif
 
-#include  "PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_public.h"
 #include  "PsTypeDef.h"
-#include  "PPP/Inc/auth.h"
-#include  "PPP/Inc/hdlc_interface.h"
+#include "../../PPP/Inc/auth.h"
+#include "../../PPP/Inc/hdlc_interface.h"
 
 
 #pragma pack(4)

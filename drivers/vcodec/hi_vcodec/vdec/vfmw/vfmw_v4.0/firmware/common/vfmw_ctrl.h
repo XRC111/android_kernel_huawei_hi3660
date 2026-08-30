@@ -7,7 +7,7 @@ hCBdIEHWj9MnyfuwUv4/BlsfWNPrq6awrE3Dv4OYZbczDrCAZ1CF1Jg+QbD6FA==*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
 #ifndef __VFMV_CTRL_H__
 #define __VFMV_CTRL_H__
-#include "vfmw.h"
+#include "../../vfmw.h"
 #include "fsp.h"
 #include "sysconfig.h"
 #include "syntax.h"

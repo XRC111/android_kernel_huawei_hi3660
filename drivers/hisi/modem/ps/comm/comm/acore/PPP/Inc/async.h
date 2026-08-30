@@ -31,9 +31,9 @@
 #define __PPP_ASYNC_H__
 
 #include "vos.h"
-#include "PPP/Inc/hdlc.h"
-#include "PPP/Inc/ppp_public.h"
-#include "PPP/Inc/ppp_mbuf.h"
+#include "../../PPP/Inc/hdlc.h"
+#include "../../PPP/Inc/ppp_public.h"
+#include "../../PPP/Inc/ppp_mbuf.h"
 
 #pragma pack(4)
 #define HDLCSIZE    ((MAX_MRU*2)+6)

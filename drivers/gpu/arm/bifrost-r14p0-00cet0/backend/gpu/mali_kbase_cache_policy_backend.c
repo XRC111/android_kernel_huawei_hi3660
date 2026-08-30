@@ -20,7 +20,7 @@
  *
  */
 
-#include "backend/gpu/mali_kbase_cache_policy_backend.h"
+#include "../../backend/gpu/mali_kbase_cache_policy_backend.h"
 #include <backend/gpu/mali_kbase_device_internal.h>
 
 void kbase_cache_set_coherency_mode(struct kbase_device *kbdev,

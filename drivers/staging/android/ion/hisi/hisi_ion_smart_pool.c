@@ -29,7 +29,7 @@
 #include <linux/kernel.h>
 #include <linux/version.h>
 
-#include "ion.h"
+#include "../ion.h"
 #include "hisi_ion_smart_pool.h"
 
 /*for pclin*/

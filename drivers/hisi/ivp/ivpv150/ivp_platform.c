@@ -1,9 +1,9 @@
 #include <linux/of.h>
-#include "ivp_log.h"
+#include "../ivp_log.h"
 #include <linux/dma-mapping.h>
 #include <linux/clk.h>
 #include "ivp_platform.h"
-#include "ivp_reg.h"
+#include "../ivp_reg.h"
 #include "ivp_atf_subsys.h"
 
 #define REMAP_ADD                        (0xe8d00000)

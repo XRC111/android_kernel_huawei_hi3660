@@ -11,7 +11,7 @@
 #include <linux/boost_sigkill_free.h>
 
 #include <asm/tlb.h>
-#include "internal.h"
+#include "../internal.h"
 
 unsigned int sysctl_boost_sigkill_free;
 

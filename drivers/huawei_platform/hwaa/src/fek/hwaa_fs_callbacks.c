@@ -1,5 +1,5 @@
 
-#include "inc/fek/hwaa_fs_callbacks.h"
+#include "../../inc/fek/hwaa_fs_callbacks.h"
 #include <linux/slab.h>
 #include <linux/string.h>
 #include <linux/printk.h>
@@ -13,10 +13,10 @@
 #include <securec.h>
 #include "huawei_platform/hwaa/hwaa_limits.h"
 #include "huawei_platform/hwaa/hwaa_ioctl.h"
-#include "inc/base/hwaa_utils.h"
-#include "inc/fek/hwaa_fs_callbacks.h"
-#include "inc/tee/hwaa_adapter.h"
-#include "inc/base/hwaa_define.h"
+#include "../../inc/base/hwaa_utils.h"
+#include "../../inc/fek/hwaa_fs_callbacks.h"
+#include "../../inc/tee/hwaa_adapter.h"
+#include "../../inc/base/hwaa_define.h"
 
 #define VERSION_LENGTH 1
 #define PHASE2_INDEX_LENGTH 32

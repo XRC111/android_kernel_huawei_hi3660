@@ -1,8 +1,8 @@
 #ifndef __USB_ANALOG_HS_ISL54405__
 #define __USB_ANALOG_HS_ISL54405__
 
-#include "huawei_platform/audio/usb_analog_hs_interface.h"
-#include "huawei_platform/usb/hw_pd_dev.h"
+#include "../../huawei_platform/audio/usb_analog_hs_interface.h"
+#include "../../huawei_platform/usb/hw_pd_dev.h"
 
 
 #ifdef CONFIG_USB_ANALOG_HS_ISL54405

@@ -14,8 +14,8 @@ extern "C" {
   1 头文件包含
 *****************************************************************************/
 #include "oal_types.h"
-#include "wlan_spec.h"
-#include "wlan_types.h"
+#include "../wlan_spec.h"
+#include "../wlan_types.h"
 #include "frw_ext_if.h"
 
 

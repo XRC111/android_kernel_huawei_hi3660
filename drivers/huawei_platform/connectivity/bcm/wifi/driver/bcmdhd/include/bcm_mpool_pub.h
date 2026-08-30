@@ -61,7 +61,7 @@
 #ifndef _BCM_MPOOL_PUB_H
 #define _BCM_MPOOL_PUB_H 1
 
-#include <typedefs.h> /* needed for uint16 */
+#include "typedefs.h" /* needed for uint16 */
 
 
 /*

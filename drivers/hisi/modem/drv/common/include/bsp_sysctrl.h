@@ -49,7 +49,7 @@
 #define _BSP_SYSCTRL_H
 
 #include <product_config.h>
-#include <bsp_trace.h>
+#include "bsp_trace.h"
 
 typedef enum tagBSP_SYSCTRL_INDEX
 {

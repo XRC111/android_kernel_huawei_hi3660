@@ -31,7 +31,7 @@
 #define STV06XX_H_
 
 #include <linux/slab.h>
-#include "gspca.h"
+#include "../gspca.h"
 
 #define MODULE_NAME "STV06xx"
 

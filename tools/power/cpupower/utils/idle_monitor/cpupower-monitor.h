@@ -11,7 +11,7 @@
 #include <stdarg.h>
 #include <time.h>
 
-#include "idle_monitor/idle_monitors.h"
+#include "../idle_monitor/idle_monitors.h"
 
 #define MONITORS_MAX 20
 #define MONITOR_NAME_LEN 20

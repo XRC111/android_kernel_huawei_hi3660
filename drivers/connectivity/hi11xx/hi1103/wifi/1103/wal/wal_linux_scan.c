@@ -21,7 +21,7 @@ extern "C" {
 #include "wal_linux_rx_rsp.h"
 #include "hmac_vap.h"
 #include "hmac_device.h"
-#include "mac_device.h"
+#include "hmac_device.h"
 #include "hmac_resource.h"
 
 #if (_PRE_MULTI_CORE_MODE_OFFLOAD_DMAC == _PRE_MULTI_CORE_MODE)&&(_PRE_OS_VERSION_LINUX == _PRE_OS_VERSION)

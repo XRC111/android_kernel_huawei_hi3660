@@ -55,7 +55,7 @@
 extern "C" {
 #endif
 #endif
-#include <bsp_shared_ddr.h>
+#include "bsp_shared_ddr.h"
 
 
 /*global ddr distribution*/

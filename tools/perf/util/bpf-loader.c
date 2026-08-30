@@ -10,7 +10,7 @@
 #include <bpf/bpf.h>
 #include <linux/err.h>
 #include <linux/string.h>
-#include "perf.h"
+#include "../perf.h"
 #include "debug.h"
 #include "bpf-loader.h"
 #include "bpf-prologue.h"

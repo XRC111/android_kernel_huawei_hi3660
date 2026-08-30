@@ -6,7 +6,7 @@
  * Licensed under the terms of the GNU General Public License, version 2.
  */
 
-#include "./bebob.h"
+#include "bebob.h"
 
 int avc_audio_set_selector(struct fw_unit *unit, unsigned int subunit_id,
 			   unsigned int fb_id, unsigned int num)

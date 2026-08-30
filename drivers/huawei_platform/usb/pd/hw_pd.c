@@ -43,7 +43,7 @@
 #include <huawei_platform/log/hw_log.h>
 #include <huawei_platform/usb/hw_pd_dev.h>
 #include <linux/hisi/usb/hisi_usb.h>
-#include "huawei_platform/usb/switch/switch_ap/switch_usb_class.h"
+#include "../../../huawei_platform/usb/switch/switch_ap/switch_usb_class.h"
 #include <linux/usb/class-dual-role.h>
 #include <huawei_platform/usb/pd/richtek/tcpm.h>
 #include <huawei_platform/power/direct_charger.h>

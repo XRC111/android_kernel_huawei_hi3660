@@ -14,7 +14,7 @@ extern "C" {
 /*****************************************************************************
   1 其他头文件包含
 *****************************************************************************/
-#include "platform_spec.h"
+#include "../platform_spec.h"
 #include "oal_cache.h"
 #include "oal_list.h"
 #include "oal_schedule.h"

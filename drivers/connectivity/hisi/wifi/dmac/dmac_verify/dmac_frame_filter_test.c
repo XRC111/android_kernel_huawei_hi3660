@@ -18,8 +18,8 @@ extern "C" {
 #include "mac_resource.h"
 #include "mac_regdomain.h"
 #include "dmac_ext_if.h"
-#include "dmac_vap.h"
-#include "dmac_main.h"
+#include "../dmac_vap.h"
+#include "../dmac_main.h"
 #include "dmac_frame_filter_test.h"
 
 #undef  THIS_FILE_ID

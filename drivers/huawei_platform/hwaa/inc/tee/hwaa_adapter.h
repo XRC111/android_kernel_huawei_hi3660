@@ -8,7 +8,7 @@
 #ifndef _HWAA_ADAPTER_H
 #define _HWAA_ADAPTER_H
 #include <linux/types.h>
-#include "inc/base/hwaa_list.h"
+#include "../../inc/base/hwaa_list.h"
 
 void init_list(void);
 

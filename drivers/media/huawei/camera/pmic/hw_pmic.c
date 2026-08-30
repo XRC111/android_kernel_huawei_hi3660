@@ -10,8 +10,8 @@
  * GNU General Public License for more details.
  */
 
-#include "hwcam_intf.h"
-#include "cam_log.h"
+#include "../hwcam_intf.h"
+#include "../cam_log.h"
 #include "hw_pmic.h"
 #include "hw_pmic_i2c.h"
 

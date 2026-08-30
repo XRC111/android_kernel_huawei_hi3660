@@ -15,7 +15,7 @@
 #ifndef PD_POLICY_ENGINE_H_
 #define PD_POLICY_ENGINE_H_
 
-#include "include/pd_core.h"
+#include "../include/pd_core.h"
 
 /* ---- Policy Engine State ---- */
 

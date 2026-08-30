@@ -23,8 +23,8 @@
 #include <teek_client_id.h>
 #include <teek_client_constants.h>
 
-#include "ion.h"
-#include "ion_priv.h"
+#include "../ion.h"
+#include "../ion_priv.h"
 #include "ion_sec_priv.h"
 
 /*uuid to TA: f8028dca-aba0-11e6-80f5-76304dec7eb7*/

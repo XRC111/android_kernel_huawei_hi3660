@@ -34,7 +34,7 @@ extern "C" {
 #include "dmac_sta_pm.h"
 #endif
 #include "dmac_device.h"
-#include "mac_device.h"
+#include "dmac_device.h"
 #include "dmac_config.h"
 #ifdef _PRE_WLAN_SW_CTRL_RSP
 #include "dmac_resource.h"

@@ -15,7 +15,7 @@
 #ifndef __HALPWRSEQCMD_H__
 #define __HALPWRSEQCMD_H__
 
-#include <drv_types.h>
+#include "drv_types.h"
 
 /* The value of cmd: 4 bits */
 #define PWR_CMD_READ		0x00

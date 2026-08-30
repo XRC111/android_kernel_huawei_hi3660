@@ -27,11 +27,11 @@
 #include <net/rtnetlink.h>
 
 #include <bcmutils.h>
-#include <wldev_common.h>
-#include <wl_cfg80211.h>
-#include <dhd_cfg80211.h>
-#include <dngl_stats.h>
-#include <dhd.h>
+#include "wldev_common.h"
+#include "wl_cfg80211.h"
+#include "dhd_cfg80211.h"
+#include "dngl_stats.h"
+#include "dhd.h"
 #include <dhdioctl.h>
 #include <wlioctl.h>
 

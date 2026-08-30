@@ -8,7 +8,7 @@
 #include <linux/syscalls.h>
 #include <linux/dma-buf.h>
 
-#include "omxvdec.h"
+#include "../../omxvdec.h"
 #include "platform.h"
 #include "memory.h"
 #include "vfmw.h"

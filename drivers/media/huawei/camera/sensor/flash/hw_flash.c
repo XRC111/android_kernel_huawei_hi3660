@@ -16,7 +16,7 @@
 #ifdef CONFIG_HUAWEI_HW_DEV_DCT
 #include <huawei_platform/devdetect/hw_dev_dec.h>
 #endif
-#include "hwcam_intf.h"
+#include "../../hwcam_intf.h"
 #include "../../clt/hisi_clt_flag.h"
 
 extern int memcpy_s(void *dest, size_t destMax, const void *src, size_t count);

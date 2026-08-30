@@ -66,13 +66,13 @@
  *****************************************************************************/
 #include <linux/firmware.h>
 #include <linux/rtnetlink.h>
-#include "iwl-trans.h"
-#include "iwl-csr.h"
+#include "../iwl-trans.h"
+#include "../iwl-csr.h"
 #include "mvm.h"
-#include "iwl-eeprom-parse.h"
-#include "iwl-eeprom-read.h"
-#include "iwl-nvm-parse.h"
-#include "iwl-prph.h"
+#include "../iwl-eeprom-parse.h"
+#include "../iwl-eeprom-read.h"
+#include "../iwl-nvm-parse.h"
+#include "../iwl-prph.h"
 
 /* Default NVM size to read */
 #define IWL_NVM_DEFAULT_CHUNK_SIZE (2*1024)

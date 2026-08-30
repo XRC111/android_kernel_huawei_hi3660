@@ -63,7 +63,7 @@
 #include <linux/slab.h>
 #include <net/mac80211.h>
 
-#include "iwl-trans.h"
+#include "../iwl-trans.h"
 
 #include "dev.h"
 #include "calib.h"

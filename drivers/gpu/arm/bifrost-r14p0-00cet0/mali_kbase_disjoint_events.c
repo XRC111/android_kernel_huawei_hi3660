@@ -24,7 +24,7 @@
  * Base kernel disjoint events helper functions
  */
 
-#include <mali_kbase.h>
+#include "mali_kbase.h"
 
 void kbase_disjoint_init(struct kbase_device *kbdev)
 {

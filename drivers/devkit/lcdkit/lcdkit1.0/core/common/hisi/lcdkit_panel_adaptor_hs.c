@@ -3,7 +3,7 @@
 #include "lcdkit_dbg.h"
 #include "lcdkit_disp.h"
 #include "lcdkit_parse.h"
-#include "lcdkit_tp.h"
+#include "../lcdkit_tp.h"
 /*
 *name:lcdkit_info_init
 *function:lcd_panel_info init

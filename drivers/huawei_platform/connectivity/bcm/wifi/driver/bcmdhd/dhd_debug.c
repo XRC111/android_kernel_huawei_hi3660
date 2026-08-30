@@ -29,10 +29,10 @@
 #include <bcmutils.h>
 #include <bcmendian.h>
 #include <bcmpcie.h>
-#include <dngl_stats.h>
-#include <dhd.h>
-#include <dhd_dbg.h>
-#include <dhd_debug.h>
+#include "dngl_stats.h"
+#include "dhd.h"
+#include "dhd_dbg.h"
+#include "dhd_debug.h"
 
 #include <event_log.h>
 #include <event_trace.h>

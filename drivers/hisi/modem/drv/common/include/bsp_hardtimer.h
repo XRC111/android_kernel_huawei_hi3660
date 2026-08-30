@@ -54,10 +54,10 @@
 
 #ifndef __ASSEMBLY__
 #include <product_config.h>
-#include <osl_common.h>
-#include <osl_math64.h>
+#include "osl_common.h"
+#include "osl_math64.h"
 #include <mdrv_timer.h>
-#include <bsp_trace.h>
+#include "bsp_trace.h"
 
 
 /*32k timer 一个slice大约为31us*/

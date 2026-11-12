@@ -8,18 +8,37 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    container:
+      image: ubuntu:20.04
+      options: --privileged
+    defaults:
+      run:
+        shell: bash
     timeout-minutes: 300
     steps:
+      - name: Install deps (author's toolchain + python2)
+        run: |
+          apt update -y
+          DEBIAN_FRONTEND=noninteractive apt install --no-install-recommends \
+            bash sudo gcc-arm-linux-gnueabi binutils binutils-aarch64-linux-gnu tar wget make \
+            python2 python3 flex unzip ca-certificates xz-utils mkbootimg cpio device-tree-compiler \
+            git git-lfs bc bison build-essential ccache curl g++-9 gcc-9 gnupg gperf imagemagick \
+            lib32ncurses5-dev lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libncurses5 \
+            libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync \
+            schedtool squashfs-tools xsltproc zip zlib1g-dev -y
+          ln -sf /usr/bin/python2.7 /usr/bin/python
+          python --version 2>&1 | head -1
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
 
-      - name: Install deps
+      - name: Restore case-sensitive files (lost on Windows)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y libncurses-dev flex bison libssl-dev libelf-dev bc u-boot-tools device-tree-compiler zip wget gcc-arm-linux-gnueabi binutils-aarch64-linux-gnu
+          python3 .github/scripts/restore_case_files.py
+          ls include/uapi/linux/netfilter/xt_mark.h
 
       - name: Install AOSP GCC 4.9
         run: |
@@ -33,9 +52,7 @@ jobs:
           ln -sf "$(realpath --relative-to=drivers KernelSU/kernel)" drivers/kernelsu
           grep -q "kernelsu" drivers/Makefile || printf "\nobj-\$(CONFIG_KSU) += kernelsu/\n" >> drivers/Makefile
           grep -q "source \"drivers/kernelsu/Kconfig\"" drivers/Kconfig || sed -i "/endmenu/i\source \"drivers/kernelsu/Kconfig\"" drivers/Kconfig
-          echo '--- verify ---'
           ls drivers/kernelsu/ | head -5
-          ls KernelSU/kernel/ | head -5
 
       - name: SELinux permissive + PM tag
         run: |

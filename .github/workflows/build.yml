@@ -60,9 +60,11 @@ jobs:
           sed -i 's/^\(CONFIG_LOCALVERSION=".*\)\(_xixiaobei[^"]*@Github"\)$/\1_PM\2/' arch/arm64/configs/merge_hi3660_defconfig
           grep -E "SELINUX_DEVELOP|CONFIG_LOCALVERSION" arch/arm64/configs/merge_hi3660_defconfig
 
-      - name: Fix script permissions
+      - name: Restore executable bits (lost on Windows)
         run: |
+          python3 .github/scripts/restore_exec_bits.py
           find . -name '*.sh' -exec chmod +x {} \;
+          test -x drivers/oases/inlinehook_gen_off && echo 'inlinehook_gen_off executable'
 
       - name: Build kernel (O=out)
         run: |

@@ -67,9 +67,9 @@ def build_bootimg(kernel_gz, dtb=None, out_path='boot.img'):
     struct.pack_into('<I', h, 0x20, TAGS_ADDR)
     struct.pack_into('<I', h, 0x24, PAGE_SIZE)
     struct.pack_into('<I', h, 0x28, 1)             # dtb_size = 1 (Huawei 习惯占位)
-    struct.pack_into('<I', h, 0x2C, 0x1200000A)  # header_version (Huawei magic value)
+    struct.pack_into('<I', h, 0x2C, 0x1200014A)  # header_version (对齐可开机 KPM 镜像)
     struct.pack_into('<I', h, 0x30, 0)             # os_version
-    h[0x34:0x44] = b'logl\x00'.ljust(16, b'\x00')
+    # name[16] 保持全 0（对齐可开机 KPM 镜像）
     h[0x44:0x44 + len(CMDLINE)] = CMDLINE
 
     # 组装：header + kernel(页对齐) + dtb(页对齐)

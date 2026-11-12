@@ -93,7 +93,7 @@ extern "C" {
 
 #ifdef _PRE_WLAN_PKT_TIME_STAT
 #include  <hwnet/ipv4/wifi_delayst.h>
-#include "hmac_vap.h"
+#include "mac_vap.h"
 #endif
 
 #undef  THIS_FILE_ID

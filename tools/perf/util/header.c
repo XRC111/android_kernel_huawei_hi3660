@@ -24,7 +24,7 @@
 #include "build-id.h"
 #include "data.h"
 #include <api/fs/fs.h>
-#include "debug.h"
+#include "asm/bug.h"
 
 /*
  * magic2 = "PERFILE2"

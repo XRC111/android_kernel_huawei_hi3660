@@ -29,7 +29,7 @@
 #include "hisi_oneimage.h"
 #endif
 #include "chr_devs.h"
-#include "hisi_oneimage.h"
+#include "oneimage.h"
 #include "board.h"
 #include "oal_schedule.h"
 #include "chr_errno.h"

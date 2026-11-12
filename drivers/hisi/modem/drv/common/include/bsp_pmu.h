@@ -62,7 +62,7 @@ extern "C" {
 
 #ifdef __FASTBOOT__
 #include <boot/boot.h>
-#include "osl_types.h"
+#include "types.h"
 #endif
 
 #include <hi_pmu.h>

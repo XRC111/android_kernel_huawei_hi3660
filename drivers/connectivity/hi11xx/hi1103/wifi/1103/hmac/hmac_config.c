@@ -123,7 +123,7 @@ extern "C" {
 #endif
 
 #if (_PRE_OS_VERSION_LINUX == _PRE_OS_VERSION)
-#include "mac_board.h"
+#include "board.h"
 #endif
 
 #undef  THIS_FILE_ID

@@ -65,7 +65,7 @@
 #include "AtPppInterface.h"
 
 #include "FcInterface.h"
-#include "AtPppInterface.h"
+#include "PppInterface.h"
 
 #include "TafApsApi.h"
 

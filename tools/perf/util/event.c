@@ -11,7 +11,7 @@
 #include "thread.h"
 #include "thread_map.h"
 #include "symbol/kallsyms.h"
-#include "debug.h"
+#include "asm/bug.h"
 #include "stat.h"
 
 static const char *perf_event__names[] = {

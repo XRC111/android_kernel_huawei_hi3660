@@ -21,7 +21,7 @@
 #include "thread_map.h"
 #include "cpumap.h"
 #include "probe-file.h"
-#include "debug.h"
+#include "asm/bug.h"
 
 #define MAX_NAME_LEN 100
 
